@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clay (Unofficial) Fantasy Football Draft Board</title>
+<meta name="description" content="200 players scored by a model built on Clay workflows. 2026 half-PPR redraft. Draft live from the board.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e0d12; --surface:#16151c; --surface2:#1d1c25; --line:#282734; --line2:#343241;
+  --text:#eceaf2; --muted:#9c98ac; --faint:#6f6b7e;
+  --matcha:#7fb069; --matcha-dim:#54783f; --matcha-ink:#0f1a0a;
+  --brick:#b5544a; --blue:#6b8fc7; --amber:#c08a3e;
+  --font:Roobert,Inter,-apple-system,BlinkMacSystemFont,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.num{font-variant-numeric:tabular-nums}
+.wrap{max-width:1360px;margin:0 auto;padding:0 20px}
+a{color:var(--matcha)}
+
+header{padding:26px 0 18px;border-bottom:1px solid var(--line)}
+.hrow{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.kick{color:var(--matcha);font-size:13px;font-weight:500;margin-bottom:6px}
+h1{font-size:30px;font-weight:600;letter-spacing:-.01em;line-height:1.15}
+.sub{color:var(--muted);margin-top:8px;max-width:640px}
+.byline{margin-top:10px;font-size:15px;font-weight:500}
+.counts{display:flex;gap:18px;margin-top:14px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.counts b{font-weight:600}
+.hactions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.btn{background:var(--surface2);color:var(--text);border:1px solid var(--line2);border-radius:8px;padding:8px 12px;font:inherit;font-size:13px;cursor:pointer}
+.btn:hover{background:var(--line)}
+.btn-primary{background:var(--matcha);color:var(--matcha-ink);border-color:var(--matcha);font-weight:600;font-size:14px;padding:11px 18px;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{background:#8fbf78}
+.pill{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:13px;color:var(--muted)}
+
+.controls{position:sticky;top:0;z-index:40;background:rgba(14,13,18,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 0}
+.crow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+input[type=search]{background:var(--surface);border:1px solid var(--line2);border-radius:8px;padding:9px 12px;color:var(--text);font:inherit;min-width:210px}
+input[type=search]::placeholder{color:var(--faint)}
+.chips{display:flex;gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:3px}
+.chip{background:transparent;border:0;border-radius:7px;padding:6px 11px;color:var(--muted);font:inherit;font-size:13px;cursor:pointer}
+.chip:hover{color:var(--text)}
+.chip[aria-pressed=true]{background:var(--matcha);color:var(--matcha-ink);font-weight:600}
+select{background:var(--surface);border:1px solid var(--line2);border-radius:8px;padding:9px 10px;color:var(--text);font:inherit;margin-left:auto}
+
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.tile .lbl{color:var(--muted);font-size:13px}
+.tile .val{font-size:26px;font-weight:600;margin-top:4px}
+
+.hint{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;margin:0 0 8px}
+.tablewrap{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:40px}
+table{width:100%;border-collapse:collapse}
+thead th{position:sticky;top:59px;z-index:30;background:#12111a;border-bottom:1px solid var(--line2);color:var(--muted);font-weight:500;font-size:12px;text-align:right;padding:11px 10px;white-space:nowrap}
+thead th:nth-child(-n+4){text-align:left}
+th .i{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border:1px solid var(--line2);border-radius:50%;font-size:9px;color:var(--faint);margin-left:5px;cursor:help}
+tbody td{border-bottom:1px solid var(--line);padding:10px;text-align:right;white-space:nowrap}
+tbody td:nth-child(-n+4){text-align:left}
+tbody tr.pr{cursor:pointer}
+tbody tr.pr:hover{background:var(--surface2)}
+tbody tr.taken{opacity:.42}
+tbody tr.taken .pname{text-decoration:line-through}
+tbody tr.mine{background:rgba(127,176,105,.07);box-shadow:inset 3px 0 0 var(--matcha)}
+.pname{font-weight:500}
+.pmeta{color:var(--faint);font-size:12px}
+.chev{display:inline-block;color:var(--faint);transition:transform .15s;font-size:11px}
+tbody tr.open .chev{transform:rotate(90deg);color:var(--matcha)}
+.badge{display:inline-block;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:500;border:1px solid}
+.b-Target{color:var(--matcha);border-color:rgba(127,176,105,.4);background:rgba(127,176,105,.1)}
+.b-Value{color:var(--blue);border-color:rgba(107,143,199,.4);background:rgba(107,143,199,.1)}
+.b-Fade{color:var(--brick);border-color:rgba(181,84,74,.4);background:rgba(181,84,74,.1)}
+.b-Fair{color:var(--muted);border-color:var(--line2)}
+.cf{display:inline-block;width:20px;text-align:center;border-radius:5px;font-size:11px;font-weight:600;padding:2px 0;border:1px solid}
+.cf-A,.cf-B{color:var(--matcha);border-color:rgba(127,176,105,.35)}
+.cf-C,.cf-D{color:var(--amber);border-color:rgba(192,138,62,.4)}
+.pos{color:var(--matcha)}.neg{color:var(--brick)}
+.dc{display:flex;gap:6px;align-items:center}
+.tk{width:15px;height:15px;accent-color:var(--matcha-dim);cursor:pointer}
+.star{background:transparent;border:1px solid var(--line2);border-radius:7px;padding:3px 7px;color:var(--faint);cursor:pointer;font-size:13px;line-height:1}
+.star[aria-pressed=true]{color:var(--matcha-ink);background:var(--matcha);border-color:var(--matcha)}
+tr.det td{background:var(--bg);border-bottom:1px solid var(--line2);padding:0}
+.det-in{padding:16px 18px;display:grid;grid-template-columns:1.6fr 1fr;gap:20px}
+.det h4{color:var(--muted);font-size:12px;font-weight:500;margin-bottom:5px}
+.det p{margin-bottom:12px}
+.quote{border-left:2px solid var(--matcha-dim);padding-left:12px;color:var(--muted);font-style:italic}
+.kv{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:6px 0;font-size:13px}
+.kv span:first-child{color:var(--muted)}
+
+.panel{position:fixed;top:0;right:0;bottom:0;width:340px;background:var(--surface);border-left:1px solid var(--line2);z-index:60;padding:20px;overflow:auto;transform:translateX(100%);transition:transform .2s}
+.panel.on{transform:none}
+.panel h3{font-size:17px;font-weight:600;margin-bottom:4px}
+.best{background:var(--surface2);border:1px solid var(--line2);border-radius:10px;padding:12px;margin:14px 0}
+.grp{margin-top:16px}
+.grp .gh{color:var(--matcha);font-size:12px;font-weight:600;margin-bottom:6px}
+.mrow{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--line);font-size:13px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:80;display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow:auto}
+.modal.on{display:flex}
+.mbox{background:var(--surface);border:1px solid var(--line2);border-radius:14px;max-width:840px;width:100%;padding:28px}
+.mbox h2{font-size:24px;font-weight:600}
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px;margin:18px 0}
+.fnode{background:var(--surface2);border:1px solid var(--line2);border-radius:8px;padding:7px 11px;font-size:13px}
+.arw{color:var(--matcha)}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.step{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px}
+.snum{display:inline-flex;width:22px;height:22px;border-radius:50%;background:rgba(127,176,105,.15);color:var(--matcha);align-items:center;justify-content:center;font-size:12px;font-weight:600;margin-right:8px}
+.step h5{display:flex;align-items:center;font-size:15px;font-weight:600;margin-bottom:7px}
+.step p{color:var(--muted);font-size:13px}
+.ref{margin-top:18px}
+.ref li{color:var(--muted);font-size:13px;margin:7px 0 0 18px}
+footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px solid var(--line)}
+@media(max-width:900px){
+  .tiles{grid-template-columns:1fr 1fr}.det-in{grid-template-columns:1fr}.steps{grid-template-columns:1fr}
+  .panel{width:100%}
+  thead{display:none}
+  tbody td{display:none;text-align:left;border:0;padding:2px 12px}
+  tbody td.m{display:block}
+  tbody tr.pr{display:grid;grid-template-columns:auto 1fr auto;gap:4px 10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+  thead th{top:0}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="hrow">
+    <div>
+      <div class="kick">Clay workflows · Redraft</div>
+      <h1>Clay (Unofficial) Fantasy Football Draft Board</h1>
+      <p class="sub">200 players scored by a model built on Clay workflows · 2026 half-PPR redraft</p>
+      <p class="byline">Jordan Brodie</p>
+      <div class="counts">
+        <span><b class="pos" id="cT">0</b> Targets</span>
+        <span><b style="color:var(--blue)" id="cV">0</b> Values</span>
+        <span><b class="neg" id="cF">0</b> Fades</span>
+      </div>
+    </div>
+    <div class="hactions">
+      <span class="pill"><span id="dcount">0</span> of 200 drafted</span>
+      <button class="btn" id="teamBtn">My team (<span id="mineN">0</span>)</button>
+      <button class="btn" id="resetBtn">Reset draft</button>
+      <button class="btn-primary" id="aboutBtn"><span aria-hidden="true">◆</span> About this build</button>
+    </div>
+  </div>
+</div></header>
+
+<div class="controls"><div class="wrap"><div class="crow">
+  <input type="search" id="q" placeholder="Search player or team">
+  <div class="chips" id="posF"></div>
+  <div class="chips" id="clsF"></div>
+  <div class="chips" id="draftF"></div>
+  <select id="sort">
+    <option value="r">Sort: Clay draft rank</option>
+    <option value="s">Sort: Positional score</option>
+    <option value="adp">Sort: ADP</option>
+    <option value="ep">Sort: Edge vs ADP</option>
+    <option value="pj">Sort: Projected ppg</option>
+    <option value="p90">Sort: Ceiling</option>
+  </select>
+</div></div></div>
+
+<div class="wrap">
+  <div class="tiles">
+    <div class="tile"><div class="lbl">Total players</div><div class="val num" id="tTotal">200</div></div>
+    <div class="tile"><div class="lbl">Targets</div><div class="val num pos" id="tTar">0</div></div>
+    <div class="tile"><div class="lbl">Fades</div><div class="val num neg" id="tFade">0</div></div>
+    <div class="tile"><div class="lbl">Avg projected ppg, top 24</div><div class="val num" style="color:var(--matcha)" id="tPpg">0</div></div>
+  </div>
+  <p class="hint"><span class="chev">▸</span> Click any player for insights, coach quotes, and ceiling data</p>
+  <div class="tablewrap"><table>
+    <thead><tr>
+      <th>Taken</th><th>Mine</th>
+      <th>Clay rank<span class="i" title="Where to actually draft him overall. Converts the positional score into value over replacement, accounts for positional scarcity, and anchors to expert consensus. This is the number to draft by.">i</span></th>
+      <th>Player</th><th>Tier</th>
+      <th>Positional score<span class="i" title="How strong this player's profile is compared to others at his own position. 50 is positional average, 100 is best in class. It does NOT account for positional scarcity.">i</span></th>
+      <th>Proj ppg</th><th>ADP</th><th>ECR</th><th>Winks</th><th>Spike wks</th><th>Edge</th><th>Class</th><th>Conf</th><th></th>
+    </tr></thead>
+    <tbody id="tb"></tbody>
+  </table></div>
+  <footer>Model anchors to expert consensus; edges come from usage, vacated volume, weekly splits, and ceiling data. Unofficial and just for fun — not affiliated with the NFL.</footer>
+</div>
+
+<div class="panel" id="panel">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <h3>My team</h3><button class="btn" id="closePanel">Close</button>
+  </div>
+  <div class="best" id="bestAv"></div>
+  <div id="teamBody"></div>
+</div>
+
+<div class="modal" id="modal"><div class="mbox">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div><h2>How this was built</h2><p style="color:var(--matcha);margin-top:6px">By Jordan Brodie · built with Clay</p></div>
+    <button class="btn" id="closeModal">Close</button>
+  </div>
+  <p style="color:var(--muted);margin-top:14px">This board isn't a rankings list I copied. It's a model sitting on top of a dataset I generated myself using Clay workflows, authored from the command line with the Clay CLI. Every number traces back to a source.</p>
+  <div class="flow">
+    <span class="fnode">Workflows</span><span class="arw">→</span>
+    <span class="fnode">Structured data</span><span class="arw">→</span>
+    <span class="fnode">Qualitative signal</span><span class="arw">→</span>
+    <span class="fnode">Score + VOR</span><span class="arw">→</span>
+    <span class="fnode">Board</span>
+  </div>
+  <div class="steps">
+    <div class="step"><h5><span class="snum">1</span>Author workflows from the CLI</h5><p>Used the Clay CLI to create multi-node workflows programmatically instead of clicking through a UI. Three workflows: player research, team environment, and coach sentiment.</p></div>
+    <div class="step"><h5><span class="snum">2</span>Pull structured data via API</h5><p>Each workflow chains search → scrape → structured extraction, returning typed JSON with a source URL for every value. 200 players enriched with 2025 usage, efficiency, Vegas props, and injury history. A second workflow built all 32 team environments: Vegas win totals, offensive line ranks, coaching changes, and vacated carries and targets.</p></div>
+    <div class="step"><h5><span class="snum">3</span>Add qualitative signal</h5><p>A third workflow reads player news, beat reporting, and direct coach quotes, then grades role language. Critically it separates concrete role statements ("he'll be our starter", "first-team reps") from generic August coachspeak ("he's looked great") — only the specific kind is allowed to move a score. Generic praise is flagged and scored zero.</p></div>
+    <div class="step"><h5><span class="snum">4</span>Score, then pressure-test</h5><p>Six weighted buckets (opportunity, production, situation, efficiency, market, regression) times a risk multiplier, converted to value over replacement, then anchored to expert consensus.</p></div>
+  </div>
+  <div class="ref">
+    <h4 style="font-size:16px;font-weight:600;margin-bottom:4px">How it was refined</h4>
+    <ul>
+      <li>Backtested against five seasons of real historical preseason ADP (2020 through 2025) to check whether the model actually beat the market. Preseason ADP is a very strong baseline, which is why the published ranks stay anchored to consensus instead of pretending to be contrarian.</li>
+      <li>Added weekly game logs to compute with-and-without splits: how a player performed in the specific games a teammate missed. 116 such teammate pairs, which is how contingency and handcuff value became measurable.</li>
+      <li>Modeled same-team competition for touches, so a crowded backfield or receiver room is priced rather than assumed away.</li>
+      <li>Added spike-week ceiling data after testing showed spike magnitude predicts future value while spike frequency is already priced in by the market.</li>
+      <li>Every row carries a confidence grade from A to D based on how much verified data actually supports it, so a well-sourced rank and a thin one don't look identical.</li>
+    </ul>
+  </div>
+  <p style="color:var(--faint);font-style:italic;margin-top:18px;font-size:13px">Unofficial and just for fun. Not affiliated with the NFL. Clay is where I work, and this is what happens when you point workflow tooling at a hobby.</p>
+</div></div>
+
+<script src="board.js"></script>
+<script>
+const B=window.BOARD, KEY='clay-board-draft', OKEY='clay-board-order';
+let st=JSON.parse(localStorage.getItem(KEY)||'{}');
+let order=JSON.parse(localStorage.getItem(OKEY)||'[]');
+let f={pos:'All',cls:'All',draft:'Available',q:'',sort:'r'}, open=new Set();
+const save=()=>{localStorage.setItem(KEY,JSON.stringify(st));localStorage.setItem(OKEY,JSON.stringify(order))};
+const n1=v=>v==null?'—':(+v).toFixed(1);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function chips(el,vals,key){el.innerHTML=vals.map(v=>`<button class="chip" data-k="${key}" data-v="${v}" aria-pressed="${f[key]===v}">${v}</button>`).join('')}
+function renderChips(){
+  chips(document.getElementById('posF'),['All','QB','RB','WR','TE'],'pos');
+  chips(document.getElementById('clsF'),['All','Target','Value','Fade','Fair'],'cls');
+  chips(document.getElementById('draftF'),['Available','Taken','My team','All'],'draft');
+}
+function view(){
+  let a=B.filter(p=>{
+    if(f.pos!=='All'&&p.p!==f.pos)return false;
+    if(f.cls!=='All'&&p.c!==f.cls)return false;
+    const s=st[p.r];
+    if(f.draft==='Available'&&s)return false;
+    if(f.draft==='Taken'&&s!=='taken')return false;
+    if(f.draft==='My team'&&s!=='mine')return false;
+    if(f.q){const t=(p.n+' '+p.t+' '+p.p).toLowerCase();if(!t.includes(f.q.toLowerCase()))return false}
+    return true});
+  const k=f.sort, asc=(k==='r'||k==='adp'||k==='ecr');
+  a.sort((x,y)=>{let u=x[k],v=y[k];if(u==null)u=asc?1e9:-1e9;if(v==null)v=asc?1e9:-1e9;return asc?u-v:v-u});
+  return a;
+}
+function render(){
+  const rows=view(), tb=document.getElementById('tb');
+  tb.innerHTML=rows.map(p=>{
+    const s=st[p.r], cl=['pr',s==='taken'?'taken':'',s==='mine'?'mine':'',open.has(p.r)?'open':''].join(' ');
+    const det=open.has(p.r)?`<tr class="det"><td colspan="15"><div class="det-in">
+      <div><h4>Insights</h4><p>${esc(p.i)}</p>
+      ${p.d?`<h4>Draft note</h4><p>${esc(p.d)}</p>`:''}
+      ${p.sq?`<h4>Coach quote</h4><p class="quote">${esc(p.sq)}</p>`:''}
+      ${p.hc?`<h4>Signal check</h4><p style="color:var(--muted)">${esc(p.hc)}</p>`:''}</div>
+      <div><div class="kv"><span>Ceiling (90th pct week)</span><b class="num">${n1(p.p90)}</b></div>
+      <div class="kv"><span>Best week</span><b class="num">${n1(p.bw)}</b></div>
+      <div class="kv"><span>Spike weeks</span><b class="num">${p.sw==null?'—':p.sw+' / '+p.g}</b></div>
+      <div class="kv"><span>2025 ppg</span><b class="num">${n1(p.ppg)}</b></div>
+      ${p.cont?`<div class="kv"><span>Contingency ppg</span><b class="num">${n1(p.cont)}</b></div>`:''}
+      <div class="kv"><span>Coach role language</span><b>${esc(p.rl||'no signal')}</b></div>
+      <div class="kv"><span>Data confidence</span><b>${p.cf}</b></div></div></div></td></tr>`:'';
+    return `<tr class="${cl}" data-r="${p.r}" tabindex="0">
+      <td class="m"><input type="checkbox" class="tk" data-tk="${p.r}" ${s==='taken'?'checked':''} aria-label="Taken"></td>
+      <td class="m"><button class="star" data-mine="${p.r}" aria-pressed="${s==='mine'}" title="My team (M)">★</button></td>
+      <td class="num m" style="color:var(--faint)">${p.r}</td>
+      <td class="m"><div class="pname">${esc(p.n)}</div><div class="pmeta">${p.t} · ${p.p}${p.pr}</div></td>
+      <td class="num">${p.ti}</td><td class="num m" style="color:var(--matcha);font-weight:600">${n1(p.s)}</td>
+      <td class="num">${n1(p.pj)}</td><td class="num">${n1(p.adp)}</td><td class="num">${p.ecr??'—'}</td>
+      <td class="num">${p.wk??'—'}</td><td class="num">${p.sw??'—'}</td>
+      <td class="num m ${p.ep>0?'pos':p.ep<0?'neg':''}">${p.ep==null?'—':(p.ep>0?'+':'')+p.ep.toFixed(1)}</td>
+      <td class="m"><span class="badge b-${p.c}">${p.c}</span></td>
+      <td><span class="cf cf-${p.cf}">${p.cf}</span></td>
+      <td><span class="chev">▸</span></td></tr>${det}`}).join('');
+  const mine=B.filter(p=>st[p.r]==='mine'), tk=Object.keys(st).length;
+  document.getElementById('mineN').textContent=mine.length;
+  document.getElementById('dcount').textContent=tk;
+  const cnt=c=>B.filter(p=>p.c===c).length;
+  document.getElementById('cT').textContent=cnt('Target');document.getElementById('cV').textContent=cnt('Value');
+  document.getElementById('cF').textContent=cnt('Fade');
+  document.getElementById('tTar').textContent=cnt('Target');document.getElementById('tFade').textContent=cnt('Fade');
+  const top24=B.slice(0,24).map(p=>p.pj).filter(v=>v!=null);
+  document.getElementById('tPpg').textContent=(top24.reduce((a,b)=>a+b,0)/top24.length).toFixed(1);
+  team(mine);
+}
+function team(mine){
+  const av=B.filter(p=>!st[p.r]).slice(0,3);
+  document.getElementById('bestAv').innerHTML='<h4 style="color:var(--muted);font-size:12px;margin-bottom:6px">Best available</h4>'+
+    (av.map(p=>`<div class="mrow"><span>${esc(p.n)} <span class="pmeta">${p.p}${p.pr}</span></span><b class="num">${n1(p.pj)}</b></div>`).join('')||'<div class="pmeta">None left</div>');
+  const byOrder=order.filter(r=>st[r]==='mine').map(r=>B.find(p=>p.r===r)).filter(Boolean);
+  const counts={};byOrder.forEach(p=>counts[p.p]=(counts[p.p]||0)+1);
+  const sum=byOrder.reduce((a,p)=>a+(p.pj||0),0);
+  let h=`<div class="mrow"><span>Roster</span><b>${['QB','RB','WR','TE'].map(k=>k+' '+(counts[k]||0)).join(' · ')}</b></div>
+         <div class="mrow"><span>Total projected ppg</span><b class="num">${sum.toFixed(1)}</b></div>`;
+  ['QB','RB','WR','TE'].forEach(pos=>{
+    const g=byOrder.filter(p=>p.p===pos);if(!g.length)return;
+    h+=`<div class="grp"><div class="gh">${pos}</div>`+g.map(p=>`<div class="mrow"><span>${esc(p.n)}</span><span class="num">${n1(p.s)} · ${n1(p.pj)}</span></div>`).join('')+'</div>'});
+  document.getElementById('teamBody').innerHTML=h+(byOrder.length?'':'<p class="pmeta" style="margin-top:14px">No players drafted yet. Click the star on a row to add.</p>');
+}
+function setState(r,v){
+  if(v)st[r]=v;else delete st[r];
+  if(v==='mine'){if(!order.includes(r))order.push(r)}else{order=order.filter(x=>x!==r)}
+  save();render();
+}
+document.addEventListener('click',e=>{
+  const c=e.target.closest('.chip');
+  if(c){f[c.dataset.k]=c.dataset.v;renderChips();render();return}
+  const tk=e.target.closest('[data-tk]');
+  if(tk){const r=+tk.dataset.tk;setState(r,tk.checked?'taken':null);e.stopPropagation();return}
+  const mn=e.target.closest('[data-mine]');
+  if(mn){const r=+mn.dataset.mine;setState(r,st[r]==='mine'?null:'mine');e.stopPropagation();return}
+  const row=e.target.closest('tr.pr');
+  if(row){const r=+row.dataset.r;open.has(r)?open.delete(r):open.add(r);render();return}
+});
+document.getElementById('q').addEventListener('input',e=>{f.q=e.target.value;render()});
+document.getElementById('sort').addEventListener('change',e=>{f.sort=e.target.value;render()});
+document.getElementById('teamBtn').onclick=()=>document.getElementById('panel').classList.add('on');
+document.getElementById('closePanel').onclick=()=>document.getElementById('panel').classList.remove('on');
+document.getElementById('aboutBtn').onclick=()=>document.getElementById('modal').classList.add('on');
+document.getElementById('closeModal').onclick=()=>document.getElementById('modal').classList.remove('on');
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')e.currentTarget.classList.remove('on')});
+document.getElementById('resetBtn').onclick=()=>{if(confirm('Clear all draft picks?')){st={};order=[];save();render()}};
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){document.getElementById('modal').classList.remove('on');document.getElementById('panel').classList.remove('on');return}
+  const row=document.activeElement&&document.activeElement.closest?document.activeElement.closest('tr.pr'):null;
+  if(!row)return;const r=+row.dataset.r;
+  if(e.key==='t'||e.key==='T')setState(r,st[r]==='taken'?null:'taken');
+  if(e.key==='m'||e.key==='M')setState(r,st[r]==='mine'?null:'mine');
+});
+renderChips();render();
+</script>
+</body>
+</html>
