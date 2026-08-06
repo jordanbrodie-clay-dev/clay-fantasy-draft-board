@@ -75,10 +75,10 @@ thead th{position:sticky;top:66px;z-index:30;background:#12111a;border-bottom:1p
 thead th:first-child{border-top-left-radius:11px}
 thead th:last-child{border-top-right-radius:11px}
 tbody tr:last-child td{border-bottom:0}
-thead th:nth-child(-n+4){text-align:left}
+thead th:nth-child(-n+5){text-align:left}
 th .i{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border:1px solid var(--line2);border-radius:50%;font-size:9px;color:var(--faint);margin-left:5px;cursor:help}
 tbody td{border-bottom:1px solid var(--line);padding:10px;text-align:right;white-space:nowrap}
-tbody td:nth-child(-n+4){text-align:left}
+tbody td:nth-child(-n+5){text-align:left}
 tbody tr.pr{cursor:pointer}
 tbody tr.pr:hover{background:var(--surface2)}
 tbody tr.taken{opacity:.42}
@@ -101,6 +101,8 @@ tbody tr.open .chev{transform:rotate(90deg);color:var(--matcha)}
 .tk{width:15px;height:15px;accent-color:var(--matcha-dim);cursor:pointer}
 .star{background:transparent;border:1px solid var(--line2);border-radius:7px;padding:3px 7px;color:var(--faint);cursor:pointer;font-size:13px;line-height:1}
 .star[aria-pressed=true]{color:var(--matcha-ink);background:var(--matcha);border-color:var(--matcha)}
+.watch{background:transparent;border:1px solid var(--line2);border-radius:7px;padding:3px 7px;color:var(--faint);cursor:pointer;font-size:13px;line-height:1}
+.watch[aria-pressed=true]{color:var(--blue);background:rgba(107,143,199,.15);border-color:var(--blue)}
 tr.det td{background:var(--bg);border-bottom:1px solid var(--line2);padding:0}
 .det-in{padding:16px 18px;display:grid;grid-template-columns:1.6fr 1fr;gap:20px}
 .det h4{color:var(--muted);font-size:12px;font-weight:500;margin-bottom:5px}
@@ -135,10 +137,29 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
   .tiles{grid-template-columns:1fr 1fr}.det-in{grid-template-columns:1fr}.steps{grid-template-columns:1fr}
   .panel{width:100%}
   thead{display:none}
-  tbody td{display:none;text-align:left;border:0;padding:2px 12px}
-  tbody td.m{display:block}
-  tbody tr.pr{display:grid;grid-template-columns:auto 1fr auto;gap:4px 10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
-  thead th{top:0}
+  table,tbody{display:block}
+  /* each row becomes its own flex "card": icons/rank on line 1, name on its own
+     full-width line (flex-basis:100% forces the wrap), then key stats on line 3 */
+  tbody tr.pr{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;padding:12px 4px;border-bottom:1px solid var(--line)}
+  tbody tr.pr td{border:0;padding:0;white-space:normal;text-align:left}
+  tbody tr.pr td:nth-child(1){order:1}
+  tbody tr.pr td:nth-child(2){order:2}
+  tbody tr.pr td:nth-child(3){order:3}
+  tbody tr.pr td:nth-child(4){order:4;color:var(--faint);font-size:12px}
+  tbody tr.pr td:nth-child(16){order:5;margin-left:auto}
+  tbody tr.pr td:nth-child(5){order:6;flex:1 1 100%}
+  tbody tr.pr td:nth-child(7){order:7;font-size:15px}
+  tbody tr.pr td:nth-child(8){order:8}
+  tbody tr.pr td:nth-child(13){order:9}
+  tbody tr.pr td:nth-child(14){order:10;margin-left:auto}
+  tbody tr.pr td:nth-child(6),
+  tbody tr.pr td:nth-child(9),
+  tbody tr.pr td:nth-child(10),
+  tbody tr.pr td:nth-child(11),
+  tbody tr.pr td:nth-child(12),
+  tbody tr.pr td:nth-child(15){display:none}
+  tr.det{display:block}
+  tr.det td{display:block;width:100%;padding:0}
 }
 </style>
 </head>
@@ -158,6 +179,7 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
     </div>
     <div class="hactions">
       <span class="pill"><span id="dcount">0</span> of 200 drafted</span>
+      <button class="btn" id="watchBtn">Watchlist (<span id="watchN">0</span>)</button>
       <button class="btn" id="teamBtn">My team (<span id="mineN">0</span>)</button>
       <button class="btn" id="resetBtn">Reset draft</button>
       <button class="btn-primary" id="aboutBtn"><span aria-hidden="true">◆</span> About this build</button>
@@ -190,7 +212,7 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
   <p class="hint"><span class="chev">▸</span> Click any player for insights, coach quotes, and ceiling data</p>
   <div class="tablewrap"><table>
     <thead><tr>
-      <th>Taken</th><th>Mine</th>
+      <th>Taken</th><th>Mine</th><th>Watch</th>
       <th>Clay rank<span class="i" title="Where to actually draft him overall. Converts the positional score into value over replacement, accounts for positional scarcity, and anchors to expert consensus. This is the number to draft by.">i</span></th>
       <th>Player</th><th>Tier</th>
       <th>Positional score<span class="i" title="How strong this player's profile is compared to others at his own position. 50 is positional average, 100 is best in class. It does NOT account for positional scarcity.">i</span></th>
@@ -203,9 +225,10 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
 
 <div class="panel" id="panel">
   <div style="display:flex;justify-content:space-between;align-items:center">
-    <h3>My team</h3><button class="btn" id="closePanel">Close</button>
+    <h3>Draft panel</h3><button class="btn" id="closePanel">Close</button>
   </div>
   <div class="best" id="bestAv"></div>
+  <div id="watchBody"></div>
   <div id="teamBody"></div>
 </div>
 
@@ -243,11 +266,13 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
 
 <script src="board.js"></script>
 <script>
-const B=window.BOARD, KEY='clay-board-draft', OKEY='clay-board-order';
+const B=window.BOARD, KEY='clay-board-draft', OKEY='clay-board-order', WKEY='clay-board-watch';
 let st=JSON.parse(localStorage.getItem(KEY)||'{}');
 let order=JSON.parse(localStorage.getItem(OKEY)||'[]');
+let watch=new Set(JSON.parse(localStorage.getItem(WKEY)||'[]'));
 let f={pos:'All',cls:'All',draft:'Available',q:'',sort:'r'}, open=new Set();
 const save=()=>{localStorage.setItem(KEY,JSON.stringify(st));localStorage.setItem(OKEY,JSON.stringify(order))};
+const saveWatch=()=>localStorage.setItem(WKEY,JSON.stringify([...watch]));
 const n1=v=>v==null?'—':(+v).toFixed(1);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
@@ -255,7 +280,7 @@ function chips(el,vals,key){el.innerHTML=vals.map(v=>`<button class="chip" data-
 function renderChips(){
   chips(document.getElementById('posF'),['All','QB','RB','WR','TE'],'pos');
   chips(document.getElementById('clsF'),['All','Target','Value','Fade','Fair'],'cls');
-  chips(document.getElementById('draftF'),['Available','Taken','My team','All'],'draft');
+  chips(document.getElementById('draftF'),['Available','Taken','My team','Watchlist','All'],'draft');
 }
 function view(){
   let a=B.filter(p=>{
@@ -265,6 +290,7 @@ function view(){
     if(f.draft==='Available'&&s)return false;
     if(f.draft==='Taken'&&s!=='taken')return false;
     if(f.draft==='My team'&&s!=='mine')return false;
+    if(f.draft==='Watchlist'&&!watch.has(p.r))return false;
     if(f.q){const t=(p.n+' '+p.t+' '+p.p).toLowerCase();if(!t.includes(f.q.toLowerCase()))return false}
     return true});
   const k=f.sort, asc=(k==='r'||k==='adp'||k==='ecr');
@@ -274,8 +300,8 @@ function view(){
 function render(){
   const rows=view(), tb=document.getElementById('tb');
   tb.innerHTML=rows.map(p=>{
-    const s=st[p.r], cl=['pr',s==='taken'?'taken':'',s==='mine'?'mine':'',open.has(p.r)?'open':''].join(' ');
-    const det=open.has(p.r)?`<tr class="det"><td colspan="15"><div class="det-in">
+    const s=st[p.r], w=watch.has(p.r), cl=['pr',s==='taken'?'taken':'',s==='mine'?'mine':'',open.has(p.r)?'open':''].join(' ');
+    const det=open.has(p.r)?`<tr class="det"><td colspan="16"><div class="det-in">
       <div><h4>Insights</h4><p>${esc(p.i)}</p>
       ${p.d?`<h4>Draft note</h4><p>${esc(p.d)}</p>`:''}
       ${p.sq?`<h4>Coach quote</h4><p class="quote">${esc(p.sq)}</p>`:''}
@@ -288,19 +314,21 @@ function render(){
       <div class="kv"><span>Coach role language</span><b>${esc(p.rl||'no signal')}</b></div>
       <div class="kv"><span>Data confidence</span><b>${p.cf}</b></div></div></div></td></tr>`:'';
     return `<tr class="${cl}" data-r="${p.r}" tabindex="0">
-      <td class="m"><input type="checkbox" class="tk" data-tk="${p.r}" ${s==='taken'?'checked':''} aria-label="Taken"></td>
-      <td class="m"><button class="star" data-mine="${p.r}" aria-pressed="${s==='mine'}" title="My team (M)">★</button></td>
-      <td class="num m" style="color:var(--faint)">${p.r}</td>
-      <td class="m"><div class="pname">${esc(p.n)}</div><div class="pmeta">${p.t} · ${p.p}${p.pr}</div></td>
-      <td class="num">${p.ti}</td><td class="num m" style="color:var(--matcha);font-weight:600">${n1(p.s)}</td>
+      <td><input type="checkbox" class="tk" data-tk="${p.r}" ${s==='taken'?'checked':''} aria-label="Taken"></td>
+      <td><button class="star" data-mine="${p.r}" aria-pressed="${s==='mine'}" title="My team (M)">★</button></td>
+      <td><button class="watch" data-watch="${p.r}" aria-pressed="${w}" title="Watchlist (W)">⚑</button></td>
+      <td class="num" style="color:var(--faint)">${p.r}</td>
+      <td><div class="pname">${esc(p.n)}</div><div class="pmeta">${p.t} · ${p.p}${p.pr}</div></td>
+      <td class="num">${p.ti}</td><td class="num" style="color:var(--matcha);font-weight:600">${n1(p.s)}</td>
       <td class="num">${n1(p.pj)}</td><td class="num">${n1(p.adp)}</td><td class="num">${p.ecr??'—'}</td>
       <td class="num">${p.wk??'—'}</td><td class="num">${p.sw??'—'}</td>
-      <td class="num m ${p.ep>0?'pos':p.ep<0?'neg':''}">${p.ep==null?'—':(p.ep>0?'+':'')+p.ep.toFixed(1)}</td>
-      <td class="m"><span class="badge b-${p.c}">${p.c}</span></td>
+      <td class="num ${p.ep>0?'pos':p.ep<0?'neg':''}">${p.ep==null?'—':(p.ep>0?'+':'')+p.ep.toFixed(1)}</td>
+      <td><span class="badge b-${p.c}">${p.c}</span></td>
       <td><span class="cf cf-${p.cf}">${p.cf}</span></td>
       <td><span class="chev">▸</span></td></tr>${det}`}).join('');
   const mine=B.filter(p=>st[p.r]==='mine'), tk=Object.keys(st).length;
   document.getElementById('mineN').textContent=mine.length;
+  document.getElementById('watchN').textContent=watch.size;
   document.getElementById('dcount').textContent=tk;
   const cnt=c=>B.filter(p=>p.c===c).length;
   document.getElementById('cT').textContent=cnt('Target');document.getElementById('cV').textContent=cnt('Value');
@@ -308,17 +336,27 @@ function render(){
   document.getElementById('tTar').textContent=cnt('Target');document.getElementById('tFade').textContent=cnt('Fade');
   const top24=B.slice(0,24).map(p=>p.pj).filter(v=>v!=null);
   document.getElementById('tPpg').textContent=(top24.reduce((a,b)=>a+b,0)/top24.length).toFixed(1);
-  team(mine);
+  renderPanel(mine);
 }
-function team(mine){
+function renderPanel(mine){
   const av=B.filter(p=>!st[p.r]).slice(0,3);
   document.getElementById('bestAv').innerHTML='<h4 style="color:var(--muted);font-size:12px;margin-bottom:6px">Best available</h4>'+
     (av.map(p=>`<div class="mrow"><span>${esc(p.n)} <span class="pmeta">${p.p}${p.pr}</span></span><b class="num">${n1(p.pj)}</b></div>`).join('')||'<div class="pmeta">None left</div>');
+
+  const watched=[...watch].map(r=>B.find(p=>p.r===r)).filter(Boolean).sort((a,b)=>a.r-b.r);
+  let wh=`<div class="grp"><div class="gh" style="display:flex;justify-content:space-between;align-items:center">
+    <span>Watchlist</span>${watched.length?'<button class="btn" id="clearWatch" style="padding:3px 8px;font-size:11px">Clear</button>':''}</div>`;
+  wh+=watched.length?watched.map(p=>`<div class="mrow"><span>${esc(p.n)} <span class="pmeta">${p.p}${p.pr}</span></span><span class="num">${n1(p.pj)} <button class="watch" data-watch="${p.r}" aria-pressed="true" title="Remove" style="margin-left:6px">⚑</button></span></div>`).join('')
+    :'<p class="pmeta">Flag players to shortlist them before you draft.</p>';
+  wh+='</div>';
+  document.getElementById('watchBody').innerHTML=wh;
+
   const byOrder=order.filter(r=>st[r]==='mine').map(r=>B.find(p=>p.r===r)).filter(Boolean);
   const counts={};byOrder.forEach(p=>counts[p.p]=(counts[p.p]||0)+1);
   const sum=byOrder.reduce((a,p)=>a+(p.pj||0),0);
-  let h=`<div class="mrow"><span>Roster</span><b>${['QB','RB','WR','TE'].map(k=>k+' '+(counts[k]||0)).join(' · ')}</b></div>
-         <div class="mrow"><span>Total projected ppg</span><b class="num">${sum.toFixed(1)}</b></div>`;
+  let h=`<div class="grp"><div class="gh">My team</div>
+         <div class="mrow"><span>Roster</span><b>${['QB','RB','WR','TE'].map(k=>k+' '+(counts[k]||0)).join(' · ')}</b></div>
+         <div class="mrow"><span>Total projected ppg</span><b class="num">${sum.toFixed(1)}</b></div></div>`;
   ['QB','RB','WR','TE'].forEach(pos=>{
     const g=byOrder.filter(p=>p.p===pos);if(!g.length)return;
     h+=`<div class="grp"><div class="gh">${pos}</div>`+g.map(p=>`<div class="mrow"><span>${esc(p.n)}</span><span class="num">${n1(p.s)} · ${n1(p.pj)}</span></div>`).join('')+'</div>'});
@@ -329,6 +367,10 @@ function setState(r,v){
   if(v==='mine'){if(!order.includes(r))order.push(r)}else{order=order.filter(x=>x!==r)}
   save();render();
 }
+function toggleWatch(r){
+  watch.has(r)?watch.delete(r):watch.add(r);
+  saveWatch();render();
+}
 document.addEventListener('click',e=>{
   const c=e.target.closest('.chip');
   if(c){f[c.dataset.k]=c.dataset.v;renderChips();render();return}
@@ -336,23 +378,28 @@ document.addEventListener('click',e=>{
   if(tk){const r=+tk.dataset.tk;setState(r,tk.checked?'taken':null);e.stopPropagation();return}
   const mn=e.target.closest('[data-mine]');
   if(mn){const r=+mn.dataset.mine;setState(r,st[r]==='mine'?null:'mine');e.stopPropagation();return}
+  const wt=e.target.closest('[data-watch]');
+  if(wt){toggleWatch(+wt.dataset.watch);e.stopPropagation();return}
+  if(e.target.id==='clearWatch'){watch=new Set();saveWatch();render();return}
   const row=e.target.closest('tr.pr');
   if(row){const r=+row.dataset.r;open.has(r)?open.delete(r):open.add(r);render();return}
 });
 document.getElementById('q').addEventListener('input',e=>{f.q=e.target.value;render()});
 document.getElementById('sort').addEventListener('change',e=>{f.sort=e.target.value;render()});
 document.getElementById('teamBtn').onclick=()=>document.getElementById('panel').classList.add('on');
+document.getElementById('watchBtn').onclick=()=>document.getElementById('panel').classList.add('on');
 document.getElementById('closePanel').onclick=()=>document.getElementById('panel').classList.remove('on');
 document.getElementById('aboutBtn').onclick=()=>document.getElementById('modal').classList.add('on');
 document.getElementById('closeModal').onclick=()=>document.getElementById('modal').classList.remove('on');
 document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')e.currentTarget.classList.remove('on')});
-document.getElementById('resetBtn').onclick=()=>{if(confirm('Clear all draft picks?')){st={};order=[];save();render()}};
+document.getElementById('resetBtn').onclick=()=>{if(confirm('Clear all draft picks? (Watchlist is kept.)')){st={};order=[];save();render()}};
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape'){document.getElementById('modal').classList.remove('on');document.getElementById('panel').classList.remove('on');return}
   const row=document.activeElement&&document.activeElement.closest?document.activeElement.closest('tr.pr'):null;
   if(!row)return;const r=+row.dataset.r;
   if(e.key==='t'||e.key==='T')setState(r,st[r]==='taken'?null:'taken');
   if(e.key==='m'||e.key==='M')setState(r,st[r]==='mine'?null:'mine');
+  if(e.key==='w'||e.key==='W')toggleWatch(r);
 });
 renderChips();render();
 </script>
