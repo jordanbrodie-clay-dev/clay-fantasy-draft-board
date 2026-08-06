@@ -110,7 +110,11 @@ tbody tr.open .chev{transform:rotate(90deg);color:var(--matcha)}
 .watch{background:transparent;border:1px solid var(--line2);border-radius:7px;padding:3px 7px;color:var(--faint);cursor:pointer;font-size:13px;line-height:1}
 .watch[aria-pressed=true]{color:var(--blue);background:rgba(107,143,199,.15);border-color:var(--blue)}
 tr.det td{background:var(--bg);border-bottom:1px solid var(--line2);padding:0}
-.det-in{padding:16px 18px;display:grid;grid-template-columns:1.6fr 1fr;gap:20px}
+/* minmax(0, Nfr), not plain Nfr — a bare fr track's automatic minimum is based on
+   its content's min-content, and the two columns here hold very different content
+   (wrapping prose vs. short label/value rows), which skewed the split to ~9:1
+   instead of the intended 1.6:1 and squeezed the stats column into overlap */
+.det-in{padding:16px 18px;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px}
 .det h4{color:var(--muted);font-size:12px;font-weight:500;margin-bottom:5px}
 .det p{margin-bottom:12px}
 .quote{border-left:2px solid var(--matcha-dim);padding-left:12px;color:var(--muted);font-style:italic}
