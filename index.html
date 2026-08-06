@@ -86,6 +86,12 @@ tbody tr.taken .pname{text-decoration:line-through}
 tbody tr.mine{background:rgba(127,176,105,.07);box-shadow:inset 3px 0 0 var(--matcha)}
 .pname{font-weight:500}
 .pmeta{color:var(--faint);font-size:12px}
+.tag{display:inline-block;font-size:11px;font-weight:500;margin-left:6px;padding:1px 6px;border-radius:5px;border:1px solid;white-space:nowrap}
+.tag-matcha{color:var(--matcha);border-color:rgba(127,176,105,.4);background:rgba(127,176,105,.1)}
+.tag-blue{color:var(--blue);border-color:rgba(107,143,199,.4);background:rgba(107,143,199,.1)}
+.tag-brick{color:var(--brick);border-color:rgba(181,84,74,.4);background:rgba(181,84,74,.1)}
+.tag-amber{color:var(--amber);border-color:rgba(192,138,62,.4);background:rgba(192,138,62,.1)}
+.tag-gray{color:var(--muted);border-color:var(--line2)}
 .chev{display:inline-block;color:var(--faint);transition:transform .15s;font-size:11px}
 tbody tr.open .chev{transform:rotate(90deg);color:var(--matcha)}
 .badge{display:inline-block;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:500;border:1px solid}
@@ -191,6 +197,7 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
   <input type="search" id="q" placeholder="Search player or team">
   <div class="chips" id="posF"></div>
   <div class="chips" id="clsF"></div>
+  <div class="chips"><button class="chip" id="hideFadesBtn" data-k="toggle" data-v="hideFades">Hide fades</button></div>
   <div class="chips" id="draftF"></div>
   <select id="sort">
     <option value="r">Sort: Clay draft rank</option>
@@ -270,7 +277,9 @@ const B=window.BOARD, KEY='clay-board-draft', OKEY='clay-board-order', WKEY='cla
 let st=JSON.parse(localStorage.getItem(KEY)||'{}');
 let order=JSON.parse(localStorage.getItem(OKEY)||'[]');
 let watch=new Set(JSON.parse(localStorage.getItem(WKEY)||'[]'));
-let f={pos:'All',cls:'All',draft:'Available',q:'',sort:'r'}, open=new Set();
+let f={pos:'All',cls:'All',draft:'Available',q:'',sort:'r',hideFades:false}, open=new Set();
+const TAGCOLOR={'Injured':'amber','Injury risk':'amber','Crowded role':'amber','Rookie':'gray','New team':'gray','High value':'matcha','Fade risk':'brick','Sleeper':'blue'};
+const tagHtml=p=>p.tg?`<span class="tag tag-${TAGCOLOR[p.tg]||'gray'}">[${p.tg}]</span>`:'';
 const save=()=>{localStorage.setItem(KEY,JSON.stringify(st));localStorage.setItem(OKEY,JSON.stringify(order))};
 const saveWatch=()=>localStorage.setItem(WKEY,JSON.stringify([...watch]));
 const n1=v=>v==null?'—':(+v).toFixed(1);
@@ -281,11 +290,13 @@ function renderChips(){
   chips(document.getElementById('posF'),['All','QB','RB','WR','TE'],'pos');
   chips(document.getElementById('clsF'),['All','Target','Value','Fade','Fair'],'cls');
   chips(document.getElementById('draftF'),['Available','Taken','My team','Watchlist','All'],'draft');
+  document.getElementById('hideFadesBtn').setAttribute('aria-pressed',f.hideFades);
 }
 function view(){
   let a=B.filter(p=>{
     if(f.pos!=='All'&&p.p!==f.pos)return false;
     if(f.cls!=='All'&&p.c!==f.cls)return false;
+    if(f.hideFades&&p.c==='Fade')return false;
     const s=st[p.r];
     if(f.draft==='Available'&&s)return false;
     if(f.draft==='Taken'&&s!=='taken')return false;
@@ -318,7 +329,7 @@ function render(){
       <td><button class="star" data-mine="${p.r}" aria-pressed="${s==='mine'}" title="My team (M)">★</button></td>
       <td><button class="watch" data-watch="${p.r}" aria-pressed="${w}" title="Watchlist (W)">⚑</button></td>
       <td class="num" style="color:var(--faint)">${p.r}</td>
-      <td><div class="pname">${esc(p.n)}</div><div class="pmeta">${p.t} · ${p.p}${p.pr}</div></td>
+      <td><div class="pname">${esc(p.n)}${tagHtml(p)}</div><div class="pmeta">${p.t} · ${p.p}${p.pr}</div></td>
       <td class="num">${p.ti}</td><td class="num" style="color:var(--matcha);font-weight:600">${n1(p.s)}</td>
       <td class="num">${n1(p.pj)}</td><td class="num">${n1(p.adp)}</td><td class="num">${p.ecr??'—'}</td>
       <td class="num">${p.wk??'—'}</td><td class="num">${p.sw??'—'}</td>
@@ -341,12 +352,12 @@ function render(){
 function renderPanel(mine){
   const av=B.filter(p=>!st[p.r]).slice(0,3);
   document.getElementById('bestAv').innerHTML='<h4 style="color:var(--muted);font-size:12px;margin-bottom:6px">Best available</h4>'+
-    (av.map(p=>`<div class="mrow"><span>${esc(p.n)} <span class="pmeta">${p.p}${p.pr}</span></span><b class="num">${n1(p.pj)}</b></div>`).join('')||'<div class="pmeta">None left</div>');
+    (av.map(p=>`<div class="mrow"><span>${esc(p.n)}${tagHtml(p)} <span class="pmeta">${p.p}${p.pr}</span></span><b class="num">${n1(p.pj)}</b></div>`).join('')||'<div class="pmeta">None left</div>');
 
   const watched=[...watch].map(r=>B.find(p=>p.r===r)).filter(Boolean).sort((a,b)=>a.r-b.r);
   let wh=`<div class="grp"><div class="gh" style="display:flex;justify-content:space-between;align-items:center">
     <span>Watchlist</span>${watched.length?'<button class="btn" id="clearWatch" style="padding:3px 8px;font-size:11px">Clear</button>':''}</div>`;
-  wh+=watched.length?watched.map(p=>`<div class="mrow"><span>${esc(p.n)} <span class="pmeta">${p.p}${p.pr}</span></span><span class="num">${n1(p.pj)} <button class="watch" data-watch="${p.r}" aria-pressed="true" title="Remove" style="margin-left:6px">⚑</button></span></div>`).join('')
+  wh+=watched.length?watched.map(p=>`<div class="mrow"><span>${esc(p.n)}${tagHtml(p)} <span class="pmeta">${p.p}${p.pr}</span></span><span class="num">${n1(p.pj)} <button class="watch" data-watch="${p.r}" aria-pressed="true" title="Remove" style="margin-left:6px">⚑</button></span></div>`).join('')
     :'<p class="pmeta">Flag players to shortlist them before you draft.</p>';
   wh+='</div>';
   document.getElementById('watchBody').innerHTML=wh;
@@ -359,7 +370,7 @@ function renderPanel(mine){
          <div class="mrow"><span>Total projected ppg</span><b class="num">${sum.toFixed(1)}</b></div></div>`;
   ['QB','RB','WR','TE'].forEach(pos=>{
     const g=byOrder.filter(p=>p.p===pos);if(!g.length)return;
-    h+=`<div class="grp"><div class="gh">${pos}</div>`+g.map(p=>`<div class="mrow"><span>${esc(p.n)}</span><span class="num">${n1(p.s)} · ${n1(p.pj)}</span></div>`).join('')+'</div>'});
+    h+=`<div class="grp"><div class="gh">${pos}</div>`+g.map(p=>`<div class="mrow"><span>${esc(p.n)}${tagHtml(p)}</span><span class="num">${n1(p.s)} · ${n1(p.pj)}</span></div>`).join('')+'</div>'});
   document.getElementById('teamBody').innerHTML=h+(byOrder.length?'':'<p class="pmeta" style="margin-top:14px">No players drafted yet. Click the star on a row to add.</p>');
 }
 function setState(r,v){
@@ -373,7 +384,10 @@ function toggleWatch(r){
 }
 document.addEventListener('click',e=>{
   const c=e.target.closest('.chip');
-  if(c){f[c.dataset.k]=c.dataset.v;renderChips();render();return}
+  if(c){
+    if(c.dataset.k==='toggle'){f[c.dataset.v]=!f[c.dataset.v];renderChips();render();return}
+    f[c.dataset.k]=c.dataset.v;renderChips();render();return
+  }
   const tk=e.target.closest('[data-tk]');
   if(tk){const r=+tk.dataset.tk;setState(r,tk.checked?'taken':null);e.stopPropagation();return}
   const mn=e.target.closest('[data-mine]');
