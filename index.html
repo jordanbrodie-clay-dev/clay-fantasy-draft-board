@@ -114,7 +114,11 @@ tr.det td{background:var(--bg);border-bottom:1px solid var(--line2);padding:0}
    its content's min-content, and the two columns here hold very different content
    (wrapping prose vs. short label/value rows), which skewed the split to ~9:1
    instead of the intended 1.6:1 and squeezed the stats column into overlap */
-.det-in{padding:16px 18px;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px}
+/* white-space is inherited — the base tbody td{white-space:nowrap} rule (for short
+   score/ADP/etc. cells) was leaking into every paragraph here, so long text (a full
+   coach quote, a long insight string) rendered as one unbroken line that overflowed
+   straight through the right-hand stats column instead of wrapping */
+.det-in{padding:16px 18px;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px;white-space:normal}
 .det h4{color:var(--muted);font-size:12px;font-weight:500;margin-bottom:5px}
 .det p{margin-bottom:12px}
 .quote{border-left:2px solid var(--matcha-dim);padding-left:12px;color:var(--muted);font-style:italic}
