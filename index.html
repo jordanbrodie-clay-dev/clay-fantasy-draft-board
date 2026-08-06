@@ -166,6 +166,11 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
   tbody tr.pr td:nth-child(15){display:none}
   tr.det{display:block}
   tr.det td{display:block;width:100%;padding:0}
+  /* stack label above value, both left-aligned — space-between overlapped text
+     on narrow screens when a label was long */
+  .kv{display:block;padding:8px 0}
+  .kv span:first-child{display:block;font-size:12px}
+  .kv b{display:block;text-align:left;margin-top:2px}
 }
 </style>
 </head>
