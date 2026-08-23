@@ -114,10 +114,18 @@
       const reachesDecision = conditionalAvailability(player, currentPick, decisionPick);
       const pressure = 1 - survival;
       const penalty = specialistPenalty(player, decisionPick, roster, settings);
+      // Do not pay materially ahead of the multi-source acquisition window. This
+      // keeps elite one-QB profiles from becoming first-round recommendations just
+      // because their above-replacement z-score is large.
+      const reachPicks = Math.max(0, (Number(player.be) || Number(player.spk) || decisionPick) - decisionPick);
+      const reachPenalty = Math.min(3, reachPicks / settings.teams) * 0.55;
+      const historicalHit = Number.isFinite(Number(player.hhr)) ? Number(player.hhr) : 0.5;
+      const evidenceFactor = 0.94 + 0.12 * historicalHit;
       // Urgency (the loss if this position is deferred) drives the decision. Raw
       // player quality is deliberately a small tiebreaker so a late-ADP QB/TE does
       // not jump several rounds simply because its standardized position value is high.
-      const decisionScore = 2.4 * urgency + 0.08 * value * need + 0.25 * pressure + (queue.has(player.id) ? 0.08 : 0) - penalty;
+      const decisionScore = (2.4 * urgency + 0.08 * value * need + 0.25 * pressure) * evidenceFactor
+        + (queue.has(player.id) ? 0.08 : 0) - penalty - reachPenalty;
       const score = decisionScore * (decisionPick === currentPick ? 1 : reachesDecision);
       return {
         player,
@@ -130,9 +138,15 @@
         nextPick,
         laterAlternative: future.likelyAlternative,
         futureValue: future.expected,
+        reachPenalty,
+        historicalHit,
       };
     }).sort((a, b) => b.score - a.score || a.player.r - b.player.r);
-    return { currentPick, decisionPick, nextPick, onClock, recommendations: scored.slice(0, 8) };
+    const positionPlans = ["QB", "RB", "WR", "TE"].map((position) => {
+      const item = scored.find((candidate) => candidate.player.p === position);
+      return item ? { position, ...item } : null;
+    }).filter(Boolean);
+    return { currentPick, decisionPick, nextPick, onClock, recommendations: scored.slice(0, 8), positionPlans };
   }
   function hashNoise(text) {
     let hash = 2166136261;

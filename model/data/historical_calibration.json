@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "generated": "2026-08-22",
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "fold_count": 5,
+    "scoring": "half-PPR points divided by 17 scheduled games",
+    "objective": "expected PPG above replacement at position",
+    "adp_source": "Fantasy Football Calculator PPR, 12-team drafts",
+    "outcome_source": "nflverse seasonal player stats",
+    "replacement_rank": {
+      "QB": 16,
+      "RB": 30,
+      "WR": 36,
+      "TE": 12
+    },
+    "starter_rank": {
+      "QB": 12,
+      "RB": 24,
+      "WR": 30,
+      "TE": 12
+    }
+  },
+  "folds": [
+    {
+      "season": 2020,
+      "matched_players": 172,
+      "drafts": 2403,
+      "players_by_position": {
+        "RB": 63,
+        "WR": 66,
+        "QB": 24,
+        "TE": 19
+      }
+    },
+    {
+      "season": 2021,
+      "matched_players": 179,
+      "drafts": 1709,
+      "players_by_position": {
+        "RB": 64,
+        "WR": 68,
+        "TE": 21,
+        "QB": 26
+      }
+    },
+    {
+      "season": 2022,
+      "matched_players": 146,
+      "drafts": 1633,
+      "players_by_position": {
+        "RB": 53,
+        "WR": 58,
+        "TE": 15,
+        "QB": 20
+      }
+    },
+    {
+      "season": 2023,
+      "matched_players": 177,
+      "drafts": 3146,
+      "players_by_position": {
+        "WR": 74,
+        "RB": 59,
+        "TE": 20,
+        "QB": 24
+      }
+    },
+    {
+      "season": 2024,
+      "matched_players": 177,
+      "drafts": 1371,
+      "players_by_position": {
+        "RB": 59,
+        "WR": 72,
+        "TE": 20,
+        "QB": 26
+      }
+    }
+  ],
+  "replacement_ppg_by_season": {
+    "2020": {
+      "QB": 15.293,
+      "RB": 7.988,
+      "WR": 8.939,
+      "TE": 6.959
+    },
+    "2021": {
+      "QB": 14.116,
+      "RB": 7.988,
+      "WR": 8.371,
+      "TE": 7.353
+    },
+    "2022": {
+      "QB": 13.251,
+      "RB": 8.482,
+      "WR": 8.265,
+      "TE": 6.647
+    },
+    "2023": {
+      "QB": 14.184,
+      "RB": 9.159,
+      "WR": 8.6,
+      "TE": 6.694
+    },
+    "2024": {
+      "QB": 14.973,
+      "RB": 8.465,
+      "WR": 8.659,
+      "TE": 6.612
+    }
+  },
+  "round_position_results": {
+    "QB": {
+      "1-2": {
+        "n": 5,
+        "mean_effective_ppg": 20.524,
+        "mean_vor_ppg": 6.097,
+        "median_vor_ppg": 6.731,
+        "vor_sd": 2.63,
+        "positive_vor_rate": 1.0,
+        "starter_hit_rate": 1.0,
+        "season_losing_rate": 0.0
+      },
+      "3-4": {
+        "n": 13,
+        "mean_effective_ppg": 19.821,
+        "mean_vor_ppg": 5.62,
+        "median_vor_ppg": 6.806,
+        "vor_sd": 4.316,
+        "positive_vor_rate": 0.923,
+        "starter_hit_rate": 0.923,
+        "season_losing_rate": 0.077
+      },
+      "5-6": {
+        "n": 19,
+        "mean_effective_ppg": 16.023,
+        "mean_vor_ppg": 1.605,
+        "median_vor_ppg": 0.636,
+        "vor_sd": 5.054,
+        "positive_vor_rate": 0.579,
+        "starter_hit_rate": 0.474,
+        "season_losing_rate": 0.263
+      },
+      "7-9": {
+        "n": 29,
+        "mean_effective_ppg": 14.073,
+        "mean_vor_ppg": -0.268,
+        "median_vor_ppg": 0.82,
+        "vor_sd": 5.969,
+        "positive_vor_rate": 0.552,
+        "starter_hit_rate": 0.483,
+        "season_losing_rate": 0.379
+      },
+      "10-12": {
+        "n": 28,
+        "mean_effective_ppg": 12.506,
+        "mean_vor_ppg": -1.89,
+        "median_vor_ppg": -0.924,
+        "vor_sd": 4.198,
+        "positive_vor_rate": 0.393,
+        "starter_hit_rate": 0.214,
+        "season_losing_rate": 0.5
+      },
+      "13+": {
+        "n": 26,
+        "mean_effective_ppg": 12.086,
+        "mean_vor_ppg": -2.494,
+        "median_vor_ppg": -1.177,
+        "vor_sd": 5.471,
+        "positive_vor_rate": 0.346,
+        "starter_hit_rate": 0.231,
+        "season_losing_rate": 0.538
+      }
+    },
+    "RB": {
+      "1-2": {
+        "n": 64,
+        "mean_effective_ppg": 12.111,
+        "mean_vor_ppg": 3.761,
+        "median_vor_ppg": 3.897,
+        "vor_sd": 5.023,
+        "positive_vor_rate": 0.797,
+        "starter_hit_rate": 0.734,
+        "season_losing_rate": 0.172
+      },
+      "3-4": {
+        "n": 42,
+        "mean_effective_ppg": 9.762,
+        "mean_vor_ppg": 1.365,
+        "median_vor_ppg": 1.659,
+        "vor_sd": 3.385,
+        "positive_vor_rate": 0.69,
+        "starter_hit_rate": 0.595,
+        "season_losing_rate": 0.238
+      },
+      "5-6": {
+        "n": 37,
+        "mean_effective_ppg": 7.517,
+        "mean_vor_ppg": -0.934,
+        "median_vor_ppg": -0.824,
+        "vor_sd": 4.066,
+        "positive_vor_rate": 0.486,
+        "starter_hit_rate": 0.405,
+        "season_losing_rate": 0.486
+      },
+      "7-9": {
+        "n": 66,
+        "mean_effective_ppg": 6.685,
+        "mean_vor_ppg": -1.71,
+        "median_vor_ppg": -2.45,
+        "vor_sd": 3.409,
+        "positive_vor_rate": 0.333,
+        "starter_hit_rate": 0.242,
+        "season_losing_rate": 0.591
+      },
+      "10-12": {
+        "n": 53,
+        "mean_effective_ppg": 5.53,
+        "mean_vor_ppg": -2.937,
+        "median_vor_ppg": -3.1,
+        "vor_sd": 3.403,
+        "positive_vor_rate": 0.17,
+        "starter_hit_rate": 0.132,
+        "season_losing_rate": 0.736
+      },
+      "13+": {
+        "n": 36,
+        "mean_effective_ppg": 5.07,
+        "mean_vor_ppg": -3.298,
+        "median_vor_ppg": -3.721,
+        "vor_sd": 3.172,
+        "positive_vor_rate": 0.194,
+        "starter_hit_rate": 0.111,
+        "season_losing_rate": 0.778
+      }
+    },
+    "WR": {
+      "1-2": {
+        "n": 47,
+        "mean_effective_ppg": 12.465,
+        "mean_vor_ppg": 3.896,
+        "median_vor_ppg": 3.865,
+        "vor_sd": 3.908,
+        "positive_vor_rate": 0.83,
+        "starter_hit_rate": 0.766,
+        "season_losing_rate": 0.085
+      },
+      "3-4": {
+        "n": 57,
+        "mean_effective_ppg": 10.21,
+        "mean_vor_ppg": 1.629,
+        "median_vor_ppg": 2.285,
+        "vor_sd": 3.238,
+        "positive_vor_rate": 0.719,
+        "starter_hit_rate": 0.667,
+        "season_losing_rate": 0.193
+      },
+      "5-6": {
+        "n": 52,
+        "mean_effective_ppg": 8.228,
+        "mean_vor_ppg": -0.345,
+        "median_vor_ppg": 0.125,
+        "vor_sd": 3.278,
+        "positive_vor_rate": 0.519,
+        "starter_hit_rate": 0.442,
+        "season_losing_rate": 0.404
+      },
+      "7-9": {
+        "n": 70,
+        "mean_effective_ppg": 7.623,
+        "mean_vor_ppg": -0.936,
+        "median_vor_ppg": -1.131,
+        "vor_sd": 3.436,
+        "positive_vor_rate": 0.4,
+        "starter_hit_rate": 0.314,
+        "season_losing_rate": 0.514
+      },
+      "10-12": {
+        "n": 63,
+        "mean_effective_ppg": 6.49,
+        "mean_vor_ppg": -2.069,
+        "median_vor_ppg": -2.835,
+        "vor_sd": 3.331,
+        "positive_vor_rate": 0.27,
+        "starter_hit_rate": 0.222,
+        "season_losing_rate": 0.651
+      },
+      "13+": {
+        "n": 49,
+        "mean_effective_ppg": 4.806,
+        "mean_vor_ppg": -3.814,
+        "median_vor_ppg": -3.992,
+        "vor_sd": 2.679,
+        "positive_vor_rate": 0.102,
+        "starter_hit_rate": 0.061,
+        "season_losing_rate": 0.837
+      }
+    },
+    "TE": {
+      "1-2": {
+        "n": 5,
+        "mean_effective_ppg": 11.968,
+        "mean_vor_ppg": 4.967,
+        "median_vor_ppg": 5.4,
+        "vor_sd": 3.605,
+        "positive_vor_rate": 0.8,
+        "starter_hit_rate": 0.8,
+        "season_losing_rate": 0.2
+      },
+      "3-4": {
+        "n": 12,
+        "mean_effective_ppg": 8.189,
+        "mean_vor_ppg": 1.374,
+        "median_vor_ppg": 1.962,
+        "vor_sd": 1.826,
+        "positive_vor_rate": 0.75,
+        "starter_hit_rate": 0.75,
+        "season_losing_rate": 0.167
+      },
+      "5-6": {
+        "n": 13,
+        "mean_effective_ppg": 8.091,
+        "mean_vor_ppg": 1.261,
+        "median_vor_ppg": 0.071,
+        "vor_sd": 3.423,
+        "positive_vor_rate": 0.538,
+        "starter_hit_rate": 0.538,
+        "season_losing_rate": 0.308
+      },
+      "7-9": {
+        "n": 22,
+        "mean_effective_ppg": 6.189,
+        "mean_vor_ppg": -0.676,
+        "median_vor_ppg": -0.226,
+        "vor_sd": 1.967,
+        "positive_vor_rate": 0.364,
+        "starter_hit_rate": 0.409,
+        "season_losing_rate": 0.318
+      },
+      "10-12": {
+        "n": 19,
+        "mean_effective_ppg": 6.335,
+        "mean_vor_ppg": -0.49,
+        "median_vor_ppg": -0.553,
+        "vor_sd": 2.558,
+        "positive_vor_rate": 0.368,
+        "starter_hit_rate": 0.421,
+        "season_losing_rate": 0.421
+      },
+      "13+": {
+        "n": 24,
+        "mean_effective_ppg": 5.403,
+        "mean_vor_ppg": -1.52,
+        "median_vor_ppg": -1.443,
+        "vor_sd": 2.706,
+        "positive_vor_rate": 0.292,
+        "starter_hit_rate": 0.333,
+        "season_losing_rate": 0.542
+      }
+    }
+  },
+  "availability": {
+    "RB": {
+      "n": 298,
+      "stdev_per_sqrt_adp_median": 0.785,
+      "stdev_per_sqrt_adp_p75": 0.915
+    },
+    "WR": {
+      "n": 338,
+      "stdev_per_sqrt_adp_median": 0.746,
+      "stdev_per_sqrt_adp_p75": 0.895
+    },
+    "QB": {
+      "n": 120,
+      "stdev_per_sqrt_adp_median": 1.021,
+      "stdev_per_sqrt_adp_p75": 1.21
+    },
+    "TE": {
+      "n": 95,
+      "stdev_per_sqrt_adp_median": 1.049,
+      "stdev_per_sqrt_adp_p75": 1.457
+    }
+  }
+}

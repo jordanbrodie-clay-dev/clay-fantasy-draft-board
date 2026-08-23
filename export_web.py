@@ -66,6 +66,8 @@ def main():
             "ep": p.get("edge_pts_per_game"), "cf": p["confidence"],
             "zv": p.get("z_vor"), "rp": p.get("replacement_ppg"), "psd": p.get("position_ppg_sd"),
             "spk": p.get("smart_pick"), "asd": p.get("availability_sd"), "mpr": p.get("market_pos_rank"),
+            "cp": p.get("consensus_pick"), "be": p.get("buy_early"), "bl": p.get("buy_late"),
+            "hhr": p.get("historical_hit_rate"), "hvor": p.get("historical_vor_ppg"), "hn": p.get("historical_sample"),
             "spec": bool(p.get("specialist")),
             "p90": sp.get("p90"), "sw": sp.get("spike_weeks"), "g": sp.get("games"), "bw": sp.get("best"),
             "ppg": wa.get("ppg"), "cont": p.get("contingency_ppg"),

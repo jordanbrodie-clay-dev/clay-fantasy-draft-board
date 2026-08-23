@@ -12,7 +12,7 @@ This makes player quality comparable across positions. It is deliberately **not*
 
 ## Draft optimization
 
-`optimize_draft_board.mjs` creates the market-aware static board. It starts at Sleeper half-PPR ADP and makes a bounded adjustment when the model and market disagree within a position. This keeps Josh Allen's QB1 quality visible without presenting him as a first-round pick.
+`optimize_draft_board.mjs` creates the market-aware static board. It blends Sleeper ADP, ECR, and Winks (weighted 1.5×), then makes a bounded adjustment when the model and market disagree within a position. Sleeper remains the availability distribution. This keeps Josh Allen's QB1 quality visible without presenting him as a first-round pick.
 
 `draft-engine.js` handles live decisions. For every candidate it estimates:
 
@@ -22,6 +22,10 @@ This makes player quality comparable across positions. It is deliberately **not*
 4. Whether the current roster still needs a starter, flex option, or only bench depth.
 
 Position-drop urgency is the main decision signal; raw player quality is only a tiebreaker. K and D/ST use Sleeper ADP and are strongly deferred until the final three rounds unless roster settings require otherwise.
+
+## Historical calibration
+
+`calibrate_strategy.py` joins Fantasy Football Calculator preseason PPR ADP to nflverse regular-season outcomes for five completed folds (2020–2024). The committed calibration contains 851 matched player-seasons. Outcomes use half-PPR points divided by 17 scheduled games so missed time remains part of the draft result. It estimates position-by-round starter hit rates and position-specific ADP dispersion; those priors inform acquisition windows and future availability while current player projections still drive the decision.
 
 ## Refresh pipeline
 

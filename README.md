@@ -20,11 +20,11 @@ Three Clay workflows, authored from the command line with the Clay CLI:
 
 Scoring: six weighted buckets (opportunity, production, situation, efficiency, market, regression) × a risk multiplier determine player quality within position. Standardized value above replacement is one input. The published Smart Rank is anchored to Sleeper ADP, while the live recommendation engine optimizes expected completed-roster value using current roster need, positional cliffs, and the probability each player survives to the user's next pick.
 
-Backtested against five seasons of real preseason ADP (2020–2025).
+Calibrated against five completed seasons of real preseason ADP and outcomes (2020–2024; 851 matched player-seasons).
 
 ## Columns worth knowing
 
-- **Smart rank** — market-aware default rank. It respects Sleeper draft cost and applies only bounded adjustments for the model's within-position opinion.
+- **Smart rank** — market-aware default rank. It blends Sleeper and ECR with a 1.5× Winks anchor, then applies only bounded adjustments for the model's within-position opinion.
 - **Quality rank** — raw player-quality order before draft cost. Useful diagnostically; it is not an instruction to reach multiple rounds.
 - **Value (σ)** — expected PPG above the position-specific replacement baseline, standardized by that position's expected-PPG spread.
 - **Positional score** — how strong the profile is *versus his own position*. 50 = positional average.
