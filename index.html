@@ -4,21 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Clay (Unofficial) Fantasy Football Draft Board</title>
-<meta name="description" content="200 players scored by a model built on Clay workflows. 2026 half-PPR redraft. Draft live from the board.">
+<meta name="description" content="Market-aware 2026 half-PPR rankings and a smart draft simulator built on Clay research, Sleeper ADP, future availability, and roster construction.">
 <meta name="author" content="Jordan Brodie">
 <link rel="canonical" href="https://jordanbrodie-clay-dev.github.io/clay-fantasy-draft-board/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Clay (Unofficial) Fantasy Football Draft Board">
 <meta property="og:title" content="Clay (Unofficial) Fantasy Football Draft Board">
-<meta property="og:description" content="200 players scored by Clay workflows and ranked by standard deviations of expected PPG above replacement at position. Draft live from the board.">
+<meta property="og:description" content="Market-aware rankings and a smart draft simulator that weighs player quality, roster construction, positional cliffs, and future availability.">
 <meta property="og:url" content="https://jordanbrodie-clay-dev.github.io/clay-fantasy-draft-board/">
 <meta property="og:image" content="https://jordanbrodie-clay-dev.github.io/clay-fantasy-draft-board/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Clay (Unofficial) Fantasy Football Draft Board — 200 players, 28 targets, 22 fades, 17 values.">
+<meta property="og:image:alt" content="Clay (Unofficial) Fantasy Football Draft Board — market-aware rankings and smart draft simulator.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Clay (Unofficial) Fantasy Football Draft Board">
-<meta name="twitter:description" content="200 players scored by a model built on Clay workflows. Draft live from the board.">
+<meta name="twitter:description" content="Market-aware rankings and live recommendations based on roster construction, positional cliffs, and future availability.">
 <meta name="twitter:image" content="https://jordanbrodie-clay-dev.github.io/clay-fantasy-draft-board/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -132,6 +132,20 @@ tr.det td{background:var(--bg);border-bottom:1px solid var(--line2);padding:0}
 .grp{margin-top:16px}
 .grp .gh{color:var(--matcha);font-size:12px;font-weight:600;margin-bottom:6px}
 .mrow{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--line);font-size:13px}
+.draftroom{background:linear-gradient(135deg,rgba(127,176,105,.10),rgba(107,143,199,.05));border:1px solid var(--matcha-dim);border-radius:14px;padding:18px;margin:20px 0 12px}
+.drafttop{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.drafttop h2{font-size:20px;font-weight:600}.drafttop p{color:var(--muted);margin-top:3px}
+.recgrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:14px;margin-top:14px}
+.recmain,.reclist{background:rgba(14,13,18,.72);border:1px solid var(--line2);border-radius:11px;padding:14px}
+.eyebrow{color:var(--matcha);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+.recname{font-size:25px;font-weight:600;margin-top:4px}.recwhy{color:var(--muted);margin-top:8px;max-width:700px}
+.recmetrics{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}.recmetric b{display:block;font-size:17px}.recmetric span{color:var(--faint);font-size:11px}
+.recline{display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:9px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.recline:last-child{border-bottom:0}.recline .rank{color:var(--faint)}
+.draftbadge{display:inline-flex;align-items:center;border-radius:999px;padding:4px 9px;font-size:11px;font-weight:600;background:rgba(127,176,105,.13);color:var(--matcha);border:1px solid rgba(127,176,105,.35)}
+.settings-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.field label{display:block;color:var(--muted);font-size:12px;margin-bottom:4px}.field input{width:100%;background:var(--bg);border:1px solid var(--line2);border-radius:8px;padding:9px;color:var(--text);font:inherit}
+.queue-actions{display:flex;gap:3px}.mini{padding:3px 7px;font-size:11px}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:80;display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow:auto}
 .modal.on{display:flex}
 .mbox{background:var(--surface);border:1px solid var(--line2);border-radius:14px;max-width:840px;width:100%;padding:28px}
@@ -148,7 +162,7 @@ tr.det td{background:var(--bg);border-bottom:1px solid var(--line2);padding:0}
 .ref li{color:var(--muted);font-size:13px;margin:7px 0 0 18px}
 footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px solid var(--line)}
 @media(max-width:900px){
-  .tiles{grid-template-columns:1fr 1fr}.det-in{grid-template-columns:1fr}.steps{grid-template-columns:1fr}
+  .tiles{grid-template-columns:1fr 1fr}.det-in{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.recgrid{grid-template-columns:1fr}.settings-grid{grid-template-columns:1fr 1fr}
   .panel{width:100%}
   thead{display:none}
   table,tbody{display:block}
@@ -188,7 +202,7 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
     <div>
       <div class="kick">Clay workflows · Redraft</div>
       <h1>Clay (Unofficial) Fantasy Football Draft Board</h1>
-      <p class="sub">200 players scored by a model built on Clay workflows · 2026 half-PPR redraft</p>
+      <p class="sub">Market-aware rankings + smart draft simulator · 2026 half-PPR redraft</p>
       <p class="byline">Jordan Brodie</p>
       <div class="counts">
         <span><b class="pos" id="cT">0</b> Targets</span>
@@ -197,9 +211,10 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
       </div>
     </div>
     <div class="hactions">
-      <span class="pill"><span id="dcount">0</span> of 200 drafted</span>
-      <button class="btn" id="watchBtn">Watchlist (<span id="watchN">0</span>)</button>
+      <span class="pill"><span id="dcount">0</span> of <span id="playerN">240</span> drafted</span>
+      <button class="btn" id="queueBtn">Queue (<span id="queueN">0</span>)</button>
       <button class="btn" id="teamBtn">My team (<span id="mineN">0</span>)</button>
+      <button class="btn" id="settingsBtn">League settings</button>
       <button class="btn" id="resetBtn">Reset draft</button>
       <button class="btn-primary" id="aboutBtn"><span aria-hidden="true">◆</span> About this build</button>
     </div>
@@ -213,35 +228,42 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
   <div class="chips"><button class="chip" id="hideFadesBtn" data-k="toggle" data-v="hideFades">Hide fades</button></div>
   <div class="chips" id="draftF"></div>
   <select id="sort">
-    <option value="r">Sort: Clay draft rank</option>
+    <option value="r">Sort: Smart draft rank</option>
     <option value="zv">Sort: Value above replacement (σ)</option>
     <option value="s">Sort: Positional score</option>
     <option value="adp">Sort: ADP</option>
-    <option value="ep">Sort: Edge vs ADP</option>
+    <option value="qr">Sort: Raw quality rank</option>
     <option value="pj">Sort: Projected ppg</option>
     <option value="p90">Sort: Ceiling</option>
   </select>
 </div></div></div>
 
 <div class="wrap">
+  <section class="draftroom" aria-live="polite">
+    <div class="drafttop">
+      <div><div class="eyebrow">Smart draft room</div><h2 id="clockTitle">Loading draft state…</h2><p id="clockSub"></p></div>
+      <div class="hactions"><button class="btn" id="simBtn">Simulate to my pick</button><button class="btn" id="roomSettingsBtn">Edit league</button></div>
+    </div>
+    <div class="recgrid" id="recommendationBody"></div>
+  </section>
   <div class="tiles">
-    <div class="tile"><div class="lbl">Total players</div><div class="val num" id="tTotal">200</div></div>
+    <div class="tile"><div class="lbl">Total players</div><div class="val num" id="tTotal">240</div></div>
     <div class="tile"><div class="lbl">Targets</div><div class="val num pos" id="tTar">0</div></div>
     <div class="tile"><div class="lbl">Fades</div><div class="val num neg" id="tFade">0</div></div>
     <div class="tile"><div class="lbl">Avg projected ppg, top 24</div><div class="val num" style="color:var(--matcha)" id="tPpg">0</div></div>
   </div>
-  <p class="hint"><span class="chev">▸</span> Click any player for insights, coach quotes, and ceiling data</p>
+  <p class="hint"><span class="chev">▸</span> Smart rank respects market cost. Quality rank isolates the underlying model. Click a player for details.</p>
   <div class="tablewrap"><table>
     <thead><tr>
-      <th>Taken</th><th>Mine</th><th>Watch</th>
-      <th>Clay rank<span class="i" title="Where to actually draft him overall. Positional order anchors to expert consensus; cross-position order optimizes standard deviations of expected PPG above replacement.">i</span></th>
+      <th>Taken</th><th>Mine</th><th>Queue</th>
+      <th>Smart rank<span class="i" title="Market-aware default rank. It combines Sleeper draft cost with the model's within-position opinion, avoiding unnecessary reaches.">i</span></th>
       <th>Player</th><th>Tier</th>
       <th>Positional score<span class="i" title="How strong this player's profile is compared to others at his own position. 50 is positional average, 100 is best in class. It does NOT account for positional scarcity.">i</span></th>
-      <th>Proj ppg</th><th>ADP</th><th>ECR</th><th>Winks</th><th>Spike wks</th><th>Value (σ)<span class="i" title="Projected PPG above the replacement player at this position, divided by the within-position standard deviation of projected PPG. This is the model's cross-position optimization objective.">i</span></th><th>Class</th><th>Conf</th><th></th>
+      <th>Proj ppg</th><th>Sleeper ADP</th><th>ECR</th><th>Quality rank<span class="i" title="Raw model-quality order before draft cost and future availability. This is diagnostic, not a recommendation to take the player here.">i</span></th><th>There next pick<span class="i" title="Estimated chance the player is still available at your next selection, conditional on being available now.">i</span></th><th>Value (σ)<span class="i" title="Projected PPG above the replacement player at this position, divided by the within-position standard deviation of projected PPG. One input to the decision engine, not the draft order.">i</span></th><th>Class</th><th>Conf</th><th></th>
     </tr></thead>
     <tbody id="tb"></tbody>
   </table></div>
-  <footer>Model positional ranks anchor to expert consensus; the overall board optimizes standard deviations of projected PPG above replacement at position. Unofficial and just for fun — not affiliated with the NFL.</footer>
+  <footer>Recommendations combine model quality, Sleeper market cost, roster construction, positional cliffs, and future availability. K/DST use simple Sleeper ADP and late-round rules. Unofficial and just for fun — not affiliated with the NFL.</footer>
 </div>
 
 <div class="panel" id="panel">
@@ -249,9 +271,30 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
     <h3>Draft panel</h3><button class="btn" id="closePanel">Close</button>
   </div>
   <div class="best" id="bestAv"></div>
-  <div id="watchBody"></div>
+  <div id="queueBody"></div>
   <div id="teamBody"></div>
 </div>
+
+<div class="modal" id="settingsModal"><div class="mbox" style="max-width:720px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div><h2>League and roster settings</h2><p style="color:var(--muted);margin-top:6px">These settings drive snake turns, roster need, specialist timing, and the completed-roster objective.</p></div>
+    <button class="btn" id="closeSettings">Close</button>
+  </div>
+  <div class="settings-grid">
+    <div class="field"><label for="setTeams">Teams</label><input id="setTeams" type="number" min="4" max="20"></div>
+    <div class="field"><label for="setSlot">Your draft slot</label><input id="setSlot" type="number" min="1" max="20"></div>
+    <div class="field"><label for="setQB">QB starters</label><input id="setQB" type="number" min="0" max="3"></div>
+    <div class="field"><label for="setRB">RB starters</label><input id="setRB" type="number" min="0" max="5"></div>
+    <div class="field"><label for="setWR">WR starters</label><input id="setWR" type="number" min="0" max="6"></div>
+    <div class="field"><label for="setTE">TE starters</label><input id="setTE" type="number" min="0" max="3"></div>
+    <div class="field"><label for="setFLEX">FLEX (RB/WR/TE)</label><input id="setFLEX" type="number" min="0" max="4"></div>
+    <div class="field"><label for="setK">Kicker</label><input id="setK" type="number" min="0" max="2"></div>
+    <div class="field"><label for="setDEF">D/ST</label><input id="setDEF" type="number" min="0" max="2"></div>
+    <div class="field"><label for="setBENCH">Bench</label><input id="setBENCH" type="number" min="0" max="15"></div>
+  </div>
+  <label style="display:flex;gap:8px;align-items:center;margin-top:16px;color:var(--muted)"><input id="setSnake" type="checkbox"> Snake draft</label>
+  <div class="hactions" style="margin-top:20px"><button class="btn-primary" id="saveSettings">Save settings</button><button class="btn" id="defaultSettings">Restore 12-team default</button></div>
+</div></div>
 
 <div class="modal" id="modal"><div class="mbox">
   <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -263,14 +306,15 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
     <span class="fnode">Workflows</span><span class="arw">→</span>
     <span class="fnode">Structured data</span><span class="arw">→</span>
     <span class="fnode">Qualitative signal</span><span class="arw">→</span>
-    <span class="fnode">Score + σ VOR</span><span class="arw">→</span>
-    <span class="fnode">Board</span>
+    <span class="fnode">Player quality</span><span class="arw">→</span>
+    <span class="fnode">Market + roster optimizer</span><span class="arw">→</span>
+    <span class="fnode">Smart pick</span>
   </div>
   <div class="steps">
     <div class="step"><h5><span class="snum">1</span>Author workflows from the CLI</h5><p>Used the Clay CLI to create multi-node workflows programmatically instead of clicking through a UI. Three workflows: player research, team environment, and coach sentiment.</p></div>
     <div class="step"><h5><span class="snum">2</span>Pull structured data via API</h5><p>Each workflow chains search → scrape → structured extraction, returning typed JSON with a source URL for every value. 200 players enriched with 2025 usage, efficiency, Vegas props, and injury history. A second workflow built all 32 team environments: Vegas win totals, offensive line ranks, coaching changes, and vacated carries and targets.</p></div>
     <div class="step"><h5><span class="snum">3</span>Add qualitative signal</h5><p>A third workflow reads player news, beat reporting, and direct coach quotes, then grades role language. Critically it separates concrete role statements ("he'll be our starter", "first-team reps") from generic August coachspeak ("he's looked great") — only the specific kind is allowed to move a score. Generic praise is flagged and scored zero.</p></div>
-    <div class="step"><h5><span class="snum">4</span>Score, then pressure-test</h5><p>Six weighted buckets (opportunity, production, situation, efficiency, market, regression) times a risk multiplier determine the positional order. The overall board then optimizes projected PPG above replacement, measured in standard deviations within each position.</p></div>
+    <div class="step"><h5><span class="snum">4</span>Optimize the completed roster</h5><p>Standardized value above replacement measures player quality, but it does not set the draft order by itself. Smart rank anchors to Sleeper cost. At each live pick, the simulator compares the current player with the expected pool at your next turn, then applies roster need and the projected positional cliff.</p></div>
   </div>
   <div class="ref">
     <h4 style="font-size:16px;font-weight:600;margin-bottom:4px">How it was refined</h4>
@@ -280,158 +324,14 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
       <li>Modeled same-team competition for touches, so a crowded backfield or receiver room is priced rather than assumed away.</li>
       <li>Added spike-week ceiling data after testing showed spike magnitude predicts future value while spike frequency is already priced in by the market.</li>
       <li>Every row carries a confidence grade from A to D based on how much verified data actually supports it, so a well-sourced rank and a thin one don't look identical.</li>
+      <li>Kickers and defenses use Sleeper ADP with a late-round defer rule. They complete the roster model without pretending those volatile positions deserve the same research spend as RB, WR, QB, and TE.</li>
     </ul>
   </div>
   <p style="color:var(--faint);font-style:italic;margin-top:18px;font-size:13px">Unofficial and just for fun. Not affiliated with the NFL. Clay is where I work, and this is what happens when you point workflow tooling at a hobby.</p>
 </div></div>
 
 <script src="board.js"></script>
-<script>
-const B=window.BOARD, KEY='clay-board-draft', OKEY='clay-board-order', WKEY='clay-board-watch';
-let st=JSON.parse(localStorage.getItem(KEY)||'{}');
-let order=JSON.parse(localStorage.getItem(OKEY)||'[]');
-let watch=new Set(JSON.parse(localStorage.getItem(WKEY)||'[]'));
-let f={pos:'All',cls:'All',draft:'Available',q:'',sort:'r',hideFades:false}, open=new Set();
-const TAGCOLOR={'Injured':'amber','Injury risk':'amber','Crowded role':'amber','Rookie':'gray','New team':'gray','High value':'matcha','Fade risk':'brick','Sleeper':'blue'};
-const tagHtml=p=>p.tg?`<span class="tag tag-${TAGCOLOR[p.tg]||'gray'}">[${p.tg}]</span>`:'';
-const save=()=>{localStorage.setItem(KEY,JSON.stringify(st));localStorage.setItem(OKEY,JSON.stringify(order))};
-const saveWatch=()=>localStorage.setItem(WKEY,JSON.stringify([...watch]));
-const n1=v=>v==null?'—':(+v).toFixed(1);
-const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-
-function chips(el,vals,key){el.innerHTML=vals.map(v=>`<button class="chip" data-k="${key}" data-v="${v}" aria-pressed="${f[key]===v}">${v}</button>`).join('')}
-function renderChips(){
-  chips(document.getElementById('posF'),['All','QB','RB','WR','TE'],'pos');
-  chips(document.getElementById('clsF'),['All','Target','Value','Fade','Fair'],'cls');
-  chips(document.getElementById('draftF'),['Available','Taken','My team','Watchlist','All'],'draft');
-  document.getElementById('hideFadesBtn').setAttribute('aria-pressed',f.hideFades);
-}
-function view(){
-  let a=B.filter(p=>{
-    if(f.pos!=='All'&&p.p!==f.pos)return false;
-    if(f.cls!=='All'&&p.c!==f.cls)return false;
-    if(f.hideFades&&p.c==='Fade')return false;
-    const s=st[p.r];
-    if(f.draft==='Available'&&s)return false;
-    if(f.draft==='Taken'&&s!=='taken')return false;
-    if(f.draft==='My team'&&s!=='mine')return false;
-    if(f.draft==='Watchlist'&&!watch.has(p.r))return false;
-    if(f.q){const t=(p.n+' '+p.t+' '+p.p).toLowerCase();if(!t.includes(f.q.toLowerCase()))return false}
-    return true});
-  const k=f.sort, asc=(k==='r'||k==='adp'||k==='ecr');
-  a.sort((x,y)=>{let u=x[k],v=y[k];if(u==null)u=asc?1e9:-1e9;if(v==null)v=asc?1e9:-1e9;return asc?u-v:v-u});
-  return a;
-}
-function render(){
-  const rows=view(), tb=document.getElementById('tb');
-  tb.innerHTML=rows.map(p=>{
-    const s=st[p.r], w=watch.has(p.r), cl=['pr',s==='taken'?'taken':'',s==='mine'?'mine':'',open.has(p.r)?'open':''].join(' ');
-    const det=open.has(p.r)?`<tr class="det"><td colspan="16"><div class="det-in">
-      <div><h4>Insights</h4><p>${esc(p.i)}</p>
-      ${p.d?`<h4>Draft note</h4><p>${esc(p.d)}</p>`:''}
-      ${p.sq?`<h4>Coach quote</h4><p class="quote">${esc(p.sq)}</p>`:''}
-      ${p.hc?`<h4>Signal check</h4><p style="color:var(--muted)">${esc(p.hc)}</p>`:''}</div>
-      <div><div class="kv"><span>Ceiling (90th pct week)</span><b class="num">${n1(p.p90)}</b></div>
-      <div class="kv"><span>Best week</span><b class="num">${n1(p.bw)}</b></div>
-      <div class="kv"><span>Spike weeks</span><b class="num">${p.sw==null?'—':p.sw+' / '+p.g}</b></div>
-      <div class="kv"><span>2025 ppg</span><b class="num">${n1(p.ppg)}</b></div>
-      <div class="kv"><span>Replacement ppg</span><b class="num">${n1(p.rp)}</b></div>
-      <div class="kv"><span>Value above replacement</span><b class="num">${p.zv==null?'—':p.zv.toFixed(2)+'σ'}</b></div>
-      ${p.cont?`<div class="kv"><span>Contingency ppg</span><b class="num">${n1(p.cont)}</b></div>`:''}
-      <div class="kv"><span>Coach role language</span><b>${esc(p.rl||'no signal')}</b></div>
-      <div class="kv"><span>Data confidence</span><b>${p.cf}</b></div></div></div></td></tr>`:'';
-    return `<tr class="${cl}" data-r="${p.r}" tabindex="0">
-      <td><input type="checkbox" class="tk" data-tk="${p.r}" ${s==='taken'?'checked':''} aria-label="Taken"></td>
-      <td><button class="star" data-mine="${p.r}" aria-pressed="${s==='mine'}" title="My team (M)">★</button></td>
-      <td><button class="watch" data-watch="${p.r}" aria-pressed="${w}" title="Watchlist (W)">⚑</button></td>
-      <td class="num" style="color:var(--faint)">${p.r}</td>
-      <td><div class="pname">${esc(p.n)}${tagHtml(p)}</div><div class="pmeta">${p.t} · ${p.p}${p.pr}</div></td>
-      <td class="num">${p.ti}</td><td class="num" style="color:var(--matcha);font-weight:600">${n1(p.s)}</td>
-      <td class="num">${n1(p.pj)}</td><td class="num">${n1(p.adp)}</td><td class="num">${p.ecr??'—'}</td>
-      <td class="num">${p.wk??'—'}</td><td class="num">${p.sw??'—'}</td>
-      <td class="num ${p.zv>0?'pos':p.zv<0?'neg':''}">${p.zv==null?'—':p.zv.toFixed(2)+'σ'}</td>
-      <td><span class="badge b-${p.c}">${p.c}</span></td>
-      <td><span class="cf cf-${p.cf}">${p.cf}</span></td>
-      <td><span class="chev">▸</span></td></tr>${det}`}).join('');
-  const mine=B.filter(p=>st[p.r]==='mine'), tk=Object.keys(st).length;
-  document.getElementById('mineN').textContent=mine.length;
-  document.getElementById('watchN').textContent=watch.size;
-  document.getElementById('dcount').textContent=tk;
-  const cnt=c=>B.filter(p=>p.c===c).length;
-  document.getElementById('cT').textContent=cnt('Target');document.getElementById('cV').textContent=cnt('Value');
-  document.getElementById('cF').textContent=cnt('Fade');
-  document.getElementById('tTar').textContent=cnt('Target');document.getElementById('tFade').textContent=cnt('Fade');
-  const top24=B.slice(0,24).map(p=>p.pj).filter(v=>v!=null);
-  document.getElementById('tPpg').textContent=(top24.reduce((a,b)=>a+b,0)/top24.length).toFixed(1);
-  renderPanel(mine);
-}
-function renderPanel(mine){
-  const av=B.filter(p=>!st[p.r]).slice(0,3);
-  document.getElementById('bestAv').innerHTML='<h4 style="color:var(--muted);font-size:12px;margin-bottom:6px">Best available</h4>'+
-    (av.map(p=>`<div class="mrow"><span>${esc(p.n)}${tagHtml(p)} <span class="pmeta">${p.p}${p.pr}</span></span><b class="num">${n1(p.pj)}</b></div>`).join('')||'<div class="pmeta">None left</div>');
-
-  const watched=[...watch].map(r=>B.find(p=>p.r===r)).filter(Boolean).sort((a,b)=>a.r-b.r);
-  let wh=`<div class="grp"><div class="gh" style="display:flex;justify-content:space-between;align-items:center">
-    <span>Watchlist</span>${watched.length?'<button class="btn" id="clearWatch" style="padding:3px 8px;font-size:11px">Clear</button>':''}</div>`;
-  wh+=watched.length?watched.map(p=>`<div class="mrow"><span>${esc(p.n)}${tagHtml(p)} <span class="pmeta">${p.p}${p.pr}</span></span><span class="num">${n1(p.pj)} <button class="watch" data-watch="${p.r}" aria-pressed="true" title="Remove" style="margin-left:6px">⚑</button></span></div>`).join('')
-    :'<p class="pmeta">Flag players to shortlist them before you draft.</p>';
-  wh+='</div>';
-  document.getElementById('watchBody').innerHTML=wh;
-
-  const byOrder=order.filter(r=>st[r]==='mine').map(r=>B.find(p=>p.r===r)).filter(Boolean);
-  const counts={};byOrder.forEach(p=>counts[p.p]=(counts[p.p]||0)+1);
-  const sum=byOrder.reduce((a,p)=>a+(p.pj||0),0);
-  let h=`<div class="grp"><div class="gh">My team</div>
-         <div class="mrow"><span>Roster</span><b>${['QB','RB','WR','TE'].map(k=>k+' '+(counts[k]||0)).join(' · ')}</b></div>
-         <div class="mrow"><span>Total projected ppg</span><b class="num">${sum.toFixed(1)}</b></div></div>`;
-  ['QB','RB','WR','TE'].forEach(pos=>{
-    const g=byOrder.filter(p=>p.p===pos);if(!g.length)return;
-    h+=`<div class="grp"><div class="gh">${pos}</div>`+g.map(p=>`<div class="mrow"><span>${esc(p.n)}${tagHtml(p)}</span><span class="num">${n1(p.s)} · ${n1(p.pj)}</span></div>`).join('')+'</div>'});
-  document.getElementById('teamBody').innerHTML=h+(byOrder.length?'':'<p class="pmeta" style="margin-top:14px">No players drafted yet. Click the star on a row to add.</p>');
-}
-function setState(r,v){
-  if(v)st[r]=v;else delete st[r];
-  if(v==='mine'){if(!order.includes(r))order.push(r)}else{order=order.filter(x=>x!==r)}
-  save();render();
-}
-function toggleWatch(r){
-  watch.has(r)?watch.delete(r):watch.add(r);
-  saveWatch();render();
-}
-document.addEventListener('click',e=>{
-  const c=e.target.closest('.chip');
-  if(c){
-    if(c.dataset.k==='toggle'){f[c.dataset.v]=!f[c.dataset.v];renderChips();render();return}
-    f[c.dataset.k]=c.dataset.v;renderChips();render();return
-  }
-  const tk=e.target.closest('[data-tk]');
-  if(tk){const r=+tk.dataset.tk;setState(r,tk.checked?'taken':null);e.stopPropagation();return}
-  const mn=e.target.closest('[data-mine]');
-  if(mn){const r=+mn.dataset.mine;setState(r,st[r]==='mine'?null:'mine');e.stopPropagation();return}
-  const wt=e.target.closest('[data-watch]');
-  if(wt){toggleWatch(+wt.dataset.watch);e.stopPropagation();return}
-  if(e.target.id==='clearWatch'){watch=new Set();saveWatch();render();return}
-  const row=e.target.closest('tr.pr');
-  if(row){const r=+row.dataset.r;open.has(r)?open.delete(r):open.add(r);render();return}
-});
-document.getElementById('q').addEventListener('input',e=>{f.q=e.target.value;render()});
-document.getElementById('sort').addEventListener('change',e=>{f.sort=e.target.value;render()});
-document.getElementById('teamBtn').onclick=()=>document.getElementById('panel').classList.add('on');
-document.getElementById('watchBtn').onclick=()=>document.getElementById('panel').classList.add('on');
-document.getElementById('closePanel').onclick=()=>document.getElementById('panel').classList.remove('on');
-document.getElementById('aboutBtn').onclick=()=>document.getElementById('modal').classList.add('on');
-document.getElementById('closeModal').onclick=()=>document.getElementById('modal').classList.remove('on');
-document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')e.currentTarget.classList.remove('on')});
-document.getElementById('resetBtn').onclick=()=>{if(confirm('Clear all draft picks? (Watchlist is kept.)')){st={};order=[];save();render()}};
-document.addEventListener('keydown',e=>{
-  if(e.key==='Escape'){document.getElementById('modal').classList.remove('on');document.getElementById('panel').classList.remove('on');return}
-  const row=document.activeElement&&document.activeElement.closest?document.activeElement.closest('tr.pr'):null;
-  if(!row)return;const r=+row.dataset.r;
-  if(e.key==='t'||e.key==='T')setState(r,st[r]==='taken'?null:'taken');
-  if(e.key==='m'||e.key==='M')setState(r,st[r]==='mine'?null:'mine');
-  if(e.key==='w'||e.key==='W')toggleWatch(r);
-});
-renderChips();render();
-</script>
+<script src="draft-engine.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

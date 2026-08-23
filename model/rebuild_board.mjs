@@ -5,20 +5,23 @@ import vm from "node:vm";
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const dataDir = path.join(root, "model", "data");
+const replacementRanks = { QB: 16, RB: 30, WR: 36, TE: 12 };
+const positions = Object.keys(replacementRanks);
 
 const context = { window: {} };
 vm.createContext(context);
 vm.runInContext(fs.readFileSync(path.join(root, "board.js"), "utf8"), context);
 
-const baseline = context.window.BOARD;
+// board.js also carries lightweight K/DST market rows for the simulator. Those
+// specialists deliberately bypass the research scorer and are re-added later by
+// optimize_draft_board.mjs.
+const baseline = context.window.BOARD.filter((player) => positions.includes(player.p) && !player.spec);
 const market = JSON.parse(fs.readFileSync(path.join(dataDir, "fantasypros_ecr_2026.json"), "utf8"));
 const research = JSON.parse(fs.readFileSync(path.join(dataDir, "player_metrics.json"), "utf8"));
 const sentiment = JSON.parse(fs.readFileSync(path.join(dataDir, "sentiment_2026.json"), "utf8"));
 const manifestPath = process.argv[2] ?? path.join(dataDir, "refresh_manifest.json");
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
 
-const replacementRanks = { QB: 16, RB: 30, WR: 36, TE: 12 };
-const positions = Object.keys(replacementRanks);
 const roleAdjustment = {
   locked_starter: 0.25,
   clear_lead: 0.20,

@@ -4,7 +4,7 @@ Also computes a single priority-ordered [tag] per player for quick scanning."""
 import json, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SRC = os.environ.get("FANTASY_BOARD_JSON", os.path.join(HERE, "model", "data", "board.json"))
+SRC = os.environ.get("FANTASY_BOARD_JSON", os.path.join(HERE, "model", "data", "draft_board.json"))
 OUT = os.path.join(HERE, "board.js")
 
 def cut(s, n):
@@ -17,8 +17,8 @@ def cut(s, n):
 SEVERE_INJURY = {"IR", "PUP", "DNR", "OUT", "DOUBTFUL"}
 
 def apply_overrides(players):
-    """Preserve the model's strict standardized-VOR ordering in the web export."""
-    order = sorted(players, key=lambda p: p["model_rank"])
+    """Preserve the optimizer's market-aware smart ranking in the web export."""
+    order = sorted(players, key=lambda p: p.get("smart_rank", p["model_rank"]))
     pos_seen = {}
     for i, p in enumerate(order, 1):
         p["_rank_web"] = i
@@ -59,11 +59,14 @@ def main():
         sp = p.get("sp") or {}
         wa = p.get("wa") or {}
         out.append({
-            "r": p["_rank_web"], "n": p["player"], "p": p["pos"], "t": p["team"],
+            "id": p.get("player_id"), "r": p["_rank_web"], "qr": p.get("quality_rank"),
+            "n": p["player"], "p": p["pos"], "t": p["team"],
             "pr": p["_pos_rank_web"], "ti": p["tier"], "s": p["playr_score"], "c": p["classification"],
-            "adp": p["adp"], "ecr": p["ecr"], "wk": p["winks_skill"], "pj": p.get("proj_ppg"),
+            "adp": p.get("sleeper_adp", p["adp"]), "ecr": p["ecr"], "wk": p["winks_skill"], "pj": p.get("proj_ppg"),
             "ep": p.get("edge_pts_per_game"), "cf": p["confidence"],
             "zv": p.get("z_vor"), "rp": p.get("replacement_ppg"), "psd": p.get("position_ppg_sd"),
+            "spk": p.get("smart_pick"), "asd": p.get("availability_sd"), "mpr": p.get("market_pos_rank"),
+            "spec": bool(p.get("specialist")),
             "p90": sp.get("p90"), "sw": sp.get("spike_weeks"), "g": sp.get("games"), "bw": sp.get("best"),
             "ppg": wa.get("ppg"), "cont": p.get("contingency_ppg"),
             "rl": s.get("role_language"), "sq": cut(s.get("key_quote"), 260) or None,

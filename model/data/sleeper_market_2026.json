@@ -1,0 +1,2752 @@
+{
+  "source": "Sleeper 2026 half-PPR projections and ADP (Rotowire feed)",
+  "source_url": "https://api.sleeper.com/projections/nfl/2026?season_type=regular&order_by=adp_half_ppr",
+  "fetched_at": "2026-08-23T02:52:31.073Z",
+  "players": [
+    {
+      "sleeper_id": "9221",
+      "player": "Jahmyr Gibbs",
+      "team": "DET",
+      "pos": "RB",
+      "adp": 1.4,
+      "projected_season_points": 299.9,
+      "updated_at": 1787385035059
+    },
+    {
+      "sleeper_id": "9509",
+      "player": "Bijan Robinson",
+      "team": "ATL",
+      "pos": "RB",
+      "adp": 2.3,
+      "projected_season_points": 292.9,
+      "updated_at": 1787385043623
+    },
+    {
+      "sleeper_id": "7564",
+      "player": "Ja'Marr Chase",
+      "team": "CIN",
+      "pos": "WR",
+      "adp": 3.5,
+      "projected_season_points": 256.6,
+      "updated_at": 1787385041609
+    },
+    {
+      "sleeper_id": "9493",
+      "player": "Puka Nacua",
+      "team": "LAR",
+      "pos": "WR",
+      "adp": 4.2,
+      "projected_season_points": 259,
+      "updated_at": 1787385038467
+    },
+    {
+      "sleeper_id": "4034",
+      "player": "Christian McCaffrey",
+      "team": "SF",
+      "pos": "RB",
+      "adp": 5.2,
+      "projected_season_points": 256,
+      "updated_at": 1787385044485
+    },
+    {
+      "sleeper_id": "6813",
+      "player": "Jonathan Taylor",
+      "team": "IND",
+      "pos": "RB",
+      "adp": 6,
+      "projected_season_points": 254.3,
+      "updated_at": 1787385036351
+    },
+    {
+      "sleeper_id": "9488",
+      "player": "Jaxon Smith-Njigba",
+      "team": "SEA",
+      "pos": "WR",
+      "adp": 7,
+      "projected_season_points": 235.1,
+      "updated_at": 1787385050295
+    },
+    {
+      "sleeper_id": "7547",
+      "player": "Amon-Ra St. Brown",
+      "team": "DET",
+      "pos": "WR",
+      "adp": 7.4,
+      "projected_season_points": 227.5,
+      "updated_at": 1787385034827
+    },
+    {
+      "sleeper_id": "8138",
+      "player": "James Cook",
+      "team": "BUF",
+      "pos": "RB",
+      "adp": 9.1,
+      "projected_season_points": 245.3,
+      "updated_at": 1787385048550
+    },
+    {
+      "sleeper_id": "6786",
+      "player": "CeeDee Lamb",
+      "team": "DAL",
+      "pos": "WR",
+      "adp": 10.7,
+      "projected_season_points": 222.5,
+      "updated_at": 1787385039733
+    },
+    {
+      "sleeper_id": "4866",
+      "player": "Saquon Barkley",
+      "team": "PHI",
+      "pos": "RB",
+      "adp": 11.3,
+      "projected_season_points": 228.2,
+      "updated_at": 1787385042960
+    },
+    {
+      "sleeper_id": "12527",
+      "player": "Ashton Jeanty",
+      "team": "LV",
+      "pos": "RB",
+      "adp": 12.6,
+      "projected_season_points": 234.5,
+      "updated_at": 1787385038819
+    },
+    {
+      "sleeper_id": "6794",
+      "player": "Justin Jefferson",
+      "team": "MIN",
+      "pos": "WR",
+      "adp": 13.8,
+      "projected_season_points": 205.4,
+      "updated_at": 1787385044956
+    },
+    {
+      "sleeper_id": "9226",
+      "player": "De'Von Achane",
+      "team": "MIA",
+      "pos": "RB",
+      "adp": 14.7,
+      "projected_season_points": 229.9,
+      "updated_at": 1787385046970
+    },
+    {
+      "sleeper_id": "12507",
+      "player": "Omarion Hampton",
+      "team": "LAC",
+      "pos": "RB",
+      "adp": 15,
+      "projected_season_points": 218.9,
+      "updated_at": 1787385043908
+    },
+    {
+      "sleeper_id": "9224",
+      "player": "Chase Brown",
+      "team": "CIN",
+      "pos": "RB",
+      "adp": 15.4,
+      "projected_season_points": 226.7,
+      "updated_at": 1787385035061
+    },
+    {
+      "sleeper_id": "3198",
+      "player": "Derrick Henry",
+      "team": "BAL",
+      "pos": "RB",
+      "adp": 17.6,
+      "projected_season_points": 238.4,
+      "updated_at": 1787385037532
+    },
+    {
+      "sleeper_id": "8151",
+      "player": "Kenneth Walker",
+      "team": "KC",
+      "pos": "RB",
+      "adp": 18.9,
+      "projected_season_points": 225.5,
+      "updated_at": 1787385043470
+    },
+    {
+      "sleeper_id": "5859",
+      "player": "A.J. Brown",
+      "team": "NE",
+      "pos": "WR",
+      "adp": 19.2,
+      "projected_season_points": 207.7,
+      "updated_at": 1787385043098
+    },
+    {
+      "sleeper_id": "8112",
+      "player": "Drake London",
+      "team": "ATL",
+      "pos": "WR",
+      "adp": 20.5,
+      "projected_season_points": 205.2,
+      "updated_at": 1787385039970
+    },
+    {
+      "sleeper_id": "4984",
+      "player": "Josh Allen",
+      "team": "BUF",
+      "pos": "QB",
+      "adp": 21.2,
+      "projected_season_points": 361.5,
+      "updated_at": 1787385049662
+    },
+    {
+      "sleeper_id": "11604",
+      "player": "Brock Bowers",
+      "team": "LV",
+      "pos": "TE",
+      "adp": 22.5,
+      "projected_season_points": 202.5,
+      "updated_at": 1787385047128
+    },
+    {
+      "sleeper_id": "7569",
+      "player": "Nico Collins",
+      "team": "HOU",
+      "pos": "WR",
+      "adp": 23.3,
+      "projected_season_points": 220,
+      "updated_at": 1787385046725
+    },
+    {
+      "sleeper_id": "8130",
+      "player": "Trey McBride",
+      "team": "ARI",
+      "pos": "TE",
+      "adp": 23.4,
+      "projected_season_points": 186.9,
+      "updated_at": 1787385043465
+    },
+    {
+      "sleeper_id": "13287",
+      "player": "Jeremiyah Love",
+      "team": "ARI",
+      "pos": "RB",
+      "adp": 25.8,
+      "projected_season_points": 188.3,
+      "updated_at": 1787385049202
+    },
+    {
+      "sleeper_id": "8137",
+      "player": "George Pickens",
+      "team": "DAL",
+      "pos": "WR",
+      "adp": 26,
+      "projected_season_points": 205.7,
+      "updated_at": 1787385034933
+    },
+    {
+      "sleeper_id": "8150",
+      "player": "Kyren Williams",
+      "team": "LAR",
+      "pos": "RB",
+      "adp": 27.9,
+      "projected_season_points": 192,
+      "updated_at": 1787385039984
+    },
+    {
+      "sleeper_id": "10229",
+      "player": "Rashee Rice",
+      "team": "KC",
+      "pos": "WR",
+      "adp": 28.6,
+      "projected_season_points": 185.3,
+      "updated_at": 1787385033422
+    },
+    {
+      "sleeper_id": "5850",
+      "player": "Josh Jacobs",
+      "team": "GB",
+      "pos": "RB",
+      "adp": 29.8,
+      "projected_season_points": 186.1,
+      "updated_at": 1787385044791
+    },
+    {
+      "sleeper_id": "11632",
+      "player": "Malik Nabers",
+      "team": "NYG",
+      "pos": "WR",
+      "adp": 30.7,
+      "projected_season_points": 186.3,
+      "updated_at": 1787385048894
+    },
+    {
+      "sleeper_id": "8155",
+      "player": "Breece Hall",
+      "team": "NYJ",
+      "pos": "RB",
+      "adp": 31.6,
+      "projected_season_points": 192.5,
+      "updated_at": 1787385045189
+    },
+    {
+      "sleeper_id": "8144",
+      "player": "Chris Olave",
+      "team": "NO",
+      "pos": "WR",
+      "adp": 32,
+      "projected_season_points": 194.9,
+      "updated_at": 1787385048552
+    },
+    {
+      "sleeper_id": "7588",
+      "player": "Javonte Williams",
+      "team": "DAL",
+      "pos": "RB",
+      "adp": 33.1,
+      "projected_season_points": 188.8,
+      "updated_at": 1787385034834
+    },
+    {
+      "sleeper_id": "7525",
+      "player": "DeVonta Smith",
+      "team": "PHI",
+      "pos": "WR",
+      "adp": 34.7,
+      "projected_season_points": 189.2,
+      "updated_at": 1787385041599
+    },
+    {
+      "sleeper_id": "4881",
+      "player": "Lamar Jackson",
+      "team": "BAL",
+      "pos": "QB",
+      "adp": 35.7,
+      "projected_season_points": 326,
+      "updated_at": 1787385042962
+    },
+    {
+      "sleeper_id": "12526",
+      "player": "Tetairoa McMillan",
+      "team": "CAR",
+      "pos": "WR",
+      "adp": 36.5,
+      "projected_season_points": 184.5,
+      "updated_at": 1787385035393
+    },
+    {
+      "sleeper_id": "12481",
+      "player": "Cam Skattebo",
+      "team": "NYG",
+      "pos": "RB",
+      "adp": 37.8,
+      "projected_season_points": 180.2,
+      "updated_at": 1787385045608
+    },
+    {
+      "sleeper_id": "6801",
+      "player": "Tee Higgins",
+      "team": "CIN",
+      "pos": "WR",
+      "adp": 38.4,
+      "projected_season_points": 186.9,
+      "updated_at": 1787385034712
+    },
+    {
+      "sleeper_id": "12514",
+      "player": "Emeka Egbuka",
+      "team": "TB",
+      "pos": "WR",
+      "adp": 39.1,
+      "projected_season_points": 185.5,
+      "updated_at": 1787385042144
+    },
+    {
+      "sleeper_id": "11635",
+      "player": "Ladd McConkey",
+      "team": "LAC",
+      "pos": "WR",
+      "adp": 39.9,
+      "projected_season_points": 187.7,
+      "updated_at": 1787385045446
+    },
+    {
+      "sleeper_id": "7543",
+      "player": "Travis Etienne",
+      "team": "NO",
+      "pos": "RB",
+      "adp": 41,
+      "projected_season_points": 189.7,
+      "updated_at": 1787385036500
+    },
+    {
+      "sleeper_id": "9997",
+      "player": "Zay Flowers",
+      "team": "BAL",
+      "pos": "WR",
+      "adp": 42.4,
+      "projected_season_points": 187.7,
+      "updated_at": 1787385048713
+    },
+    {
+      "sleeper_id": "8146",
+      "player": "Garrett Wilson",
+      "team": "NYJ",
+      "pos": "WR",
+      "adp": 43.7,
+      "projected_season_points": 183.4,
+      "updated_at": 1787385038339
+    },
+    {
+      "sleeper_id": "12517",
+      "player": "Colston Loveland",
+      "team": "CHI",
+      "pos": "TE",
+      "adp": 44.4,
+      "projected_season_points": 173.4,
+      "updated_at": 1787385045615
+    },
+    {
+      "sleeper_id": "11584",
+      "player": "Bucky Irving",
+      "team": "TB",
+      "pos": "RB",
+      "adp": 45.8,
+      "projected_season_points": 179.3,
+      "updated_at": 1787385038627
+    },
+    {
+      "sleeper_id": "7526",
+      "player": "Jaylen Waddle",
+      "team": "DEN",
+      "pos": "WR",
+      "adp": 46.5,
+      "projected_season_points": 182.5,
+      "updated_at": 1787385045102
+    },
+    {
+      "sleeper_id": "12512",
+      "player": "Quinshon Judkins",
+      "team": "CLE",
+      "pos": "RB",
+      "adp": 47.6,
+      "projected_season_points": 180,
+      "updated_at": 1787385045611
+    },
+    {
+      "sleeper_id": "5892",
+      "player": "David Montgomery",
+      "team": "HOU",
+      "pos": "RB",
+      "adp": 48,
+      "projected_season_points": 190.1,
+      "updated_at": 1787385039580
+    },
+    {
+      "sleeper_id": "12529",
+      "player": "TreVeyon Henderson",
+      "team": "NE",
+      "pos": "RB",
+      "adp": 49.9,
+      "projected_season_points": 153.5,
+      "updated_at": 1787385035395
+    },
+    {
+      "sleeper_id": "12518",
+      "player": "Tyler Warren",
+      "team": "IND",
+      "pos": "TE",
+      "adp": 50.1,
+      "projected_season_points": 159.6,
+      "updated_at": 1787385045617
+    },
+    {
+      "sleeper_id": "11564",
+      "player": "Drake Maye",
+      "team": "NE",
+      "pos": "QB",
+      "adp": 51.3,
+      "projected_season_points": 320.76,
+      "updated_at": 1787385040288
+    },
+    {
+      "sleeper_id": "6790",
+      "player": "D'Andre Swift",
+      "team": "CHI",
+      "pos": "RB",
+      "adp": 52.5,
+      "projected_season_points": 189.5,
+      "updated_at": 1787385044952
+    },
+    {
+      "sleeper_id": "5927",
+      "player": "Terry McLaurin",
+      "team": "WAS",
+      "pos": "WR",
+      "adp": 53.3,
+      "projected_season_points": 176.8,
+      "updated_at": 1787385043110
+    },
+    {
+      "sleeper_id": "6770",
+      "player": "Joe Burrow",
+      "team": "CIN",
+      "pos": "QB",
+      "adp": 54.5,
+      "projected_season_points": 306.12,
+      "updated_at": 1787385039730
+    },
+    {
+      "sleeper_id": "12519",
+      "player": "Luther Burden",
+      "team": "CHI",
+      "pos": "WR",
+      "adp": 55.7,
+      "projected_season_points": 173,
+      "updated_at": 1787385045619
+    },
+    {
+      "sleeper_id": "4983",
+      "player": "DJ Moore",
+      "team": "BUF",
+      "pos": "WR",
+      "adp": 55.8,
+      "projected_season_points": 147.5,
+      "updated_at": 1787385042974
+    },
+    {
+      "sleeper_id": "8148",
+      "player": "Jameson Williams",
+      "team": "DET",
+      "pos": "WR",
+      "adp": 57.8,
+      "projected_season_points": 176.2,
+      "updated_at": 1787385048553
+    },
+    {
+      "sleeper_id": "2133",
+      "player": "Davante Adams",
+      "team": "LAR",
+      "pos": "WR",
+      "adp": 58,
+      "projected_season_points": 161,
+      "updated_at": 1787385040860
+    },
+    {
+      "sleeper_id": "12490",
+      "player": "Bhayshul Tuten",
+      "team": "JAX",
+      "pos": "RB",
+      "adp": 59.6,
+      "projected_season_points": 158.8,
+      "updated_at": 1787385040486
+    },
+    {
+      "sleeper_id": "2216",
+      "player": "Mike Evans",
+      "team": "SF",
+      "pos": "WR",
+      "adp": 60.1,
+      "projected_season_points": 187.2,
+      "updated_at": 1787385042595
+    },
+    {
+      "sleeper_id": "13286",
+      "player": "Jadarian Price",
+      "team": "SEA",
+      "pos": "RB",
+      "adp": 61.3,
+      "projected_season_points": 160.5,
+      "updated_at": 1787385049200
+    },
+    {
+      "sleeper_id": "11620",
+      "player": "Rome Odunze",
+      "team": "CHI",
+      "pos": "WR",
+      "adp": 62.8,
+      "projected_season_points": 173.9,
+      "updated_at": 1787385041997
+    },
+    {
+      "sleeper_id": "6904",
+      "player": "Jalen Hurts",
+      "team": "PHI",
+      "pos": "QB",
+      "adp": 63,
+      "projected_season_points": 310.54,
+      "updated_at": 1787385046600
+    },
+    {
+      "sleeper_id": "10859",
+      "player": "Sam LaPorta",
+      "team": "DET",
+      "pos": "TE",
+      "adp": 63.4,
+      "projected_season_points": 158.5,
+      "updated_at": 1787385036778
+    },
+    {
+      "sleeper_id": "13279",
+      "player": "Carnell Tate",
+      "team": "TEN",
+      "pos": "WR",
+      "adp": 65.2,
+      "projected_season_points": 144.8,
+      "updated_at": 1787385042305
+    },
+    {
+      "sleeper_id": "11566",
+      "player": "Jayden Daniels",
+      "team": "WAS",
+      "pos": "QB",
+      "adp": 66.6,
+      "projected_season_points": 308.72,
+      "updated_at": 1787385048882
+    },
+    {
+      "sleeper_id": "9484",
+      "player": "Tucker Kraft",
+      "team": "GB",
+      "pos": "TE",
+      "adp": 67.6,
+      "projected_season_points": 140.9,
+      "updated_at": 1787385041849
+    },
+    {
+      "sleeper_id": "8167",
+      "player": "Christian Watson",
+      "team": "GB",
+      "pos": "WR",
+      "adp": 68.3,
+      "projected_season_points": 176.1,
+      "updated_at": 1787385043473
+    },
+    {
+      "sleeper_id": "8228",
+      "player": "Jaylen Warren",
+      "team": "PIT",
+      "pos": "RB",
+      "adp": 69.3,
+      "projected_season_points": 152.6,
+      "updated_at": 1787385036627
+    },
+    {
+      "sleeper_id": "11631",
+      "player": "Brian Thomas",
+      "team": "JAX",
+      "pos": "WR",
+      "adp": 70.7,
+      "projected_season_points": 164.4,
+      "updated_at": 1787385040306
+    },
+    {
+      "sleeper_id": "7553",
+      "player": "Kyle Pitts",
+      "team": "ATL",
+      "pos": "TE",
+      "adp": 71.8,
+      "projected_season_points": 138.6,
+      "updated_at": 1787385041607
+    },
+    {
+      "sleeper_id": "12506",
+      "player": "Harold Fannin",
+      "team": "CLE",
+      "pos": "TE",
+      "adp": 71.8,
+      "projected_season_points": 143.4,
+      "updated_at": 1787385035389
+    },
+    {
+      "sleeper_id": "11628",
+      "player": "Marvin Harrison",
+      "team": "ARI",
+      "pos": "WR",
+      "adp": 73.7,
+      "projected_season_points": 155.2,
+      "updated_at": 1787385035238
+    },
+    {
+      "sleeper_id": "9487",
+      "player": "Parker Washington",
+      "team": "JAX",
+      "pos": "WR",
+      "adp": 74,
+      "projected_season_points": 176.4,
+      "updated_at": 1787385048708
+    },
+    {
+      "sleeper_id": "7594",
+      "player": "Chuba Hubbard",
+      "team": "CAR",
+      "pos": "RB",
+      "adp": 75.9,
+      "projected_season_points": 136.9,
+      "updated_at": 1787385048459
+    },
+    {
+      "sleeper_id": "11560",
+      "player": "Caleb Williams",
+      "team": "CHI",
+      "pos": "QB",
+      "adp": 76.5,
+      "projected_season_points": 299.34,
+      "updated_at": 1787385045430
+    },
+    {
+      "sleeper_id": "7611",
+      "player": "Rhamondre Stevenson",
+      "team": "NE",
+      "pos": "RB",
+      "adp": 77,
+      "projected_season_points": 154.5,
+      "updated_at": 1787385048461
+    },
+    {
+      "sleeper_id": "5846",
+      "player": "DK Metcalf",
+      "team": "PIT",
+      "pos": "WR",
+      "adp": 78.1,
+      "projected_season_points": 152.3,
+      "updated_at": 1787385046434
+    },
+    {
+      "sleeper_id": "6797",
+      "player": "Justin Herbert",
+      "team": "LAC",
+      "pos": "QB",
+      "adp": 79.7,
+      "projected_season_points": 295.48,
+      "updated_at": 1787385046577
+    },
+    {
+      "sleeper_id": "5967",
+      "player": "Tony Pollard",
+      "team": "TEN",
+      "pos": "RB",
+      "adp": 79.7,
+      "projected_season_points": 146.1,
+      "updated_at": 1787385034571
+    },
+    {
+      "sleeper_id": "12489",
+      "player": "RJ Harvey",
+      "team": "DEN",
+      "pos": "RB",
+      "adp": 81.6,
+      "projected_season_points": 125.6,
+      "updated_at": 1787385047317
+    },
+    {
+      "sleeper_id": "13281",
+      "player": "Jordyn Tyson",
+      "team": "NO",
+      "pos": "WR",
+      "adp": 82.4,
+      "projected_season_points": 90.5,
+      "updated_at": 1787385047442
+    },
+    {
+      "sleeper_id": "7021",
+      "player": "Rico Dowdle",
+      "team": "PIT",
+      "pos": "RB",
+      "adp": 83.7,
+      "projected_season_points": 142.1,
+      "updated_at": 1787385048363
+    },
+    {
+      "sleeper_id": "5045",
+      "player": "Courtland Sutton",
+      "team": "DEN",
+      "pos": "WR",
+      "adp": 84.5,
+      "projected_season_points": 144.8,
+      "updated_at": 1787385046311
+    },
+    {
+      "sleeper_id": "13294",
+      "player": "Makai Lemon",
+      "team": "PHI",
+      "pos": "WR",
+      "adp": 85.4,
+      "projected_season_points": 138.5,
+      "updated_at": 1787385042309
+    },
+    {
+      "sleeper_id": "6806",
+      "player": "J.K. Dobbins",
+      "team": "DEN",
+      "pos": "RB",
+      "adp": 86.4,
+      "projected_season_points": 147.2,
+      "updated_at": 1787385043249
+    },
+    {
+      "sleeper_id": "3294",
+      "player": "Dak Prescott",
+      "team": "DAL",
+      "pos": "QB",
+      "adp": 87.4,
+      "projected_season_points": 303.88,
+      "updated_at": 1787385034156
+    },
+    {
+      "sleeper_id": "12534",
+      "player": "Kyle Monangai",
+      "team": "CHI",
+      "pos": "RB",
+      "adp": 87.9,
+      "projected_season_points": 143.1,
+      "updated_at": 1787385047324
+    },
+    {
+      "sleeper_id": "10232",
+      "player": "Michael Wilson",
+      "team": "ARI",
+      "pos": "WR",
+      "adp": 89.8,
+      "projected_season_points": 136.5,
+      "updated_at": 1787385043637
+    },
+    {
+      "sleeper_id": "4217",
+      "player": "George Kittle",
+      "team": "SF",
+      "pos": "TE",
+      "adp": 90.6,
+      "projected_season_points": 138.3,
+      "updated_at": 1787385044517
+    },
+    {
+      "sleeper_id": "11583",
+      "player": "Jonathon Brooks",
+      "team": "CAR",
+      "pos": "RB",
+      "adp": 91.5,
+      "projected_season_points": 137.9,
+      "updated_at": 1787385047122
+    },
+    {
+      "sleeper_id": "8142",
+      "player": "Alec Pierce",
+      "team": "IND",
+      "pos": "WR",
+      "adp": 92.6,
+      "projected_season_points": 150.9,
+      "updated_at": 1787385034937
+    },
+    {
+      "sleeper_id": "11586",
+      "player": "Blake Corum",
+      "team": "LAR",
+      "pos": "RB",
+      "adp": 93.7,
+      "projected_season_points": 127.8,
+      "updated_at": 1787385043768
+    },
+    {
+      "sleeper_id": "10236",
+      "player": "Dalton Kincaid",
+      "team": "BUF",
+      "pos": "TE",
+      "adp": 94,
+      "projected_season_points": 130.6,
+      "updated_at": 1787385040148
+    },
+    {
+      "sleeper_id": "4037",
+      "player": "Chris Godwin",
+      "team": "TB",
+      "pos": "WR",
+      "adp": 95,
+      "projected_season_points": 139.6,
+      "updated_at": 1787385047875
+    },
+    {
+      "sleeper_id": "7523",
+      "player": "Trevor Lawrence",
+      "team": "JAX",
+      "pos": "QB",
+      "adp": 95.7,
+      "projected_season_points": 303.42,
+      "updated_at": 1787385045100
+    },
+    {
+      "sleeper_id": "12508",
+      "player": "Jaxson Dart",
+      "team": "NYG",
+      "pos": "QB",
+      "adp": 97.8,
+      "projected_season_points": 296.54,
+      "updated_at": 1787385035392
+    },
+    {
+      "sleeper_id": "1466",
+      "player": "Travis Kelce",
+      "team": "KC",
+      "pos": "TE",
+      "adp": 98.4,
+      "projected_season_points": 136.4,
+      "updated_at": 1787385037409
+    },
+    {
+      "sleeper_id": "12533",
+      "player": "Jacory Croskey-Merritt",
+      "team": "WAS",
+      "pos": "RB",
+      "adp": 99.8,
+      "projected_season_points": 118.4,
+      "updated_at": 1787385043914
+    },
+    {
+      "sleeper_id": "9756",
+      "player": "Jordan Addison",
+      "team": "MIN",
+      "pos": "WR",
+      "adp": 100.6,
+      "projected_season_points": 141.7,
+      "updated_at": 1787385041859
+    },
+    {
+      "sleeper_id": "6819",
+      "player": "Michael Pittman",
+      "team": "PIT",
+      "pos": "WR",
+      "adp": 101.1,
+      "projected_season_points": 136.4,
+      "updated_at": 1787385036354
+    },
+    {
+      "sleeper_id": "10222",
+      "player": "Jayden Reed",
+      "team": "GB",
+      "pos": "WR",
+      "adp": 102.9,
+      "projected_season_points": 162.6,
+      "updated_at": 1787385040143
+    },
+    {
+      "sleeper_id": "8408",
+      "player": "Jordan Mason",
+      "team": "MIN",
+      "pos": "RB",
+      "adp": 103.2,
+      "projected_season_points": 143.7,
+      "updated_at": 1787385034986
+    },
+    {
+      "sleeper_id": "9754",
+      "player": "Quentin Johnston",
+      "team": "LAC",
+      "pos": "WR",
+      "adp": 103.5,
+      "projected_season_points": 134.9,
+      "updated_at": 1787385043632
+    },
+    {
+      "sleeper_id": "8110",
+      "player": "Jake Ferguson",
+      "team": "DAL",
+      "pos": "TE",
+      "adp": 105.6,
+      "projected_season_points": 124.8,
+      "updated_at": 1787385041719
+    },
+    {
+      "sleeper_id": "4046",
+      "player": "Patrick Mahomes",
+      "team": "KC",
+      "pos": "QB",
+      "adp": 106.8,
+      "projected_season_points": 286.68,
+      "updated_at": 1787385049546
+    },
+    {
+      "sleeper_id": "4199",
+      "player": "Aaron Jones",
+      "team": "MIN",
+      "pos": "RB",
+      "adp": 107,
+      "projected_season_points": 120.1,
+      "updated_at": 1787385037652
+    },
+    {
+      "sleeper_id": "7567",
+      "player": "Kenny Gainwell",
+      "team": "TB",
+      "pos": "RB",
+      "adp": 108.3,
+      "projected_season_points": 128.8,
+      "updated_at": 1787385048454
+    },
+    {
+      "sleeper_id": "421",
+      "player": "Matthew Stafford",
+      "team": "LAR",
+      "pos": "QB",
+      "adp": 109.3,
+      "projected_season_points": 280.22,
+      "updated_at": 1787385044516
+    },
+    {
+      "sleeper_id": "9500",
+      "player": "Josh Downs",
+      "team": "IND",
+      "pos": "WR",
+      "adp": 110.7,
+      "projected_season_points": 137.3,
+      "updated_at": 1787385036758
+    },
+    {
+      "sleeper_id": "8126",
+      "player": "Wan'Dale Robinson",
+      "team": "TEN",
+      "pos": "WR",
+      "adp": 111.4,
+      "projected_season_points": 135.2,
+      "updated_at": 1787385050153
+    },
+    {
+      "sleeper_id": "5947",
+      "player": "Jakobi Meyers",
+      "team": "JAX",
+      "pos": "WR",
+      "adp": 111.8,
+      "projected_season_points": 137.3,
+      "updated_at": 1787385048186
+    },
+    {
+      "sleeper_id": "8131",
+      "player": "Isaiah Likely",
+      "team": "NYG",
+      "pos": "TE",
+      "adp": 113.9,
+      "projected_season_points": 126.3,
+      "updated_at": 1787385043467
+    },
+    {
+      "sleeper_id": "13298",
+      "player": "KC Concepcion",
+      "team": "CLE",
+      "pos": "WR",
+      "adp": 114.3,
+      "projected_season_points": 127.4,
+      "updated_at": 1787385042311
+    },
+    {
+      "sleeper_id": "2449",
+      "player": "Stefon Diggs",
+      "team": "WAS",
+      "pos": "WR",
+      "adp": 115.5,
+      "projected_season_points": 125.3,
+      "updated_at": 1787385040888
+    },
+    {
+      "sleeper_id": "8136",
+      "player": "Rachaad White",
+      "team": "WAS",
+      "pos": "RB",
+      "adp": 116.1,
+      "projected_season_points": 111.1,
+      "updated_at": 1787385048549
+    },
+    {
+      "sleeper_id": "8183",
+      "player": "Brock Purdy",
+      "team": "SF",
+      "pos": "QB",
+      "adp": 117.2,
+      "projected_season_points": 303.2,
+      "updated_at": 1787385038346
+    },
+    {
+      "sleeper_id": "11563",
+      "player": "Bo Nix",
+      "team": "DEN",
+      "pos": "QB",
+      "adp": 118.7,
+      "projected_season_points": 295.72,
+      "updated_at": 1787385040286
+    },
+    {
+      "sleeper_id": "5022",
+      "player": "Dallas Goedert",
+      "team": "PHI",
+      "pos": "TE",
+      "adp": 119.2,
+      "projected_season_points": 109.5,
+      "updated_at": 1787385042986
+    },
+    {
+      "sleeper_id": "5012",
+      "player": "Mark Andrews",
+      "team": "BAL",
+      "pos": "TE",
+      "adp": 119.6,
+      "projected_season_points": 132.5,
+      "updated_at": 1787385034397
+    },
+    {
+      "sleeper_id": "11624",
+      "player": "Xavier Worthy",
+      "team": "KC",
+      "pos": "WR",
+      "adp": 121.5,
+      "projected_season_points": 134,
+      "updated_at": 1787385043772
+    },
+    {
+      "sleeper_id": "12501",
+      "player": "Matthew Golden",
+      "team": "GB",
+      "pos": "WR",
+      "adp": 122.2,
+      "projected_season_points": 141.1,
+      "updated_at": 1787385049069
+    },
+    {
+      "sleeper_id": "8121",
+      "player": "Romeo Doubs",
+      "team": "NE",
+      "pos": "WR",
+      "adp": 123.5,
+      "projected_season_points": 132.7,
+      "updated_at": 1787385038335
+    },
+    {
+      "sleeper_id": "9753",
+      "player": "Zach Charbonnet",
+      "team": "SEA",
+      "pos": "RB",
+      "adp": 124.7,
+      "projected_season_points": 61.7,
+      "updated_at": 1787385046983
+    },
+    {
+      "sleeper_id": "11655",
+      "player": "Tyrone Tracy",
+      "team": "NYG",
+      "pos": "RB",
+      "adp": 125.4,
+      "projected_season_points": 100.8,
+      "updated_at": 1787385047135
+    },
+    {
+      "sleeper_id": "10219",
+      "player": "Chris Rodriguez",
+      "team": "JAX",
+      "pos": "RB",
+      "adp": 126.9,
+      "projected_season_points": 125,
+      "updated_at": 1787385035073
+    },
+    {
+      "sleeper_id": "5872",
+      "player": "Deebo Samuel",
+      "team": "SF",
+      "pos": "WR",
+      "adp": 127.3,
+      "projected_season_points": 127.7,
+      "updated_at": 1787385044793
+    },
+    {
+      "sleeper_id": "8132",
+      "player": "Tyler Allgeier",
+      "team": "ARI",
+      "pos": "RB",
+      "adp": 127.8,
+      "projected_season_points": 65.4,
+      "updated_at": 1787385039980
+    },
+    {
+      "sleeper_id": "3163",
+      "player": "Jared Goff",
+      "team": "DET",
+      "pos": "QB",
+      "adp": 129.5,
+      "projected_season_points": 283.46,
+      "updated_at": 1787385039208
+    },
+    {
+      "sleeper_id": "11533",
+      "player": "Brandon Aubrey",
+      "team": "DAL",
+      "pos": "K",
+      "adp": 130.8,
+      "projected_season_points": 116,
+      "updated_at": 1787385040273
+    },
+    {
+      "sleeper_id": "LAR",
+      "player": "LAR D/ST",
+      "team": "LAR",
+      "pos": "DEF",
+      "adp": 131.7,
+      "projected_season_points": 106,
+      "updated_at": 1787385050813
+    },
+    {
+      "sleeper_id": "HOU",
+      "player": "HOU D/ST",
+      "team": "HOU",
+      "pos": "DEF",
+      "adp": 132.7,
+      "projected_season_points": 104,
+      "updated_at": 1787385050822
+    },
+    {
+      "sleeper_id": "SEA",
+      "player": "SEA D/ST",
+      "team": "SEA",
+      "pos": "DEF",
+      "adp": 133.4,
+      "projected_season_points": 103,
+      "updated_at": 1787385050797
+    },
+    {
+      "sleeper_id": "8259",
+      "player": "Cameron Dicker",
+      "team": "LAC",
+      "pos": "K",
+      "adp": 134.5,
+      "projected_season_points": 106,
+      "updated_at": 1787385034957
+    },
+    {
+      "sleeper_id": "DEN",
+      "player": "DEN D/ST",
+      "team": "DEN",
+      "pos": "DEF",
+      "adp": 135.3,
+      "projected_season_points": 96,
+      "updated_at": 1787385050827
+    },
+    {
+      "sleeper_id": "2747",
+      "player": "Jason Myers",
+      "team": "SEA",
+      "pos": "K",
+      "adp": 135.7,
+      "projected_season_points": 111,
+      "updated_at": 1787385042677
+    },
+    {
+      "sleeper_id": "PHI",
+      "player": "PHI D/ST",
+      "team": "PHI",
+      "pos": "DEF",
+      "adp": 137.7,
+      "projected_season_points": 98,
+      "updated_at": 1787385050801
+    },
+    {
+      "sleeper_id": "13417",
+      "player": "De'Zhaun Stribling",
+      "team": "SF",
+      "pos": "WR",
+      "adp": 138.9,
+      "projected_season_points": 105.4,
+      "updated_at": 1787385038971
+    },
+    {
+      "sleeper_id": "12493",
+      "player": "Oronde Gadsden",
+      "team": "LAC",
+      "pos": "TE",
+      "adp": 139.3,
+      "projected_season_points": 113.8,
+      "updated_at": 1787385047320
+    },
+    {
+      "sleeper_id": "3451",
+      "player": "Ka'imi Fairbairn",
+      "team": "HOU",
+      "pos": "K",
+      "adp": 140.3,
+      "projected_season_points": 113,
+      "updated_at": 1787385049499
+    },
+    {
+      "sleeper_id": "8134",
+      "player": "Khalil Shakir",
+      "team": "BUF",
+      "pos": "WR",
+      "adp": 141.6,
+      "projected_season_points": 135.2,
+      "updated_at": 1787385039982
+    },
+    {
+      "sleeper_id": "13345",
+      "player": "Jonah Coleman",
+      "team": "DEN",
+      "pos": "RB",
+      "adp": 142.4,
+      "projected_season_points": 58.9,
+      "updated_at": 1787385040671
+    },
+    {
+      "sleeper_id": "3214",
+      "player": "Hunter Henry",
+      "team": "NE",
+      "pos": "TE",
+      "adp": 143.6,
+      "projected_season_points": 124.5,
+      "updated_at": 1787385049468
+    },
+    {
+      "sleeper_id": "11786",
+      "player": "Cam Little",
+      "team": "JAX",
+      "pos": "K",
+      "adp": 143.6,
+      "projected_season_points": 112,
+      "updated_at": 1787385042022
+    },
+    {
+      "sleeper_id": "BAL",
+      "player": "BAL D/ST",
+      "team": "BAL",
+      "pos": "DEF",
+      "adp": 145.8,
+      "projected_season_points": 95,
+      "updated_at": 1787385050841
+    },
+    {
+      "sleeper_id": "11646",
+      "player": "Jalen Coker",
+      "team": "CAR",
+      "pos": "WR",
+      "adp": 146.1,
+      "projected_season_points": 135.9,
+      "updated_at": 1787385047132
+    },
+    {
+      "sleeper_id": "12474",
+      "player": "Woody Marks",
+      "team": "HOU",
+      "pos": "RB",
+      "adp": 147.5,
+      "projected_season_points": 74.3,
+      "updated_at": 1787385047312
+    },
+    {
+      "sleeper_id": "5849",
+      "player": "Kyler Murray",
+      "team": "MIN",
+      "pos": "QB",
+      "adp": 148.7,
+      "projected_season_points": 274.66,
+      "updated_at": 1787385048165
+    },
+    {
+      "sleeper_id": "4892",
+      "player": "Baker Mayfield",
+      "team": "TB",
+      "pos": "QB",
+      "adp": 149.2,
+      "projected_season_points": 274.88,
+      "updated_at": 1787385036025
+    },
+    {
+      "sleeper_id": "8676",
+      "player": "Rashid Shaheed",
+      "team": "SEA",
+      "pos": "WR",
+      "adp": 150.7,
+      "projected_season_points": 115.6,
+      "updated_at": 1787385038415
+    },
+    {
+      "sleeper_id": "11539",
+      "player": "Jake Bates",
+      "team": "DET",
+      "pos": "K",
+      "adp": 151.3,
+      "projected_season_points": 105,
+      "updated_at": 1787385038616
+    },
+    {
+      "sleeper_id": "4035",
+      "player": "Alvin Kamara",
+      "team": "NO",
+      "pos": "RB",
+      "adp": 151.5,
+      "projected_season_points": 53,
+      "updated_at": 1787385042808
+    },
+    {
+      "sleeper_id": "NE",
+      "player": "NE D/ST",
+      "team": "NE",
+      "pos": "DEF",
+      "adp": 153.3,
+      "projected_season_points": 92,
+      "updated_at": 1787385050807
+    },
+    {
+      "sleeper_id": "12484",
+      "player": "Jayden Higgins",
+      "team": "HOU",
+      "pos": "WR",
+      "adp": 154.3,
+      "projected_season_points": null,
+      "updated_at": 1787385049065
+    },
+    {
+      "sleeper_id": "9480",
+      "player": "Brenton Strange",
+      "team": "JAX",
+      "pos": "TE",
+      "adp": 155.3,
+      "projected_season_points": 129.5,
+      "updated_at": 1787385045306
+    },
+    {
+      "sleeper_id": "12015",
+      "player": "Harrison Mevis",
+      "team": "LAR",
+      "pos": "K",
+      "adp": 156.5,
+      "projected_season_points": 106,
+      "updated_at": 1787385040389
+    },
+    {
+      "sleeper_id": "13346",
+      "player": "Denzel Boston",
+      "team": "CLE",
+      "pos": "WR",
+      "adp": 157.4,
+      "projected_season_points": 108.2,
+      "updated_at": 1787385047461
+    },
+    {
+      "sleeper_id": "MIN",
+      "player": "MIN D/ST",
+      "team": "MIN",
+      "pos": "DEF",
+      "adp": 158.4,
+      "projected_season_points": 92,
+      "updated_at": 1787385050809
+    },
+    {
+      "sleeper_id": "6804",
+      "player": "Jordan Love",
+      "team": "GB",
+      "pos": "QB",
+      "adp": 159.2,
+      "projected_season_points": 278.52,
+      "updated_at": 1787385041456
+    },
+    {
+      "sleeper_id": "JAX",
+      "player": "JAX D/ST",
+      "team": "JAX",
+      "pos": "DEF",
+      "adp": 159.2,
+      "projected_season_points": 91,
+      "updated_at": 1787385050818
+    },
+    {
+      "sleeper_id": "8154",
+      "player": "Brian Robinson",
+      "team": "ATL",
+      "pos": "RB",
+      "adp": 161.1,
+      "projected_season_points": 63.4,
+      "updated_at": 1787385036615
+    },
+    {
+      "sleeper_id": "13293",
+      "player": "Ja'Kobi Lane",
+      "team": "BAL",
+      "pos": "WR",
+      "adp": 162,
+      "projected_season_points": 87.4,
+      "updated_at": 1787385037253
+    },
+    {
+      "sleeper_id": "9511",
+      "player": "Keaton Mitchell",
+      "team": "LAC",
+      "pos": "RB",
+      "adp": 163.3,
+      "projected_season_points": 87.9,
+      "updated_at": 1787385050305
+    },
+    {
+      "sleeper_id": "8180",
+      "player": "Jalen Nailor",
+      "team": "LV",
+      "pos": "WR",
+      "adp": 164.2,
+      "projected_season_points": 107.6,
+      "updated_at": 1787385041726
+    },
+    {
+      "sleeper_id": "9225",
+      "player": "Tank Bigsby",
+      "team": "PHI",
+      "pos": "RB",
+      "adp": 165.8,
+      "projected_season_points": 61.2,
+      "updated_at": 1787385046968
+    },
+    {
+      "sleeper_id": "PIT",
+      "player": "PIT D/ST",
+      "team": "PIT",
+      "pos": "DEF",
+      "adp": 166.9,
+      "projected_season_points": 88,
+      "updated_at": 1787385050799
+    },
+    {
+      "sleeper_id": "5189",
+      "player": "Eddy Pineiro",
+      "team": "SF",
+      "pos": "K",
+      "adp": 167.5,
+      "projected_season_points": 101,
+      "updated_at": 1787385034430
+    },
+    {
+      "sleeper_id": "LAC",
+      "player": "LAC D/ST",
+      "team": "LAC",
+      "pos": "DEF",
+      "adp": 167.7,
+      "projected_season_points": 86,
+      "updated_at": 1787385050815
+    },
+    {
+      "sleeper_id": "9508",
+      "player": "Tyjae Spears",
+      "team": "TEN",
+      "pos": "RB",
+      "adp": 169.8,
+      "projected_season_points": 97.1,
+      "updated_at": 1787385041858
+    },
+    {
+      "sleeper_id": "4943",
+      "player": "Sam Darnold",
+      "team": "SEA",
+      "pos": "QB",
+      "adp": 170.4,
+      "projected_season_points": 262.74,
+      "updated_at": 1787385048010
+    },
+    {
+      "sleeper_id": "13330",
+      "player": "Kenyon Sadiq",
+      "team": "NYJ",
+      "pos": "TE",
+      "adp": 171.6,
+      "projected_season_points": 80.2,
+      "updated_at": 1787385047452
+    },
+    {
+      "sleeper_id": "8205",
+      "player": "Isiah Pacheco",
+      "team": "DET",
+      "pos": "RB",
+      "adp": 172.8,
+      "projected_season_points": 48.6,
+      "updated_at": 1787385036623
+    },
+    {
+      "sleeper_id": "DET",
+      "player": "DET D/ST",
+      "team": "DET",
+      "pos": "DEF",
+      "adp": 173.6,
+      "projected_season_points": 92,
+      "updated_at": 1787385050825
+    },
+    {
+      "sleeper_id": "12545",
+      "player": "Tyler Shough",
+      "team": "NO",
+      "pos": "QB",
+      "adp": 174.3,
+      "projected_season_points": 270.94,
+      "updated_at": 1787385045623
+    },
+    {
+      "sleeper_id": "12530",
+      "player": "Travis Hunter",
+      "team": "JAX",
+      "pos": "WR",
+      "adp": 175.7,
+      "projected_season_points": 83.1,
+      "updated_at": 1787385045620
+    },
+    {
+      "sleeper_id": "11603",
+      "player": "AJ Barner",
+      "team": "SEA",
+      "pos": "TE",
+      "adp": 175.9,
+      "projected_season_points": 113.4,
+      "updated_at": 1787385033566
+    },
+    {
+      "sleeper_id": "12469",
+      "player": "Dylan Sampson",
+      "team": "CLE",
+      "pos": "RB",
+      "adp": 177.2,
+      "projected_season_points": 77.2,
+      "updated_at": 1787385047308
+    },
+    {
+      "sleeper_id": "13276",
+      "player": "Omar Cooper",
+      "team": "NYJ",
+      "pos": "WR",
+      "adp": 178.3,
+      "projected_season_points": 104.6,
+      "updated_at": 1787385033854
+    },
+    {
+      "sleeper_id": "7839",
+      "player": "Evan McPherson",
+      "team": "CIN",
+      "pos": "K",
+      "adp": 179.8,
+      "projected_season_points": 106,
+      "updated_at": 1787385050111
+    },
+    {
+      "sleeper_id": "11581",
+      "player": "MarShawn Lloyd",
+      "team": "GB",
+      "pos": "RB",
+      "adp": 180,
+      "projected_season_points": 48.3,
+      "updated_at": 1787385040299
+    },
+    {
+      "sleeper_id": "13413",
+      "player": "Cyrus Allen",
+      "team": "KC",
+      "pos": "WR",
+      "adp": 181.5,
+      "projected_season_points": 77.5,
+      "updated_at": 1787385035522
+    },
+    {
+      "sleeper_id": "11792",
+      "player": "Will Reichard",
+      "team": "MIN",
+      "pos": "K",
+      "adp": 182.2,
+      "projected_season_points": 109,
+      "updated_at": 1787385042025
+    },
+    {
+      "sleeper_id": "1945",
+      "player": "Chris Boswell",
+      "team": "PIT",
+      "pos": "K",
+      "adp": 183.3,
+      "projected_season_points": 107,
+      "updated_at": 1787385049362
+    },
+    {
+      "sleeper_id": "9502",
+      "player": "Tank Dell",
+      "team": "HOU",
+      "pos": "WR",
+      "adp": 183.9,
+      "projected_season_points": 95.3,
+      "updated_at": 1787385041854
+    },
+    {
+      "sleeper_id": "5844",
+      "player": "T.J. Hockenson",
+      "team": "MIN",
+      "pos": "TE",
+      "adp": 185.2,
+      "projected_season_points": 122,
+      "updated_at": 1787385049819
+    },
+    {
+      "sleeper_id": "11610",
+      "player": "Malik Washington",
+      "team": "MIA",
+      "pos": "WR",
+      "adp": 186.2,
+      "projected_season_points": 107.3,
+      "updated_at": 1787385045444
+    },
+    {
+      "sleeper_id": "13269",
+      "player": "Fernando Mendoza",
+      "team": "LV",
+      "pos": "QB",
+      "adp": 187.5,
+      "projected_season_points": 212.16,
+      "updated_at": 1787385044037
+    },
+    {
+      "sleeper_id": "8210",
+      "player": "Chig Okonkwo",
+      "team": "WAS",
+      "pos": "TE",
+      "adp": 188.2,
+      "projected_season_points": 113.6,
+      "updated_at": 1787385046822
+    },
+    {
+      "sleeper_id": "12711",
+      "player": "Tyler Loop",
+      "team": "BAL",
+      "pos": "K",
+      "adp": 189.6,
+      "projected_season_points": 106,
+      "updated_at": 1787385042196
+    },
+    {
+      "sleeper_id": "13305",
+      "player": "Mike Washington",
+      "team": "LV",
+      "pos": "RB",
+      "adp": 190.7,
+      "projected_season_points": 57.5,
+      "updated_at": 1787385037254
+    },
+    {
+      "sleeper_id": "7002",
+      "player": "Juwan Johnson",
+      "team": "NO",
+      "pos": "TE",
+      "adp": 191.1,
+      "projected_season_points": 112.9,
+      "updated_at": 1787385044986
+    },
+    {
+      "sleeper_id": "10213",
+      "player": "Tre Tucker",
+      "team": "LV",
+      "pos": "WR",
+      "adp": 191.4,
+      "projected_season_points": 102.9,
+      "updated_at": 1787385036768
+    },
+    {
+      "sleeper_id": "11576",
+      "player": "Braelon Allen",
+      "team": "NYJ",
+      "pos": "RB",
+      "adp": 193.8,
+      "projected_season_points": 47.2,
+      "updated_at": 1787385047121
+    },
+    {
+      "sleeper_id": "12713",
+      "player": "Andy Borregales",
+      "team": "NE",
+      "pos": "K",
+      "adp": 194.4,
+      "projected_season_points": 96,
+      "updated_at": 1787385043952
+    },
+    {
+      "sleeper_id": "13288",
+      "player": "Nicholas Singleton",
+      "team": "TEN",
+      "pos": "RB",
+      "adp": 195,
+      "projected_season_points": 57.7,
+      "updated_at": 1787385047444
+    },
+    {
+      "sleeper_id": "8161",
+      "player": "Malik Willis",
+      "team": "MIA",
+      "pos": "QB",
+      "adp": 196.4,
+      "projected_season_points": 270.12,
+      "updated_at": 1787385034941
+    },
+    {
+      "sleeper_id": "9758",
+      "player": "C.J. Stroud",
+      "team": "HOU",
+      "pos": "QB",
+      "adp": 197.8,
+      "projected_season_points": 247.82,
+      "updated_at": 1787385050309
+    },
+    {
+      "sleeper_id": "11618",
+      "player": "Jalen McMillan",
+      "team": "TB",
+      "pos": "WR",
+      "adp": 198.1,
+      "projected_season_points": 105.4,
+      "updated_at": 1787385036901
+    },
+    {
+      "sleeper_id": "13337",
+      "player": "Emmett Johnson",
+      "team": "KC",
+      "pos": "RB",
+      "adp": 199.6,
+      "projected_season_points": 59.2,
+      "updated_at": 1787385044057
+    },
+    {
+      "sleeper_id": "4227",
+      "player": "Harrison Butker",
+      "team": "KC",
+      "pos": "K",
+      "adp": 199.7,
+      "projected_season_points": 100,
+      "updated_at": 1787385035923
+    },
+    {
+      "sleeper_id": "7049",
+      "player": "Jauan Jennings",
+      "team": "MIN",
+      "pos": "WR",
+      "adp": 201,
+      "projected_season_points": 86.2,
+      "updated_at": 1787385050006
+    },
+    {
+      "sleeper_id": "5001",
+      "player": "Dalton Schultz",
+      "team": "HOU",
+      "pos": "TE",
+      "adp": 202.2,
+      "projected_season_points": 110.2,
+      "updated_at": 1787385044624
+    },
+    {
+      "sleeper_id": "13320",
+      "player": "Zachariah Branch",
+      "team": "ATL",
+      "pos": "WR",
+      "adp": 203,
+      "projected_season_points": 63.5,
+      "updated_at": 1787385045768
+    },
+    {
+      "sleeper_id": "6783",
+      "player": "Jerry Jeudy",
+      "team": "CLE",
+      "pos": "WR",
+      "adp": 204.8,
+      "projected_season_points": 98.1,
+      "updated_at": 1787385048335
+    },
+    {
+      "sleeper_id": "1479",
+      "player": "Keenan Allen",
+      "team": "IND",
+      "pos": "WR",
+      "adp": 205.9,
+      "projected_season_points": 84.8,
+      "updated_at": 1787385047616
+    },
+    {
+      "sleeper_id": "13296",
+      "player": "Caleb Douglas",
+      "team": "MIA",
+      "pos": "WR",
+      "adp": 206.2,
+      "projected_season_points": 77.8,
+      "updated_at": 1787385044044
+    },
+    {
+      "sleeper_id": "6650",
+      "player": "Chase McLaughlin",
+      "team": "TB",
+      "pos": "K",
+      "adp": 207.4,
+      "projected_season_points": 105,
+      "updated_at": 1787385044923
+    },
+    {
+      "sleeper_id": "13414",
+      "player": "Kaelon Black",
+      "team": "SF",
+      "pos": "RB",
+      "adp": 208,
+      "projected_season_points": 39.3,
+      "updated_at": 1787385038970
+    },
+    {
+      "sleeper_id": "GB",
+      "player": "GB D/ST",
+      "team": "GB",
+      "pos": "DEF",
+      "adp": 209.5,
+      "projected_season_points": 86,
+      "updated_at": 1787385050823
+    },
+    {
+      "sleeper_id": "9486",
+      "player": "Dontayvion Wicks",
+      "team": "PHI",
+      "pos": "WR",
+      "adp": 210,
+      "projected_season_points": 57.4,
+      "updated_at": 1787385035062
+    },
+    {
+      "sleeper_id": "4039",
+      "player": "Cooper Kupp",
+      "team": "SEA",
+      "pos": "WR",
+      "adp": 211.2,
+      "projected_season_points": 70.4,
+      "updated_at": 1787385047879
+    },
+    {
+      "sleeper_id": "12492",
+      "player": "Pat Bryant",
+      "team": "DEN",
+      "pos": "WR",
+      "adp": 212.4,
+      "projected_season_points": 78.9,
+      "updated_at": 1787385033713
+    },
+    {
+      "sleeper_id": "12487",
+      "player": "Terrance Ferguson",
+      "team": "LAR",
+      "pos": "TE",
+      "adp": 213.7,
+      "projected_season_points": 82.8,
+      "updated_at": 1787385037084
+    },
+    {
+      "sleeper_id": "11575",
+      "player": "Ray Davis",
+      "team": "BUF",
+      "pos": "RB",
+      "adp": 214,
+      "projected_season_points": 60.6,
+      "updated_at": 1787385040293
+    },
+    {
+      "sleeper_id": "5870",
+      "player": "Daniel Jones",
+      "team": "IND",
+      "pos": "QB",
+      "adp": 215,
+      "projected_season_points": 223.54,
+      "updated_at": 1787385041277
+    },
+    {
+      "sleeper_id": "12535",
+      "player": "Isaac TeSlaa",
+      "team": "DET",
+      "pos": "WR",
+      "adp": 215.9,
+      "projected_season_points": 73.1,
+      "updated_at": 1787385047325
+    },
+    {
+      "sleeper_id": "12522",
+      "player": "Cam Ward",
+      "team": "TEN",
+      "pos": "QB",
+      "adp": 217.1,
+      "projected_season_points": 227.84,
+      "updated_at": 1787385049074
+    },
+    {
+      "sleeper_id": "12457",
+      "player": "Jaydon Blue",
+      "team": "DAL",
+      "pos": "RB",
+      "adp": 218,
+      "projected_season_points": 52.1,
+      "updated_at": 1787385047305
+    },
+    {
+      "sleeper_id": "12509",
+      "player": "Tre' Harris",
+      "team": "LAC",
+      "pos": "WR",
+      "adp": 219.5,
+      "projected_season_points": 93.4,
+      "updated_at": 1787385038818
+    },
+    {
+      "sleeper_id": "12502",
+      "player": "Gunnar Helm",
+      "team": "TEN",
+      "pos": "TE",
+      "adp": 220.9,
+      "projected_season_points": 101.8,
+      "updated_at": 1787385049070
+    },
+    {
+      "sleeper_id": "KC",
+      "player": "KC D/ST",
+      "team": "KC",
+      "pos": "DEF",
+      "adp": 221.7,
+      "projected_season_points": 87,
+      "updated_at": 1787385050817
+    },
+    {
+      "sleeper_id": "9228",
+      "player": "Bryce Young",
+      "team": "CAR",
+      "pos": "QB",
+      "adp": 222.4,
+      "projected_season_points": 235.58,
+      "updated_at": 1787385041845
+    },
+    {
+      "sleeper_id": "4137",
+      "player": "James Conner",
+      "team": "ARI",
+      "pos": "RB",
+      "adp": 223.9,
+      "projected_season_points": 51.7,
+      "updated_at": 1787385049559
+    },
+    {
+      "sleeper_id": "3321",
+      "player": "Tyreek Hill",
+      "team": null,
+      "pos": "WR",
+      "adp": 223.9,
+      "projected_season_points": 77.2,
+      "updated_at": 1787385044410
+    },
+    {
+      "sleeper_id": "4033",
+      "player": "David Njoku",
+      "team": "LAC",
+      "pos": "TE",
+      "adp": 225.6,
+      "projected_season_points": 46.5,
+      "updated_at": 1787385044483
+    },
+    {
+      "sleeper_id": "11625",
+      "player": "Adonai Mitchell",
+      "team": "NYJ",
+      "pos": "WR",
+      "adp": 226.2,
+      "projected_season_points": 80.8,
+      "updated_at": 1787385043774
+    },
+    {
+      "sleeper_id": "8111",
+      "player": "Cade Otton",
+      "team": "TB",
+      "pos": "TE",
+      "adp": 227.6,
+      "projected_season_points": 95.8,
+      "updated_at": 1787385043462
+    },
+    {
+      "sleeper_id": "13405",
+      "player": "Kaytron Allen",
+      "team": "WAS",
+      "pos": "RB",
+      "adp": 228.2,
+      "projected_season_points": 41.9,
+      "updated_at": 1787385047473
+    },
+    {
+      "sleeper_id": "11783",
+      "player": "Ryan Flournoy",
+      "team": "DAL",
+      "pos": "WR",
+      "adp": 229.9,
+      "projected_season_points": 97.7,
+      "updated_at": 1787385040336
+    },
+    {
+      "sleeper_id": "11647",
+      "player": "Kimani Vidal",
+      "team": "LAC",
+      "pos": "RB",
+      "adp": 230.3,
+      "projected_season_points": 53,
+      "updated_at": 1787385043779
+    },
+    {
+      "sleeper_id": "13301",
+      "player": "Antonio Williams",
+      "team": "WAS",
+      "pos": "WR",
+      "adp": 231,
+      "projected_season_points": 61.2,
+      "updated_at": 1787385035500
+    },
+    {
+      "sleeper_id": "9504",
+      "player": "Kayshon Boutte",
+      "team": "NE",
+      "pos": "WR",
+      "adp": 231.4,
+      "projected_season_points": 79.1,
+      "updated_at": 1787385050303
+    },
+    {
+      "sleeper_id": "DAL",
+      "player": "DAL D/ST",
+      "team": "DAL",
+      "pos": "DEF",
+      "adp": 233.1,
+      "projected_season_points": 86,
+      "updated_at": 1787385050829
+    },
+    {
+      "sleeper_id": "SF",
+      "player": "SF D/ST",
+      "team": "SF",
+      "pos": "DEF",
+      "adp": 234.6,
+      "projected_season_points": 84,
+      "updated_at": 1787385050796
+    },
+    {
+      "sleeper_id": "CHI",
+      "player": "CHI D/ST",
+      "team": "CHI",
+      "pos": "DEF",
+      "adp": 235.6,
+      "projected_season_points": 85,
+      "updated_at": 1787385050835
+    },
+    {
+      "sleeper_id": "2020",
+      "player": "Cairo Santos",
+      "team": "CHI",
+      "pos": "K",
+      "adp": 236.4,
+      "projected_season_points": 100,
+      "updated_at": 1787385039130
+    },
+    {
+      "sleeper_id": "13285",
+      "player": "Malachi Fields",
+      "team": "NYG",
+      "pos": "WR",
+      "adp": 237.3,
+      "projected_season_points": 75,
+      "updated_at": 1787385044043
+    },
+    {
+      "sleeper_id": "5995",
+      "player": "Justice Hill",
+      "team": "BAL",
+      "pos": "RB",
+      "adp": 238,
+      "projected_season_points": 55.7,
+      "updated_at": 1787385049841
+    },
+    {
+      "sleeper_id": "12467",
+      "player": "Jordan James",
+      "team": "SF",
+      "pos": "RB",
+      "adp": 239.5,
+      "projected_season_points": 54.2,
+      "updated_at": 1787385045605
+    },
+    {
+      "sleeper_id": "13317",
+      "player": "Ted Hurst",
+      "team": "TB",
+      "pos": "WR",
+      "adp": 239.7,
+      "projected_season_points": 79.9,
+      "updated_at": 1787385044051
+    },
+    {
+      "sleeper_id": "7600",
+      "player": "Pat Freiermuth",
+      "team": "PIT",
+      "pos": "TE",
+      "adp": 241.3,
+      "projected_season_points": 102.9,
+      "updated_at": 1787385041619
+    },
+    {
+      "sleeper_id": "13347",
+      "player": "Demond Claiborne",
+      "team": "MIN",
+      "pos": "RB",
+      "adp": 242.5,
+      "projected_season_points": 22.8,
+      "updated_at": 1787385040672
+    },
+    {
+      "sleeper_id": "11637",
+      "player": "Keon Coleman",
+      "team": "BUF",
+      "pos": "WR",
+      "adp": 243.6,
+      "projected_season_points": 71.3,
+      "updated_at": 1787385048895
+    },
+    {
+      "sleeper_id": "96",
+      "player": "Aaron Rodgers",
+      "team": "PIT",
+      "pos": "QB",
+      "adp": 244,
+      "projected_season_points": 177,
+      "updated_at": 1787385046980
+    },
+    {
+      "sleeper_id": "8172",
+      "player": "Greg Dulcich",
+      "team": "MIA",
+      "pos": "TE",
+      "adp": 245.8,
+      "projected_season_points": 87.4,
+      "updated_at": 1787385048557
+    },
+    {
+      "sleeper_id": "13274",
+      "player": "Germie Bernard",
+      "team": "PIT",
+      "pos": "WR",
+      "adp": 246.9,
+      "projected_season_points": 80.9,
+      "updated_at": 1787385049196
+    },
+    {
+      "sleeper_id": "13311",
+      "player": "Chris Bell",
+      "team": "MIA",
+      "pos": "WR",
+      "adp": 247.3,
+      "projected_season_points": 54.7,
+      "updated_at": 1787385037256
+    },
+    {
+      "sleeper_id": "13349",
+      "player": "Eli Stowers",
+      "team": "PHI",
+      "pos": "TE",
+      "adp": 248,
+      "projected_season_points": 65.9,
+      "updated_at": 1787385038949
+    },
+    {
+      "sleeper_id": "3257",
+      "player": "Jacoby Brissett",
+      "team": "ARI",
+      "pos": "QB",
+      "adp": 249.1,
+      "projected_season_points": 160,
+      "updated_at": 1787385046071
+    },
+    {
+      "sleeper_id": "11643",
+      "player": "Jaylen Wright",
+      "team": "MIA",
+      "pos": "RB",
+      "adp": 250.7,
+      "projected_season_points": 41.1,
+      "updated_at": 1787385035239
+    },
+    {
+      "sleeper_id": "4981",
+      "player": "Calvin Ridley",
+      "team": "TEN",
+      "pos": "WR",
+      "adp": 251,
+      "projected_season_points": 63.8,
+      "updated_at": 1787385041150
+    },
+    {
+      "sleeper_id": "12524",
+      "player": "Shedeur Sanders",
+      "team": "CLE",
+      "pos": "QB",
+      "adp": 252.8,
+      "projected_season_points": 97.12,
+      "updated_at": 1787385037087
+    },
+    {
+      "sleeper_id": "7571",
+      "player": "Rashod Bateman",
+      "team": "BAL",
+      "pos": "WR",
+      "adp": 253.6,
+      "projected_season_points": 84.3,
+      "updated_at": 1787385043373
+    },
+    {
+      "sleeper_id": "13268",
+      "player": "Elijah Sarratt",
+      "team": "BAL",
+      "pos": "WR",
+      "adp": 254.5,
+      "projected_season_points": 50.4,
+      "updated_at": 1787385040657
+    },
+    {
+      "sleeper_id": "9506",
+      "player": "Sean Tucker",
+      "team": "TB",
+      "pos": "RB",
+      "adp": 255.7,
+      "projected_season_points": 48.5,
+      "updated_at": 1787385045313
+    },
+    {
+      "sleeper_id": "8698",
+      "player": "Jake Tonges",
+      "team": "SF",
+      "pos": "TE",
+      "adp": 255.9,
+      "projected_season_points": 55.8,
+      "updated_at": 1787385041813
+    },
+    {
+      "sleeper_id": "1373",
+      "player": "Geno Smith",
+      "team": "NYJ",
+      "pos": "QB",
+      "adp": 257,
+      "projected_season_points": 222.48,
+      "updated_at": 1787385035576
+    },
+    {
+      "sleeper_id": "6768",
+      "player": "Tua Tagovailoa",
+      "team": "ATL",
+      "pos": "QB",
+      "adp": 258.4,
+      "projected_season_points": 137.94,
+      "updated_at": 1787385046571
+    },
+    {
+      "sleeper_id": "7090",
+      "player": "Darnell Mooney",
+      "team": "NYG",
+      "pos": "WR",
+      "adp": 259.3,
+      "projected_season_points": 49.1,
+      "updated_at": 1787385046648
+    },
+    {
+      "sleeper_id": "12497",
+      "player": "Tory Horton",
+      "team": "SEA",
+      "pos": "WR",
+      "adp": 260.2,
+      "projected_season_points": 76.5,
+      "updated_at": 1787385042139
+    },
+    {
+      "sleeper_id": "6865",
+      "player": "Colby Parkinson",
+      "team": "LAR",
+      "pos": "TE",
+      "adp": 261.8,
+      "projected_season_points": 61.8,
+      "updated_at": 1787385036367
+    },
+    {
+      "sleeper_id": "11597",
+      "player": "Theo Johnson",
+      "team": "NYG",
+      "pos": "TE",
+      "adp": 262.8,
+      "projected_season_points": 61.5,
+      "updated_at": 1787385047126
+    },
+    {
+      "sleeper_id": "11627",
+      "player": "Troy Franklin",
+      "team": "DEN",
+      "pos": "WR",
+      "adp": 263.6,
+      "projected_season_points": 54.1,
+      "updated_at": 1787385033570
+    },
+    {
+      "sleeper_id": "11589",
+      "player": "Trey Benson",
+      "team": "ARI",
+      "pos": "RB",
+      "adp": 263.6,
+      "projected_season_points": 25.7,
+      "updated_at": 1787385033564
+    },
+    {
+      "sleeper_id": "4029",
+      "player": "Dalvin Cook",
+      "team": null,
+      "pos": "RB",
+      "adp": 264,
+      "projected_season_points": null,
+      "updated_at": 1787385035893
+    },
+    {
+      "sleeper_id": "11435",
+      "player": "Emanuel Wilson",
+      "team": "SEA",
+      "pos": "RB",
+      "adp": 265.7,
+      "projected_season_points": 51,
+      "updated_at": 1787385038592
+    },
+    {
+      "sleeper_id": "13964",
+      "player": "Myles Montgomery",
+      "team": null,
+      "pos": "RB",
+      "adp": 266,
+      "projected_season_points": null,
+      "updated_at": 1787385045892
+    },
+    {
+      "sleeper_id": "2910",
+      "player": "Tyler Rutenbeck",
+      "team": null,
+      "pos": "WR",
+      "adp": 267,
+      "projected_season_points": null,
+      "updated_at": 1787385040927
+    },
+    {
+      "sleeper_id": "6803",
+      "player": "Brandon Aiyuk",
+      "team": "SF",
+      "pos": "WR",
+      "adp": 267.4,
+      "projected_season_points": 41.6,
+      "updated_at": 1787385036349
+    },
+    {
+      "sleeper_id": "14037",
+      "player": "Rashad Rochelle",
+      "team": "SEA",
+      "pos": "WR",
+      "adp": 268,
+      "projected_season_points": null,
+      "updated_at": 1787385045914
+    },
+    {
+      "sleeper_id": "6699",
+      "player": "Gunner Olszewski",
+      "team": "NYG",
+      "pos": "WR",
+      "adp": 269,
+      "projected_season_points": null,
+      "updated_at": 1787385046556
+    },
+    {
+      "sleeper_id": "6778",
+      "player": "Chris Streveler",
+      "team": null,
+      "pos": "QB",
+      "adp": 270,
+      "projected_season_points": null,
+      "updated_at": 1787385049970
+    },
+    {
+      "sleeper_id": "11995",
+      "player": "Zack Annexstad",
+      "team": null,
+      "pos": "QB",
+      "adp": 271,
+      "projected_season_points": null,
+      "updated_at": 1787385047251
+    },
+    {
+      "sleeper_id": "5142",
+      "player": "Kurt Benkert",
+      "team": null,
+      "pos": "QB",
+      "adp": 272,
+      "projected_season_points": null,
+      "updated_at": 1787385039468
+    },
+    {
+      "sleeper_id": "1848",
+      "player": "James White",
+      "team": null,
+      "pos": "RB",
+      "adp": 273,
+      "projected_season_points": null,
+      "updated_at": 1787385040835
+    },
+    {
+      "sleeper_id": "8905",
+      "player": "Travis Koontz",
+      "team": null,
+      "pos": "TE",
+      "adp": 274,
+      "projected_season_points": null,
+      "updated_at": 1787385045298
+    },
+    {
+      "sleeper_id": "4863",
+      "player": "Josh Rosen",
+      "team": null,
+      "pos": "QB",
+      "adp": 275,
+      "projected_season_points": null,
+      "updated_at": 1787385039435
+    },
+    {
+      "sleeper_id": "14008",
+      "player": "Rodney Hammond",
+      "team": "DEN",
+      "pos": "RB",
+      "adp": 276,
+      "projected_season_points": null,
+      "updated_at": 1787385037392
+    },
+    {
+      "sleeper_id": "344",
+      "player": "Julian Edelman",
+      "team": null,
+      "pos": "WR",
+      "adp": 277.3,
+      "projected_season_points": null,
+      "updated_at": 1787385039245
+    },
+    {
+      "sleeper_id": "1979",
+      "player": "Blake Bortles",
+      "team": "NO",
+      "pos": "QB",
+      "adp": 278.3,
+      "projected_season_points": null,
+      "updated_at": 1787385034018
+    },
+    {
+      "sleeper_id": "1169",
+      "player": "Robert Griffin",
+      "team": null,
+      "pos": "QB",
+      "adp": 279,
+      "projected_season_points": null,
+      "updated_at": 1787385035250
+    },
+    {
+      "sleeper_id": "6932",
+      "player": "Charlie Taumoepeau",
+      "team": null,
+      "pos": "TE",
+      "adp": 280,
+      "projected_season_points": null,
+      "updated_at": 1787385038103
+    },
+    {
+      "sleeper_id": "6317",
+      "player": "Jacob Dolegala",
+      "team": null,
+      "pos": "QB",
+      "adp": 281,
+      "projected_season_points": null,
+      "updated_at": 1787385048262
+    },
+    {
+      "sleeper_id": "208",
+      "player": "Josh McCown",
+      "team": null,
+      "pos": "QB",
+      "adp": 282,
+      "projected_season_points": null,
+      "updated_at": 1787385049373
+    },
+    {
+      "sleeper_id": "11491",
+      "player": "Austin Aune",
+      "team": null,
+      "pos": "QB",
+      "adp": 283,
+      "projected_season_points": null,
+      "updated_at": 1787385035215
+    },
+    {
+      "sleeper_id": "5752",
+      "player": "Sherman Badie",
+      "team": null,
+      "pos": "RB",
+      "adp": 284,
+      "projected_season_points": null,
+      "updated_at": 1787385046422
+    },
+    {
+      "sleeper_id": "3199",
+      "player": "Michael Thomas",
+      "team": null,
+      "pos": "WR",
+      "adp": 285,
+      "projected_season_points": null,
+      "updated_at": 1787385040961
+    },
+    {
+      "sleeper_id": "178",
+      "player": "Matt Schaub",
+      "team": null,
+      "pos": "QB",
+      "adp": 286,
+      "projected_season_points": null,
+      "updated_at": 1787385044241
+    },
+    {
+      "sleeper_id": "7584",
+      "player": "Brennan Eagles",
+      "team": null,
+      "pos": "WR",
+      "adp": 287,
+      "projected_season_points": null,
+      "updated_at": 1787385039864
+    },
+    {
+      "sleeper_id": "7211",
+      "player": "Zimari Manning",
+      "team": null,
+      "pos": "WR",
+      "adp": 289,
+      "projected_season_points": null,
+      "updated_at": 1787385036439
+    },
+    {
+      "sleeper_id": "6847",
+      "player": "Devin Duvernay",
+      "team": "ARI",
+      "pos": "WR",
+      "adp": 291.5,
+      "projected_season_points": -1.4,
+      "updated_at": 1787385046584
+    },
+    {
+      "sleeper_id": "5134",
+      "player": "Keith Kirkwood",
+      "team": null,
+      "pos": "WR",
+      "adp": 293,
+      "projected_season_points": null,
+      "updated_at": 1787385041168
+    },
+    {
+      "sleeper_id": "3664",
+      "player": "J.D. McKissic",
+      "team": null,
+      "pos": "RB",
+      "adp": 294,
+      "projected_season_points": null,
+      "updated_at": 1787385047835
+    },
+    {
+      "sleeper_id": "3410",
+      "player": "Jake Coker",
+      "team": null,
+      "pos": "QB",
+      "adp": 295,
+      "projected_season_points": null,
+      "updated_at": 1787385040979
+    },
+    {
+      "sleeper_id": "12538",
+      "player": "Brady Cook",
+      "team": "NYJ",
+      "pos": "QB",
+      "adp": 295.5,
+      "projected_season_points": null,
+      "updated_at": 1787385045622
+    },
+    {
+      "sleeper_id": "8177",
+      "player": "Grant Calcaterra",
+      "team": "PHI",
+      "pos": "TE",
+      "adp": 297,
+      "projected_season_points": 20.6,
+      "updated_at": 1787385043475
+    },
+    {
+      "sleeper_id": "11439",
+      "player": "Jaleel McLaughlin",
+      "team": "DEN",
+      "pos": "RB",
+      "adp": 299,
+      "projected_season_points": 6.5,
+      "updated_at": 1787385035209
+    },
+    {
+      "sleeper_id": "1346",
+      "player": "Marquise Goodwin",
+      "team": null,
+      "pos": "WR",
+      "adp": 300,
+      "projected_season_points": null,
+      "updated_at": 1787385049225
+    },
+    {
+      "sleeper_id": "13968",
+      "player": "Drew Stevens",
+      "team": "WAS",
+      "pos": "K",
+      "adp": 341.7,
+      "projected_season_points": 22,
+      "updated_at": 1787385047588
+    },
+    {
+      "sleeper_id": "13833",
+      "player": "Dominic Zvada",
+      "team": "NYG",
+      "pos": "K",
+      "adp": 350.6,
+      "projected_season_points": 56,
+      "updated_at": 1787385049290
+    },
+    {
+      "sleeper_id": "8258",
+      "player": "Cade York",
+      "team": "NYJ",
+      "pos": "K",
+      "adp": 368,
+      "projected_season_points": 13,
+      "updated_at": 1787385050172
+    },
+    {
+      "sleeper_id": "11261",
+      "player": "Andre Szmyt",
+      "team": "CLE",
+      "pos": "K",
+      "adp": 439.6,
+      "projected_season_points": 84,
+      "updated_at": 1787385038562
+    },
+    {
+      "sleeper_id": "TEN",
+      "player": "TEN D/ST",
+      "team": "TEN",
+      "pos": "DEF",
+      "adp": 500.8,
+      "projected_season_points": 67,
+      "updated_at": 1787385050792
+    },
+    {
+      "sleeper_id": "NYJ",
+      "player": "NYJ D/ST",
+      "team": "NYJ",
+      "pos": "DEF",
+      "adp": 515.9,
+      "projected_season_points": 64,
+      "updated_at": 1787385050803
+    },
+    {
+      "sleeper_id": "BUF",
+      "player": "BUF D/ST",
+      "team": "BUF",
+      "pos": "DEF",
+      "adp": 530.1,
+      "projected_season_points": 84,
+      "updated_at": 1787385050839
+    }
+  ]
+}
