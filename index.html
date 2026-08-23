@@ -10,7 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Clay (Unofficial) Fantasy Football Draft Board">
 <meta property="og:title" content="Clay (Unofficial) Fantasy Football Draft Board">
-<meta property="og:description" content="200 players scored by a model built on Clay workflows — usage, vacated volume, weekly splits and coach sentiment, backtested against five seasons of ADP. Draft live from the board.">
+<meta property="og:description" content="200 players scored by Clay workflows and ranked by standard deviations of expected PPG above replacement at position. Draft live from the board.">
 <meta property="og:url" content="https://jordanbrodie-clay-dev.github.io/clay-fantasy-draft-board/">
 <meta property="og:image" content="https://jordanbrodie-clay-dev.github.io/clay-fantasy-draft-board/og.png">
 <meta property="og:image:width" content="1200">
@@ -214,6 +214,7 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
   <div class="chips" id="draftF"></div>
   <select id="sort">
     <option value="r">Sort: Clay draft rank</option>
+    <option value="zv">Sort: Value above replacement (σ)</option>
     <option value="s">Sort: Positional score</option>
     <option value="adp">Sort: ADP</option>
     <option value="ep">Sort: Edge vs ADP</option>
@@ -233,14 +234,14 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
   <div class="tablewrap"><table>
     <thead><tr>
       <th>Taken</th><th>Mine</th><th>Watch</th>
-      <th>Clay rank<span class="i" title="Where to actually draft him overall. Converts the positional score into value over replacement, accounts for positional scarcity, and anchors to expert consensus. This is the number to draft by.">i</span></th>
+      <th>Clay rank<span class="i" title="Where to actually draft him overall. Positional order anchors to expert consensus; cross-position order optimizes standard deviations of expected PPG above replacement.">i</span></th>
       <th>Player</th><th>Tier</th>
       <th>Positional score<span class="i" title="How strong this player's profile is compared to others at his own position. 50 is positional average, 100 is best in class. It does NOT account for positional scarcity.">i</span></th>
-      <th>Proj ppg</th><th>ADP</th><th>ECR</th><th>Winks</th><th>Spike wks</th><th>Edge</th><th>Class</th><th>Conf</th><th></th>
+      <th>Proj ppg</th><th>ADP</th><th>ECR</th><th>Winks</th><th>Spike wks</th><th>Value (σ)<span class="i" title="Projected PPG above the replacement player at this position, divided by the within-position standard deviation of projected PPG. This is the model's cross-position optimization objective.">i</span></th><th>Class</th><th>Conf</th><th></th>
     </tr></thead>
     <tbody id="tb"></tbody>
   </table></div>
-  <footer>Model anchors to expert consensus; edges come from usage, vacated volume, weekly splits, and ceiling data. Unofficial and just for fun — not affiliated with the NFL.</footer>
+  <footer>Model positional ranks anchor to expert consensus; the overall board optimizes standard deviations of projected PPG above replacement at position. Unofficial and just for fun — not affiliated with the NFL.</footer>
 </div>
 
 <div class="panel" id="panel">
@@ -262,14 +263,14 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
     <span class="fnode">Workflows</span><span class="arw">→</span>
     <span class="fnode">Structured data</span><span class="arw">→</span>
     <span class="fnode">Qualitative signal</span><span class="arw">→</span>
-    <span class="fnode">Score + VOR</span><span class="arw">→</span>
+    <span class="fnode">Score + σ VOR</span><span class="arw">→</span>
     <span class="fnode">Board</span>
   </div>
   <div class="steps">
     <div class="step"><h5><span class="snum">1</span>Author workflows from the CLI</h5><p>Used the Clay CLI to create multi-node workflows programmatically instead of clicking through a UI. Three workflows: player research, team environment, and coach sentiment.</p></div>
     <div class="step"><h5><span class="snum">2</span>Pull structured data via API</h5><p>Each workflow chains search → scrape → structured extraction, returning typed JSON with a source URL for every value. 200 players enriched with 2025 usage, efficiency, Vegas props, and injury history. A second workflow built all 32 team environments: Vegas win totals, offensive line ranks, coaching changes, and vacated carries and targets.</p></div>
     <div class="step"><h5><span class="snum">3</span>Add qualitative signal</h5><p>A third workflow reads player news, beat reporting, and direct coach quotes, then grades role language. Critically it separates concrete role statements ("he'll be our starter", "first-team reps") from generic August coachspeak ("he's looked great") — only the specific kind is allowed to move a score. Generic praise is flagged and scored zero.</p></div>
-    <div class="step"><h5><span class="snum">4</span>Score, then pressure-test</h5><p>Six weighted buckets (opportunity, production, situation, efficiency, market, regression) times a risk multiplier, converted to value over replacement, then anchored to expert consensus.</p></div>
+    <div class="step"><h5><span class="snum">4</span>Score, then pressure-test</h5><p>Six weighted buckets (opportunity, production, situation, efficiency, market, regression) times a risk multiplier determine the positional order. The overall board then optimizes projected PPG above replacement, measured in standard deviations within each position.</p></div>
   </div>
   <div class="ref">
     <h4 style="font-size:16px;font-weight:600;margin-bottom:4px">How it was refined</h4>
@@ -334,6 +335,8 @@ function render(){
       <div class="kv"><span>Best week</span><b class="num">${n1(p.bw)}</b></div>
       <div class="kv"><span>Spike weeks</span><b class="num">${p.sw==null?'—':p.sw+' / '+p.g}</b></div>
       <div class="kv"><span>2025 ppg</span><b class="num">${n1(p.ppg)}</b></div>
+      <div class="kv"><span>Replacement ppg</span><b class="num">${n1(p.rp)}</b></div>
+      <div class="kv"><span>Value above replacement</span><b class="num">${p.zv==null?'—':p.zv.toFixed(2)+'σ'}</b></div>
       ${p.cont?`<div class="kv"><span>Contingency ppg</span><b class="num">${n1(p.cont)}</b></div>`:''}
       <div class="kv"><span>Coach role language</span><b>${esc(p.rl||'no signal')}</b></div>
       <div class="kv"><span>Data confidence</span><b>${p.cf}</b></div></div></div></td></tr>`:'';
@@ -346,7 +349,7 @@ function render(){
       <td class="num">${p.ti}</td><td class="num" style="color:var(--matcha);font-weight:600">${n1(p.s)}</td>
       <td class="num">${n1(p.pj)}</td><td class="num">${n1(p.adp)}</td><td class="num">${p.ecr??'—'}</td>
       <td class="num">${p.wk??'—'}</td><td class="num">${p.sw??'—'}</td>
-      <td class="num ${p.ep>0?'pos':p.ep<0?'neg':''}">${p.ep==null?'—':(p.ep>0?'+':'')+p.ep.toFixed(1)}</td>
+      <td class="num ${p.zv>0?'pos':p.zv<0?'neg':''}">${p.zv==null?'—':p.zv.toFixed(2)+'σ'}</td>
       <td><span class="badge b-${p.c}">${p.c}</span></td>
       <td><span class="cf cf-${p.cf}">${p.cf}</span></td>
       <td><span class="chev">▸</span></td></tr>${det}`}).join('');

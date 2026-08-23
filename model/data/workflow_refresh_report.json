@@ -1,0 +1,303 @@
+{
+  "refreshed_at": "2026-08-23T02:30:38.426Z",
+  "workflow_runs": {
+    "research": "run_0tk7ahvS4zd9bH5UTPP",
+    "sentiment": "run_0tk7ahv2Z2Shim8JQer"
+  },
+  "requested": 200,
+  "research_complete": 179,
+  "sentiment_complete": 180,
+  "failures": {
+    "research": [
+      {
+        "player": "Javonte Williams",
+        "pos": "RB",
+        "team": "DAL",
+        "sportradar_id": "889dcdc5-3d88-45df-9677-5ad7ff87c011",
+        "error": "Claygent failed: None of the provided search results could be verified as listing 2026 full-season (season-long) player prop over/under lines for Javonte Williams (rushing/receiving/passing yards and TDs) from a real sportsbook. The closest result (FantasyTeamAdvice season-long props page) did not show any actual 2026 over/under numbers on the exact URL provided, and the BettingPros player-futures page appears to be futures/cheat-sheet style with no visible full-season rushing/receiving/passing yardage or TD over/under lines in the extracted content."
+      },
+      {
+        "player": "Josh Allen",
+        "pos": "QB",
+        "team": "BUF",
+        "sportradar_id": "3069db07-aa43-4503-ab11-2ae5c0002721",
+        "error": "Claygent failed: None of the provided candidate results (notably fantasy.nfl.com and thefantasyfootballers.com) contained the requested 2025-season advanced efficiency metrics (e.g., yards per route run, EPA/expected fantasy points, missed tackles forced) when checked via page scrape; therefore I cannot select a verified best secondary stats source from the given results."
+      },
+      {
+        "player": "Travis Etienne Jr.",
+        "pos": "RB",
+        "team": "NO",
+        "sportradar_id": "970693f0-0af4-4627-ac0c-bf519f7433ee",
+        "error": "Claygent failed: None of the candidate domains in the provided search results (fantasydata.com, espn.com, sports.yahoo.com) contained clear 2025 advanced/efficiency metrics for Travis Etienne Jr such as yards per route run, EPA/expected points, missed tackles forced, or expected fantasy points (the only page visited showed basic usage/yardage and no required advanced efficiency metrics). Therefore I cannot confidently select a different domain that most likely provides the requested 2025 advanced stats."
+      },
+      {
+        "player": "Zach Charbonnet",
+        "pos": "RB",
+        "team": "SEA",
+        "sportradar_id": "7d7f1628-85a7-4633-9ffe-d82fc2761b00",
+        "error": "Claygent failed: None of the candidate sources contain explicit 2026 season-long (full-season) prop over/under lines for rushing/receiving/passing yards and TDs. The only clearly labeled “season-long props” page located (FantasyTeamAdvice) does not show numeric over/under lines in the accessible content, and the FanDuel sportsbook page shows no player props for any game/season. Other results (e.g., RotoWire) did not provide relevant season-long O/U data in the extracted content."
+      },
+      {
+        "player": "Denzel Boston",
+        "pos": "WR",
+        "team": "CLE",
+        "sportradar_id": "a17e4b32-20bb-4552-855e-0aa3cf0bafab",
+        "error": "Claygent failed: None of the provided Google results appears to be an injury-history timeline page for Denzel Boston (WR, Cleveland Browns) covering the 2024 and 2025 NFL seasons. The only injury-history-style result (Draft Sharks) is for a different player (Denzel Ward). The Cleveland Browns roster ‘logs’ page confirms the player but does not provide an injury timeline or games-missed-by-season information in the extracted content, and the Fox Sports link appears to be for college football rather than an NFL injury timeline."
+      },
+      {
+        "player": "Kayshon Boutte",
+        "pos": "WR",
+        "team": "NE",
+        "sportradar_id": "9c054866-5e6c-460b-9af3-ebf91e7d0a3e",
+        "error": "Claygent failed: Could not locate a source in the provided search results that lists Kayshon Boutte 2026 season-long (full-season) player prop over/under lines for rushing/receiving/passing yards and TDs from a real sportsbook. The only sportsbook-like page found (FanDuel player-props) indicates that there are currently no player props available for this player, and the other pages found (e.g., BettingPros, Lineups, SI) are focused on weekly/game or Super Bowl–specific props rather than season-long totals."
+      },
+      {
+        "player": "Jonathon Brooks",
+        "pos": "RB",
+        "team": "CAR",
+        "sportradar_id": "5c842941-844b-4f6a-bce4-26b377146674",
+        "error": "Claygent failed: Could not find a source among the provided Google results that clearly lists Jonathon Brooks’ 2026 season-long prop over/under markets (rushing/receiving/passing yards and TDs). FanDuel’s player-props page stated there are no player props available for the shown game, RotoWire’s page did not display any odds/lines in the retrieved content, and BettingPros pages visited did not show season-long 2026 over/under numbers (they referenced game/week context or loading/no lines)."
+      },
+      {
+        "player": "RJ Harvey",
+        "pos": "RB",
+        "team": "DEN",
+        "sportradar_id": "fc6dbb83-b2b1-4962-b793-e79b2378b525",
+        "error": "Claygent failed: Could not locate a source that actually lists RJ Harvey’s 2026 season-long (full-season) over/under prop lines for rushing/receiving/passing yards and touchdowns. Checked multiple candidate pages/aggregators from the provided results (Covers, BettingPros player futures/props, RotoWire, ScoresAndOdds, FanDuel player-props) and none displayed season-total O/U markets—Covers/RotoWire mainly show per-game projections or futures (e.g., MVP), and FanDuel indicates no player props available for the shown context."
+      },
+      {
+        "player": "Garrett Wilson",
+        "pos": "WR",
+        "team": "NYJ",
+        "sportradar_id": "68d72fe0-79b2-4fdb-afd5-6c79676e77f3",
+        "error": "Unexpected token '<', \"<html>\r\n<h\"... is not valid JSON"
+      },
+      {
+        "player": "David Montgomery",
+        "pos": "RB",
+        "team": "HOU",
+        "sportradar_id": "1c9e1cd5-8cb1-4a15-a2c8-3a0c0fd5423c",
+        "error": "Unexpected token '<', \"<html>\r\n<h\"... is not valid JSON"
+      },
+      {
+        "player": "Daniel Jones",
+        "pos": "QB",
+        "team": "IND",
+        "sportradar_id": "0042266b-cb28-4012-bfd2-06650badad97",
+        "error": "Claygent failed: I could not find (from the provided search results and a direct check of the linked pages) a real sportsbook page that specifically lists Daniel Jones 2026 season-long (full-season) over/under lines for passing/rushing/receiving yards and touchdown totals. The available FanDuel link is a generic NFL player-props navigation page without confirmable season-long markets, and BettingPros appears to focus on weekly/single-week props rather than full-season season-long totals."
+      },
+      {
+        "player": "Eli Stowers",
+        "pos": "TE",
+        "team": "PHI",
+        "sportradar_id": "287b7f15-ebe2-433f-af00-b1755576f8f8",
+        "error": "Claygent failed: From the provided search results and subsequent page checks (BettingPros and FanDuel), the available Eli Stowers “player props” pages are matchup/game-context (e.g., “TE•WAS @ PHI” and “Next Game”) and do not clearly list 2026 season-long over/under markets for rushing/receiving/passing yards or TDs. None of the results point to a verified sportsbook page offering explicit season-total (full 2026) prop lines for Eli Stowers."
+      },
+      {
+        "player": "Jack Bech",
+        "pos": "WR",
+        "team": "LV",
+        "sportradar_id": "01079767-a3a3-437d-b935-ea0ecb1fe68b",
+        "error": "Tool execution failed with status: ERROR_BAD_REQUEST — We were unable to scrape this website. Try again in a few minutes, and if that does not work, please let Clay know."
+      },
+      {
+        "player": "Jared Goff",
+        "pos": "QB",
+        "team": "DET",
+        "sportradar_id": "aba8f925-ffbf-4654-bfa7-a25d3d237494",
+        "error": "Tool execution failed with status: ERROR_TIMEOUT"
+      },
+      {
+        "player": "De'Von Achane",
+        "pos": "RB",
+        "team": "MIA",
+        "sportradar_id": "a4ef921b-8767-4b4f-a651-7675c00f9af0",
+        "error": "Claygent failed: I could not find a page that clearly lists De'Von Achane’s current 2026 *season-long* (full regular-season) player-prop over/under lines for rushing/receiving/passing yards and TDs from a real sportsbook or a qualifying aggregator. The sportsbook links found (e.g., FanDuel) did not show any season-long prop lines, and the available aggregator pages I checked (e.g., BettingPros, PropsBot) did not provide verifiable full-season line values for the required yardage/TD markets (they appeared to be weekly/game props or lacked the necessary line/odds details in accessible content)."
+      },
+      {
+        "player": "Emmett Johnson",
+        "pos": "RB",
+        "team": "KC",
+        "sportradar_id": "ec3e0874-c2bc-49f6-b4b1-dfc874eecb9b",
+        "error": "Claygent failed: None of the provided Google results appear to be a sportsbook page or an aggregator page specifically listing 2026 season-long (full-season) rushing/receiving/passing yardage and TD over/under lines for Emmett Johnson. The only likely aggregator result (BettingPros) is a “Prop Bet Analyzer” tied to a specific matchup (RB • DEN @ KC), indicating weekly/single-game props rather than season-long totals. Other results are clearly single-game/gameday props (FantasyTeamAdvice) or non-prop content (ESPN, social/forum, videos). Therefore I cannot select a link that matches the requested season-long props criteria from the provided options."
+      },
+      {
+        "player": "Kenneth Walker III",
+        "pos": "RB",
+        "team": "KC",
+        "sportradar_id": "22ee9bac-a64c-4d44-94fc-51d775465b3b",
+        "error": "Claygent failed: Unable to find a real sportsbook page that currently lists Kenneth Walker III 2026 season-long (not single-game) rushing/receiving/passing yardage and TD over/under lines. The available results are either Super Bowl/single-game props (e.g., DraftKings DK Network post) or aggregators that also appear to focus on single-game prop lines; FanDuel’s player-props page shows no props available for Kenneth Walker III."
+      },
+      {
+        "player": "Hunter Henry",
+        "pos": "TE",
+        "team": "NE",
+        "sportradar_id": "705899da-3c20-4bc3-b5d0-2e6e40655131",
+        "error": "Claygent failed: I couldn’t find a source in the provided search results that clearly lists Hunter Henry’s current 2026 season-long (full-season) over/under lines for rushing/receiving/passing yards and TD totals. The FanDuel player-props page shown only contains next-game/single-game touchdown props, not season-long thresholds. BettingPros pages I checked are for single prop types (e.g., receiving yards) and do not show season-long (2026 season totals) lines in the accessible content, only a consensus number for that prop context without confirming it’s season-long. FantasyTeamAdvice’s listed season-long props link appears to be for 2023, not 2026, so it wouldn’t meet the requirement."
+      },
+      {
+        "player": "Justin Herbert",
+        "pos": "QB",
+        "team": "LAC",
+        "sportradar_id": "f0a8f8e3-b9e9-46ed-85e4-eec6452a8a44",
+        "error": "Claygent failed: The provided alternate domain (https://www.fantasypros.com/nfl/players/justin-herbert.php) does not show 2025-season advanced efficiency/expected metrics like EPA, yards per route run, expected fantasy points, or missed tackles forced—only standard fantasy/rushing/passing stats and projections. Therefore I cannot select a best-fit “advanced stats” secondary source from the given options with sufficient confidence."
+      },
+      {
+        "player": "Michael Wilson",
+        "pos": "WR",
+        "team": "ARI",
+        "sportradar_id": "b91be982-fccd-448e-869b-e9b5148a1730",
+        "error": "Unexpected token '<', \"<html>\r\n<h\"... is not valid JSON"
+      },
+      {
+        "player": "Rhamondre Stevenson",
+        "pos": "RB",
+        "team": "NE",
+        "sportradar_id": "6260e78a-64e2-4f7e-9bf8-39948a17a370",
+        "error": "Failed to submit AI-runner execution: Unexpected token '<', \"<html>\r\n<h\"... is not valid JSON"
+      }
+    ],
+    "sentiment": [
+      {
+        "player": "Ladd McConkey",
+        "pos": "WR",
+        "team": "LAC",
+        "sportradar_id": "473bc7e5-c393-4f21-9e49-3ffc16711238",
+        "error": "Claygent failed: From the provided candidate results, the only non-chargers.com domain that could be accessed for role-specific 2026 camp/offseason reporting was Sports Illustrated (si.com). However, the SI page content available did not include concrete beat-reporter details requested (first-team reps, specific depth-chart position for 2026, snap projections, package usage, or who he is competing with). ESPN and Yahoo Sports pages returned 'no relevant data' when queried for those role-specific details, so I cannot confidently select a link that contains the required concrete role reporting."
+      },
+      {
+        "player": "T.J. Hockenson",
+        "pos": "TE",
+        "team": "MIN",
+        "sportradar_id": "bd1120b6-38b3-4225-a4b0-20660a149d0d",
+        "error": "Claygent failed: Tried visiting all three provided links; none returned any relevant content containing direct quotes from the Vikings head coach or offensive coordinator about T.J. Hockenson’s 2026 role/usage/standing (no coach-name quote evidence found / page content not accessible via the scraper)."
+      },
+      {
+        "player": "Trevor Lawrence",
+        "pos": "QB",
+        "team": "JAX",
+        "sportradar_id": "aaa8b42c-4d87-45f6-bfd2-e31cfed9a736",
+        "error": "Claygent failed: Tried visiting the candidate non-jaguars.com results (ESPN and Yahoo Sports and BigCatCountry) to extract concrete 2026 role reporting about Trevor Lawrence (first-team reps/depth chart/snap projections/package usage/competition). The webpage scraping tool returned 'no relevant data' for each, so I cannot verify role-specific beat-reporter content from the provided links."
+      },
+      {
+        "player": "Dallas Goedert",
+        "pos": "TE",
+        "team": "PHI",
+        "sportradar_id": "e8029983-87cf-49a2-bc04-04c8233a0630",
+        "error": "Claygent failed: I reviewed the most promising 2026-related results (Eagles official position-preview page; PhillyVoice practice-notes post; EaglesWire/USA Today; Yahoo; Facebook; and an Eagles official video page) and none contained direct quotes from a head coach or offensive coordinator about Dallas Goedert’s 2026 role/usage/standing. The only direct quote I saw on the Eagles official position-preview page was from Dallas Goedert himself, not a coach/OC."
+      },
+      {
+        "player": "Puka Nacua",
+        "pos": "WR",
+        "team": "LAR",
+        "sportradar_id": "111be44d-7bc2-4cad-934d-c9e946293b2f",
+        "error": "Claygent failed: None of the candidate links found (SI depth chart, ESPN intel updates, Yahoo, and NYT Athletic) contained accessible concrete 2026 role reporting about Puka Nacua such as first-team reps, depth-chart position, snap projections, package usage, or specific competition. SI did not mention him at all; ESPN and Yahoo content was not retrievable for role specifics; NYT Athletic only described him as “star”/leading in catches without the concrete role details required."
+      },
+      {
+        "player": "Jack Bech",
+        "pos": "WR",
+        "team": "LV",
+        "sportradar_id": "01079767-a3a3-437d-b935-ea0ecb1fe68b",
+        "error": "Claygent failed: I attempted to find direct head-coach/offensive-coordinator quotes about WR Jack Bech (2026) from the provided high-priority results. Raiders.com Training Camp Notebook 8/4 includes coach quotes, but they are about other receivers (e.g., Malik Benson, Chase Roberts) and does not provide coach quotes about Bech; Bech’s quotes present are from Bech himself. I also checked an SI.com article framing Bech’s 2026 role and found no direct coach quotes about him. Without coach-quote evidence, I cannot select a result that meets the requirement."
+      },
+      {
+        "player": "Caleb Williams",
+        "pos": "QB",
+        "team": "CHI",
+        "sportradar_id": "49d4b627-3f19-49a8-ae33-f539e0fb1f88",
+        "error": "Claygent failed: From the provided candidate links, I could not retrieve any concrete 2026 role reporting (first-team reps/depth chart/snap projections/package usage/competition) about Caleb Williams. The ESPN link returned no relevant data on access, and the NYT Athletic article (kept behind/paywalled excerpt) did not include explicit first-team/snap/package/competition details in the accessible text. Other candidates in the list (YouTube/Facebook/Instagram) were explicitly disallowed or provided no extractable page content."
+      },
+      {
+        "player": "KC Concepcion",
+        "pos": "WR",
+        "team": "CLE",
+        "sportradar_id": "395b5873-4054-4190-913c-60b664d11e61",
+        "error": "Unexpected token '<', \"<html>\r\n<h\"... is not valid JSON"
+      },
+      {
+        "player": "Jonathan Taylor",
+        "pos": "RB",
+        "team": "IND",
+        "sportradar_id": "925195a4-06ba-4e37-ae7d-a3d6a5419139",
+        "error": "Claygent failed: Both provided candidate results (ESPN training-camp intel page and Colts.com Jonathan Taylor video page) did not yield any relevant direct coach quotes about Jonathan Taylor’s 2026 role/usage/standing when scraped with the webpage-visit tool (“no relevant data”). With no other links available from the input, I can’t reliably identify a source containing head coach/offensive coordinator quotes."
+      },
+      {
+        "player": "Brandon Aiyuk",
+        "pos": "WR",
+        "team": "SF",
+        "sportradar_id": "c90471cc-fa60-4416-9388-5aebb5d877eb",
+        "error": "Claygent failed: The only team-linked result I checked (Yahoo Sports article: https://sports.yahoo.com/articles/49ers-gm-john-lynch-tight-223542432.html) does not provide concrete 2026 camp role reporting about first-team reps, depth-chart position, snap projections, package usage, or who he’s competing with. It focuses on Aiyuk being on a “left squad”/reserve designation and Lynch declining to discuss more. Other checked link (ESPN depth chart) also contained no relevant role/projection data for Aiyuk, and the remaining options in the provided list are either non-beat/listicle/video/fantasy-type or on the excluded 49erswebzone domain."
+      },
+      {
+        "player": "Woody Marks",
+        "pos": "RB",
+        "team": "HOU",
+        "sportradar_id": "b900661b-b5df-47c8-819d-bb13b106a60b",
+        "error": "Unexpected token '<', \"<html>\r\n<h\"... is not valid JSON"
+      },
+      {
+        "player": "Tyler Allgeier",
+        "pos": "RB",
+        "team": "ARI",
+        "sportradar_id": "f4529909-1a02-4f4b-a1f3-315cad100683",
+        "error": "Claygent failed: None of the provided Google results contained clear direct quotes from the head coach or offensive coordinator about Tyler Allgeier’s role/usage/standing for the 2026 season based on webpage excerpts checked (Yahoo article showed coaching mentions without Allgeier role/usage quotes; AZCentral linked from Yahoo showed no relevant data). As a result, I can’t confidently select a single result that is most likely to include genuine coach quotes about Allgeier."
+      },
+      {
+        "player": "AJ Barner",
+        "pos": "TE",
+        "team": "SEA",
+        "sportradar_id": "e96127b4-d381-43d4-b0ae-8790c706756f",
+        "error": "Claygent failed: None of the provided results surfaced concrete beat-style role reporting for AJ Barner (first-team reps, depth-chart position, snap/usage projections, package usage, or direct competition). The team-site Seahawks.com article could not be extracted with any specific role/rep/depth details, and the ESPN training-camp intel page also returned no relevant data for Barner’s role. Without a clearly supporting source, I cannot confidently select the single best link as requested."
+      },
+      {
+        "player": "Antonio Williams",
+        "pos": "WR",
+        "team": "WAS",
+        "sportradar_id": "d80b6d95-5b56-4e52-9a19-05957961f506",
+        "error": "Claygent failed: I reviewed the provided top results by visiting each link; none of the pages yielded direct quotes from the Commanders head coach or offensive coordinator about WR Antonio Williams. The only extract found (from the commanders.com training-camp quotes page) contained a player quote from Antonio Williams, not coach coverage. Other visited beat/SI pages returned no relevant coach-quote text via the scraper, so I can’t confidently provide a chosen_url that contains genuine coach quotes about his role/usage/standing for the 2026 season."
+      },
+      {
+        "player": "Tee Higgins",
+        "pos": "WR",
+        "team": "CIN",
+        "sportradar_id": "7963b029-5de4-4541-b00a-44eefe4349af",
+        "error": "Claygent failed: From the provided candidate results, I could not find any that reliably contain concrete 2026 role reporting on Tee Higgins (first-team reps, snap projections, or package usage). The two local/team-specific articles I checked (CincyJungle and the mirrored Yahoo version) only provide relative depth-chart placement for Higgins (e.g., noting he’s behind Iosivas and ahead of Colbie Young) without reps/snap/usage details. The ESPN and Facebook links did not yield relevant role-reporting content in the retrieved page text."
+      },
+      {
+        "player": "Brian Thomas",
+        "pos": "WR",
+        "team": "JAX",
+        "sportradar_id": "271a233e-68b3-4261-a3aa-7667eaf9d3cc",
+        "error": "Claygent failed: Tried visiting multiple candidate pages from different domains (SI, ESPN, BigCatCountry) but the webpage extraction tool returned 'no relevant data' each time, so I could not obtain concrete beat-reporter role information (first-team reps/depth chart/snap/package usage/competitors) to select a reliable chosen_url."
+      },
+      {
+        "player": "Quentin Johnston",
+        "pos": "WR",
+        "team": "LAC",
+        "sportradar_id": "e648bc98-bc81-44d0-8d4b-b9223c497ff4",
+        "error": "Claygent failed: None of the non-chargers.com results provided (ESPN, Sports Illustrated, Yahoo) contained concrete Quentin Johnston 2026 role reporting such as first-team reps, depth-chart position, snap projections, package usage, or specific competition. The only likely source for that kind of detail would be the Chargers’ own depth chart page, but it is on the same domain (chargers.com) as the excluded chargers.com video URL, which violates the domain requirement."
+      },
+      {
+        "player": "David Montgomery",
+        "pos": "RB",
+        "team": "HOU",
+        "sportradar_id": "1c9e1cd5-8cb1-4a15-a2c8-3a0c0fd5423c",
+        "error": "Failed to submit AI-runner execution: Unexpected token '<', \"<html>\r\n<h\"... is not valid JSON"
+      },
+      {
+        "player": "DeVonta Smith",
+        "pos": "WR",
+        "team": "PHI",
+        "sportradar_id": "28fe52c0-4b32-11f1-bb94-572e588a4e80",
+        "error": "Claygent failed: None of the provided search results yielded clearly relevant head-coach/offensive-coordinator direct quotes about DeVonta Smith’s 2026 role/usage/standing. Webpage checks for the top candidates (mcall, CBS News, Facebook) returned no relevant data, and the NYTimes Athletic page contained DeVonta Smith context mainly about injury/practice participation without direct coach quotes on his usage/standing."
+      },
+      {
+        "player": "Sam LaPorta",
+        "pos": "TE",
+        "team": "DET",
+        "sportradar_id": "3059f1e5-1871-4458-9e90-9b9917874c61",
+        "error": "Claygent failed: Tried visiting the candidate pages from the provided Google results (sports.yahoo.com, espn.com, and nfl.com) to extract concrete 2026 camp/offseason role reporting for Sam LaPorta (first-team reps, depth-chart position, snap projections, package usage, competition). The webpage-visit tool returned 'no relevant data' for each page, likely due to dynamic content/transcripts not being accessible. Without extractable text evidence, I can’t confidently identify the best beat-reporting source or the requested role details from the options given."
+      }
+    ]
+  }
+}

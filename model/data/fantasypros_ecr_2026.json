@@ -1,0 +1,7730 @@
+{
+  "source": "FantasyPros half-PPR Expert Consensus Rankings",
+  "source_url": "https://www.fantasypros.com/nfl/rankings/half-point-ppr-cheatsheets.php",
+  "season": 2026,
+  "source_last_updated": "8/23",
+  "expert_count": 107,
+  "fetched_at": "2026-08-23T02:24:38.629Z",
+  "players": [
+    {
+      "player": "Jahmyr Gibbs",
+      "team": "DET",
+      "pos": "RB",
+      "ecr": 1,
+      "average_expert_rank": 1.72,
+      "rank_std_dev": 0.82,
+      "pos_rank": "RB1",
+      "tier": 1
+    },
+    {
+      "player": "Bijan Robinson",
+      "team": "ATL",
+      "pos": "RB",
+      "ecr": 2,
+      "average_expert_rank": 2.22,
+      "rank_std_dev": 0.8,
+      "pos_rank": "RB2",
+      "tier": 1
+    },
+    {
+      "player": "Ja'Marr Chase",
+      "team": "CIN",
+      "pos": "WR",
+      "ecr": 3,
+      "average_expert_rank": 2.53,
+      "rank_std_dev": 1.21,
+      "pos_rank": "WR1",
+      "tier": 1
+    },
+    {
+      "player": "Puka Nacua",
+      "team": "LAR",
+      "pos": "WR",
+      "ecr": 4,
+      "average_expert_rank": 4.3,
+      "rank_std_dev": 1.41,
+      "pos_rank": "WR2",
+      "tier": 1
+    },
+    {
+      "player": "Jaxon Smith-Njigba",
+      "team": "SEA",
+      "pos": "WR",
+      "ecr": 5,
+      "average_expert_rank": 5.99,
+      "rank_std_dev": 1.56,
+      "pos_rank": "WR3",
+      "tier": 1
+    },
+    {
+      "player": "Amon-Ra St. Brown",
+      "team": "DET",
+      "pos": "WR",
+      "ecr": 6,
+      "average_expert_rank": 6.59,
+      "rank_std_dev": 1.2,
+      "pos_rank": "WR4",
+      "tier": 1
+    },
+    {
+      "player": "Christian McCaffrey",
+      "team": "SF",
+      "pos": "RB",
+      "ecr": 7,
+      "average_expert_rank": 8.89,
+      "rank_std_dev": 4.72,
+      "pos_rank": "RB3",
+      "tier": 1
+    },
+    {
+      "player": "Jonathan Taylor",
+      "team": "IND",
+      "pos": "RB",
+      "ecr": 8,
+      "average_expert_rank": 8.99,
+      "rank_std_dev": 3.06,
+      "pos_rank": "RB4",
+      "tier": 1
+    },
+    {
+      "player": "CeeDee Lamb",
+      "team": "DAL",
+      "pos": "WR",
+      "ecr": 9,
+      "average_expert_rank": 9.8,
+      "rank_std_dev": 2.6,
+      "pos_rank": "WR5",
+      "tier": 1
+    },
+    {
+      "player": "Justin Jefferson",
+      "team": "MIN",
+      "pos": "WR",
+      "ecr": 10,
+      "average_expert_rank": 10.84,
+      "rank_std_dev": 3.46,
+      "pos_rank": "WR6",
+      "tier": 2
+    },
+    {
+      "player": "James Cook III",
+      "team": "BUF",
+      "pos": "RB",
+      "ecr": 11,
+      "average_expert_rank": 11.13,
+      "rank_std_dev": 3.72,
+      "pos_rank": "RB5",
+      "tier": 2
+    },
+    {
+      "player": "Ashton Jeanty",
+      "team": "LV",
+      "pos": "RB",
+      "ecr": 12,
+      "average_expert_rank": 14.23,
+      "rank_std_dev": 4.74,
+      "pos_rank": "RB6",
+      "tier": 2
+    },
+    {
+      "player": "Drake London",
+      "team": "ATL",
+      "pos": "WR",
+      "ecr": 13,
+      "average_expert_rank": 15.47,
+      "rank_std_dev": 4.37,
+      "pos_rank": "WR7",
+      "tier": 2
+    },
+    {
+      "player": "Chase Brown",
+      "team": "CIN",
+      "pos": "RB",
+      "ecr": 14,
+      "average_expert_rank": 16.09,
+      "rank_std_dev": 4.99,
+      "pos_rank": "RB7",
+      "tier": 2
+    },
+    {
+      "player": "A.J. Brown",
+      "team": "NE",
+      "pos": "WR",
+      "ecr": 15,
+      "average_expert_rank": 16.6,
+      "rank_std_dev": 5.62,
+      "pos_rank": "WR8",
+      "tier": 2
+    },
+    {
+      "player": "Saquon Barkley",
+      "team": "PHI",
+      "pos": "RB",
+      "ecr": 16,
+      "average_expert_rank": 17.7,
+      "rank_std_dev": 5.5,
+      "pos_rank": "RB8",
+      "tier": 2
+    },
+    {
+      "player": "Brock Bowers",
+      "team": "LV",
+      "pos": "TE",
+      "ecr": 17,
+      "average_expert_rank": 18.57,
+      "rank_std_dev": 3.94,
+      "pos_rank": "TE1",
+      "tier": 2
+    },
+    {
+      "player": "De'Von Achane",
+      "team": "MIA",
+      "pos": "RB",
+      "ecr": 18,
+      "average_expert_rank": 19.14,
+      "rank_std_dev": 7.09,
+      "pos_rank": "RB9",
+      "tier": 2
+    },
+    {
+      "player": "Nico Collins",
+      "team": "HOU",
+      "pos": "WR",
+      "ecr": 19,
+      "average_expert_rank": 19.55,
+      "rank_std_dev": 4.59,
+      "pos_rank": "WR9",
+      "tier": 2
+    },
+    {
+      "player": "Omarion Hampton",
+      "team": "LAC",
+      "pos": "RB",
+      "ecr": 20,
+      "average_expert_rank": 19.82,
+      "rank_std_dev": 5.51,
+      "pos_rank": "RB10",
+      "tier": 2
+    },
+    {
+      "player": "Kenneth Walker III",
+      "team": "KC",
+      "pos": "RB",
+      "ecr": 21,
+      "average_expert_rank": 22.04,
+      "rank_std_dev": 9.3,
+      "pos_rank": "RB11",
+      "tier": 2
+    },
+    {
+      "player": "Derrick Henry",
+      "team": "BAL",
+      "pos": "RB",
+      "ecr": 22,
+      "average_expert_rank": 22.19,
+      "rank_std_dev": 5.75,
+      "pos_rank": "RB12",
+      "tier": 2
+    },
+    {
+      "player": "George Pickens",
+      "team": "DAL",
+      "pos": "WR",
+      "ecr": 23,
+      "average_expert_rank": 22.86,
+      "rank_std_dev": 5.55,
+      "pos_rank": "WR10",
+      "tier": 2
+    },
+    {
+      "player": "Trey McBride",
+      "team": "ARI",
+      "pos": "TE",
+      "ecr": 24,
+      "average_expert_rank": 23.52,
+      "rank_std_dev": 7.19,
+      "pos_rank": "TE2",
+      "tier": 2
+    },
+    {
+      "player": "Chris Olave",
+      "team": "NO",
+      "pos": "WR",
+      "ecr": 25,
+      "average_expert_rank": 23.89,
+      "rank_std_dev": 5.9,
+      "pos_rank": "WR11",
+      "tier": 3
+    },
+    {
+      "player": "Rashee Rice",
+      "team": "KC",
+      "pos": "WR",
+      "ecr": 26,
+      "average_expert_rank": 28.6,
+      "rank_std_dev": 8.27,
+      "pos_rank": "WR12",
+      "tier": 3
+    },
+    {
+      "player": "Malik Nabers",
+      "team": "NYG",
+      "pos": "WR",
+      "ecr": 27,
+      "average_expert_rank": 28.73,
+      "rank_std_dev": 9.27,
+      "pos_rank": "WR13",
+      "tier": 3
+    },
+    {
+      "player": "DeVonta Smith",
+      "team": "PHI",
+      "pos": "WR",
+      "ecr": 28,
+      "average_expert_rank": 29.89,
+      "rank_std_dev": 6.23,
+      "pos_rank": "WR14",
+      "tier": 3
+    },
+    {
+      "player": "Zay Flowers",
+      "team": "BAL",
+      "pos": "WR",
+      "ecr": 29,
+      "average_expert_rank": 32.9,
+      "rank_std_dev": 6.82,
+      "pos_rank": "WR15",
+      "tier": 3
+    },
+    {
+      "player": "Kyren Williams",
+      "team": "LAR",
+      "pos": "RB",
+      "ecr": 30,
+      "average_expert_rank": 34.38,
+      "rank_std_dev": 7.74,
+      "pos_rank": "RB13",
+      "tier": 3
+    },
+    {
+      "player": "Josh Allen",
+      "team": "BUF",
+      "pos": "QB",
+      "ecr": 31,
+      "average_expert_rank": 28.46,
+      "rank_std_dev": 5.74,
+      "pos_rank": "QB1",
+      "tier": 3
+    },
+    {
+      "player": "Tetairoa McMillan",
+      "team": "CAR",
+      "pos": "WR",
+      "ecr": 32,
+      "average_expert_rank": 36.48,
+      "rank_std_dev": 6.68,
+      "pos_rank": "WR16",
+      "tier": 3
+    },
+    {
+      "player": "Tee Higgins",
+      "team": "CIN",
+      "pos": "WR",
+      "ecr": 33,
+      "average_expert_rank": 36.72,
+      "rank_std_dev": 6.25,
+      "pos_rank": "WR17",
+      "tier": 3
+    },
+    {
+      "player": "Javonte Williams",
+      "team": "DAL",
+      "pos": "RB",
+      "ecr": 34,
+      "average_expert_rank": 37.74,
+      "rank_std_dev": 7.77,
+      "pos_rank": "RB14",
+      "tier": 3
+    },
+    {
+      "player": "Breece Hall",
+      "team": "NYJ",
+      "pos": "RB",
+      "ecr": 35,
+      "average_expert_rank": 38.41,
+      "rank_std_dev": 7.37,
+      "pos_rank": "RB15",
+      "tier": 3
+    },
+    {
+      "player": "Garrett Wilson",
+      "team": "NYJ",
+      "pos": "WR",
+      "ecr": 36,
+      "average_expert_rank": 38.64,
+      "rank_std_dev": 6.87,
+      "pos_rank": "WR18",
+      "tier": 3
+    },
+    {
+      "player": "Josh Jacobs",
+      "team": "GB",
+      "pos": "RB",
+      "ecr": 37,
+      "average_expert_rank": 39.78,
+      "rank_std_dev": 8.15,
+      "pos_rank": "RB16",
+      "tier": 3
+    },
+    {
+      "player": "Jaylen Waddle",
+      "team": "DEN",
+      "pos": "WR",
+      "ecr": 38,
+      "average_expert_rank": 39.84,
+      "rank_std_dev": 7.53,
+      "pos_rank": "WR19",
+      "tier": 3
+    },
+    {
+      "player": "Ladd McConkey",
+      "team": "LAC",
+      "pos": "WR",
+      "ecr": 39,
+      "average_expert_rank": 39.89,
+      "rank_std_dev": 7.43,
+      "pos_rank": "WR20",
+      "tier": 3
+    },
+    {
+      "player": "Jeremiyah Love",
+      "team": "ARI",
+      "pos": "RB",
+      "ecr": 40,
+      "average_expert_rank": 40.13,
+      "rank_std_dev": 9.42,
+      "pos_rank": "RB17",
+      "tier": 3
+    },
+    {
+      "player": "Emeka Egbuka",
+      "team": "TB",
+      "pos": "WR",
+      "ecr": 41,
+      "average_expert_rank": 40.3,
+      "rank_std_dev": 7.79,
+      "pos_rank": "WR21",
+      "tier": 3
+    },
+    {
+      "player": "Colston Loveland",
+      "team": "CHI",
+      "pos": "TE",
+      "ecr": 42,
+      "average_expert_rank": 41.36,
+      "rank_std_dev": 12.71,
+      "pos_rank": "TE3",
+      "tier": 4
+    },
+    {
+      "player": "Lamar Jackson",
+      "team": "BAL",
+      "pos": "QB",
+      "ecr": 43,
+      "average_expert_rank": 39.03,
+      "rank_std_dev": 12.47,
+      "pos_rank": "QB2",
+      "tier": 4
+    },
+    {
+      "player": "Travis Etienne Jr.",
+      "team": "NO",
+      "pos": "RB",
+      "ecr": 44,
+      "average_expert_rank": 46.9,
+      "rank_std_dev": 8.1,
+      "pos_rank": "RB18",
+      "tier": 4
+    },
+    {
+      "player": "Terry McLaurin",
+      "team": "WAS",
+      "pos": "WR",
+      "ecr": 45,
+      "average_expert_rank": 47.42,
+      "rank_std_dev": 6.98,
+      "pos_rank": "WR22",
+      "tier": 4
+    },
+    {
+      "player": "Davante Adams",
+      "team": "LAR",
+      "pos": "WR",
+      "ecr": 46,
+      "average_expert_rank": 50.06,
+      "rank_std_dev": 8.07,
+      "pos_rank": "WR23",
+      "tier": 4
+    },
+    {
+      "player": "Luther Burden III",
+      "team": "CHI",
+      "pos": "WR",
+      "ecr": 47,
+      "average_expert_rank": 51.56,
+      "rank_std_dev": 10.61,
+      "pos_rank": "WR24",
+      "tier": 4
+    },
+    {
+      "player": "D'Andre Swift",
+      "team": "CHI",
+      "pos": "RB",
+      "ecr": 48,
+      "average_expert_rank": 51.93,
+      "rank_std_dev": 8.02,
+      "pos_rank": "RB19",
+      "tier": 4
+    },
+    {
+      "player": "Drake Maye",
+      "team": "NE",
+      "pos": "QB",
+      "ecr": 49,
+      "average_expert_rank": 44.31,
+      "rank_std_dev": 17.36,
+      "pos_rank": "QB3",
+      "tier": 4
+    },
+    {
+      "player": "Cam Skattebo",
+      "team": "NYG",
+      "pos": "RB",
+      "ecr": 50,
+      "average_expert_rank": 52.71,
+      "rank_std_dev": 8.29,
+      "pos_rank": "RB20",
+      "tier": 4
+    },
+    {
+      "player": "Jameson Williams",
+      "team": "DET",
+      "pos": "WR",
+      "ecr": 51,
+      "average_expert_rank": 53.19,
+      "rank_std_dev": 9.48,
+      "pos_rank": "WR25",
+      "tier": 4
+    },
+    {
+      "player": "Tyler Warren",
+      "team": "IND",
+      "pos": "TE",
+      "ecr": 52,
+      "average_expert_rank": 53.22,
+      "rank_std_dev": 12.2,
+      "pos_rank": "TE4",
+      "tier": 4
+    },
+    {
+      "player": "Quinshon Judkins",
+      "team": "CLE",
+      "pos": "RB",
+      "ecr": 53,
+      "average_expert_rank": 54.64,
+      "rank_std_dev": 9.03,
+      "pos_rank": "RB21",
+      "tier": 4
+    },
+    {
+      "player": "Bucky Irving",
+      "team": "TB",
+      "pos": "RB",
+      "ecr": 54,
+      "average_expert_rank": 55.08,
+      "rank_std_dev": 7.96,
+      "pos_rank": "RB22",
+      "tier": 4
+    },
+    {
+      "player": "David Montgomery",
+      "team": "HOU",
+      "pos": "RB",
+      "ecr": 55,
+      "average_expert_rank": 55.38,
+      "rank_std_dev": 7.96,
+      "pos_rank": "RB23",
+      "tier": 4
+    },
+    {
+      "player": "DJ Moore",
+      "team": "BUF",
+      "pos": "WR",
+      "ecr": 56,
+      "average_expert_rank": 56.16,
+      "rank_std_dev": 13.19,
+      "pos_rank": "WR26",
+      "tier": 4
+    },
+    {
+      "player": "Christian Watson",
+      "team": "GB",
+      "pos": "WR",
+      "ecr": 57,
+      "average_expert_rank": 56.61,
+      "rank_std_dev": 9.85,
+      "pos_rank": "WR27",
+      "tier": 4
+    },
+    {
+      "player": "Mike Evans",
+      "team": "SF",
+      "pos": "WR",
+      "ecr": 58,
+      "average_expert_rank": 57.15,
+      "rank_std_dev": 10.64,
+      "pos_rank": "WR28",
+      "tier": 4
+    },
+    {
+      "player": "Rome Odunze",
+      "team": "CHI",
+      "pos": "WR",
+      "ecr": 59,
+      "average_expert_rank": 57.43,
+      "rank_std_dev": 8.92,
+      "pos_rank": "WR29",
+      "tier": 4
+    },
+    {
+      "player": "Joe Burrow",
+      "team": "CIN",
+      "pos": "QB",
+      "ecr": 60,
+      "average_expert_rank": 51.1,
+      "rank_std_dev": 15.57,
+      "pos_rank": "QB4",
+      "tier": 4
+    },
+    {
+      "player": "Bhayshul Tuten",
+      "team": "JAC",
+      "pos": "RB",
+      "ecr": 61,
+      "average_expert_rank": 61.91,
+      "rank_std_dev": 9.5,
+      "pos_rank": "RB24",
+      "tier": 4
+    },
+    {
+      "player": "TreVeyon Henderson",
+      "team": "NE",
+      "pos": "RB",
+      "ecr": 62,
+      "average_expert_rank": 63.21,
+      "rank_std_dev": 10.47,
+      "pos_rank": "RB25",
+      "tier": 4
+    },
+    {
+      "player": "Jayden Daniels",
+      "team": "WAS",
+      "pos": "QB",
+      "ecr": 63,
+      "average_expert_rank": 58.57,
+      "rank_std_dev": 16.36,
+      "pos_rank": "QB5",
+      "tier": 5
+    },
+    {
+      "player": "Jadarian Price",
+      "team": "SEA",
+      "pos": "RB",
+      "ecr": 64,
+      "average_expert_rank": 66.58,
+      "rank_std_dev": 9.66,
+      "pos_rank": "RB26",
+      "tier": 5
+    },
+    {
+      "player": "Jalen Hurts",
+      "team": "PHI",
+      "pos": "QB",
+      "ecr": 65,
+      "average_expert_rank": 61.02,
+      "rank_std_dev": 13.12,
+      "pos_rank": "QB6",
+      "tier": 5
+    },
+    {
+      "player": "Parker Washington",
+      "team": "JAC",
+      "pos": "WR",
+      "ecr": 66,
+      "average_expert_rank": 69.39,
+      "rank_std_dev": 15.6,
+      "pos_rank": "WR30",
+      "tier": 5
+    },
+    {
+      "player": "Tucker Kraft",
+      "team": "GB",
+      "pos": "TE",
+      "ecr": 67,
+      "average_expert_rank": 71.17,
+      "rank_std_dev": 9.84,
+      "pos_rank": "TE5",
+      "tier": 5
+    },
+    {
+      "player": "Carnell Tate",
+      "team": "TEN",
+      "pos": "WR",
+      "ecr": 68,
+      "average_expert_rank": 72.15,
+      "rank_std_dev": 14.29,
+      "pos_rank": "WR31",
+      "tier": 5
+    },
+    {
+      "player": "Marvin Harrison Jr.",
+      "team": "ARI",
+      "pos": "WR",
+      "ecr": 69,
+      "average_expert_rank": 72.31,
+      "rank_std_dev": 11.63,
+      "pos_rank": "WR32",
+      "tier": 5
+    },
+    {
+      "player": "Jaylen Warren",
+      "team": "PIT",
+      "pos": "RB",
+      "ecr": 70,
+      "average_expert_rank": 73.94,
+      "rank_std_dev": 8.36,
+      "pos_rank": "RB27",
+      "tier": 5
+    },
+    {
+      "player": "Rhamondre Stevenson",
+      "team": "NE",
+      "pos": "RB",
+      "ecr": 71,
+      "average_expert_rank": 75.77,
+      "rank_std_dev": 10.21,
+      "pos_rank": "RB28",
+      "tier": 5
+    },
+    {
+      "player": "Caleb Williams",
+      "team": "CHI",
+      "pos": "QB",
+      "ecr": 72,
+      "average_expert_rank": 68.87,
+      "rank_std_dev": 15.45,
+      "pos_rank": "QB7",
+      "tier": 5
+    },
+    {
+      "player": "Brian Thomas Jr.",
+      "team": "JAC",
+      "pos": "WR",
+      "ecr": 73,
+      "average_expert_rank": 77.79,
+      "rank_std_dev": 12.85,
+      "pos_rank": "WR33",
+      "tier": 5
+    },
+    {
+      "player": "Tony Pollard",
+      "team": "TEN",
+      "pos": "RB",
+      "ecr": 74,
+      "average_expert_rank": 79.07,
+      "rank_std_dev": 10.78,
+      "pos_rank": "RB29",
+      "tier": 5
+    },
+    {
+      "player": "Harold Fannin Jr.",
+      "team": "CLE",
+      "pos": "TE",
+      "ecr": 75,
+      "average_expert_rank": 79.11,
+      "rank_std_dev": 15.6,
+      "pos_rank": "TE6",
+      "tier": 5
+    },
+    {
+      "player": "DK Metcalf",
+      "team": "PIT",
+      "pos": "WR",
+      "ecr": 76,
+      "average_expert_rank": 79.89,
+      "rank_std_dev": 11.68,
+      "pos_rank": "WR34",
+      "tier": 5
+    },
+    {
+      "player": "Justin Herbert",
+      "team": "LAC",
+      "pos": "QB",
+      "ecr": 77,
+      "average_expert_rank": 73.81,
+      "rank_std_dev": 15.5,
+      "pos_rank": "QB8",
+      "tier": 5
+    },
+    {
+      "player": "Sam LaPorta",
+      "team": "DET",
+      "pos": "TE",
+      "ecr": 78,
+      "average_expert_rank": 81.37,
+      "rank_std_dev": 11.41,
+      "pos_rank": "TE7",
+      "tier": 5
+    },
+    {
+      "player": "Rico Dowdle",
+      "team": "PIT",
+      "pos": "RB",
+      "ecr": 79,
+      "average_expert_rank": 82.27,
+      "rank_std_dev": 10.51,
+      "pos_rank": "RB30",
+      "tier": 5
+    },
+    {
+      "player": "Chris Godwin Jr.",
+      "team": "TB",
+      "pos": "WR",
+      "ecr": 80,
+      "average_expert_rank": 82.54,
+      "rank_std_dev": 12.82,
+      "pos_rank": "WR35",
+      "tier": 5
+    },
+    {
+      "player": "Kyle Pitts Sr.",
+      "team": "ATL",
+      "pos": "TE",
+      "ecr": 81,
+      "average_expert_rank": 83.8,
+      "rank_std_dev": 10.16,
+      "pos_rank": "TE8",
+      "tier": 5
+    },
+    {
+      "player": "Courtland Sutton",
+      "team": "DEN",
+      "pos": "WR",
+      "ecr": 82,
+      "average_expert_rank": 84.53,
+      "rank_std_dev": 13.92,
+      "pos_rank": "WR36",
+      "tier": 5
+    },
+    {
+      "player": "Trevor Lawrence",
+      "team": "JAC",
+      "pos": "QB",
+      "ecr": 83,
+      "average_expert_rank": 78.33,
+      "rank_std_dev": 14.18,
+      "pos_rank": "QB9",
+      "tier": 5
+    },
+    {
+      "player": "Jonathon Brooks",
+      "team": "CAR",
+      "pos": "RB",
+      "ecr": 84,
+      "average_expert_rank": 87.64,
+      "rank_std_dev": 23.46,
+      "pos_rank": "RB31",
+      "tier": 5
+    },
+    {
+      "player": "Dak Prescott",
+      "team": "DAL",
+      "pos": "QB",
+      "ecr": 85,
+      "average_expert_rank": 80.5,
+      "rank_std_dev": 16.33,
+      "pos_rank": "QB10",
+      "tier": 5
+    },
+    {
+      "player": "J.K. Dobbins",
+      "team": "DEN",
+      "pos": "RB",
+      "ecr": 86,
+      "average_expert_rank": 90.86,
+      "rank_std_dev": 13.72,
+      "pos_rank": "RB32",
+      "tier": 5
+    },
+    {
+      "player": "Michael Pittman Jr.",
+      "team": "PIT",
+      "pos": "WR",
+      "ecr": 87,
+      "average_expert_rank": 91,
+      "rank_std_dev": 13.2,
+      "pos_rank": "WR37",
+      "tier": 5
+    },
+    {
+      "player": "Michael Wilson",
+      "team": "ARI",
+      "pos": "WR",
+      "ecr": 88,
+      "average_expert_rank": 92.7,
+      "rank_std_dev": 15.5,
+      "pos_rank": "WR38",
+      "tier": 6
+    },
+    {
+      "player": "Quentin Johnston",
+      "team": "LAC",
+      "pos": "WR",
+      "ecr": 89,
+      "average_expert_rank": 93.03,
+      "rank_std_dev": 13.03,
+      "pos_rank": "WR39",
+      "tier": 6
+    },
+    {
+      "player": "Blake Corum",
+      "team": "LAR",
+      "pos": "RB",
+      "ecr": 90,
+      "average_expert_rank": 95.6,
+      "rank_std_dev": 13.04,
+      "pos_rank": "RB33",
+      "tier": 6
+    },
+    {
+      "player": "Alec Pierce",
+      "team": "IND",
+      "pos": "WR",
+      "ecr": 91,
+      "average_expert_rank": 96.15,
+      "rank_std_dev": 18.37,
+      "pos_rank": "WR40",
+      "tier": 6
+    },
+    {
+      "player": "Chuba Hubbard",
+      "team": "CAR",
+      "pos": "RB",
+      "ecr": 92,
+      "average_expert_rank": 96.57,
+      "rank_std_dev": 15.37,
+      "pos_rank": "RB34",
+      "tier": 6
+    },
+    {
+      "player": "RJ Harvey",
+      "team": "DEN",
+      "pos": "RB",
+      "ecr": 93,
+      "average_expert_rank": 98.92,
+      "rank_std_dev": 17.94,
+      "pos_rank": "RB35",
+      "tier": 6
+    },
+    {
+      "player": "George Kittle",
+      "team": "SF",
+      "pos": "TE",
+      "ecr": 94,
+      "average_expert_rank": 99.04,
+      "rank_std_dev": 15.24,
+      "pos_rank": "TE9",
+      "tier": 6
+    },
+    {
+      "player": "Josh Downs",
+      "team": "IND",
+      "pos": "WR",
+      "ecr": 95,
+      "average_expert_rank": 99.14,
+      "rank_std_dev": 17.16,
+      "pos_rank": "WR41",
+      "tier": 6
+    },
+    {
+      "player": "Wan'Dale Robinson",
+      "team": "TEN",
+      "pos": "WR",
+      "ecr": 96,
+      "average_expert_rank": 100.04,
+      "rank_std_dev": 16.44,
+      "pos_rank": "WR42",
+      "tier": 6
+    },
+    {
+      "player": "Jacory Croskey-Merritt",
+      "team": "WAS",
+      "pos": "RB",
+      "ecr": 97,
+      "average_expert_rank": 101.86,
+      "rank_std_dev": 13.87,
+      "pos_rank": "RB36",
+      "tier": 6
+    },
+    {
+      "player": "Stefon Diggs",
+      "team": "WAS",
+      "pos": "WR",
+      "ecr": 98,
+      "average_expert_rank": 102.96,
+      "rank_std_dev": 32.88,
+      "pos_rank": "WR43",
+      "tier": 6
+    },
+    {
+      "player": "Brock Purdy",
+      "team": "SF",
+      "pos": "QB",
+      "ecr": 99,
+      "average_expert_rank": 96.69,
+      "rank_std_dev": 13.11,
+      "pos_rank": "QB11",
+      "tier": 6
+    },
+    {
+      "player": "Travis Kelce",
+      "team": "KC",
+      "pos": "TE",
+      "ecr": 100,
+      "average_expert_rank": 104.3,
+      "rank_std_dev": 15.25,
+      "pos_rank": "TE10",
+      "tier": 6
+    },
+    {
+      "player": "Jordan Addison",
+      "team": "MIN",
+      "pos": "WR",
+      "ecr": 101,
+      "average_expert_rank": 104.34,
+      "rank_std_dev": 15.32,
+      "pos_rank": "WR44",
+      "tier": 6
+    },
+    {
+      "player": "Kyle Monangai",
+      "team": "CHI",
+      "pos": "RB",
+      "ecr": 102,
+      "average_expert_rank": 104.44,
+      "rank_std_dev": 14.42,
+      "pos_rank": "RB37",
+      "tier": 6
+    },
+    {
+      "player": "Kenny Gainwell",
+      "team": "TB",
+      "pos": "RB",
+      "ecr": 103,
+      "average_expert_rank": 105.97,
+      "rank_std_dev": 13.58,
+      "pos_rank": "RB38",
+      "tier": 6
+    },
+    {
+      "player": "Jordan Mason",
+      "team": "MIN",
+      "pos": "RB",
+      "ecr": 104,
+      "average_expert_rank": 106.11,
+      "rank_std_dev": 17.26,
+      "pos_rank": "RB39",
+      "tier": 6
+    },
+    {
+      "player": "Jaxson Dart",
+      "team": "NYG",
+      "pos": "QB",
+      "ecr": 105,
+      "average_expert_rank": 98.95,
+      "rank_std_dev": 17.47,
+      "pos_rank": "QB12",
+      "tier": 6
+    },
+    {
+      "player": "Jayden Reed",
+      "team": "GB",
+      "pos": "WR",
+      "ecr": 106,
+      "average_expert_rank": 106.79,
+      "rank_std_dev": 16.86,
+      "pos_rank": "WR45",
+      "tier": 6
+    },
+    {
+      "player": "Rachaad White",
+      "team": "WAS",
+      "pos": "RB",
+      "ecr": 107,
+      "average_expert_rank": 108.71,
+      "rank_std_dev": 15.42,
+      "pos_rank": "RB40",
+      "tier": 6
+    },
+    {
+      "player": "Bo Nix",
+      "team": "DEN",
+      "pos": "QB",
+      "ecr": 108,
+      "average_expert_rank": 101.59,
+      "rank_std_dev": 13.64,
+      "pos_rank": "QB13",
+      "tier": 6
+    },
+    {
+      "player": "Patrick Mahomes II",
+      "team": "KC",
+      "pos": "QB",
+      "ecr": 109,
+      "average_expert_rank": 101.98,
+      "rank_std_dev": 15.71,
+      "pos_rank": "QB14",
+      "tier": 6
+    },
+    {
+      "player": "Makai Lemon",
+      "team": "PHI",
+      "pos": "WR",
+      "ecr": 110,
+      "average_expert_rank": 109.75,
+      "rank_std_dev": 18.46,
+      "pos_rank": "WR46",
+      "tier": 6
+    },
+    {
+      "player": "Jakobi Meyers",
+      "team": "JAC",
+      "pos": "WR",
+      "ecr": 111,
+      "average_expert_rank": 110.29,
+      "rank_std_dev": 17.54,
+      "pos_rank": "WR47",
+      "tier": 6
+    },
+    {
+      "player": "Dalton Kincaid",
+      "team": "BUF",
+      "pos": "TE",
+      "ecr": 112,
+      "average_expert_rank": 110.35,
+      "rank_std_dev": 14.02,
+      "pos_rank": "TE11",
+      "tier": 6
+    },
+    {
+      "player": "Matthew Stafford",
+      "team": "LAR",
+      "pos": "QB",
+      "ecr": 113,
+      "average_expert_rank": 107.35,
+      "rank_std_dev": 18.73,
+      "pos_rank": "QB15",
+      "tier": 6
+    },
+    {
+      "player": "Aaron Jones Sr.",
+      "team": "MIN",
+      "pos": "RB",
+      "ecr": 114,
+      "average_expert_rank": 114.86,
+      "rank_std_dev": 14.62,
+      "pos_rank": "RB41",
+      "tier": 6
+    },
+    {
+      "player": "Jared Goff",
+      "team": "DET",
+      "pos": "QB",
+      "ecr": 115,
+      "average_expert_rank": 109.63,
+      "rank_std_dev": 16.47,
+      "pos_rank": "QB16",
+      "tier": 6
+    },
+    {
+      "player": "Dallas Goedert",
+      "team": "PHI",
+      "pos": "TE",
+      "ecr": 116,
+      "average_expert_rank": 118.06,
+      "rank_std_dev": 15.38,
+      "pos_rank": "TE12",
+      "tier": 6
+    },
+    {
+      "player": "Isaiah Likely",
+      "team": "NYG",
+      "pos": "TE",
+      "ecr": 117,
+      "average_expert_rank": 118.85,
+      "rank_std_dev": 26.86,
+      "pos_rank": "TE13",
+      "tier": 6
+    },
+    {
+      "player": "Kyler Murray",
+      "team": "MIN",
+      "pos": "QB",
+      "ecr": 118,
+      "average_expert_rank": 114.98,
+      "rank_std_dev": 18.18,
+      "pos_rank": "QB17",
+      "tier": 6
+    },
+    {
+      "player": "Jake Ferguson",
+      "team": "DAL",
+      "pos": "TE",
+      "ecr": 119,
+      "average_expert_rank": 122.51,
+      "rank_std_dev": 17.05,
+      "pos_rank": "TE14",
+      "tier": 6
+    },
+    {
+      "player": "Mark Andrews",
+      "team": "BAL",
+      "pos": "TE",
+      "ecr": 120,
+      "average_expert_rank": 126.21,
+      "rank_std_dev": 21.98,
+      "pos_rank": "TE15",
+      "tier": 6
+    },
+    {
+      "player": "KC Concepcion",
+      "team": "CLE",
+      "pos": "WR",
+      "ecr": 121,
+      "average_expert_rank": 126.65,
+      "rank_std_dev": 26.24,
+      "pos_rank": "WR48",
+      "tier": 6
+    },
+    {
+      "player": "Chris Rodriguez Jr.",
+      "team": "JAC",
+      "pos": "RB",
+      "ecr": 122,
+      "average_expert_rank": 126.95,
+      "rank_std_dev": 17.39,
+      "pos_rank": "RB42",
+      "tier": 6
+    },
+    {
+      "player": "Xavier Worthy",
+      "team": "KC",
+      "pos": "WR",
+      "ecr": 123,
+      "average_expert_rank": 127.44,
+      "rank_std_dev": 16.94,
+      "pos_rank": "WR49",
+      "tier": 6
+    },
+    {
+      "player": "Jalen Coker",
+      "team": "CAR",
+      "pos": "WR",
+      "ecr": 124,
+      "average_expert_rank": 130.59,
+      "rank_std_dev": 18.13,
+      "pos_rank": "WR50",
+      "tier": 6
+    },
+    {
+      "player": "Matthew Golden",
+      "team": "GB",
+      "pos": "WR",
+      "ecr": 125,
+      "average_expert_rank": 131.16,
+      "rank_std_dev": 21.73,
+      "pos_rank": "WR51",
+      "tier": 6
+    },
+    {
+      "player": "Khalil Shakir",
+      "team": "BUF",
+      "pos": "WR",
+      "ecr": 126,
+      "average_expert_rank": 131.33,
+      "rank_std_dev": 15.24,
+      "pos_rank": "WR52",
+      "tier": 6
+    },
+    {
+      "player": "Tyler Allgeier",
+      "team": "ARI",
+      "pos": "RB",
+      "ecr": 127,
+      "average_expert_rank": 131.33,
+      "rank_std_dev": 11.67,
+      "pos_rank": "RB43",
+      "tier": 6
+    },
+    {
+      "player": "Baker Mayfield",
+      "team": "TB",
+      "pos": "QB",
+      "ecr": 128,
+      "average_expert_rank": 124.72,
+      "rank_std_dev": 17.56,
+      "pos_rank": "QB18",
+      "tier": 6
+    },
+    {
+      "player": "Jordyn Tyson",
+      "team": "NO",
+      "pos": "WR",
+      "ecr": 129,
+      "average_expert_rank": 131.76,
+      "rank_std_dev": 27.92,
+      "pos_rank": "WR53",
+      "tier": 6
+    },
+    {
+      "player": "Jordan Love",
+      "team": "GB",
+      "pos": "QB",
+      "ecr": 130,
+      "average_expert_rank": 125.32,
+      "rank_std_dev": 18.99,
+      "pos_rank": "QB19",
+      "tier": 6
+    },
+    {
+      "player": "Woody Marks",
+      "team": "HOU",
+      "pos": "RB",
+      "ecr": 131,
+      "average_expert_rank": 134.56,
+      "rank_std_dev": 15.49,
+      "pos_rank": "RB44",
+      "tier": 7
+    },
+    {
+      "player": "Tyler Shough",
+      "team": "NO",
+      "pos": "QB",
+      "ecr": 132,
+      "average_expert_rank": 129.79,
+      "rank_std_dev": 24.22,
+      "pos_rank": "QB20",
+      "tier": 7
+    },
+    {
+      "player": "Juwan Johnson",
+      "team": "NO",
+      "pos": "TE",
+      "ecr": 133,
+      "average_expert_rank": 137.39,
+      "rank_std_dev": 20.27,
+      "pos_rank": "TE16",
+      "tier": 7
+    },
+    {
+      "player": "Romeo Doubs",
+      "team": "NE",
+      "pos": "WR",
+      "ecr": 134,
+      "average_expert_rank": 133.17,
+      "rank_std_dev": 17.97,
+      "pos_rank": "WR54",
+      "tier": 7
+    },
+    {
+      "player": "Tyrone Tracy Jr.",
+      "team": "NYG",
+      "pos": "RB",
+      "ecr": 135,
+      "average_expert_rank": 141.57,
+      "rank_std_dev": 21.95,
+      "pos_rank": "RB45",
+      "tier": 7
+    },
+    {
+      "player": "De'Zhaun Stribling",
+      "team": "SF",
+      "pos": "WR",
+      "ecr": 136,
+      "average_expert_rank": 141.92,
+      "rank_std_dev": 41.9,
+      "pos_rank": "WR55",
+      "tier": 7
+    },
+    {
+      "player": "Tyjae Spears",
+      "team": "TEN",
+      "pos": "RB",
+      "ecr": 137,
+      "average_expert_rank": 142.78,
+      "rank_std_dev": 17.77,
+      "pos_rank": "RB46",
+      "tier": 7
+    },
+    {
+      "player": "Malik Willis",
+      "team": "MIA",
+      "pos": "QB",
+      "ecr": 138,
+      "average_expert_rank": 139.2,
+      "rank_std_dev": 31.83,
+      "pos_rank": "QB21",
+      "tier": 7
+    },
+    {
+      "player": "Zach Charbonnet",
+      "team": "SEA",
+      "pos": "RB",
+      "ecr": 139,
+      "average_expert_rank": 142.4,
+      "rank_std_dev": 25.89,
+      "pos_rank": "RB47",
+      "tier": 7
+    },
+    {
+      "player": "Keaton Mitchell",
+      "team": "LAC",
+      "pos": "RB",
+      "ecr": 140,
+      "average_expert_rank": 144.1,
+      "rank_std_dev": 23.84,
+      "pos_rank": "RB48",
+      "tier": 7
+    },
+    {
+      "player": "Deebo Samuel Sr.",
+      "team": "SF",
+      "pos": "WR",
+      "ecr": 141,
+      "average_expert_rank": 137.69,
+      "rank_std_dev": 32.61,
+      "pos_rank": "WR56",
+      "tier": 7
+    },
+    {
+      "player": "Tank Bigsby",
+      "team": "PHI",
+      "pos": "RB",
+      "ecr": 142,
+      "average_expert_rank": 154.21,
+      "rank_std_dev": 17.46,
+      "pos_rank": "RB49",
+      "tier": 7
+    },
+    {
+      "player": "Brenton Strange",
+      "team": "JAC",
+      "pos": "TE",
+      "ecr": 143,
+      "average_expert_rank": 154.3,
+      "rank_std_dev": 22.44,
+      "pos_rank": "TE17",
+      "tier": 7
+    },
+    {
+      "player": "Jonah Coleman",
+      "team": "DEN",
+      "pos": "RB",
+      "ecr": 144,
+      "average_expert_rank": 149.12,
+      "rank_std_dev": 31.4,
+      "pos_rank": "RB50",
+      "tier": 7
+    },
+    {
+      "player": "Hunter Henry",
+      "team": "NE",
+      "pos": "TE",
+      "ecr": 145,
+      "average_expert_rank": 157.48,
+      "rank_std_dev": 20.59,
+      "pos_rank": "TE18",
+      "tier": 7
+    },
+    {
+      "player": "Alvin Kamara",
+      "team": "NO",
+      "pos": "RB",
+      "ecr": 146,
+      "average_expert_rank": 157.53,
+      "rank_std_dev": 30.64,
+      "pos_rank": "RB51",
+      "tier": 7
+    },
+    {
+      "player": "Dylan Sampson",
+      "team": "CLE",
+      "pos": "RB",
+      "ecr": 147,
+      "average_expert_rank": 150.87,
+      "rank_std_dev": 19.23,
+      "pos_rank": "RB52",
+      "tier": 7
+    },
+    {
+      "player": "C.J. Stroud",
+      "team": "HOU",
+      "pos": "QB",
+      "ecr": 148,
+      "average_expert_rank": 152.88,
+      "rank_std_dev": 25.88,
+      "pos_rank": "QB22",
+      "tier": 7
+    },
+    {
+      "player": "Chig Okonkwo",
+      "team": "WAS",
+      "pos": "TE",
+      "ecr": 149,
+      "average_expert_rank": 161.06,
+      "rank_std_dev": 27.88,
+      "pos_rank": "TE19",
+      "tier": 7
+    },
+    {
+      "player": "Denzel Boston",
+      "team": "CLE",
+      "pos": "WR",
+      "ecr": 150,
+      "average_expert_rank": 156.04,
+      "rank_std_dev": 31.42,
+      "pos_rank": "WR57",
+      "tier": 7
+    },
+    {
+      "player": "Sam Darnold",
+      "team": "SEA",
+      "pos": "QB",
+      "ecr": 151,
+      "average_expert_rank": 150.67,
+      "rank_std_dev": 25.83,
+      "pos_rank": "QB23",
+      "tier": 7
+    },
+    {
+      "player": "Rashid Shaheed",
+      "team": "SEA",
+      "pos": "WR",
+      "ecr": 152,
+      "average_expert_rank": 148.2,
+      "rank_std_dev": 17.52,
+      "pos_rank": "WR58",
+      "tier": 7
+    },
+    {
+      "player": "Dalton Schultz",
+      "team": "HOU",
+      "pos": "TE",
+      "ecr": 153,
+      "average_expert_rank": 171.32,
+      "rank_std_dev": 27.16,
+      "pos_rank": "TE20",
+      "tier": 7
+    },
+    {
+      "player": "Brian Robinson Jr.",
+      "team": "ATL",
+      "pos": "RB",
+      "ecr": 154,
+      "average_expert_rank": 158.87,
+      "rank_std_dev": 17.02,
+      "pos_rank": "RB53",
+      "tier": 7
+    },
+    {
+      "player": "Daniel Jones",
+      "team": "IND",
+      "pos": "QB",
+      "ecr": 155,
+      "average_expert_rank": 158.88,
+      "rank_std_dev": 31.3,
+      "pos_rank": "QB24",
+      "tier": 7
+    },
+    {
+      "player": "Cam Ward",
+      "team": "TEN",
+      "pos": "QB",
+      "ecr": 156,
+      "average_expert_rank": 166.47,
+      "rank_std_dev": 30.44,
+      "pos_rank": "QB25",
+      "tier": 7
+    },
+    {
+      "player": "Isiah Pacheco",
+      "team": "DET",
+      "pos": "RB",
+      "ecr": 157,
+      "average_expert_rank": 154.29,
+      "rank_std_dev": 22.21,
+      "pos_rank": "RB54",
+      "tier": 7
+    },
+    {
+      "player": "Tre Tucker",
+      "team": "LV",
+      "pos": "WR",
+      "ecr": 158,
+      "average_expert_rank": 175.22,
+      "rank_std_dev": 28.13,
+      "pos_rank": "WR59",
+      "tier": 7
+    },
+    {
+      "player": "Adonai Mitchell",
+      "team": "NYJ",
+      "pos": "WR",
+      "ecr": 159,
+      "average_expert_rank": 171.63,
+      "rank_std_dev": 25.72,
+      "pos_rank": "WR60",
+      "tier": 7
+    },
+    {
+      "player": "Jalen McMillan",
+      "team": "TB",
+      "pos": "WR",
+      "ecr": 160,
+      "average_expert_rank": 171.39,
+      "rank_std_dev": 27.84,
+      "pos_rank": "WR61",
+      "tier": 7
+    },
+    {
+      "player": "Jerry Jeudy",
+      "team": "CLE",
+      "pos": "WR",
+      "ecr": 161,
+      "average_expert_rank": 173.53,
+      "rank_std_dev": 25.52,
+      "pos_rank": "WR62",
+      "tier": 7
+    },
+    {
+      "player": "Jauan Jennings",
+      "team": "MIN",
+      "pos": "WR",
+      "ecr": 162,
+      "average_expert_rank": 167.53,
+      "rank_std_dev": 29.41,
+      "pos_rank": "WR63",
+      "tier": 7
+    },
+    {
+      "player": "T.J. Hockenson",
+      "team": "MIN",
+      "pos": "TE",
+      "ecr": 163,
+      "average_expert_rank": 194.48,
+      "rank_std_dev": 27.43,
+      "pos_rank": "TE21",
+      "tier": 7
+    },
+    {
+      "player": "Braelon Allen",
+      "team": "NYJ",
+      "pos": "RB",
+      "ecr": 164,
+      "average_expert_rank": 164.12,
+      "rank_std_dev": 29.39,
+      "pos_rank": "RB55",
+      "tier": 7
+    },
+    {
+      "player": "Bryce Young",
+      "team": "CAR",
+      "pos": "QB",
+      "ecr": 165,
+      "average_expert_rank": 185.06,
+      "rank_std_dev": 33.78,
+      "pos_rank": "QB26",
+      "tier": 7
+    },
+    {
+      "player": "Oronde Gadsden II",
+      "team": "LAC",
+      "pos": "TE",
+      "ecr": 166,
+      "average_expert_rank": 185.48,
+      "rank_std_dev": 39.66,
+      "pos_rank": "TE22",
+      "tier": 7
+    },
+    {
+      "player": "AJ Barner",
+      "team": "SEA",
+      "pos": "TE",
+      "ecr": 167,
+      "average_expert_rank": 194.74,
+      "rank_std_dev": 23.47,
+      "pos_rank": "TE23",
+      "tier": 7
+    },
+    {
+      "player": "Jalen Nailor",
+      "team": "LV",
+      "pos": "WR",
+      "ecr": 168,
+      "average_expert_rank": 189.67,
+      "rank_std_dev": 38.25,
+      "pos_rank": "WR64",
+      "tier": 8
+    },
+    {
+      "player": "MarShawn Lloyd",
+      "team": "GB",
+      "pos": "RB",
+      "ecr": 169,
+      "average_expert_rank": 177.59,
+      "rank_std_dev": 46.51,
+      "pos_rank": "RB56",
+      "tier": 8
+    },
+    {
+      "player": "Tre' Harris",
+      "team": "LAC",
+      "pos": "WR",
+      "ecr": 170,
+      "average_expert_rank": 184.8,
+      "rank_std_dev": 26.6,
+      "pos_rank": "WR65",
+      "tier": 8
+    },
+    {
+      "player": "Omar Cooper Jr.",
+      "team": "NYJ",
+      "pos": "WR",
+      "ecr": 171,
+      "average_expert_rank": 186.22,
+      "rank_std_dev": 36.38,
+      "pos_rank": "WR66",
+      "tier": 8
+    },
+    {
+      "player": "Dontayvion Wicks",
+      "team": "PHI",
+      "pos": "WR",
+      "ecr": 172,
+      "average_expert_rank": 194.25,
+      "rank_std_dev": 30.08,
+      "pos_rank": "WR67",
+      "tier": 8
+    },
+    {
+      "player": "Ray Davis",
+      "team": "BUF",
+      "pos": "RB",
+      "ecr": 173,
+      "average_expert_rank": 186.59,
+      "rank_std_dev": 28.96,
+      "pos_rank": "RB57",
+      "tier": 8
+    },
+    {
+      "player": "Jacoby Brissett",
+      "team": "ARI",
+      "pos": "QB",
+      "ecr": 174,
+      "average_expert_rank": 207.37,
+      "rank_std_dev": 39.41,
+      "pos_rank": "QB27",
+      "tier": 8
+    },
+    {
+      "player": "Ryan Flournoy",
+      "team": "DAL",
+      "pos": "WR",
+      "ecr": 175,
+      "average_expert_rank": 187.73,
+      "rank_std_dev": 30.41,
+      "pos_rank": "WR68",
+      "tier": 8
+    },
+    {
+      "player": "Sean Tucker",
+      "team": "TB",
+      "pos": "RB",
+      "ecr": 176,
+      "average_expert_rank": 188.29,
+      "rank_std_dev": 28.75,
+      "pos_rank": "RB58",
+      "tier": 8
+    },
+    {
+      "player": "Pat Bryant",
+      "team": "DEN",
+      "pos": "WR",
+      "ecr": 177,
+      "average_expert_rank": 196.58,
+      "rank_std_dev": 30.49,
+      "pos_rank": "WR69",
+      "tier": 8
+    },
+    {
+      "player": "Terrance Ferguson",
+      "team": "LAR",
+      "pos": "TE",
+      "ecr": 178,
+      "average_expert_rank": 204.25,
+      "rank_std_dev": 42.38,
+      "pos_rank": "TE24",
+      "tier": 8
+    },
+    {
+      "player": "Emmett Johnson",
+      "team": "KC",
+      "pos": "RB",
+      "ecr": 179,
+      "average_expert_rank": 184.37,
+      "rank_std_dev": 33.23,
+      "pos_rank": "RB59",
+      "tier": 8
+    },
+    {
+      "player": "Kenyon Sadiq",
+      "team": "NYJ",
+      "pos": "TE",
+      "ecr": 180,
+      "average_expert_rank": 211.57,
+      "rank_std_dev": 33.83,
+      "pos_rank": "TE25",
+      "tier": 8
+    },
+    {
+      "player": "Travis Hunter",
+      "team": "JAC",
+      "pos": "WR",
+      "ecr": 181,
+      "average_expert_rank": 182.4,
+      "rank_std_dev": 34.77,
+      "pos_rank": "WR70",
+      "tier": 8
+    },
+    {
+      "player": "Malik Washington",
+      "team": "MIA",
+      "pos": "WR",
+      "ecr": 182,
+      "average_expert_rank": 196.58,
+      "rank_std_dev": 35.7,
+      "pos_rank": "WR71",
+      "tier": 8
+    },
+    {
+      "player": "Keenan Allen",
+      "team": "IND",
+      "pos": "WR",
+      "ecr": 183,
+      "average_expert_rank": 210.77,
+      "rank_std_dev": 62.04,
+      "pos_rank": "WR72",
+      "tier": 8
+    },
+    {
+      "player": "Mike Washington Jr.",
+      "team": "LV",
+      "pos": "RB",
+      "ecr": 185,
+      "average_expert_rank": 184.76,
+      "rank_std_dev": 35.11,
+      "pos_rank": "RB60",
+      "tier": 8
+    },
+    {
+      "player": "Gunnar Helm",
+      "team": "TEN",
+      "pos": "TE",
+      "ecr": 186,
+      "average_expert_rank": 218.69,
+      "rank_std_dev": 26.04,
+      "pos_rank": "TE26",
+      "tier": 8
+    },
+    {
+      "player": "Nicholas Singleton",
+      "team": "TEN",
+      "pos": "RB",
+      "ecr": 187,
+      "average_expert_rank": 199.81,
+      "rank_std_dev": 36.87,
+      "pos_rank": "RB61",
+      "tier": 8
+    },
+    {
+      "player": "Jaylin Noel",
+      "team": "HOU",
+      "pos": "WR",
+      "ecr": 188,
+      "average_expert_rank": 196.92,
+      "rank_std_dev": 29.24,
+      "pos_rank": "WR73",
+      "tier": 8
+    },
+    {
+      "player": "Tank Dell",
+      "team": "HOU",
+      "pos": "WR",
+      "ecr": 189,
+      "average_expert_rank": 204.79,
+      "rank_std_dev": 32.94,
+      "pos_rank": "WR74",
+      "tier": 8
+    },
+    {
+      "player": "Kayshon Boutte",
+      "team": "NE",
+      "pos": "WR",
+      "ecr": 190,
+      "average_expert_rank": 199.17,
+      "rank_std_dev": 26.67,
+      "pos_rank": "WR75",
+      "tier": 8
+    },
+    {
+      "player": "Kimani Vidal",
+      "team": "LAC",
+      "pos": "RB",
+      "ecr": 192,
+      "average_expert_rank": 193.25,
+      "rank_std_dev": 32.61,
+      "pos_rank": "RB62",
+      "tier": 8
+    },
+    {
+      "player": "Calvin Ridley",
+      "team": "TEN",
+      "pos": "WR",
+      "ecr": 193,
+      "average_expert_rank": 203.36,
+      "rank_std_dev": 34.57,
+      "pos_rank": "WR76",
+      "tier": 8
+    },
+    {
+      "player": "Kaytron Allen",
+      "team": "WAS",
+      "pos": "RB",
+      "ecr": 197,
+      "average_expert_rank": 210.96,
+      "rank_std_dev": 39.21,
+      "pos_rank": "RB63",
+      "tier": 8
+    },
+    {
+      "player": "Aaron Rodgers",
+      "team": "PIT",
+      "pos": "QB",
+      "ecr": 198,
+      "average_expert_rank": 232.08,
+      "rank_std_dev": 40.42,
+      "pos_rank": "QB28",
+      "tier": 8
+    },
+    {
+      "player": "Geno Smith",
+      "team": "NYJ",
+      "pos": "QB",
+      "ecr": 200,
+      "average_expert_rank": 238.71,
+      "rank_std_dev": 31.8,
+      "pos_rank": "QB29",
+      "tier": 8
+    },
+    {
+      "player": "Pat Freiermuth",
+      "team": "PIT",
+      "pos": "TE",
+      "ecr": 202,
+      "average_expert_rank": 228.73,
+      "rank_std_dev": 26.09,
+      "pos_rank": "TE27",
+      "tier": 8
+    },
+    {
+      "player": "Cade Otton",
+      "team": "TB",
+      "pos": "TE",
+      "ecr": 203,
+      "average_expert_rank": 235.06,
+      "rank_std_dev": 24.53,
+      "pos_rank": "TE28",
+      "tier": 8
+    },
+    {
+      "player": "James Conner",
+      "team": "ARI",
+      "pos": "RB",
+      "ecr": 205,
+      "average_expert_rank": 199.11,
+      "rank_std_dev": 35.32,
+      "pos_rank": "RB64",
+      "tier": 8
+    },
+    {
+      "player": "Rashod Bateman",
+      "team": "BAL",
+      "pos": "WR",
+      "ecr": 208,
+      "average_expert_rank": 216.61,
+      "rank_std_dev": 27.9,
+      "pos_rank": "WR77",
+      "tier": 8
+    },
+    {
+      "player": "Isaac TeSlaa",
+      "team": "DET",
+      "pos": "WR",
+      "ecr": 209,
+      "average_expert_rank": 211.2,
+      "rank_std_dev": 25.57,
+      "pos_rank": "WR78",
+      "tier": 8
+    },
+    {
+      "player": "Emanuel Wilson",
+      "team": "SEA",
+      "pos": "RB",
+      "ecr": 210,
+      "average_expert_rank": 204.83,
+      "rank_std_dev": 40.76,
+      "pos_rank": "RB65",
+      "tier": 8
+    },
+    {
+      "player": "Jaydon Blue",
+      "team": "DAL",
+      "pos": "RB",
+      "ecr": 212,
+      "average_expert_rank": 207.13,
+      "rank_std_dev": 42.66,
+      "pos_rank": "RB66",
+      "tier": 8
+    },
+    {
+      "player": "Oscar Delp",
+      "team": "NO",
+      "pos": "TE",
+      "ecr": 213,
+      "average_expert_rank": 278.86,
+      "rank_std_dev": 35.62,
+      "pos_rank": "TE29",
+      "tier": 8
+    },
+    {
+      "player": "Troy Franklin",
+      "team": "DEN",
+      "pos": "WR",
+      "ecr": 218,
+      "average_expert_rank": 212.24,
+      "rank_std_dev": 34.06,
+      "pos_rank": "WR79",
+      "tier": 8
+    },
+    {
+      "player": "Fernando Mendoza",
+      "team": "LV",
+      "pos": "QB",
+      "ecr": 221,
+      "average_expert_rank": 260.77,
+      "rank_std_dev": 38.25,
+      "pos_rank": "QB30",
+      "tier": 9
+    },
+    {
+      "player": "Darnell Mooney",
+      "team": "NYG",
+      "pos": "WR",
+      "ecr": 222,
+      "average_expert_rank": 217.86,
+      "rank_std_dev": 22.42,
+      "pos_rank": "WR80",
+      "tier": 9
+    },
+    {
+      "player": "George Holani",
+      "team": "SEA",
+      "pos": "RB",
+      "ecr": 227,
+      "average_expert_rank": 232.48,
+      "rank_std_dev": 39.41,
+      "pos_rank": "RB67",
+      "tier": 9
+    },
+    {
+      "player": "Jaylen Wright",
+      "team": "MIA",
+      "pos": "RB",
+      "ecr": 228,
+      "average_expert_rank": 219.41,
+      "rank_std_dev": 30.09,
+      "pos_rank": "RB68",
+      "tier": 9
+    },
+    {
+      "player": "Cooper Kupp",
+      "team": "SEA",
+      "pos": "WR",
+      "ecr": 230,
+      "average_expert_rank": 232.33,
+      "rank_std_dev": 28.79,
+      "pos_rank": "WR81",
+      "tier": 9
+    },
+    {
+      "player": "Colby Parkinson",
+      "team": "LAR",
+      "pos": "TE",
+      "ecr": 232,
+      "average_expert_rank": 253.91,
+      "rank_std_dev": 23.73,
+      "pos_rank": "TE30",
+      "tier": 9
+    },
+    {
+      "player": "Ollie Gordon II",
+      "team": "MIA",
+      "pos": "RB",
+      "ecr": 235,
+      "average_expert_rank": 230.71,
+      "rank_std_dev": 23.85,
+      "pos_rank": "RB69",
+      "tier": 9
+    },
+    {
+      "player": "David Njoku",
+      "team": "LAC",
+      "pos": "TE",
+      "ecr": 236,
+      "average_expert_rank": 241.08,
+      "rank_std_dev": 30.68,
+      "pos_rank": "TE31",
+      "tier": 9
+    },
+    {
+      "player": "Evan Engram",
+      "team": "DEN",
+      "pos": "TE",
+      "ecr": 238,
+      "average_expert_rank": 251.32,
+      "rank_std_dev": 24.69,
+      "pos_rank": "TE32",
+      "tier": 9
+    },
+    {
+      "player": "Germie Bernard",
+      "team": "PIT",
+      "pos": "WR",
+      "ecr": 239,
+      "average_expert_rank": 231.77,
+      "rank_std_dev": 29.34,
+      "pos_rank": "WR82",
+      "tier": 9
+    },
+    {
+      "player": "Zachariah Branch",
+      "team": "ATL",
+      "pos": "WR",
+      "ecr": 240,
+      "average_expert_rank": 225.04,
+      "rank_std_dev": 34.93,
+      "pos_rank": "WR83",
+      "tier": 9
+    },
+    {
+      "player": "Tua Tagovailoa",
+      "team": "ATL",
+      "pos": "QB",
+      "ecr": 241,
+      "average_expert_rank": 272.14,
+      "rank_std_dev": 33.84,
+      "pos_rank": "QB31",
+      "tier": 9
+    },
+    {
+      "player": "Jack Bech",
+      "team": "LV",
+      "pos": "WR",
+      "ecr": 243,
+      "average_expert_rank": 243.57,
+      "rank_std_dev": 32.62,
+      "pos_rank": "WR84",
+      "tier": 9
+    },
+    {
+      "player": "Justice Hill",
+      "team": "BAL",
+      "pos": "RB",
+      "ecr": 244,
+      "average_expert_rank": 235.63,
+      "rank_std_dev": 34.87,
+      "pos_rank": "RB70",
+      "tier": 9
+    },
+    {
+      "player": "Antonio Williams",
+      "team": "WAS",
+      "pos": "WR",
+      "ecr": 245,
+      "average_expert_rank": 229.66,
+      "rank_std_dev": 39.34,
+      "pos_rank": "WR85",
+      "tier": 9
+    },
+    {
+      "player": "Chris Brooks",
+      "team": "GB",
+      "pos": "RB",
+      "ecr": 247,
+      "average_expert_rank": 253.62,
+      "rank_std_dev": 29.51,
+      "pos_rank": "RB71",
+      "tier": 9
+    },
+    {
+      "player": "Demond Claiborne",
+      "team": "MIN",
+      "pos": "RB",
+      "ecr": 248,
+      "average_expert_rank": 231.07,
+      "rank_std_dev": 36.83,
+      "pos_rank": "RB72",
+      "tier": 9
+    },
+    {
+      "player": "Isaiah Davis",
+      "team": "NYJ",
+      "pos": "RB",
+      "ecr": 250,
+      "average_expert_rank": 247.7,
+      "rank_std_dev": 31.07,
+      "pos_rank": "RB73",
+      "tier": 9
+    },
+    {
+      "player": "Elic Ayomanor",
+      "team": "TEN",
+      "pos": "WR",
+      "ecr": 251,
+      "average_expert_rank": 247.81,
+      "rank_std_dev": 33.51,
+      "pos_rank": "WR86",
+      "tier": 9
+    },
+    {
+      "player": "Malachi Fields",
+      "team": "NYG",
+      "pos": "WR",
+      "ecr": 252,
+      "average_expert_rank": 244.14,
+      "rank_std_dev": 35.95,
+      "pos_rank": "WR87",
+      "tier": 9
+    },
+    {
+      "player": "Devaughn Vele",
+      "team": "NO",
+      "pos": "WR",
+      "ecr": 254,
+      "average_expert_rank": 253.34,
+      "rank_std_dev": 40.41,
+      "pos_rank": "WR88",
+      "tier": 9
+    },
+    {
+      "player": "Tory Horton",
+      "team": "SEA",
+      "pos": "WR",
+      "ecr": 255,
+      "average_expert_rank": 255.48,
+      "rank_std_dev": 26.23,
+      "pos_rank": "WR89",
+      "tier": 9
+    },
+    {
+      "player": "Ted Hurst III",
+      "team": "TB",
+      "pos": "WR",
+      "ecr": 256,
+      "average_expert_rank": 242.69,
+      "rank_std_dev": 32.06,
+      "pos_rank": "WR90",
+      "tier": 9
+    },
+    {
+      "player": "Keon Coleman",
+      "team": "BUF",
+      "pos": "WR",
+      "ecr": 258,
+      "average_expert_rank": 248.72,
+      "rank_std_dev": 31.36,
+      "pos_rank": "WR91",
+      "tier": 9
+    },
+    {
+      "player": "Chimere Dike",
+      "team": "TEN",
+      "pos": "WR",
+      "ecr": 259,
+      "average_expert_rank": 242.5,
+      "rank_std_dev": 34.03,
+      "pos_rank": "WR92",
+      "tier": 9
+    },
+    {
+      "player": "Samaje Perine",
+      "team": "CIN",
+      "pos": "RB",
+      "ecr": 260,
+      "average_expert_rank": 259.18,
+      "rank_std_dev": 37.95,
+      "pos_rank": "RB74",
+      "tier": 9
+    },
+    {
+      "player": "Kaelon Black",
+      "team": "SF",
+      "pos": "RB",
+      "ecr": 261,
+      "average_expert_rank": 234.39,
+      "rank_std_dev": 47.83,
+      "pos_rank": "RB75",
+      "tier": 9
+    },
+    {
+      "player": "Jordan James",
+      "team": "SF",
+      "pos": "RB",
+      "ecr": 262,
+      "average_expert_rank": 252.07,
+      "rank_std_dev": 34.76,
+      "pos_rank": "RB76",
+      "tier": 9
+    },
+    {
+      "player": "Chris Bell",
+      "team": "MIA",
+      "pos": "WR",
+      "ecr": 264,
+      "average_expert_rank": 250.02,
+      "rank_std_dev": 38.11,
+      "pos_rank": "WR93",
+      "tier": 9
+    },
+    {
+      "player": "LeQuint Allen Jr.",
+      "team": "JAC",
+      "pos": "RB",
+      "ecr": 265,
+      "average_expert_rank": 266.08,
+      "rank_std_dev": 31.29,
+      "pos_rank": "RB77",
+      "tier": 9
+    },
+    {
+      "player": "Kirk Cousins",
+      "team": "LV",
+      "pos": "QB",
+      "ecr": 266,
+      "average_expert_rank": 286.79,
+      "rank_std_dev": 33.23,
+      "pos_rank": "QB32",
+      "tier": 9
+    },
+    {
+      "player": "Michael Penix Jr.",
+      "team": "ATL",
+      "pos": "QB",
+      "ecr": 267,
+      "average_expert_rank": 287.4,
+      "rank_std_dev": 31.96,
+      "pos_rank": "QB33",
+      "tier": 9
+    },
+    {
+      "player": "Ja'Kobi Lane",
+      "team": "BAL",
+      "pos": "WR",
+      "ecr": 268,
+      "average_expert_rank": 231.95,
+      "rank_std_dev": 47.72,
+      "pos_rank": "WR94",
+      "tier": 9
+    },
+    {
+      "player": "Ty Johnson",
+      "team": "BUF",
+      "pos": "RB",
+      "ecr": 269,
+      "average_expert_rank": 256.19,
+      "rank_std_dev": 29.33,
+      "pos_rank": "RB78",
+      "tier": 9
+    },
+    {
+      "player": "Greg Dulcich",
+      "team": "MIA",
+      "pos": "TE",
+      "ecr": 270,
+      "average_expert_rank": 197.59,
+      "rank_std_dev": 39.99,
+      "pos_rank": "TE33",
+      "tier": 9
+    },
+    {
+      "player": "Najee Harris",
+      "team": "NYG",
+      "pos": "RB",
+      "ecr": 271,
+      "average_expert_rank": 254.65,
+      "rank_std_dev": 46.33,
+      "pos_rank": "RB79",
+      "tier": 9
+    },
+    {
+      "player": "Deshaun Watson",
+      "team": "CLE",
+      "pos": "QB",
+      "ecr": 272,
+      "average_expert_rank": 292.57,
+      "rank_std_dev": 27.86,
+      "pos_rank": "QB34",
+      "tier": 9
+    },
+    {
+      "player": "Darius Slayton",
+      "team": "NYG",
+      "pos": "WR",
+      "ecr": 273,
+      "average_expert_rank": 266.6,
+      "rank_std_dev": 29.49,
+      "pos_rank": "WR95",
+      "tier": 9
+    },
+    {
+      "player": "Christian Kirk",
+      "team": "SF",
+      "pos": "WR",
+      "ecr": 274,
+      "average_expert_rank": 260.05,
+      "rank_std_dev": 33.15,
+      "pos_rank": "WR96",
+      "tier": 9
+    },
+    {
+      "player": "Mason Taylor",
+      "team": "NYJ",
+      "pos": "TE",
+      "ecr": 275,
+      "average_expert_rank": 268.04,
+      "rank_std_dev": 28.4,
+      "pos_rank": "TE34",
+      "tier": 9
+    },
+    {
+      "player": "Tyquan Thornton",
+      "team": "KC",
+      "pos": "WR",
+      "ecr": 276,
+      "average_expert_rank": 261,
+      "rank_std_dev": 35.63,
+      "pos_rank": "WR97",
+      "tier": 9
+    },
+    {
+      "player": "Shedeur Sanders",
+      "team": "CLE",
+      "pos": "QB",
+      "ecr": 277,
+      "average_expert_rank": 291.57,
+      "rank_std_dev": 31.03,
+      "pos_rank": "QB35",
+      "tier": 9
+    },
+    {
+      "player": "Elijah Sarratt",
+      "team": "BAL",
+      "pos": "WR",
+      "ecr": 278,
+      "average_expert_rank": 257.91,
+      "rank_std_dev": 26.1,
+      "pos_rank": "WR98",
+      "tier": 9
+    },
+    {
+      "player": "DJ Giddens",
+      "team": "IND",
+      "pos": "RB",
+      "ecr": 279,
+      "average_expert_rank": 262.04,
+      "rank_std_dev": 28.95,
+      "pos_rank": "RB80",
+      "tier": 9
+    },
+    {
+      "player": "Malik Davis",
+      "team": "DAL",
+      "pos": "RB",
+      "ecr": 280,
+      "average_expert_rank": 262.28,
+      "rank_std_dev": 31.12,
+      "pos_rank": "RB81",
+      "tier": 9
+    },
+    {
+      "player": "Trey Benson",
+      "team": "ARI",
+      "pos": "RB",
+      "ecr": 281,
+      "average_expert_rank": 262.88,
+      "rank_std_dev": 41.82,
+      "pos_rank": "RB82",
+      "tier": 9
+    },
+    {
+      "player": "Xavier Legette",
+      "team": "CAR",
+      "pos": "WR",
+      "ecr": 283,
+      "average_expert_rank": 268.18,
+      "rank_std_dev": 30.51,
+      "pos_rank": "WR99",
+      "tier": 9
+    },
+    {
+      "player": "Devin Neal",
+      "team": "NO",
+      "pos": "RB",
+      "ecr": 284,
+      "average_expert_rank": 259,
+      "rank_std_dev": 38.08,
+      "pos_rank": "RB83",
+      "tier": 9
+    },
+    {
+      "player": "Theo Johnson",
+      "team": "NYG",
+      "pos": "TE",
+      "ecr": 285,
+      "average_expert_rank": 270.38,
+      "rank_std_dev": 32.93,
+      "pos_rank": "TE35",
+      "tier": 9
+    },
+    {
+      "player": "Caleb Douglas",
+      "team": "MIA",
+      "pos": "WR",
+      "ecr": 287,
+      "average_expert_rank": 216.63,
+      "rank_std_dev": 57.89,
+      "pos_rank": "WR100",
+      "tier": 9
+    },
+    {
+      "player": "Marvin Mims Jr.",
+      "team": "DEN",
+      "pos": "WR",
+      "ecr": 288,
+      "average_expert_rank": 271.09,
+      "rank_std_dev": 28.81,
+      "pos_rank": "WR101",
+      "tier": 9
+    },
+    {
+      "player": "Adam Randall",
+      "team": "BAL",
+      "pos": "RB",
+      "ecr": 289,
+      "average_expert_rank": 273.35,
+      "rank_std_dev": 34.07,
+      "pos_rank": "RB84",
+      "tier": 9
+    },
+    {
+      "player": "Brashard Smith",
+      "team": "KC",
+      "pos": "RB",
+      "ecr": 290,
+      "average_expert_rank": 280.21,
+      "rank_std_dev": 28.83,
+      "pos_rank": "RB85",
+      "tier": 9
+    },
+    {
+      "player": "Eli Stowers",
+      "team": "PHI",
+      "pos": "TE",
+      "ecr": 291,
+      "average_expert_rank": 265.73,
+      "rank_std_dev": 32.76,
+      "pos_rank": "TE36",
+      "tier": 9
+    },
+    {
+      "player": "Seth McGowan",
+      "team": "IND",
+      "pos": "RB",
+      "ecr": 292,
+      "average_expert_rank": 268.88,
+      "rank_std_dev": 37.66,
+      "pos_rank": "RB86",
+      "tier": 9
+    },
+    {
+      "player": "Kendre Miller",
+      "team": "NO",
+      "pos": "RB",
+      "ecr": 293,
+      "average_expert_rank": 273.76,
+      "rank_std_dev": 35.67,
+      "pos_rank": "RB87",
+      "tier": 9
+    },
+    {
+      "player": "Emari Demercado",
+      "team": "KC",
+      "pos": "RB",
+      "ecr": 295,
+      "average_expert_rank": 282.28,
+      "rank_std_dev": 24.53,
+      "pos_rank": "RB88",
+      "tier": 9
+    },
+    {
+      "player": "Devin Singletary",
+      "team": "NYG",
+      "pos": "RB",
+      "ecr": 296,
+      "average_expert_rank": 287.04,
+      "rank_std_dev": 25.02,
+      "pos_rank": "RB89",
+      "tier": 10
+    },
+    {
+      "player": "Trevor Etienne",
+      "team": "CAR",
+      "pos": "RB",
+      "ecr": 297,
+      "average_expert_rank": 299.61,
+      "rank_std_dev": 30.05,
+      "pos_rank": "RB90",
+      "tier": 10
+    },
+    {
+      "player": "Kaleb Johnson",
+      "team": "PIT",
+      "pos": "RB",
+      "ecr": 298,
+      "average_expert_rank": 272.38,
+      "rank_std_dev": 34.65,
+      "pos_rank": "RB91",
+      "tier": 10
+    },
+    {
+      "player": "Mack Hollins",
+      "team": "NE",
+      "pos": "WR",
+      "ecr": 299,
+      "average_expert_rank": 281.93,
+      "rank_std_dev": 32.76,
+      "pos_rank": "WR102",
+      "tier": 10
+    },
+    {
+      "player": "Tahj Brooks",
+      "team": "CIN",
+      "pos": "RB",
+      "ecr": 300,
+      "average_expert_rank": 301.34,
+      "rank_std_dev": 32.65,
+      "pos_rank": "RB92",
+      "tier": 10
+    },
+    {
+      "player": "Hollywood Brown",
+      "team": "PHI",
+      "pos": "WR",
+      "ecr": 301,
+      "average_expert_rank": 285.54,
+      "rank_std_dev": 18.49,
+      "pos_rank": "WR103",
+      "tier": 10
+    },
+    {
+      "player": "Cyrus Allen",
+      "team": "KC",
+      "pos": "WR",
+      "ecr": 302,
+      "average_expert_rank": 220.95,
+      "rank_std_dev": 68.54,
+      "pos_rank": "WR104",
+      "tier": 10
+    },
+    {
+      "player": "Kyle Williams",
+      "team": "NE",
+      "pos": "WR",
+      "ecr": 304,
+      "average_expert_rank": 276.23,
+      "rank_std_dev": 42.05,
+      "pos_rank": "WR105",
+      "tier": 10
+    },
+    {
+      "player": "Isaac Guerendo",
+      "team": "SF",
+      "pos": "RB",
+      "ecr": 305,
+      "average_expert_rank": 295.67,
+      "rank_std_dev": 36,
+      "pos_rank": "RB93",
+      "tier": 10
+    },
+    {
+      "player": "Jerome Ford",
+      "team": "WAS",
+      "pos": "RB",
+      "ecr": 306,
+      "average_expert_rank": 287.88,
+      "rank_std_dev": 25.82,
+      "pos_rank": "RB94",
+      "tier": 10
+    },
+    {
+      "player": "Mike Gesicki",
+      "team": "CIN",
+      "pos": "TE",
+      "ecr": 307,
+      "average_expert_rank": 266.56,
+      "rank_std_dev": 33.05,
+      "pos_rank": "TE37",
+      "tier": 10
+    },
+    {
+      "player": "Isaiah Bond",
+      "team": "CLE",
+      "pos": "WR",
+      "ecr": 308,
+      "average_expert_rank": 285.84,
+      "rank_std_dev": 29.87,
+      "pos_rank": "WR106",
+      "tier": 10
+    },
+    {
+      "player": "Jarquez Hunter",
+      "team": "LAR",
+      "pos": "RB",
+      "ecr": 309,
+      "average_expert_rank": 305.11,
+      "rank_std_dev": 35.14,
+      "pos_rank": "RB95",
+      "tier": 10
+    },
+    {
+      "player": "Brandon Aiyuk",
+      "team": "SF",
+      "pos": "WR",
+      "ecr": 311,
+      "average_expert_rank": 268.67,
+      "rank_std_dev": 55.31,
+      "pos_rank": "WR107",
+      "tier": 10
+    },
+    {
+      "player": "Jaleel McLaughlin",
+      "team": "DEN",
+      "pos": "RB",
+      "ecr": 312,
+      "average_expert_rank": 302.07,
+      "rank_std_dev": 33.76,
+      "pos_rank": "RB96",
+      "tier": 10
+    },
+    {
+      "player": "Skyler Bell",
+      "team": "BUF",
+      "pos": "WR",
+      "ecr": 313,
+      "average_expert_rank": 286.39,
+      "rank_std_dev": 43.77,
+      "pos_rank": "WR108",
+      "tier": 10
+    },
+    {
+      "player": "Audric Estime",
+      "team": "NO",
+      "pos": "RB",
+      "ecr": 314,
+      "average_expert_rank": 307.39,
+      "rank_std_dev": 30.41,
+      "pos_rank": "RB97",
+      "tier": 10
+    },
+    {
+      "player": "Will Shipley",
+      "team": "PHI",
+      "pos": "RB",
+      "ecr": 315,
+      "average_expert_rank": 313.84,
+      "rank_std_dev": 38.61,
+      "pos_rank": "RB98",
+      "tier": 10
+    },
+    {
+      "player": "Tyreek Hill",
+      "team": "FA",
+      "pos": "WR",
+      "ecr": 317,
+      "average_expert_rank": 270.06,
+      "rank_std_dev": 44.32,
+      "pos_rank": "WR109",
+      "tier": 10
+    },
+    {
+      "player": "Andrei Iosivas",
+      "team": "CIN",
+      "pos": "WR",
+      "ecr": 318,
+      "average_expert_rank": 277.6,
+      "rank_std_dev": 35.63,
+      "pos_rank": "WR110",
+      "tier": 10
+    },
+    {
+      "player": "Jake Tonges",
+      "team": "SF",
+      "pos": "TE",
+      "ecr": 319,
+      "average_expert_rank": 276.57,
+      "rank_std_dev": 31.99,
+      "pos_rank": "TE38",
+      "tier": 10
+    },
+    {
+      "player": "Darnell Washington",
+      "team": "PIT",
+      "pos": "TE",
+      "ecr": 321,
+      "average_expert_rank": 287.3,
+      "rank_std_dev": 35.96,
+      "pos_rank": "TE39",
+      "tier": 10
+    },
+    {
+      "player": "Darren Waller",
+      "team": "CAR",
+      "pos": "TE",
+      "ecr": 322,
+      "average_expert_rank": 252.6,
+      "rank_std_dev": 47.62,
+      "pos_rank": "TE40",
+      "tier": 10
+    },
+    {
+      "player": "Kareem Hunt",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 323,
+      "average_expert_rank": 319.53,
+      "rank_std_dev": 39.09,
+      "pos_rank": "RB99",
+      "tier": 10
+    },
+    {
+      "player": "Jahan Dotson",
+      "team": "ATL",
+      "pos": "WR",
+      "ecr": 324,
+      "average_expert_rank": 277.09,
+      "rank_std_dev": 70.14,
+      "pos_rank": "WR111",
+      "tier": 10
+    },
+    {
+      "player": "Joe Mixon",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 325,
+      "average_expert_rank": 314.54,
+      "rank_std_dev": 43.74,
+      "pos_rank": "RB100",
+      "tier": 10
+    },
+    {
+      "player": "Michael Mayer",
+      "team": "LV",
+      "pos": "TE",
+      "ecr": 326,
+      "average_expert_rank": 287,
+      "rank_std_dev": 41.58,
+      "pos_rank": "TE41",
+      "tier": 10
+    },
+    {
+      "player": "Carson Beck",
+      "team": "ARI",
+      "pos": "QB",
+      "ecr": 327,
+      "average_expert_rank": 317.6,
+      "rank_std_dev": 26.13,
+      "pos_rank": "QB36",
+      "tier": 11
+    },
+    {
+      "player": "DeMario Douglas",
+      "team": "NE",
+      "pos": "WR",
+      "ecr": 328,
+      "average_expert_rank": 285.52,
+      "rank_std_dev": 53.03,
+      "pos_rank": "WR112",
+      "tier": 11
+    },
+    {
+      "player": "J.J. McCarthy",
+      "team": "MIN",
+      "pos": "QB",
+      "ecr": 329,
+      "average_expert_rank": 318.71,
+      "rank_std_dev": 28.05,
+      "pos_rank": "QB37",
+      "tier": 11
+    },
+    {
+      "player": "Elijah Arroyo",
+      "team": "SEA",
+      "pos": "TE",
+      "ecr": 330,
+      "average_expert_rank": 301.44,
+      "rank_std_dev": 38.13,
+      "pos_rank": "TE42",
+      "tier": 11
+    },
+    {
+      "player": "Jalen Tolbert",
+      "team": "MIA",
+      "pos": "WR",
+      "ecr": 331,
+      "average_expert_rank": 292.53,
+      "rank_std_dev": 70.08,
+      "pos_rank": "WR113",
+      "tier": 11
+    },
+    {
+      "player": "Erick All Jr.",
+      "team": "CIN",
+      "pos": "TE",
+      "ecr": 333,
+      "average_expert_rank": 304.24,
+      "rank_std_dev": 41.03,
+      "pos_rank": "TE43",
+      "tier": 11
+    },
+    {
+      "player": "Bryce Lance",
+      "team": "NO",
+      "pos": "WR",
+      "ecr": 334,
+      "average_expert_rank": 294.64,
+      "rank_std_dev": 67.16,
+      "pos_rank": "WR114",
+      "tier": 11
+    },
+    {
+      "player": "Cedric Tillman",
+      "team": "CLE",
+      "pos": "WR",
+      "ecr": 335,
+      "average_expert_rank": 308.21,
+      "rank_std_dev": 31.62,
+      "pos_rank": "WR115",
+      "tier": 11
+    },
+    {
+      "player": "Mac Jones",
+      "team": "SF",
+      "pos": "QB",
+      "ecr": 336,
+      "average_expert_rank": 328,
+      "rank_std_dev": 23.03,
+      "pos_rank": "QB38",
+      "tier": 11
+    },
+    {
+      "player": "Eli Raridon",
+      "team": "NE",
+      "pos": "TE",
+      "ecr": 337,
+      "average_expert_rank": 309.85,
+      "rank_std_dev": 45.77,
+      "pos_rank": "TE44",
+      "tier": 11
+    },
+    {
+      "player": "Calvin Austin III",
+      "team": "NYG",
+      "pos": "WR",
+      "ecr": 338,
+      "average_expert_rank": 315.22,
+      "rank_std_dev": 55.98,
+      "pos_rank": "WR116",
+      "tier": 11
+    },
+    {
+      "player": "Noah Gray",
+      "team": "KC",
+      "pos": "TE",
+      "ecr": 339,
+      "average_expert_rank": 319.63,
+      "rank_std_dev": 30.64,
+      "pos_rank": "TE45",
+      "tier": 11
+    },
+    {
+      "player": "Xavier Hutchinson",
+      "team": "HOU",
+      "pos": "WR",
+      "ecr": 340,
+      "average_expert_rank": 285.76,
+      "rank_std_dev": 80.52,
+      "pos_rank": "WR117",
+      "tier": 11
+    },
+    {
+      "player": "Konata Mumpfield",
+      "team": "LAR",
+      "pos": "WR",
+      "ecr": 341,
+      "average_expert_rank": 308.58,
+      "rank_std_dev": 57.01,
+      "pos_rank": "WR118",
+      "tier": 11
+    },
+    {
+      "player": "Tyler Higbee",
+      "team": "LAR",
+      "pos": "TE",
+      "ecr": 342,
+      "average_expert_rank": 312.62,
+      "rank_std_dev": 33.1,
+      "pos_rank": "TE46",
+      "tier": 11
+    },
+    {
+      "player": "Cole Kmet",
+      "team": "CHI",
+      "pos": "TE",
+      "ecr": 343,
+      "average_expert_rank": 318.27,
+      "rank_std_dev": 31.43,
+      "pos_rank": "TE47",
+      "tier": 11
+    },
+    {
+      "player": "Tez Johnson",
+      "team": "TB",
+      "pos": "WR",
+      "ecr": 344,
+      "average_expert_rank": 300.2,
+      "rank_std_dev": 35.69,
+      "pos_rank": "WR119",
+      "tier": 11
+    },
+    {
+      "player": "Dawson Knox",
+      "team": "BUF",
+      "pos": "TE",
+      "ecr": 345,
+      "average_expert_rank": 323.08,
+      "rank_std_dev": 37.13,
+      "pos_rank": "TE48",
+      "tier": 11
+    },
+    {
+      "player": "Chris Brazzell II",
+      "team": "CAR",
+      "pos": "WR",
+      "ecr": 346,
+      "average_expert_rank": 296.42,
+      "rank_std_dev": 68.05,
+      "pos_rank": "WR120",
+      "tier": 11
+    },
+    {
+      "player": "Justin Fields",
+      "team": "KC",
+      "pos": "QB",
+      "ecr": 347,
+      "average_expert_rank": 336.16,
+      "rank_std_dev": 22.81,
+      "pos_rank": "QB39",
+      "tier": 11
+    },
+    {
+      "player": "Luke McCaffrey",
+      "team": "WAS",
+      "pos": "WR",
+      "ecr": 348,
+      "average_expert_rank": 322.42,
+      "rank_std_dev": 54.99,
+      "pos_rank": "WR121",
+      "tier": 11
+    },
+    {
+      "player": "Olamide Zaccheaus",
+      "team": "ATL",
+      "pos": "WR",
+      "ecr": 349,
+      "average_expert_rank": 302.43,
+      "rank_std_dev": 33.27,
+      "pos_rank": "WR122",
+      "tier": 11
+    },
+    {
+      "player": "Brenen Thompson",
+      "team": "LAC",
+      "pos": "WR",
+      "ecr": 350,
+      "average_expert_rank": 309.3,
+      "rank_std_dev": 62.79,
+      "pos_rank": "WR123",
+      "tier": 11
+    },
+    {
+      "player": "Max Klare",
+      "team": "LAR",
+      "pos": "TE",
+      "ecr": 351,
+      "average_expert_rank": 320.3,
+      "rank_std_dev": 30.62,
+      "pos_rank": "TE49",
+      "tier": 11
+    },
+    {
+      "player": "Charlie Kolar",
+      "team": "LAC",
+      "pos": "TE",
+      "ecr": 352,
+      "average_expert_rank": 278.95,
+      "rank_std_dev": 54.25,
+      "pos_rank": "TE50",
+      "tier": 11
+    },
+    {
+      "player": "Bam Knight",
+      "team": "ARI",
+      "pos": "RB",
+      "ecr": 353,
+      "average_expert_rank": 308.23,
+      "rank_std_dev": 51.95,
+      "pos_rank": "RB101",
+      "tier": 11
+    },
+    {
+      "player": "Jalen Royals",
+      "team": "KC",
+      "pos": "WR",
+      "ecr": 354,
+      "average_expert_rank": 314.41,
+      "rank_std_dev": 32.16,
+      "pos_rank": "WR124",
+      "tier": 11
+    },
+    {
+      "player": "Kendrick Bourne",
+      "team": "ARI",
+      "pos": "WR",
+      "ecr": 356,
+      "average_expert_rank": 274.5,
+      "rank_std_dev": 51.93,
+      "pos_rank": "WR125",
+      "tier": 11
+    },
+    {
+      "player": "Ty Simpson",
+      "team": "LAR",
+      "pos": "QB",
+      "ecr": 358,
+      "average_expert_rank": 345.09,
+      "rank_std_dev": 26.51,
+      "pos_rank": "QB40",
+      "tier": 11
+    },
+    {
+      "player": "Joshua Palmer",
+      "team": "BUF",
+      "pos": "WR",
+      "ecr": 359,
+      "average_expert_rank": 301.05,
+      "rank_std_dev": 37.3,
+      "pos_rank": "WR126",
+      "tier": 11
+    },
+    {
+      "player": "Eli Heidenreich",
+      "team": "PIT",
+      "pos": "RB",
+      "ecr": 360,
+      "average_expert_rank": 312.95,
+      "rank_std_dev": 56.84,
+      "pos_rank": "RB102",
+      "tier": 11
+    },
+    {
+      "player": "Ja'Tavion Sanders",
+      "team": "CAR",
+      "pos": "TE",
+      "ecr": 361,
+      "average_expert_rank": 316.8,
+      "rank_std_dev": 42.07,
+      "pos_rank": "TE51",
+      "tier": 11
+    },
+    {
+      "player": "Justin Joly",
+      "team": "DEN",
+      "pos": "TE",
+      "ecr": 362,
+      "average_expert_rank": 315.79,
+      "rank_std_dev": 37.87,
+      "pos_rank": "TE52",
+      "tier": 11
+    },
+    {
+      "player": "Michael Carter",
+      "team": "TEN",
+      "pos": "RB",
+      "ecr": 363,
+      "average_expert_rank": 334.78,
+      "rank_std_dev": 50.93,
+      "pos_rank": "RB103",
+      "tier": 11
+    },
+    {
+      "player": "Jawhar Jordan",
+      "team": "HOU",
+      "pos": "RB",
+      "ecr": 364,
+      "average_expert_rank": 334.76,
+      "rank_std_dev": 63.77,
+      "pos_rank": "RB104",
+      "tier": 11
+    },
+    {
+      "player": "Anthony Richardson Sr.",
+      "team": "IND",
+      "pos": "QB",
+      "ecr": 365,
+      "average_expert_rank": 338.06,
+      "rank_std_dev": 30,
+      "pos_rank": "QB41",
+      "tier": 11
+    },
+    {
+      "player": "Treylon Burks",
+      "team": "WAS",
+      "pos": "WR",
+      "ecr": 367,
+      "average_expert_rank": 337.63,
+      "rank_std_dev": 75.16,
+      "pos_rank": "WR127",
+      "tier": 11
+    },
+    {
+      "player": "Roman Wilson",
+      "team": "PIT",
+      "pos": "WR",
+      "ecr": 369,
+      "average_expert_rank": 311.79,
+      "rank_std_dev": 92.9,
+      "pos_rank": "WR128",
+      "tier": 11
+    },
+    {
+      "player": "Kalif Raymond",
+      "team": "CHI",
+      "pos": "WR",
+      "ecr": 370,
+      "average_expert_rank": 315.14,
+      "rank_std_dev": 83.79,
+      "pos_rank": "WR129",
+      "tier": 11
+    },
+    {
+      "player": "Dont'e Thornton Jr.",
+      "team": "LV",
+      "pos": "WR",
+      "ecr": 371,
+      "average_expert_rank": 344.14,
+      "rank_std_dev": 75.35,
+      "pos_rank": "WR130",
+      "tier": 11
+    },
+    {
+      "player": "KaVontae Turpin",
+      "team": "DAL",
+      "pos": "WR",
+      "ecr": 372,
+      "average_expert_rank": 315.77,
+      "rank_std_dev": 91.74,
+      "pos_rank": "WR131",
+      "tier": 11
+    },
+    {
+      "player": "Malik Benson",
+      "team": "LV",
+      "pos": "WR",
+      "ecr": 374,
+      "average_expert_rank": 319.31,
+      "rank_std_dev": 88.97,
+      "pos_rank": "WR132",
+      "tier": 11
+    },
+    {
+      "player": "Phil Mafah",
+      "team": "DAL",
+      "pos": "RB",
+      "ecr": 375,
+      "average_expert_rank": 319.54,
+      "rank_std_dev": 67.79,
+      "pos_rank": "RB105",
+      "tier": 11
+    },
+    {
+      "player": "Raheim Sanders",
+      "team": "CLE",
+      "pos": "RB",
+      "ecr": 376,
+      "average_expert_rank": 328,
+      "rank_std_dev": 72.83,
+      "pos_rank": "RB106",
+      "tier": 11
+    },
+    {
+      "player": "Joe Flacco",
+      "team": "CIN",
+      "pos": "QB",
+      "ecr": 377,
+      "average_expert_rank": 337.85,
+      "rank_std_dev": 20.73,
+      "pos_rank": "QB42",
+      "tier": 11
+    },
+    {
+      "player": "Savion Williams",
+      "team": "GB",
+      "pos": "WR",
+      "ecr": 378,
+      "average_expert_rank": 342.77,
+      "rank_std_dev": 68.8,
+      "pos_rank": "WR133",
+      "tier": 11
+    },
+    {
+      "player": "Jaylin Lane",
+      "team": "WAS",
+      "pos": "WR",
+      "ecr": 379,
+      "average_expert_rank": 348.46,
+      "rank_std_dev": 74.56,
+      "pos_rank": "WR134",
+      "tier": 11
+    },
+    {
+      "player": "John Metchie III",
+      "team": "CAR",
+      "pos": "WR",
+      "ecr": 380,
+      "average_expert_rank": 312.92,
+      "rank_std_dev": 48.36,
+      "pos_rank": "WR135",
+      "tier": 11
+    },
+    {
+      "player": "Kevin Coleman Jr.",
+      "team": "MIA",
+      "pos": "WR",
+      "ecr": 382,
+      "average_expert_rank": 333.17,
+      "rank_std_dev": 88.28,
+      "pos_rank": "WR136",
+      "tier": 11
+    },
+    {
+      "player": "Roschon Johnson",
+      "team": "CHI",
+      "pos": "RB",
+      "ecr": 383,
+      "average_expert_rank": 335,
+      "rank_std_dev": 70.77,
+      "pos_rank": "RB107",
+      "tier": 11
+    },
+    {
+      "player": "Jam Miller",
+      "team": "NE",
+      "pos": "RB",
+      "ecr": 384,
+      "average_expert_rank": 339.92,
+      "rank_std_dev": 69.83,
+      "pos_rank": "RB108",
+      "tier": 11
+    },
+    {
+      "player": "Noah Fant",
+      "team": "NO",
+      "pos": "TE",
+      "ecr": 385,
+      "average_expert_rank": 343.5,
+      "rank_std_dev": 36.25,
+      "pos_rank": "TE53",
+      "tier": 11
+    },
+    {
+      "player": "J'Mari Taylor",
+      "team": "JAC",
+      "pos": "RB",
+      "ecr": 386,
+      "average_expert_rank": 343.58,
+      "rank_std_dev": 59.2,
+      "pos_rank": "RB109",
+      "tier": 11
+    },
+    {
+      "player": "Luke Musgrave",
+      "team": "GB",
+      "pos": "TE",
+      "ecr": 388,
+      "average_expert_rank": 343.45,
+      "rank_std_dev": 44.78,
+      "pos_rank": "TE54",
+      "tier": 11
+    },
+    {
+      "player": "Tommy Tremble",
+      "team": "CAR",
+      "pos": "TE",
+      "ecr": 389,
+      "average_expert_rank": 345.09,
+      "rank_std_dev": 43.76,
+      "pos_rank": "TE55",
+      "tier": 11
+    },
+    {
+      "player": "Jordan Whittington",
+      "team": "LAR",
+      "pos": "WR",
+      "ecr": 390,
+      "average_expert_rank": 347.82,
+      "rank_std_dev": 91.23,
+      "pos_rank": "WR137",
+      "tier": 11
+    },
+    {
+      "player": "Austin Ekeler",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 391,
+      "average_expert_rank": 355.27,
+      "rank_std_dev": 63.57,
+      "pos_rank": "RB110",
+      "tier": 11
+    },
+    {
+      "player": "CJ Daniels",
+      "team": "LAR",
+      "pos": "WR",
+      "ecr": 392,
+      "average_expert_rank": 361,
+      "rank_std_dev": 83.4,
+      "pos_rank": "WR138",
+      "tier": 11
+    },
+    {
+      "player": "Zavion Thomas",
+      "team": "CHI",
+      "pos": "WR",
+      "ecr": 395,
+      "average_expert_rank": 341,
+      "rank_std_dev": 88.55,
+      "pos_rank": "WR139",
+      "tier": 11
+    },
+    {
+      "player": "Marcus Mariota",
+      "team": "WAS",
+      "pos": "QB",
+      "ecr": 396,
+      "average_expert_rank": 344.6,
+      "rank_std_dev": 33.46,
+      "pos_rank": "QB43",
+      "tier": 11
+    },
+    {
+      "player": "Joe Milton III",
+      "team": "DAL",
+      "pos": "QB",
+      "ecr": 397,
+      "average_expert_rank": 349.2,
+      "rank_std_dev": 40.91,
+      "pos_rank": "QB44",
+      "tier": 11
+    },
+    {
+      "player": "Ben Sinnott",
+      "team": "WAS",
+      "pos": "TE",
+      "ecr": 398,
+      "average_expert_rank": 353.7,
+      "rank_std_dev": 33.57,
+      "pos_rank": "TE56",
+      "tier": 11
+    },
+    {
+      "player": "Demarcus Robinson",
+      "team": "SF",
+      "pos": "WR",
+      "ecr": 399,
+      "average_expert_rank": 359.1,
+      "rank_std_dev": 97.98,
+      "pos_rank": "WR140",
+      "tier": 11
+    },
+    {
+      "player": "Nick Westbrook-Ikhine",
+      "team": "IND",
+      "pos": "WR",
+      "ecr": 400,
+      "average_expert_rank": 330.44,
+      "rank_std_dev": 109.83,
+      "pos_rank": "WR141",
+      "tier": 11
+    },
+    {
+      "player": "Devontez Walker",
+      "team": "BAL",
+      "pos": "WR",
+      "ecr": 401,
+      "average_expert_rank": 343.22,
+      "rank_std_dev": 101.21,
+      "pos_rank": "WR142",
+      "tier": 11
+    },
+    {
+      "player": "Rasheen Ali",
+      "team": "BAL",
+      "pos": "RB",
+      "ecr": 402,
+      "average_expert_rank": 349.22,
+      "rank_std_dev": 77.16,
+      "pos_rank": "RB111",
+      "tier": 11
+    },
+    {
+      "player": "Mitchell Evans",
+      "team": "CAR",
+      "pos": "TE",
+      "ecr": 403,
+      "average_expert_rank": 361.67,
+      "rank_std_dev": 27.32,
+      "pos_rank": "TE57",
+      "tier": 11
+    },
+    {
+      "player": "Daniel Bellinger",
+      "team": "TEN",
+      "pos": "TE",
+      "ecr": 404,
+      "average_expert_rank": 366.56,
+      "rank_std_dev": 31.85,
+      "pos_rank": "TE58",
+      "tier": 11
+    },
+    {
+      "player": "Colbie Young",
+      "team": "CIN",
+      "pos": "WR",
+      "ecr": 405,
+      "average_expert_rank": 372.56,
+      "rank_std_dev": 99.18,
+      "pos_rank": "WR143",
+      "tier": 11
+    },
+    {
+      "player": "Damien Martinez",
+      "team": "GB",
+      "pos": "RB",
+      "ecr": 406,
+      "average_expert_rank": 376.11,
+      "rank_std_dev": 70.4,
+      "pos_rank": "RB112",
+      "tier": 11
+    },
+    {
+      "player": "Cade Klubnik",
+      "team": "NYJ",
+      "pos": "QB",
+      "ecr": 407,
+      "average_expert_rank": 331.88,
+      "rank_std_dev": 30.11,
+      "pos_rank": "QB45",
+      "tier": 12
+    },
+    {
+      "player": "Austin Hooper",
+      "team": "ATL",
+      "pos": "TE",
+      "ecr": 408,
+      "average_expert_rank": 345,
+      "rank_std_dev": 44.94,
+      "pos_rank": "TE59",
+      "tier": 12
+    },
+    {
+      "player": "Jameis Winston",
+      "team": "NYG",
+      "pos": "QB",
+      "ecr": 409,
+      "average_expert_rank": 350.38,
+      "rank_std_dev": 32.14,
+      "pos_rank": "QB46",
+      "tier": 12
+    },
+    {
+      "player": "Ashton Dulin",
+      "team": "IND",
+      "pos": "WR",
+      "ecr": 410,
+      "average_expert_rank": 373.75,
+      "rank_std_dev": 104.66,
+      "pos_rank": "WR144",
+      "tier": 12
+    },
+    {
+      "player": "Greg Dortch",
+      "team": "DET",
+      "pos": "WR",
+      "ecr": 412,
+      "average_expert_rank": 382.63,
+      "rank_std_dev": 100.67,
+      "pos_rank": "WR145",
+      "tier": 12
+    },
+    {
+      "player": "John Bates",
+      "team": "WAS",
+      "pos": "TE",
+      "ecr": 413,
+      "average_expert_rank": 331.71,
+      "rank_std_dev": 51.26,
+      "pos_rank": "TE60",
+      "tier": 12
+    },
+    {
+      "player": "Kyle Juszczyk",
+      "team": "SF",
+      "pos": "RB",
+      "ecr": 414,
+      "average_expert_rank": 347.29,
+      "rank_std_dev": 96.15,
+      "pos_rank": "RB113",
+      "tier": 12
+    },
+    {
+      "player": "Tutu Atwell",
+      "team": "MIA",
+      "pos": "WR",
+      "ecr": 415,
+      "average_expert_rank": 349.43,
+      "rank_std_dev": 110.49,
+      "pos_rank": "WR146",
+      "tier": 12
+    },
+    {
+      "player": "Zavier Scott",
+      "team": "MIN",
+      "pos": "RB",
+      "ecr": 416,
+      "average_expert_rank": 356.71,
+      "rank_std_dev": 91.13,
+      "pos_rank": "RB114",
+      "tier": 12
+    },
+    {
+      "player": "Robert Henry Jr.",
+      "team": "WAS",
+      "pos": "RB",
+      "ecr": 417,
+      "average_expert_rank": 366.29,
+      "rank_std_dev": 87.72,
+      "pos_rank": "RB115",
+      "tier": 12
+    },
+    {
+      "player": "Sione Vaki",
+      "team": "DET",
+      "pos": "RB",
+      "ecr": 418,
+      "average_expert_rank": 371.29,
+      "rank_std_dev": 79.64,
+      "pos_rank": "RB116",
+      "tier": 12
+    },
+    {
+      "player": "Zach Ertz",
+      "team": "FA",
+      "pos": "TE",
+      "ecr": 420,
+      "average_expert_rank": 357.33,
+      "rank_std_dev": 28.45,
+      "pos_rank": "TE61",
+      "tier": 12
+    },
+    {
+      "player": "Riley Leonard",
+      "team": "IND",
+      "pos": "QB",
+      "ecr": 421,
+      "average_expert_rank": 359.33,
+      "rank_std_dev": 29.42,
+      "pos_rank": "QB47",
+      "tier": 12
+    },
+    {
+      "player": "Terrell Jennings",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 423,
+      "average_expert_rank": 382.17,
+      "rank_std_dev": 77.36,
+      "pos_rank": "RB117",
+      "tier": 12
+    },
+    {
+      "player": "Dameon Pierce",
+      "team": "PHI",
+      "pos": "RB",
+      "ecr": 424,
+      "average_expert_rank": 382.5,
+      "rank_std_dev": 79.52,
+      "pos_rank": "RB118",
+      "tier": 12
+    },
+    {
+      "player": "Deion Burks",
+      "team": "IND",
+      "pos": "WR",
+      "ecr": 426,
+      "average_expert_rank": 392,
+      "rank_std_dev": 109.07,
+      "pos_rank": "WR147",
+      "tier": 12
+    },
+    {
+      "player": "Odell Beckham Jr.",
+      "team": "NYG",
+      "pos": "WR",
+      "ecr": 427,
+      "average_expert_rank": 316.4,
+      "rank_std_dev": 49.77,
+      "pos_rank": "WR148",
+      "tier": 12
+    },
+    {
+      "player": "Tim Patrick",
+      "team": "NYJ",
+      "pos": "WR",
+      "ecr": 428,
+      "average_expert_rank": 423.83,
+      "rank_std_dev": 103.7,
+      "pos_rank": "WR149",
+      "tier": 12
+    },
+    {
+      "player": "Khalil Herbert",
+      "team": "SF",
+      "pos": "RB",
+      "ecr": 429,
+      "average_expert_rank": 351.6,
+      "rank_std_dev": 119.94,
+      "pos_rank": "RB119",
+      "tier": 12
+    },
+    {
+      "player": "Gardner Minshew II",
+      "team": "ARI",
+      "pos": "QB",
+      "ecr": 430,
+      "average_expert_rank": 361.2,
+      "rank_std_dev": 49.6,
+      "pos_rank": "QB48",
+      "tier": 12
+    },
+    {
+      "player": "Matt Hibner",
+      "team": "BAL",
+      "pos": "TE",
+      "ecr": 431,
+      "average_expert_rank": 364.4,
+      "rank_std_dev": 69.82,
+      "pos_rank": "TE62",
+      "tier": 12
+    },
+    {
+      "player": "Tommy Myers",
+      "team": "FA",
+      "pos": "TE",
+      "ecr": 432,
+      "average_expert_rank": 365.4,
+      "rank_std_dev": 68.4,
+      "pos_rank": "TE63",
+      "tier": 12
+    },
+    {
+      "player": "Jonnu Smith",
+      "team": "FA",
+      "pos": "TE",
+      "ecr": 433,
+      "average_expert_rank": 368.4,
+      "rank_std_dev": 28.86,
+      "pos_rank": "TE64",
+      "tier": 12
+    },
+    {
+      "player": "Jeremy McNichols",
+      "team": "WAS",
+      "pos": "RB",
+      "ecr": 434,
+      "average_expert_rank": 368.6,
+      "rank_std_dev": 107.51,
+      "pos_rank": "RB120",
+      "tier": 12
+    },
+    {
+      "player": "Dylan Laube",
+      "team": "LV",
+      "pos": "RB",
+      "ecr": 435,
+      "average_expert_rank": 368.6,
+      "rank_std_dev": 118.6,
+      "pos_rank": "RB121",
+      "tier": 12
+    },
+    {
+      "player": "Tyler Goodson",
+      "team": "ATL",
+      "pos": "RB",
+      "ecr": 436,
+      "average_expert_rank": 369,
+      "rank_std_dev": 113.71,
+      "pos_rank": "RB122",
+      "tier": 12
+    },
+    {
+      "player": "Quinn Ewers",
+      "team": "MIA",
+      "pos": "QB",
+      "ecr": 437,
+      "average_expert_rank": 371.6,
+      "rank_std_dev": 41.18,
+      "pos_rank": "QB49",
+      "tier": 12
+    },
+    {
+      "player": "Antonio Gibson",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 438,
+      "average_expert_rank": 376.4,
+      "rank_std_dev": 109.6,
+      "pos_rank": "RB123",
+      "tier": 12
+    },
+    {
+      "player": "Tai Felton",
+      "team": "MIN",
+      "pos": "WR",
+      "ecr": 439,
+      "average_expert_rank": 378.2,
+      "rank_std_dev": 141.07,
+      "pos_rank": "WR150",
+      "tier": 12
+    },
+    {
+      "player": "Elijah Higgins",
+      "team": "ARI",
+      "pos": "TE",
+      "ecr": 440,
+      "average_expert_rank": 379.2,
+      "rank_std_dev": 29.12,
+      "pos_rank": "TE65",
+      "tier": 12
+    },
+    {
+      "player": "Ronnie Rivers",
+      "team": "LAR",
+      "pos": "RB",
+      "ecr": 441,
+      "average_expert_rank": 379.8,
+      "rank_std_dev": 101.56,
+      "pos_rank": "RB124",
+      "tier": 12
+    },
+    {
+      "player": "Ty Chandler",
+      "team": "NO",
+      "pos": "RB",
+      "ecr": 442,
+      "average_expert_rank": 380.6,
+      "rank_std_dev": 114.4,
+      "pos_rank": "RB125",
+      "tier": 12
+    },
+    {
+      "player": "Josh Oliver",
+      "team": "MIN",
+      "pos": "TE",
+      "ecr": 443,
+      "average_expert_rank": 382.6,
+      "rank_std_dev": 42.25,
+      "pos_rank": "TE66",
+      "tier": 12
+    },
+    {
+      "player": "Tanner Koziol",
+      "team": "JAC",
+      "pos": "TE",
+      "ecr": 444,
+      "average_expert_rank": 385.8,
+      "rank_std_dev": 29.01,
+      "pos_rank": "TE67",
+      "tier": 12
+    },
+    {
+      "player": "Will Kacmarek",
+      "team": "MIA",
+      "pos": "TE",
+      "ecr": 445,
+      "average_expert_rank": 388.4,
+      "rank_std_dev": 39.2,
+      "pos_rank": "TE68",
+      "tier": 12
+    },
+    {
+      "player": "Jackson Hawes",
+      "team": "BUF",
+      "pos": "TE",
+      "ecr": 446,
+      "average_expert_rank": 390.2,
+      "rank_std_dev": 31.73,
+      "pos_rank": "TE69",
+      "tier": 12
+    },
+    {
+      "player": "Marlin Klein",
+      "team": "HOU",
+      "pos": "TE",
+      "ecr": 447,
+      "average_expert_rank": 392.2,
+      "rank_std_dev": 32.47,
+      "pos_rank": "TE70",
+      "tier": 12
+    },
+    {
+      "player": "Barion Brown",
+      "team": "NO",
+      "pos": "WR",
+      "ecr": 448,
+      "average_expert_rank": 395.4,
+      "rank_std_dev": 142.66,
+      "pos_rank": "WR151",
+      "tier": 12
+    },
+    {
+      "player": "Luke Schoonmaker",
+      "team": "DAL",
+      "pos": "TE",
+      "ecr": 449,
+      "average_expert_rank": 398.2,
+      "rank_std_dev": 29.44,
+      "pos_rank": "TE71",
+      "tier": 12
+    },
+    {
+      "player": "Noah Whittington",
+      "team": "HOU",
+      "pos": "RB",
+      "ecr": 450,
+      "average_expert_rank": 407,
+      "rank_std_dev": 98.19,
+      "pos_rank": "RB126",
+      "tier": 12
+    },
+    {
+      "player": "Jacob Cowing",
+      "team": "SF",
+      "pos": "WR",
+      "ecr": 451,
+      "average_expert_rank": 417,
+      "rank_std_dev": 139.23,
+      "pos_rank": "WR152",
+      "tier": 12
+    },
+    {
+      "player": "Reggie Gilliam",
+      "team": "NE",
+      "pos": "RB",
+      "ecr": 452,
+      "average_expert_rank": 418.2,
+      "rank_std_dev": 124.27,
+      "pos_rank": "RB127",
+      "tier": 12
+    },
+    {
+      "player": "Jahdae Walker",
+      "team": "CHI",
+      "pos": "WR",
+      "ecr": 453,
+      "average_expert_rank": 418.2,
+      "rank_std_dev": 116.46,
+      "pos_rank": "WR153",
+      "tier": 12
+    },
+    {
+      "player": "Dyami Brown",
+      "team": "WAS",
+      "pos": "WR",
+      "ecr": 455,
+      "average_expert_rank": 426.2,
+      "rank_std_dev": 104.29,
+      "pos_rank": "WR154",
+      "tier": 12
+    },
+    {
+      "player": "Marquez Valdes-Scantling",
+      "team": "DAL",
+      "pos": "WR",
+      "ecr": 457,
+      "average_expert_rank": 341.75,
+      "rank_std_dev": 50.79,
+      "pos_rank": "WR155",
+      "tier": 12
+    },
+    {
+      "player": "Davis Mills",
+      "team": "HOU",
+      "pos": "QB",
+      "ecr": 458,
+      "average_expert_rank": 342.75,
+      "rank_std_dev": 71.36,
+      "pos_rank": "QB50",
+      "tier": 12
+    },
+    {
+      "player": "Lil'Jordan Humphrey",
+      "team": "DEN",
+      "pos": "WR",
+      "ecr": 459,
+      "average_expert_rank": 450,
+      "rank_std_dev": 117.2,
+      "pos_rank": "WR156",
+      "tier": 12
+    },
+    {
+      "player": "Jalen Reagor",
+      "team": "MIA",
+      "pos": "WR",
+      "ecr": 460,
+      "average_expert_rank": 347.75,
+      "rank_std_dev": 69.14,
+      "pos_rank": "WR157",
+      "tier": 12
+    },
+    {
+      "player": "Jalen Milroe",
+      "team": "SEA",
+      "pos": "QB",
+      "ecr": 461,
+      "average_expert_rank": 349.75,
+      "rank_std_dev": 65.45,
+      "pos_rank": "QB51",
+      "tier": 12
+    },
+    {
+      "player": "Xavier Restrepo",
+      "team": "TEN",
+      "pos": "WR",
+      "ecr": 462,
+      "average_expert_rank": 356.75,
+      "rank_std_dev": 67.06,
+      "pos_rank": "WR158",
+      "tier": 12
+    },
+    {
+      "player": "Adam Trautman",
+      "team": "DEN",
+      "pos": "TE",
+      "ecr": 463,
+      "average_expert_rank": 391,
+      "rank_std_dev": 49.08,
+      "pos_rank": "TE72",
+      "tier": 12
+    },
+    {
+      "player": "Jeremy Ruckert",
+      "team": "NYJ",
+      "pos": "TE",
+      "ecr": 464,
+      "average_expert_rank": 396,
+      "rank_std_dev": 72.43,
+      "pos_rank": "TE73",
+      "tier": 12
+    },
+    {
+      "player": "Xavier Smith",
+      "team": "LAR",
+      "pos": "WR",
+      "ecr": 465,
+      "average_expert_rank": 397.25,
+      "rank_std_dev": 162.75,
+      "pos_rank": "WR159",
+      "tier": 12
+    },
+    {
+      "player": "Foster Moreau",
+      "team": "HOU",
+      "pos": "TE",
+      "ecr": 466,
+      "average_expert_rank": 398.25,
+      "rank_std_dev": 76.82,
+      "pos_rank": "TE74",
+      "tier": 12
+    },
+    {
+      "player": "Frank Gore Jr.",
+      "team": "BUF",
+      "pos": "RB",
+      "ecr": 467,
+      "average_expert_rank": 398.75,
+      "rank_std_dev": 113.82,
+      "pos_rank": "RB128",
+      "tier": 12
+    },
+    {
+      "player": "Miles Sanders",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 468,
+      "average_expert_rank": 400.25,
+      "rank_std_dev": 126.19,
+      "pos_rank": "RB129",
+      "tier": 12
+    },
+    {
+      "player": "Sam Roush",
+      "team": "CHI",
+      "pos": "TE",
+      "ecr": 469,
+      "average_expert_rank": 400.25,
+      "rank_std_dev": 47.38,
+      "pos_rank": "TE75",
+      "tier": 12
+    },
+    {
+      "player": "Tyler Conklin",
+      "team": "DET",
+      "pos": "TE",
+      "ecr": 470,
+      "average_expert_rank": 401.5,
+      "rank_std_dev": 36.2,
+      "pos_rank": "TE76",
+      "tier": 12
+    },
+    {
+      "player": "Donovan Edwards",
+      "team": "MIA",
+      "pos": "RB",
+      "ecr": 472,
+      "average_expert_rank": 404,
+      "rank_std_dev": 117.55,
+      "pos_rank": "RB130",
+      "tier": 12
+    },
+    {
+      "player": "Durham Smythe",
+      "team": "BAL",
+      "pos": "TE",
+      "ecr": 473,
+      "average_expert_rank": 404.75,
+      "rank_std_dev": 45.12,
+      "pos_rank": "TE77",
+      "tier": 12
+    },
+    {
+      "player": "Roman Hemby",
+      "team": "LV",
+      "pos": "RB",
+      "ecr": 474,
+      "average_expert_rank": 405.75,
+      "rank_std_dev": 129.44,
+      "pos_rank": "RB131",
+      "tier": 12
+    },
+    {
+      "player": "Hunter Luepke",
+      "team": "DAL",
+      "pos": "RB",
+      "ecr": 475,
+      "average_expert_rank": 406.25,
+      "rank_std_dev": 129.04,
+      "pos_rank": "RB132",
+      "tier": 12
+    },
+    {
+      "player": "Michael Trigg",
+      "team": "DAL",
+      "pos": "TE",
+      "ecr": 476,
+      "average_expert_rank": 409.75,
+      "rank_std_dev": 33.02,
+      "pos_rank": "TE78",
+      "tier": 12
+    },
+    {
+      "player": "Mitch Tinsley",
+      "team": "CIN",
+      "pos": "WR",
+      "ecr": 477,
+      "average_expert_rank": 411,
+      "rank_std_dev": 152.08,
+      "pos_rank": "WR160",
+      "tier": 12
+    },
+    {
+      "player": "Miles Davis",
+      "team": "CAR",
+      "pos": "RB",
+      "ecr": 478,
+      "average_expert_rank": 412,
+      "rank_std_dev": 126.75,
+      "pos_rank": "RB133",
+      "tier": 12
+    },
+    {
+      "player": "Jaydn Ott",
+      "team": "KC",
+      "pos": "RB",
+      "ecr": 479,
+      "average_expert_rank": 416,
+      "rank_std_dev": 110.72,
+      "pos_rank": "RB134",
+      "tier": 12
+    },
+    {
+      "player": "Jacob Saylors",
+      "team": "DET",
+      "pos": "RB",
+      "ecr": 480,
+      "average_expert_rank": 417.25,
+      "rank_std_dev": 145.98,
+      "pos_rank": "RB135",
+      "tier": 12
+    },
+    {
+      "player": "Jaret Patterson",
+      "team": "LAC",
+      "pos": "RB",
+      "ecr": 481,
+      "average_expert_rank": 422,
+      "rank_std_dev": 115.27,
+      "pos_rank": "RB136",
+      "tier": 12
+    },
+    {
+      "player": "Myles Montgomery",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 483,
+      "average_expert_rank": 424.5,
+      "rank_std_dev": 107.8,
+      "pos_rank": "RB137",
+      "tier": 12
+    },
+    {
+      "player": "Jake Bobo",
+      "team": "SEA",
+      "pos": "WR",
+      "ecr": 485,
+      "average_expert_rank": 429,
+      "rank_std_dev": 154.76,
+      "pos_rank": "WR161",
+      "tier": 12
+    },
+    {
+      "player": "Travis Homer",
+      "team": "PIT",
+      "pos": "RB",
+      "ecr": 489,
+      "average_expert_rank": 439.75,
+      "rank_std_dev": 133.04,
+      "pos_rank": "RB138",
+      "tier": 12
+    },
+    {
+      "player": "Scotty Miller",
+      "team": "CHI",
+      "pos": "WR",
+      "ecr": 490,
+      "average_expert_rank": 441.75,
+      "rank_std_dev": 178.37,
+      "pos_rank": "WR162",
+      "tier": 12
+    },
+    {
+      "player": "Elijah Mitchell",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 491,
+      "average_expert_rank": 442,
+      "rank_std_dev": 118.15,
+      "pos_rank": "RB139",
+      "tier": 12
+    },
+    {
+      "player": "Jimmy Horn Jr.",
+      "team": "CAR",
+      "pos": "WR",
+      "ecr": 492,
+      "average_expert_rank": 443,
+      "rank_std_dev": 148.68,
+      "pos_rank": "WR163",
+      "tier": 12
+    },
+    {
+      "player": "Van Jefferson",
+      "team": "WAS",
+      "pos": "WR",
+      "ecr": 493,
+      "average_expert_rank": 450.75,
+      "rank_std_dev": 128.77,
+      "pos_rank": "WR164",
+      "tier": 12
+    },
+    {
+      "player": "Isaiah Williams",
+      "team": "FA",
+      "pos": "WR",
+      "ecr": 494,
+      "average_expert_rank": 451.5,
+      "rank_std_dev": 189.71,
+      "pos_rank": "WR165",
+      "tier": 12
+    },
+    {
+      "player": "Cedrick Wilson Jr.",
+      "team": "DET",
+      "pos": "WR",
+      "ecr": 495,
+      "average_expert_rank": 459.25,
+      "rank_std_dev": 177.38,
+      "pos_rank": "WR166",
+      "tier": 12
+    },
+    {
+      "player": "Spencer Rattler",
+      "team": "NO",
+      "pos": "QB",
+      "ecr": 496,
+      "average_expert_rank": 327,
+      "rank_std_dev": 61.26,
+      "pos_rank": "QB52",
+      "tier": 12
+    },
+    {
+      "player": "KeAndre Lambert-Smith",
+      "team": "LAC",
+      "pos": "WR",
+      "ecr": 497,
+      "average_expert_rank": 473.5,
+      "rank_std_dev": 141.78,
+      "pos_rank": "WR167",
+      "tier": 12
+    },
+    {
+      "player": "Theo Wease Jr.",
+      "team": "MIA",
+      "pos": "WR",
+      "ecr": 498,
+      "average_expert_rank": 349,
+      "rank_std_dev": 97.1,
+      "pos_rank": "WR168",
+      "tier": 12
+    },
+    {
+      "player": "DeAndre Hopkins",
+      "team": "BAL",
+      "pos": "WR",
+      "ecr": 499,
+      "average_expert_rank": 360,
+      "rank_std_dev": 66.51,
+      "pos_rank": "WR169",
+      "tier": 12
+    },
+    {
+      "player": "Tyler Lockett",
+      "team": "LV",
+      "pos": "WR",
+      "ecr": 501,
+      "average_expert_rank": 364,
+      "rank_std_dev": 71.63,
+      "pos_rank": "WR170",
+      "tier": 12
+    },
+    {
+      "player": "Chris Blair",
+      "team": "ATL",
+      "pos": "WR",
+      "ecr": 502,
+      "average_expert_rank": 364.67,
+      "rank_std_dev": 75.96,
+      "pos_rank": "WR171",
+      "tier": 12
+    },
+    {
+      "player": "David Sills V",
+      "team": "TB",
+      "pos": "WR",
+      "ecr": 503,
+      "average_expert_rank": 366,
+      "rank_std_dev": 70.35,
+      "pos_rank": "WR172",
+      "tier": 12
+    },
+    {
+      "player": "Trey Lance",
+      "team": "LAC",
+      "pos": "QB",
+      "ecr": 504,
+      "average_expert_rank": 367,
+      "rank_std_dev": 60.81,
+      "pos_rank": "QB53",
+      "tier": 12
+    },
+    {
+      "player": "Tyler Huntley",
+      "team": "BAL",
+      "pos": "QB",
+      "ecr": 505,
+      "average_expert_rank": 372.67,
+      "rank_std_dev": 58.45,
+      "pos_rank": "QB54",
+      "tier": 12
+    },
+    {
+      "player": "Michael Woods II",
+      "team": "DEN",
+      "pos": "WR",
+      "ecr": 506,
+      "average_expert_rank": 373,
+      "rank_std_dev": 95.33,
+      "pos_rank": "WR173",
+      "tier": 12
+    },
+    {
+      "player": "Tyrod Taylor",
+      "team": "GB",
+      "pos": "QB",
+      "ecr": 507,
+      "average_expert_rank": 382,
+      "rank_std_dev": 38.26,
+      "pos_rank": "QB55",
+      "tier": 12
+    },
+    {
+      "player": "Noah Brown",
+      "team": "LV",
+      "pos": "WR",
+      "ecr": 508,
+      "average_expert_rank": 517.5,
+      "rank_std_dev": 170.83,
+      "pos_rank": "WR174",
+      "tier": 13
+    },
+    {
+      "player": "Mo Alie-Cox",
+      "team": "IND",
+      "pos": "TE",
+      "ecr": 509,
+      "average_expert_rank": 412,
+      "rank_std_dev": 71.51,
+      "pos_rank": "TE79",
+      "tier": 13
+    },
+    {
+      "player": "Jelani Woods",
+      "team": "NYJ",
+      "pos": "TE",
+      "ecr": 510,
+      "average_expert_rank": 412.67,
+      "rank_std_dev": 57.66,
+      "pos_rank": "TE80",
+      "tier": 13
+    },
+    {
+      "player": "Will Levis",
+      "team": "TEN",
+      "pos": "QB",
+      "ecr": 511,
+      "average_expert_rank": 413.33,
+      "rank_std_dev": 13.47,
+      "pos_rank": "QB56",
+      "tier": 13
+    },
+    {
+      "player": "Nate Boerkircher",
+      "team": "JAC",
+      "pos": "TE",
+      "ecr": 512,
+      "average_expert_rank": 428.67,
+      "rank_std_dev": 28.71,
+      "pos_rank": "TE81",
+      "tier": 13
+    },
+    {
+      "player": "Isaiah Williams",
+      "team": "NYJ",
+      "pos": "WR",
+      "ecr": 513,
+      "average_expert_rank": 429.33,
+      "rank_std_dev": 169.8,
+      "pos_rank": "WR175",
+      "tier": 13
+    },
+    {
+      "player": "Taysom Hill",
+      "team": "FA",
+      "pos": "TE",
+      "ecr": 514,
+      "average_expert_rank": 429.67,
+      "rank_std_dev": 104.91,
+      "pos_rank": "TE82",
+      "tier": 13
+    },
+    {
+      "player": "Nate Adkins",
+      "team": "DEN",
+      "pos": "TE",
+      "ecr": 515,
+      "average_expert_rank": 435.33,
+      "rank_std_dev": 56.31,
+      "pos_rank": "TE83",
+      "tier": 13
+    },
+    {
+      "player": "Jack Endries",
+      "team": "CIN",
+      "pos": "TE",
+      "ecr": 516,
+      "average_expert_rank": 440.33,
+      "rank_std_dev": 31.56,
+      "pos_rank": "TE84",
+      "tier": 13
+    },
+    {
+      "player": "Cade Stover",
+      "team": "HOU",
+      "pos": "TE",
+      "ecr": 517,
+      "average_expert_rank": 442,
+      "rank_std_dev": 43.18,
+      "pos_rank": "TE85",
+      "tier": 13
+    },
+    {
+      "player": "Moliki Matavao",
+      "team": "NO",
+      "pos": "TE",
+      "ecr": 518,
+      "average_expert_rank": 443.33,
+      "rank_std_dev": 58.34,
+      "pos_rank": "TE86",
+      "tier": 13
+    },
+    {
+      "player": "Bauer Sharp",
+      "team": "TB",
+      "pos": "TE",
+      "ecr": 519,
+      "average_expert_rank": 451,
+      "rank_std_dev": 52.01,
+      "pos_rank": "TE87",
+      "tier": 13
+    },
+    {
+      "player": "Elijah Tau-Tolliver",
+      "team": "BAL",
+      "pos": "RB",
+      "ecr": 520,
+      "average_expert_rank": 453.33,
+      "rank_std_dev": 127.52,
+      "pos_rank": "RB140",
+      "tier": 13
+    },
+    {
+      "player": "Kalel Mullings",
+      "team": "TEN",
+      "pos": "RB",
+      "ecr": 521,
+      "average_expert_rank": 455.33,
+      "rank_std_dev": 123.11,
+      "pos_rank": "RB141",
+      "tier": 13
+    },
+    {
+      "player": "Elijah Moore",
+      "team": "PHI",
+      "pos": "WR",
+      "ecr": 523,
+      "average_expert_rank": 469.67,
+      "rank_std_dev": 142.34,
+      "pos_rank": "WR176",
+      "tier": 13
+    },
+    {
+      "player": "Miles Kitselman",
+      "team": "FA",
+      "pos": "TE",
+      "ecr": 524,
+      "average_expert_rank": 470,
+      "rank_std_dev": 79.65,
+      "pos_rank": "TE88",
+      "tier": 13
+    },
+    {
+      "player": "Josh Cuevas",
+      "team": "BAL",
+      "pos": "TE",
+      "ecr": 525,
+      "average_expert_rank": 472,
+      "rank_std_dev": 50.8,
+      "pos_rank": "TE89",
+      "tier": 13
+    },
+    {
+      "player": "Will Dissly",
+      "team": "FA",
+      "pos": "TE",
+      "ecr": 526,
+      "average_expert_rank": 472.33,
+      "rank_std_dev": 57.88,
+      "pos_rank": "TE90",
+      "tier": 13
+    },
+    {
+      "player": "Derius Davis",
+      "team": "LAC",
+      "pos": "WR",
+      "ecr": 527,
+      "average_expert_rank": 475,
+      "rank_std_dev": 170.67,
+      "pos_rank": "WR177",
+      "tier": 13
+    },
+    {
+      "player": "Lew Nichols III",
+      "team": "PIT",
+      "pos": "RB",
+      "ecr": 528,
+      "average_expert_rank": 476.33,
+      "rank_std_dev": 126.56,
+      "pos_rank": "RB142",
+      "tier": 13
+    },
+    {
+      "player": "Cash Jones",
+      "team": "ATL",
+      "pos": "RB",
+      "ecr": 530,
+      "average_expert_rank": 476.67,
+      "rank_std_dev": 113.1,
+      "pos_rank": "RB143",
+      "tier": 13
+    },
+    {
+      "player": "Raheem Mostert",
+      "team": "LV",
+      "pos": "RB",
+      "ecr": 531,
+      "average_expert_rank": 479.33,
+      "rank_std_dev": 125.75,
+      "pos_rank": "RB144",
+      "tier": 13
+    },
+    {
+      "player": "Max Bredeson",
+      "team": "MIN",
+      "pos": "RB",
+      "ecr": 532,
+      "average_expert_rank": 483.33,
+      "rank_std_dev": 137.46,
+      "pos_rank": "RB145",
+      "tier": 13
+    },
+    {
+      "player": "Khalil Dinkins",
+      "team": "FA",
+      "pos": "TE",
+      "ecr": 533,
+      "average_expert_rank": 484,
+      "rank_std_dev": 70.01,
+      "pos_rank": "TE91",
+      "tier": 13
+    },
+    {
+      "player": "Nathan Carter",
+      "team": "ATL",
+      "pos": "RB",
+      "ecr": 534,
+      "average_expert_rank": 492.33,
+      "rank_std_dev": 138.22,
+      "pos_rank": "RB146",
+      "tier": 13
+    },
+    {
+      "player": "Reggie Virgil",
+      "team": "ARI",
+      "pos": "WR",
+      "ecr": 535,
+      "average_expert_rank": 493.33,
+      "rank_std_dev": 113.77,
+      "pos_rank": "WR178",
+      "tier": 13
+    },
+    {
+      "player": "British Brooks",
+      "team": "HOU",
+      "pos": "RB",
+      "ecr": 536,
+      "average_expert_rank": 493.67,
+      "rank_std_dev": 134.39,
+      "pos_rank": "RB147",
+      "tier": 13
+    },
+    {
+      "player": "Brandin Cooks",
+      "team": "FA",
+      "pos": "WR",
+      "ecr": 538,
+      "average_expert_rank": 495.33,
+      "rank_std_dev": 174.52,
+      "pos_rank": "WR179",
+      "tier": 13
+    },
+    {
+      "player": "Juice Wells Jr.",
+      "team": "ATL",
+      "pos": "WR",
+      "ecr": 539,
+      "average_expert_rank": 496.67,
+      "rank_std_dev": 194.45,
+      "pos_rank": "WR180",
+      "tier": 13
+    },
+    {
+      "player": "Sincere McCormick",
+      "team": "SF",
+      "pos": "RB",
+      "ecr": 540,
+      "average_expert_rank": 497,
+      "rank_std_dev": 99.63,
+      "pos_rank": "RB148",
+      "tier": 13
+    },
+    {
+      "player": "Alexander Mattison",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 541,
+      "average_expert_rank": 501.33,
+      "rank_std_dev": 166.6,
+      "pos_rank": "RB149",
+      "tier": 13
+    },
+    {
+      "player": "Efton Chism III",
+      "team": "NE",
+      "pos": "WR",
+      "ecr": 543,
+      "average_expert_rank": 514,
+      "rank_std_dev": 133.97,
+      "pos_rank": "WR181",
+      "tier": 13
+    },
+    {
+      "player": "Alec Ingold",
+      "team": "LAC",
+      "pos": "RB",
+      "ecr": 544,
+      "average_expert_rank": 515,
+      "rank_std_dev": 195.56,
+      "pos_rank": "RB150",
+      "tier": 13
+    },
+    {
+      "player": "Dohnte Meyers",
+      "team": "CIN",
+      "pos": "WR",
+      "ecr": 545,
+      "average_expert_rank": 515.67,
+      "rank_std_dev": 204.19,
+      "pos_rank": "WR182",
+      "tier": 13
+    },
+    {
+      "player": "Patrick Ricard",
+      "team": "NYG",
+      "pos": "RB",
+      "ecr": 546,
+      "average_expert_rank": 515.67,
+      "rank_std_dev": 186.22,
+      "pos_rank": "RB151",
+      "tier": 13
+    },
+    {
+      "player": "Cam Akers",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 547,
+      "average_expert_rank": 516.67,
+      "rank_std_dev": 112.87,
+      "pos_rank": "RB152",
+      "tier": 13
+    },
+    {
+      "player": "Myles Price",
+      "team": "MIN",
+      "pos": "WR",
+      "ecr": 548,
+      "average_expert_rank": 516.67,
+      "rank_std_dev": 133.19,
+      "pos_rank": "WR183",
+      "tier": 13
+    },
+    {
+      "player": "JuJu Smith-Schuster",
+      "team": "FA",
+      "pos": "WR",
+      "ecr": 549,
+      "average_expert_rank": 519,
+      "rank_std_dev": 142.19,
+      "pos_rank": "WR184",
+      "tier": 13
+    },
+    {
+      "player": "Michael Burton",
+      "team": "CLE",
+      "pos": "RB",
+      "ecr": 550,
+      "average_expert_rank": 519.33,
+      "rank_std_dev": 124.98,
+      "pos_rank": "RB153",
+      "tier": 13
+    },
+    {
+      "player": "Kyle Allen",
+      "team": "BUF",
+      "pos": "QB",
+      "ecr": 552,
+      "average_expert_rank": 351.5,
+      "rank_std_dev": 80.5,
+      "pos_rank": "QB57",
+      "tier": 13
+    },
+    {
+      "player": "Jarrett Stidham",
+      "team": "DEN",
+      "pos": "QB",
+      "ecr": 553,
+      "average_expert_rank": 352.5,
+      "rank_std_dev": 67.5,
+      "pos_rank": "QB58",
+      "tier": 13
+    },
+    {
+      "player": "Jakobie Keeney-James",
+      "team": "PIT",
+      "pos": "WR",
+      "ecr": 554,
+      "average_expert_rank": 357.5,
+      "rank_std_dev": 136.5,
+      "pos_rank": "WR185",
+      "tier": 13
+    },
+    {
+      "player": "Tommy DeVito",
+      "team": "NE",
+      "pos": "QB",
+      "ecr": 555,
+      "average_expert_rank": 357.5,
+      "rank_std_dev": 68.5,
+      "pos_rank": "QB59",
+      "tier": 13
+    },
+    {
+      "player": "Tahj Washington",
+      "team": "MIA",
+      "pos": "WR",
+      "ecr": 556,
+      "average_expert_rank": 359.5,
+      "rank_std_dev": 127.5,
+      "pos_rank": "WR186",
+      "tier": 13
+    },
+    {
+      "player": "Jared Wayne",
+      "team": "HOU",
+      "pos": "WR",
+      "ecr": 557,
+      "average_expert_rank": 362,
+      "rank_std_dev": 118,
+      "pos_rank": "WR187",
+      "tier": 13
+    },
+    {
+      "player": "Coleman Owen",
+      "team": "IND",
+      "pos": "WR",
+      "ecr": 558,
+      "average_expert_rank": 362.5,
+      "rank_std_dev": 134.5,
+      "pos_rank": "WR188",
+      "tier": 13
+    },
+    {
+      "player": "Adam Prentice",
+      "team": "DEN",
+      "pos": "RB",
+      "ecr": 559,
+      "average_expert_rank": 530,
+      "rank_std_dev": 183.41,
+      "pos_rank": "RB154",
+      "tier": 13
+    },
+    {
+      "player": "Eric Gray",
+      "team": "NYG",
+      "pos": "RB",
+      "ecr": 560,
+      "average_expert_rank": 530,
+      "rank_std_dev": 127.94,
+      "pos_rank": "RB155",
+      "tier": 13
+    },
+    {
+      "player": "Kevin Austin Jr.",
+      "team": "NO",
+      "pos": "WR",
+      "ecr": 561,
+      "average_expert_rank": 368,
+      "rank_std_dev": 107,
+      "pos_rank": "WR189",
+      "tier": 13
+    },
+    {
+      "player": "Casey Washington",
+      "team": "CAR",
+      "pos": "WR",
+      "ecr": 562,
+      "average_expert_rank": 368.5,
+      "rank_std_dev": 121.5,
+      "pos_rank": "WR190",
+      "tier": 13
+    },
+    {
+      "player": "Mecole Hardman Jr.",
+      "team": "BUF",
+      "pos": "WR",
+      "ecr": 563,
+      "average_expert_rank": 533.67,
+      "rank_std_dev": 143.23,
+      "pos_rank": "WR191",
+      "tier": 13
+    },
+    {
+      "player": "Drew Allar",
+      "team": "PIT",
+      "pos": "QB",
+      "ecr": 564,
+      "average_expert_rank": 371.5,
+      "rank_std_dev": 50.5,
+      "pos_rank": "QB60",
+      "tier": 13
+    },
+    {
+      "player": "Jake Browning",
+      "team": "TB",
+      "pos": "QB",
+      "ecr": 565,
+      "average_expert_rank": 372,
+      "rank_std_dev": 68,
+      "pos_rank": "QB61",
+      "tier": 13
+    },
+    {
+      "player": "Maurice Alexander",
+      "team": "CHI",
+      "pos": "WR",
+      "ecr": 566,
+      "average_expert_rank": 372.5,
+      "rank_std_dev": 126.5,
+      "pos_rank": "WR192",
+      "tier": 13
+    },
+    {
+      "player": "Jordan Watkins",
+      "team": "SF",
+      "pos": "WR",
+      "ecr": 567,
+      "average_expert_rank": 379,
+      "rank_std_dev": 114,
+      "pos_rank": "WR193",
+      "tier": 13
+    },
+    {
+      "player": "Justin Watson",
+      "team": "HOU",
+      "pos": "WR",
+      "ecr": 568,
+      "average_expert_rank": 539.33,
+      "rank_std_dev": 142.68,
+      "pos_rank": "WR194",
+      "tier": 13
+    },
+    {
+      "player": "Quentin Skinner",
+      "team": "BUF",
+      "pos": "WR",
+      "ecr": 569,
+      "average_expert_rank": 382.5,
+      "rank_std_dev": 134.5,
+      "pos_rank": "WR195",
+      "tier": 13
+    },
+    {
+      "player": "Dalevon Campbell",
+      "team": "LAC",
+      "pos": "WR",
+      "ecr": 570,
+      "average_expert_rank": 384.5,
+      "rank_std_dev": 148.5,
+      "pos_rank": "WR196",
+      "tier": 13
+    },
+    {
+      "player": "Isaiah Hodgins",
+      "team": "NYG",
+      "pos": "WR",
+      "ecr": 571,
+      "average_expert_rank": 543,
+      "rank_std_dev": 125.95,
+      "pos_rank": "WR197",
+      "tier": 13
+    },
+    {
+      "player": "Jalen Brooks",
+      "team": "ARI",
+      "pos": "WR",
+      "ecr": 572,
+      "average_expert_rank": 544.33,
+      "rank_std_dev": 168.56,
+      "pos_rank": "WR198",
+      "tier": 13
+    },
+    {
+      "player": "Velus Jones Jr.",
+      "team": "SEA",
+      "pos": "WR",
+      "ecr": 573,
+      "average_expert_rank": 545.33,
+      "rank_std_dev": 169.95,
+      "pos_rank": "WR199",
+      "tier": 13
+    },
+    {
+      "player": "Diontae Johnson",
+      "team": "FA",
+      "pos": "WR",
+      "ecr": 574,
+      "average_expert_rank": 547,
+      "rank_std_dev": 170.89,
+      "pos_rank": "WR200",
+      "tier": 13
+    },
+    {
+      "player": "Jaheim Bell",
+      "team": "PIT",
+      "pos": "TE",
+      "ecr": 575,
+      "average_expert_rank": 391.5,
+      "rank_std_dev": 142.5,
+      "pos_rank": "TE92",
+      "tier": 13
+    },
+    {
+      "player": "Taylen Green",
+      "team": "CLE",
+      "pos": "QB",
+      "ecr": 576,
+      "average_expert_rank": 397.5,
+      "rank_std_dev": 26.5,
+      "pos_rank": "QB62",
+      "tier": 13
+    },
+    {
+      "player": "Anderson Castle",
+      "team": "IND",
+      "pos": "RB",
+      "ecr": 577,
+      "average_expert_rank": 552.33,
+      "rank_std_dev": 160.93,
+      "pos_rank": "RB156",
+      "tier": 13
+    },
+    {
+      "player": "Jeshaun Jones",
+      "team": "MIN",
+      "pos": "WR",
+      "ecr": 578,
+      "average_expert_rank": 400,
+      "rank_std_dev": 167,
+      "pos_rank": "WR201",
+      "tier": 13
+    },
+    {
+      "player": "Kenny McIntosh",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 579,
+      "average_expert_rank": 553.33,
+      "rank_std_dev": 94.78,
+      "pos_rank": "RB157",
+      "tier": 13
+    },
+    {
+      "player": "Drake Dabney",
+      "team": "GB",
+      "pos": "TE",
+      "ecr": 580,
+      "average_expert_rank": 405,
+      "rank_std_dev": 168,
+      "pos_rank": "TE93",
+      "tier": 13
+    },
+    {
+      "player": "Albert Okwuegbunam Jr.",
+      "team": "LV",
+      "pos": "TE",
+      "ecr": 581,
+      "average_expert_rank": 405.5,
+      "rank_std_dev": 125.5,
+      "pos_rank": "TE94",
+      "tier": 13
+    },
+    {
+      "player": "Raheem Blackshear",
+      "team": "DET",
+      "pos": "RB",
+      "ecr": 582,
+      "average_expert_rank": 557.33,
+      "rank_std_dev": 135.24,
+      "pos_rank": "RB158",
+      "tier": 13
+    },
+    {
+      "player": "Cooper Rush",
+      "team": "ATL",
+      "pos": "QB",
+      "ecr": 583,
+      "average_expert_rank": 408.5,
+      "rank_std_dev": 53.5,
+      "pos_rank": "QB63",
+      "tier": 13
+    },
+    {
+      "player": "Bub Means",
+      "team": "NO",
+      "pos": "WR",
+      "ecr": 584,
+      "average_expert_rank": 409,
+      "rank_std_dev": 167,
+      "pos_rank": "WR202",
+      "tier": 13
+    },
+    {
+      "player": "Ulysses Bentley IV",
+      "team": "IND",
+      "pos": "RB",
+      "ecr": 585,
+      "average_expert_rank": 560.33,
+      "rank_std_dev": 198.93,
+      "pos_rank": "RB159",
+      "tier": 13
+    },
+    {
+      "player": "Brycen Tremayne",
+      "team": "CAR",
+      "pos": "WR",
+      "ecr": 586,
+      "average_expert_rank": 560.67,
+      "rank_std_dev": 185.15,
+      "pos_rank": "WR203",
+      "tier": 13
+    },
+    {
+      "player": "Tyson Bagent",
+      "team": "CHI",
+      "pos": "QB",
+      "ecr": 587,
+      "average_expert_rank": 415.5,
+      "rank_std_dev": 0.5,
+      "pos_rank": "QB64",
+      "tier": 13
+    },
+    {
+      "player": "Mason Rudolph",
+      "team": "PIT",
+      "pos": "QB",
+      "ecr": 588,
+      "average_expert_rank": 416.5,
+      "rank_std_dev": 29.5,
+      "pos_rank": "QB65",
+      "tier": 13
+    },
+    {
+      "player": "Jermaine Burton",
+      "team": "FA",
+      "pos": "WR",
+      "ecr": 589,
+      "average_expert_rank": 419.5,
+      "rank_std_dev": 143.5,
+      "pos_rank": "WR204",
+      "tier": 13
+    },
+    {
+      "player": "Tanner McKee",
+      "team": "PHI",
+      "pos": "QB",
+      "ecr": 590,
+      "average_expert_rank": 427,
+      "rank_std_dev": 11,
+      "pos_rank": "QB66",
+      "tier": 13
+    },
+    {
+      "player": "Ahmani Marshall",
+      "team": "CLE",
+      "pos": "RB",
+      "ecr": 591,
+      "average_expert_rank": 572,
+      "rank_std_dev": 189.96,
+      "pos_rank": "RB160",
+      "tier": 13
+    },
+    {
+      "player": "K.J. Osborn",
+      "team": "TEN",
+      "pos": "WR",
+      "ecr": 592,
+      "average_expert_rank": 429,
+      "rank_std_dev": 167,
+      "pos_rank": "WR205",
+      "tier": 13
+    },
+    {
+      "player": "Dominic Lovett",
+      "team": "DET",
+      "pos": "WR",
+      "ecr": 593,
+      "average_expert_rank": 430,
+      "rank_std_dev": 167,
+      "pos_rank": "WR206",
+      "tier": 13
+    },
+    {
+      "player": "Montorie Foster Jr.",
+      "team": "SEA",
+      "pos": "WR",
+      "ecr": 594,
+      "average_expert_rank": 573.67,
+      "rank_std_dev": 168.07,
+      "pos_rank": "WR207",
+      "tier": 13
+    },
+    {
+      "player": "Andy Dalton",
+      "team": "PHI",
+      "pos": "QB",
+      "ecr": 595,
+      "average_expert_rank": 432,
+      "rank_std_dev": 12,
+      "pos_rank": "QB67",
+      "tier": 13
+    },
+    {
+      "player": "Curtis Samuel",
+      "team": "FA",
+      "pos": "WR",
+      "ecr": 596,
+      "average_expert_rank": 586.67,
+      "rank_std_dev": 165.26,
+      "pos_rank": "WR208",
+      "tier": 13
+    },
+    {
+      "player": "Michael Briscoe",
+      "team": "MIN",
+      "pos": "WR",
+      "ecr": 597,
+      "average_expert_rank": 587.33,
+      "rank_std_dev": 163.81,
+      "pos_rank": "WR209",
+      "tier": 13
+    },
+    {
+      "player": "Vinny Anthony II",
+      "team": "ATL",
+      "pos": "WR",
+      "ecr": 598,
+      "average_expert_rank": 606.67,
+      "rank_std_dev": 193.97,
+      "pos_rank": "WR210",
+      "tier": 13
+    },
+    {
+      "player": "Seydou Traore",
+      "team": "MIA",
+      "pos": "TE",
+      "ecr": 599,
+      "average_expert_rank": 483,
+      "rank_std_dev": 23,
+      "pos_rank": "TE95",
+      "tier": 13
+    },
+    {
+      "player": "Drew Sample",
+      "team": "CIN",
+      "pos": "TE",
+      "ecr": 600,
+      "average_expert_rank": 483,
+      "rank_std_dev": 18,
+      "pos_rank": "TE96",
+      "tier": 13
+    },
+    {
+      "player": "Brock Wright",
+      "team": "DET",
+      "pos": "TE",
+      "ecr": 601,
+      "average_expert_rank": 491,
+      "rank_std_dev": 12,
+      "pos_rank": "TE97",
+      "tier": 13
+    },
+    {
+      "player": "Joe Royer",
+      "team": "CLE",
+      "pos": "TE",
+      "ecr": 602,
+      "average_expert_rank": 493.5,
+      "rank_std_dev": 22.5,
+      "pos_rank": "TE98",
+      "tier": 13
+    },
+    {
+      "player": "J. Michael Sturdivant",
+      "team": "GB",
+      "pos": "WR",
+      "ecr": 603,
+      "average_expert_rank": 494,
+      "rank_std_dev": 106,
+      "pos_rank": "WR211",
+      "tier": 13
+    },
+    {
+      "player": "Tanner Hudson",
+      "team": "CIN",
+      "pos": "TE",
+      "ecr": 604,
+      "average_expert_rank": 499,
+      "rank_std_dev": 14,
+      "pos_rank": "TE99",
+      "tier": 13
+    },
+    {
+      "player": "Joshua Cephus",
+      "team": "FA",
+      "pos": "WR",
+      "ecr": 605,
+      "average_expert_rank": 500,
+      "rank_std_dev": 110,
+      "pos_rank": "WR212",
+      "tier": 13
+    },
+    {
+      "player": "Deontay Burnett",
+      "team": "FA",
+      "pos": "WR",
+      "ecr": 606,
+      "average_expert_rank": 501,
+      "rank_std_dev": 110,
+      "pos_rank": "WR213",
+      "tier": 13
+    },
+    {
+      "player": "Davis Allen",
+      "team": "LAR",
+      "pos": "TE",
+      "ecr": 607,
+      "average_expert_rank": 502,
+      "rank_std_dev": 13,
+      "pos_rank": "TE100",
+      "tier": 13
+    },
+    {
+      "player": "Grant Calcaterra",
+      "team": "PHI",
+      "pos": "TE",
+      "ecr": 608,
+      "average_expert_rank": 505,
+      "rank_std_dev": 15,
+      "pos_rank": "TE101",
+      "tier": 13
+    },
+    {
+      "player": "Jermar Jefferson",
+      "team": "MIN",
+      "pos": "RB",
+      "ecr": 609,
+      "average_expert_rank": 505.5,
+      "rank_std_dev": 109.5,
+      "pos_rank": "RB161",
+      "tier": 13
+    },
+    {
+      "player": "Luke Farrell",
+      "team": "SF",
+      "pos": "TE",
+      "ecr": 610,
+      "average_expert_rank": 505.5,
+      "rank_std_dev": 13.5,
+      "pos_rank": "TE102",
+      "tier": 13
+    },
+    {
+      "player": "Josh Whyle",
+      "team": "GB",
+      "pos": "TE",
+      "ecr": 611,
+      "average_expert_rank": 509,
+      "rank_std_dev": 32,
+      "pos_rank": "TE103",
+      "tier": 13
+    },
+    {
+      "player": "Ian Thomas",
+      "team": "LV",
+      "pos": "TE",
+      "ecr": 612,
+      "average_expert_rank": 509.5,
+      "rank_std_dev": 15.5,
+      "pos_rank": "TE104",
+      "tier": 13
+    },
+    {
+      "player": "Jared Wiley",
+      "team": "KC",
+      "pos": "TE",
+      "ecr": 613,
+      "average_expert_rank": 511.5,
+      "rank_std_dev": 28.5,
+      "pos_rank": "TE105",
+      "tier": 13
+    },
+    {
+      "player": "Ben Sims",
+      "team": "MIA",
+      "pos": "TE",
+      "ecr": 614,
+      "average_expert_rank": 514.5,
+      "rank_std_dev": 12.5,
+      "pos_rank": "TE106",
+      "tier": 14
+    },
+    {
+      "player": "Eric Saubert",
+      "team": "SEA",
+      "pos": "TE",
+      "ecr": 615,
+      "average_expert_rank": 516,
+      "rank_std_dev": 12,
+      "pos_rank": "TE107",
+      "tier": 14
+    },
+    {
+      "player": "Ricky White III",
+      "team": "SEA",
+      "pos": "WR",
+      "ecr": 616,
+      "average_expert_rank": 631.33,
+      "rank_std_dev": 156.92,
+      "pos_rank": "WR214",
+      "tier": 14
+    },
+    {
+      "player": "Payne Durham",
+      "team": "TB",
+      "pos": "TE",
+      "ecr": 617,
+      "average_expert_rank": 517.5,
+      "rank_std_dev": 11.5,
+      "pos_rank": "TE108",
+      "tier": 14
+    },
+    {
+      "player": "Salvon Ahmed",
+      "team": "CHI",
+      "pos": "RB",
+      "ecr": 618,
+      "average_expert_rank": 518,
+      "rank_std_dev": 132,
+      "pos_rank": "RB162",
+      "tier": 14
+    },
+    {
+      "player": "Craig Reynolds",
+      "team": "WAS",
+      "pos": "RB",
+      "ecr": 619,
+      "average_expert_rank": 519,
+      "rank_std_dev": 166,
+      "pos_rank": "RB163",
+      "tier": 14
+    },
+    {
+      "player": "Tip Reiman",
+      "team": "ARI",
+      "pos": "TE",
+      "ecr": 620,
+      "average_expert_rank": 520.5,
+      "rank_std_dev": 9.5,
+      "pos_rank": "TE109",
+      "tier": 14
+    },
+    {
+      "player": "Brevyn Spann-Ford",
+      "team": "DAL",
+      "pos": "TE",
+      "ecr": 621,
+      "average_expert_rank": 522,
+      "rank_std_dev": 14,
+      "pos_rank": "TE110",
+      "tier": 14
+    },
+    {
+      "player": "Charlie Woerner",
+      "team": "ATL",
+      "pos": "TE",
+      "ecr": 622,
+      "average_expert_rank": 524,
+      "rank_std_dev": 11,
+      "pos_rank": "TE111",
+      "tier": 14
+    },
+    {
+      "player": "Julian Hill",
+      "team": "NE",
+      "pos": "TE",
+      "ecr": 623,
+      "average_expert_rank": 525,
+      "rank_std_dev": 3,
+      "pos_rank": "TE112",
+      "tier": 14
+    },
+    {
+      "player": "JaMycal Hasty",
+      "team": "NE",
+      "pos": "RB",
+      "ecr": 624,
+      "average_expert_rank": 526,
+      "rank_std_dev": 161,
+      "pos_rank": "RB164",
+      "tier": 14
+    },
+    {
+      "player": "Anthony Hankerson",
+      "team": "SEA",
+      "pos": "RB",
+      "ecr": 625,
+      "average_expert_rank": 527,
+      "rank_std_dev": 147,
+      "pos_rank": "RB165",
+      "tier": 14
+    },
+    {
+      "player": "Jack Stoll",
+      "team": "CLE",
+      "pos": "TE",
+      "ecr": 626,
+      "average_expert_rank": 529,
+      "rank_std_dev": 5,
+      "pos_rank": "TE113",
+      "tier": 14
+    },
+    {
+      "player": "Thomas Fidone II",
+      "team": "NYG",
+      "pos": "TE",
+      "ecr": 627,
+      "average_expert_rank": 530,
+      "rank_std_dev": 32,
+      "pos_rank": "TE114",
+      "tier": 14
+    },
+    {
+      "player": "Devin Culp",
+      "team": "TB",
+      "pos": "TE",
+      "ecr": 628,
+      "average_expert_rank": 534.5,
+      "rank_std_dev": 16.5,
+      "pos_rank": "TE115",
+      "tier": 14
+    },
+    {
+      "player": "Stone Smartt",
+      "team": "PHI",
+      "pos": "TE",
+      "ecr": 629,
+      "average_expert_rank": 537.5,
+      "rank_std_dev": 0.5,
+      "pos_rank": "TE116",
+      "tier": 14
+    },
+    {
+      "player": "Kylen Granson",
+      "team": "TEN",
+      "pos": "TE",
+      "ecr": 630,
+      "average_expert_rank": 538,
+      "rank_std_dev": 14,
+      "pos_rank": "TE117",
+      "tier": 14
+    },
+    {
+      "player": "Brevin Jordan",
+      "team": "HOU",
+      "pos": "TE",
+      "ecr": 631,
+      "average_expert_rank": 539,
+      "rank_std_dev": 3,
+      "pos_rank": "TE118",
+      "tier": 14
+    },
+    {
+      "player": "Ben Yurosek",
+      "team": "MIN",
+      "pos": "TE",
+      "ecr": 632,
+      "average_expert_rank": 539.5,
+      "rank_std_dev": 13.5,
+      "pos_rank": "TE119",
+      "tier": 14
+    },
+    {
+      "player": "Owen Wright",
+      "team": "HOU",
+      "pos": "RB",
+      "ecr": 633,
+      "average_expert_rank": 543,
+      "rank_std_dev": 151,
+      "pos_rank": "RB166",
+      "tier": 14
+    },
+    {
+      "player": "Will Mallory",
+      "team": "IND",
+      "pos": "TE",
+      "ecr": 634,
+      "average_expert_rank": 543.5,
+      "rank_std_dev": 3.5,
+      "pos_rank": "TE120",
+      "tier": 14
+    },
+    {
+      "player": "Jake Briningstool",
+      "team": "KC",
+      "pos": "TE",
+      "ecr": 635,
+      "average_expert_rank": 549.5,
+      "rank_std_dev": 6.5,
+      "pos_rank": "TE121",
+      "tier": 14
+    },
+    {
+      "player": "Drew Ogletree",
+      "team": "IND",
+      "pos": "TE",
+      "ecr": 636,
+      "average_expert_rank": 551,
+      "rank_std_dev": 3,
+      "pos_rank": "TE122",
+      "tier": 14
+    },
+    {
+      "player": "Blake Whiteheart",
+      "team": "CLE",
+      "pos": "TE",
+      "ecr": 637,
+      "average_expert_rank": 555,
+      "rank_std_dev": 4,
+      "pos_rank": "TE123",
+      "tier": 14
+    },
+    {
+      "player": "Joel Wilson",
+      "team": "TEN",
+      "pos": "TE",
+      "ecr": 638,
+      "average_expert_rank": 559,
+      "rank_std_dev": 10,
+      "pos_rank": "TE124",
+      "tier": 14
+    },
+    {
+      "player": "Jack Westover",
+      "team": "NE",
+      "pos": "TE",
+      "ecr": 639,
+      "average_expert_rank": 568,
+      "rank_std_dev": 12,
+      "pos_rank": "TE125",
+      "tier": 14
+    },
+    {
+      "player": "Carsen Ryan",
+      "team": "CLE",
+      "pos": "TE",
+      "ecr": 640,
+      "average_expert_rank": 572.5,
+      "rank_std_dev": 11.5,
+      "pos_rank": "TE126",
+      "tier": 14
+    },
+    {
+      "player": "Brayden Willis",
+      "team": "SF",
+      "pos": "TE",
+      "ecr": 641,
+      "average_expert_rank": 572.5,
+      "rank_std_dev": 10.5,
+      "pos_rank": "TE127",
+      "tier": 14
+    },
+    {
+      "player": "Hunter Long",
+      "team": "JAC",
+      "pos": "TE",
+      "ecr": 642,
+      "average_expert_rank": 573.5,
+      "rank_std_dev": 14.5,
+      "pos_rank": "TE128",
+      "tier": 14
+    },
+    {
+      "player": "Gavin Bartholomew",
+      "team": "MIN",
+      "pos": "TE",
+      "ecr": 643,
+      "average_expert_rank": 575.5,
+      "rank_std_dev": 11.5,
+      "pos_rank": "TE129",
+      "tier": 14
+    },
+    {
+      "player": "James Mitchell",
+      "team": "CAR",
+      "pos": "TE",
+      "ecr": 644,
+      "average_expert_rank": 576.5,
+      "rank_std_dev": 12.5,
+      "pos_rank": "TE130",
+      "tier": 14
+    },
+    {
+      "player": "Lucas Krull",
+      "team": "DEN",
+      "pos": "TE",
+      "ecr": 645,
+      "average_expert_rank": 580,
+      "rank_std_dev": 13,
+      "pos_rank": "TE131",
+      "tier": 14
+    },
+    {
+      "player": "Teagan Quitoriano",
+      "team": "ARI",
+      "pos": "TE",
+      "ecr": 646,
+      "average_expert_rank": 582,
+      "rank_std_dev": 10,
+      "pos_rank": "TE132",
+      "tier": 14
+    },
+    {
+      "player": "Tyler Badie",
+      "team": "DEN",
+      "pos": "RB",
+      "ecr": 647,
+      "average_expert_rank": 582.5,
+      "rank_std_dev": 5.5,
+      "pos_rank": "RB167",
+      "tier": 14
+    },
+    {
+      "player": "Josh Cameron",
+      "team": "JAC",
+      "pos": "WR",
+      "ecr": 648,
+      "average_expert_rank": 587.5,
+      "rank_std_dev": 77.5,
+      "pos_rank": "WR215",
+      "tier": 14
+    },
+    {
+      "player": "John Michael Gyllenborg",
+      "team": "KC",
+      "pos": "TE",
+      "ecr": 649,
+      "average_expert_rank": 588,
+      "rank_std_dev": 2,
+      "pos_rank": "TE133",
+      "tier": 14
+    },
+    {
+      "player": "AJ Dillon",
+      "team": "CAR",
+      "pos": "RB",
+      "ecr": 650,
+      "average_expert_rank": 588.5,
+      "rank_std_dev": 19.5,
+      "pos_rank": "RB168",
+      "tier": 14
+    },
+    {
+      "player": "Ko Kieft",
+      "team": "TB",
+      "pos": "TE",
+      "ecr": 651,
+      "average_expert_rank": 588.5,
+      "rank_std_dev": 13.5,
+      "pos_rank": "TE134",
+      "tier": 14
+    },
+    {
+      "player": "Colson Yankoff",
+      "team": "WAS",
+      "pos": "TE",
+      "ecr": 652,
+      "average_expert_rank": 593.5,
+      "rank_std_dev": 15.5,
+      "pos_rank": "TE135",
+      "tier": 14
+    },
+    {
+      "player": "Cole Turner",
+      "team": "MIA",
+      "pos": "TE",
+      "ecr": 653,
+      "average_expert_rank": 600,
+      "rank_std_dev": 10,
+      "pos_rank": "TE136",
+      "tier": 14
+    },
+    {
+      "player": "Kye Robichaux",
+      "team": "DET",
+      "pos": "RB",
+      "ecr": 654,
+      "average_expert_rank": 601,
+      "rank_std_dev": 57,
+      "pos_rank": "RB169",
+      "tier": 14
+    },
+    {
+      "player": "David Martin-Robinson",
+      "team": "TEN",
+      "pos": "TE",
+      "ecr": 655,
+      "average_expert_rank": 601.5,
+      "rank_std_dev": 20.5,
+      "pos_rank": "TE137",
+      "tier": 14
+    },
+    {
+      "player": "Joshua Simon",
+      "team": "ATL",
+      "pos": "TE",
+      "ecr": 656,
+      "average_expert_rank": 602,
+      "rank_std_dev": 3,
+      "pos_rank": "TE138",
+      "tier": 14
+    },
+    {
+      "player": "Jabari Small",
+      "team": "DET",
+      "pos": "RB",
+      "ecr": 657,
+      "average_expert_rank": 608,
+      "rank_std_dev": 53,
+      "pos_rank": "RB170",
+      "tier": 14
+    },
+    {
+      "player": "Jack Velling",
+      "team": "ATL",
+      "pos": "TE",
+      "ecr": 658,
+      "average_expert_rank": 608,
+      "rank_std_dev": 4,
+      "pos_rank": "TE139",
+      "tier": 14
+    },
+    {
+      "player": "Kendrick Law",
+      "team": "DET",
+      "pos": "WR",
+      "ecr": 659,
+      "average_expert_rank": 609,
+      "rank_std_dev": 91,
+      "pos_rank": "WR216",
+      "tier": 14
+    },
+    {
+      "player": "Nick Kallerup",
+      "team": "SEA",
+      "pos": "TE",
+      "ecr": 660,
+      "average_expert_rank": 609.5,
+      "rank_std_dev": 16.5,
+      "pos_rank": "TE140",
+      "tier": 14
+    },
+    {
+      "player": "Ty Pezza",
+      "team": "BAL",
+      "pos": "TE",
+      "ecr": 661,
+      "average_expert_rank": 611.5,
+      "rank_std_dev": 4.5,
+      "pos_rank": "TE141",
+      "tier": 14
+    },
+    {
+      "player": "Zach Horton",
+      "team": "DET",
+      "pos": "TE",
+      "ecr": 662,
+      "average_expert_rank": 613.5,
+      "rank_std_dev": 17.5,
+      "pos_rank": "TE142",
+      "tier": 14
+    },
+    {
+      "player": "Quintin Morris",
+      "team": "JAC",
+      "pos": "TE",
+      "ecr": 663,
+      "average_expert_rank": 615,
+      "rank_std_dev": 1,
+      "pos_rank": "TE143",
+      "tier": 14
+    },
+    {
+      "player": "Ameer Abdullah",
+      "team": "JAC",
+      "pos": "RB",
+      "ecr": 664,
+      "average_expert_rank": 615.5,
+      "rank_std_dev": 21.5,
+      "pos_rank": "RB171",
+      "tier": 14
+    },
+    {
+      "player": "Lan Larison",
+      "team": "NE",
+      "pos": "RB",
+      "ecr": 665,
+      "average_expert_rank": 617,
+      "rank_std_dev": 11,
+      "pos_rank": "RB172",
+      "tier": 14
+    },
+    {
+      "player": "Cameron Latu",
+      "team": "PHI",
+      "pos": "TE",
+      "ecr": 666,
+      "average_expert_rank": 618,
+      "rank_std_dev": 17,
+      "pos_rank": "TE144",
+      "tier": 14
+    },
+    {
+      "player": "Kaden Wetjen",
+      "team": "PIT",
+      "pos": "WR",
+      "ecr": 667,
+      "average_expert_rank": 620,
+      "rank_std_dev": 88,
+      "pos_rank": "WR217",
+      "tier": 14
+    },
+    {
+      "player": "Dean Connors",
+      "team": "LAR",
+      "pos": "RB",
+      "ecr": 668,
+      "average_expert_rank": 620.5,
+      "rank_std_dev": 49.5,
+      "pos_rank": "RB173",
+      "tier": 14
+    },
+    {
+      "player": "Jamal Haynes",
+      "team": "CIN",
+      "pos": "RB",
+      "ecr": 669,
+      "average_expert_rank": 623.5,
+      "rank_std_dev": 16.5,
+      "pos_rank": "RB174",
+      "tier": 14
+    },
+    {
+      "player": "Brenden Bates",
+      "team": "CLE",
+      "pos": "TE",
+      "ecr": 670,
+      "average_expert_rank": 626.5,
+      "rank_std_dev": 7.5,
+      "pos_rank": "TE145",
+      "tier": 14
+    },
+    {
+      "player": "Dontae McMillan",
+      "team": "BAL",
+      "pos": "RB",
+      "ecr": 671,
+      "average_expert_rank": 627.5,
+      "rank_std_dev": 52.5,
+      "pos_rank": "RB175",
+      "tier": 14
+    },
+    {
+      "player": "CJ Donaldson",
+      "team": "NO",
+      "pos": "RB",
+      "ecr": 672,
+      "average_expert_rank": 627.5,
+      "rank_std_dev": 5.5,
+      "pos_rank": "RB176",
+      "tier": 14
+    },
+    {
+      "player": "Tanner Conner",
+      "team": "NYG",
+      "pos": "TE",
+      "ecr": 673,
+      "average_expert_rank": 628,
+      "rank_std_dev": 5,
+      "pos_rank": "TE146",
+      "tier": 14
+    },
+    {
+      "player": "Johnny Mundt",
+      "team": "PHI",
+      "pos": "TE",
+      "ecr": 674,
+      "average_expert_rank": 630,
+      "rank_std_dev": 6,
+      "pos_rank": "TE147",
+      "tier": 14
+    },
+    {
+      "player": "Bryson Nesbit",
+      "team": "MIN",
+      "pos": "TE",
+      "ecr": 675,
+      "average_expert_rank": 630.5,
+      "rank_std_dev": 6.5,
+      "pos_rank": "TE148",
+      "tier": 14
+    },
+    {
+      "player": "Thomas Gordon",
+      "team": "DET",
+      "pos": "TE",
+      "ecr": 676,
+      "average_expert_rank": 633,
+      "rank_std_dev": 6,
+      "pos_rank": "TE149",
+      "tier": 14
+    },
+    {
+      "player": "Anthony Gould",
+      "team": "IND",
+      "pos": "WR",
+      "ecr": 677,
+      "average_expert_rank": 637.5,
+      "rank_std_dev": 87.5,
+      "pos_rank": "WR218",
+      "tier": 14
+    },
+    {
+      "player": "Carson Towt",
+      "team": "IND",
+      "pos": "TE",
+      "ecr": 678,
+      "average_expert_rank": 637.5,
+      "rank_std_dev": 7.5,
+      "pos_rank": "TE150",
+      "tier": 14
+    },
+    {
+      "player": "Bo Melton",
+      "team": "GB",
+      "pos": "WR",
+      "ecr": 679,
+      "average_expert_rank": 639,
+      "rank_std_dev": 81,
+      "pos_rank": "WR219",
+      "tier": 14
+    },
+    {
+      "player": "Michael Wortham",
+      "team": "JAC",
+      "pos": "WR",
+      "ecr": 680,
+      "average_expert_rank": 645.5,
+      "rank_std_dev": 102.5,
+      "pos_rank": "WR220",
+      "tier": 14
+    },
+    {
+      "player": "CJ Dippre",
+      "team": "NE",
+      "pos": "TE",
+      "ecr": 681,
+      "average_expert_rank": 647,
+      "rank_std_dev": 7,
+      "pos_rank": "TE151",
+      "tier": 14
+    },
+    {
+      "player": "Rivaldo Fairweather",
+      "team": "ARI",
+      "pos": "TE",
+      "ecr": 682,
+      "average_expert_rank": 648,
+      "rank_std_dev": 9,
+      "pos_rank": "TE152",
+      "tier": 14
+    },
+    {
+      "player": "Princeton Fant",
+      "team": "DAL",
+      "pos": "TE",
+      "ecr": 683,
+      "average_expert_rank": 650.5,
+      "rank_std_dev": 8.5,
+      "pos_rank": "TE153",
+      "tier": 14
+    },
+    {
+      "player": "Caleb Lohner",
+      "team": "DEN",
+      "pos": "TE",
+      "ecr": 684,
+      "average_expert_rank": 651.5,
+      "rank_std_dev": 38.5,
+      "pos_rank": "TE154",
+      "tier": 14
+    },
+    {
+      "player": "Chase Curtis",
+      "team": "NYJ",
+      "pos": "TE",
+      "ecr": 685,
+      "average_expert_rank": 653,
+      "rank_std_dev": 9,
+      "pos_rank": "TE155",
+      "tier": 14
+    },
+    {
+      "player": "Kenny Fletcher Jr.",
+      "team": "TB",
+      "pos": "TE",
+      "ecr": 686,
+      "average_expert_rank": 656,
+      "rank_std_dev": 9,
+      "pos_rank": "TE156",
+      "tier": 14
+    },
+    {
+      "player": "Skyy Moore",
+      "team": "GB",
+      "pos": "WR",
+      "ecr": 687,
+      "average_expert_rank": 656.5,
+      "rank_std_dev": 82.5,
+      "pos_rank": "WR221",
+      "tier": 14
+    },
+    {
+      "player": "DeeJay Dallas",
+      "team": "JAC",
+      "pos": "RB",
+      "ecr": 688,
+      "average_expert_rank": 657.5,
+      "rank_std_dev": 5.5,
+      "pos_rank": "RB177",
+      "tier": 14
+    },
+    {
+      "player": "Ronnie Bell",
+      "team": "NO",
+      "pos": "WR",
+      "ecr": 689,
+      "average_expert_rank": 660,
+      "rank_std_dev": 114,
+      "pos_rank": "WR222",
+      "tier": 14
+    },
+    {
+      "player": "Jameson Geers",
+      "team": "ARI",
+      "pos": "TE",
+      "ecr": 690,
+      "average_expert_rank": 660,
+      "rank_std_dev": 10,
+      "pos_rank": "TE157",
+      "tier": 14
+    },
+    {
+      "player": "Chris Manhertz",
+      "team": "NYG",
+      "pos": "TE",
+      "ecr": 691,
+      "average_expert_rank": 662,
+      "rank_std_dev": 10,
+      "pos_rank": "TE158",
+      "tier": 14
+    },
+    {
+      "player": "Michael Bandy",
+      "team": "DEN",
+      "pos": "WR",
+      "ecr": 692,
+      "average_expert_rank": 663,
+      "rank_std_dev": 97,
+      "pos_rank": "WR223",
+      "tier": 14
+    },
+    {
+      "player": "Jacardia Wright",
+      "team": "SEA",
+      "pos": "RB",
+      "ecr": 693,
+      "average_expert_rank": 664,
+      "rank_std_dev": 9,
+      "pos_rank": "RB178",
+      "tier": 14
+    },
+    {
+      "player": "Jordan Waters",
+      "team": "LAR",
+      "pos": "RB",
+      "ecr": 694,
+      "average_expert_rank": 664.5,
+      "rank_std_dev": 28.5,
+      "pos_rank": "RB179",
+      "tier": 14
+    },
+    {
+      "player": "Tanner Arkin",
+      "team": "NE",
+      "pos": "TE",
+      "ecr": 695,
+      "average_expert_rank": 665,
+      "rank_std_dev": 8,
+      "pos_rank": "TE159",
+      "tier": 14
+    },
+    {
+      "player": "Gary Brightwell",
+      "team": "CIN",
+      "pos": "RB",
+      "ecr": 696,
+      "average_expert_rank": 665,
+      "rank_std_dev": 1,
+      "pos_rank": "RB180",
+      "tier": 14
+    },
+    {
+      "player": "Sean McKeon",
+      "team": "IND",
+      "pos": "TE",
+      "ecr": 697,
+      "average_expert_rank": 665.5,
+      "rank_std_dev": 5.5,
+      "pos_rank": "TE160",
+      "tier": 14
+    },
+    {
+      "player": "Tyler Johnson",
+      "team": "DAL",
+      "pos": "WR",
+      "ecr": 698,
+      "average_expert_rank": 667.5,
+      "rank_std_dev": 110.5,
+      "pos_rank": "WR224",
+      "tier": 14
+    },
+    {
+      "player": "Mason Tipton",
+      "team": "NO",
+      "pos": "WR",
+      "ecr": 699,
+      "average_expert_rank": 667.5,
+      "rank_std_dev": 89.5,
+      "pos_rank": "WR225",
+      "tier": 14
+    },
+    {
+      "player": "Ben Skowronek",
+      "team": "PIT",
+      "pos": "WR",
+      "ecr": 700,
+      "average_expert_rank": 667.5,
+      "rank_std_dev": 86.5,
+      "pos_rank": "WR226",
+      "tier": 14
+    },
+    {
+      "player": "Jonathan Mingo",
+      "team": "DAL",
+      "pos": "WR",
+      "ecr": 701,
+      "average_expert_rank": 670,
+      "rank_std_dev": 75,
+      "pos_rank": "WR227",
+      "tier": 14
+    },
+    {
+      "player": "Patrick Taylor Jr.",
+      "team": "SF",
+      "pos": "RB",
+      "ecr": 702,
+      "average_expert_rank": 672.5,
+      "rank_std_dev": 26.5,
+      "pos_rank": "RB181",
+      "tier": 14
+    },
+    {
+      "player": "Lance Mason",
+      "team": "PIT",
+      "pos": "TE",
+      "ecr": 703,
+      "average_expert_rank": 672.5,
+      "rank_std_dev": 9.5,
+      "pos_rank": "TE161",
+      "tier": 14
+    },
+    {
+      "player": "Pierre Strong Jr.",
+      "team": "GB",
+      "pos": "RB",
+      "ecr": 704,
+      "average_expert_rank": 673,
+      "rank_std_dev": 12,
+      "pos_rank": "RB182",
+      "tier": 14
+    },
+    {
+      "player": "Layne Pryor",
+      "team": "HOU",
+      "pos": "TE",
+      "ecr": 705,
+      "average_expert_rank": 675,
+      "rank_std_dev": 9,
+      "pos_rank": "TE162",
+      "tier": 14
+    },
+    {
+      "player": "Xavier Weaver",
+      "team": "ARI",
+      "pos": "WR",
+      "ecr": 706,
+      "average_expert_rank": 675.5,
+      "rank_std_dev": 88.5,
+      "pos_rank": "WR228",
+      "tier": 14
+    },
+    {
+      "player": "Kentrel Bullock",
+      "team": "CIN",
+      "pos": "RB",
+      "ecr": 707,
+      "average_expert_rank": 677,
+      "rank_std_dev": 30,
+      "pos_rank": "RB183",
+      "tier": 14
+    },
+    {
+      "player": "Jaren Kanak",
+      "team": "TEN",
+      "pos": "TE",
+      "ecr": 708,
+      "average_expert_rank": 677.5,
+      "rank_std_dev": 8.5,
+      "pos_rank": "TE163",
+      "tier": 14
+    },
+    {
+      "player": "Chip Trayanum",
+      "team": "NYJ",
+      "pos": "RB",
+      "ecr": 709,
+      "average_expert_rank": 679.5,
+      "rank_std_dev": 7.5,
+      "pos_rank": "RB184",
+      "tier": 14
+    },
+    {
+      "player": "Lake McRee",
+      "team": "PIT",
+      "pos": "TE",
+      "ecr": 710,
+      "average_expert_rank": 681.5,
+      "rank_std_dev": 7.5,
+      "pos_rank": "TE164",
+      "tier": 14
+    },
+    {
+      "player": "Tyrell Shavers",
+      "team": "BUF",
+      "pos": "WR",
+      "ecr": 711,
+      "average_expert_rank": 682,
+      "rank_std_dev": 100,
+      "pos_rank": "WR229",
+      "tier": 14
+    },
+    {
+      "player": "Darius Cooper",
+      "team": "PHI",
+      "pos": "WR",
+      "ecr": 712,
+      "average_expert_rank": 683.5,
+      "rank_std_dev": 84.5,
+      "pos_rank": "WR230",
+      "tier": 14
+    },
+    {
+      "player": "Quentin Moore",
+      "team": "WAS",
+      "pos": "TE",
+      "ecr": 713,
+      "average_expert_rank": 684,
+      "rank_std_dev": 7,
+      "pos_rank": "TE165",
+      "tier": 14
+    },
+    {
+      "player": "Chris Myarick",
+      "team": "LV",
+      "pos": "TE",
+      "ecr": 714,
+      "average_expert_rank": 684,
+      "rank_std_dev": 5,
+      "pos_rank": "TE166",
+      "tier": 14
+    },
+    {
+      "player": "Hayden Rucci",
+      "team": "SF",
+      "pos": "TE",
+      "ecr": 715,
+      "average_expert_rank": 686,
+      "rank_std_dev": 7,
+      "pos_rank": "TE167",
+      "tier": 14
+    },
+    {
+      "player": "Corey Kiner",
+      "team": "ARI",
+      "pos": "RB",
+      "ecr": 716,
+      "average_expert_rank": 687,
+      "rank_std_dev": 9,
+      "pos_rank": "RB185",
+      "tier": 14
+    },
+    {
+      "player": "DJ Rogers",
+      "team": "DAL",
+      "pos": "TE",
+      "ecr": 717,
+      "average_expert_rank": 688.5,
+      "rank_std_dev": 7.5,
+      "pos_rank": "TE168",
+      "tier": 14
+    },
+    {
+      "player": "Jeff Caldwell",
+      "team": "KC",
+      "pos": "WR",
+      "ecr": 718,
+      "average_expert_rank": 689.5,
+      "rank_std_dev": 98.5,
+      "pos_rank": "WR231",
+      "tier": 14
+    },
+    {
+      "player": "Patrick Herbert",
+      "team": "JAC",
+      "pos": "TE",
+      "ecr": 719,
+      "average_expert_rank": 691,
+      "rank_std_dev": 7,
+      "pos_rank": "TE169",
+      "tier": 14
+    },
+    {
+      "player": "Israel Abanikanda",
+      "team": "DAL",
+      "pos": "RB",
+      "ecr": 720,
+      "average_expert_rank": 691,
+      "rank_std_dev": 1,
+      "pos_rank": "RB186",
+      "tier": 14
+    },
+    {
+      "player": "Brittain Brown",
+      "team": "CHI",
+      "pos": "RB",
+      "ecr": 721,
+      "average_expert_rank": 695,
+      "rank_std_dev": 27,
+      "pos_rank": "RB187",
+      "tier": 15
+    },
+    {
+      "player": "Carter Runyon",
+      "team": "LV",
+      "pos": "TE",
+      "ecr": 722,
+      "average_expert_rank": 698,
+      "rank_std_dev": 6,
+      "pos_rank": "TE170",
+      "tier": 15
+    },
+    {
+      "player": "Dylan Drummond",
+      "team": "ATL",
+      "pos": "WR",
+      "ecr": 723,
+      "average_expert_rank": 699,
+      "rank_std_dev": 114,
+      "pos_rank": "WR232",
+      "tier": 15
+    },
+    {
+      "player": "Zaire Mitchell-Paden",
+      "team": "NO",
+      "pos": "TE",
+      "ecr": 724,
+      "average_expert_rank": 700.5,
+      "rank_std_dev": 5.5,
+      "pos_rank": "TE171",
+      "tier": 15
+    },
+    {
+      "player": "Dante Miller",
+      "team": "NYG",
+      "pos": "RB",
+      "ecr": 725,
+      "average_expert_rank": 701,
+      "rank_std_dev": 1,
+      "pos_rank": "RB188",
+      "tier": 15
+    },
+    {
+      "player": "Ethan Conner",
+      "team": "FA",
+      "pos": "TE",
+      "ecr": 726,
+      "average_expert_rank": 702.5,
+      "rank_std_dev": 4.5,
+      "pos_rank": "TE172",
+      "tier": 15
+    },
+    {
+      "player": "Arian Smith",
+      "team": "NYJ",
+      "pos": "WR",
+      "ecr": 727,
+      "average_expert_rank": 703,
+      "rank_std_dev": 95,
+      "pos_rank": "WR233",
+      "tier": 15
+    },
+    {
+      "player": "Julius Chestnut",
+      "team": "TEN",
+      "pos": "RB",
+      "ecr": 728,
+      "average_expert_rank": 703.5,
+      "rank_std_dev": 1.5,
+      "pos_rank": "RB189",
+      "tier": 15
+    },
+    {
+      "player": "Jamari Thrash",
+      "team": "CLE",
+      "pos": "WR",
+      "ecr": 729,
+      "average_expert_rank": 704.5,
+      "rank_std_dev": 103.5,
+      "pos_rank": "WR234",
+      "tier": 15
+    },
+    {
+      "player": "David Moore",
+      "team": "CAR",
+      "pos": "WR",
+      "ecr": 730,
+      "average_expert_rank": 705,
+      "rank_std_dev": 102,
+      "pos_rank": "WR235",
+      "tier": 15
+    },
+    {
+      "player": "Treyton Welch",
+      "team": "NO",
+      "pos": "TE",
+      "ecr": 731,
+      "average_expert_rank": 705,
+      "rank_std_dev": 4,
+      "pos_rank": "TE173",
+      "tier": 15
+    },
+    {
+      "player": "Messiah Swinson",
+      "team": "GB",
+      "pos": "TE",
+      "ecr": 732,
+      "average_expert_rank": 707,
+      "rank_std_dev": 3,
+      "pos_rank": "TE174",
+      "tier": 15
+    },
+    {
+      "player": "Ray-Ray McCloud III",
+      "team": "CHI",
+      "pos": "WR",
+      "ecr": 733,
+      "average_expert_rank": 709,
+      "rank_std_dev": 111,
+      "pos_rank": "WR236",
+      "tier": 15
+    },
+    {
+      "player": "Josh Williams",
+      "team": "TB",
+      "pos": "RB",
+      "ecr": 734,
+      "average_expert_rank": 709,
+      "rank_std_dev": 4,
+      "pos_rank": "RB190",
+      "tier": 15
+    },
+    {
+      "player": "E.J. Jenkins",
+      "team": "PHI",
+      "pos": "TE",
+      "ecr": 735,
+      "average_expert_rank": 709,
+      "rank_std_dev": 3,
+      "pos_rank": "TE175",
+      "tier": 15
+    },
+    {
+      "player": "Carson Steele",
+      "team": "PHI",
+      "pos": "RB",
+      "ecr": 736,
+      "average_expert_rank": 709.5,
+      "rank_std_dev": 6.5,
+      "pos_rank": "RB191",
+      "tier": 15
+    },
+    {
+      "player": "Patrick Gurd",
+      "team": "LV",
+      "pos": "TE",
+      "ecr": 737,
+      "average_expert_rank": 711,
+      "rank_std_dev": 2,
+      "pos_rank": "TE176",
+      "tier": 15
+    },
+    {
+      "player": "Gus Edwards",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 738,
+      "average_expert_rank": 712.5,
+      "rank_std_dev": 2.5,
+      "pos_rank": "RB192",
+      "tier": 15
+    },
+    {
+      "player": "Cody Hardy",
+      "team": "NO",
+      "pos": "TE",
+      "ecr": 739,
+      "average_expert_rank": 714,
+      "rank_std_dev": 2,
+      "pos_rank": "TE177",
+      "tier": 15
+    },
+    {
+      "player": "Devin Duvernay",
+      "team": "ARI",
+      "pos": "WR",
+      "ecr": 740,
+      "average_expert_rank": 716,
+      "rank_std_dev": 98,
+      "pos_rank": "WR237",
+      "tier": 15
+    },
+    {
+      "player": "Kameron Johnson",
+      "team": "TB",
+      "pos": "WR",
+      "ecr": 741,
+      "average_expert_rank": 716.5,
+      "rank_std_dev": 99.5,
+      "pos_rank": "WR238",
+      "tier": 15
+    },
+    {
+      "player": "RJ Maryland",
+      "team": "GB",
+      "pos": "TE",
+      "ecr": 742,
+      "average_expert_rank": 716.5,
+      "rank_std_dev": 1.5,
+      "pos_rank": "TE178",
+      "tier": 15
+    },
+    {
+      "player": "Gunner Olszewski",
+      "team": "NYG",
+      "pos": "WR",
+      "ecr": 743,
+      "average_expert_rank": 717,
+      "rank_std_dev": 98,
+      "pos_rank": "WR239",
+      "tier": 15
+    },
+    {
+      "player": "Malachi Corley",
+      "team": "CLE",
+      "pos": "WR",
+      "ecr": 744,
+      "average_expert_rank": 717,
+      "rank_std_dev": 92,
+      "pos_rank": "WR240",
+      "tier": 15
+    },
+    {
+      "player": "Evan Svoboda",
+      "team": "LAC",
+      "pos": "TE",
+      "ecr": 745,
+      "average_expert_rank": 718.5,
+      "rank_std_dev": 0.5,
+      "pos_rank": "TE179",
+      "tier": 15
+    },
+    {
+      "player": "Tylan Wallace",
+      "team": "CLE",
+      "pos": "WR",
+      "ecr": 746,
+      "average_expert_rank": 720,
+      "rank_std_dev": 99,
+      "pos_rank": "WR241",
+      "tier": 15
+    },
+    {
+      "player": "Dae'Quan Wright",
+      "team": "CLE",
+      "pos": "TE",
+      "ecr": 747,
+      "average_expert_rank": 721,
+      "rank_std_dev": 0,
+      "pos_rank": "TE180",
+      "tier": 15
+    },
+    {
+      "player": "Braxton Berrios",
+      "team": "NYG",
+      "pos": "WR",
+      "ecr": 748,
+      "average_expert_rank": 721.5,
+      "rank_std_dev": 108.5,
+      "pos_rank": "WR242",
+      "tier": 15
+    },
+    {
+      "player": "Deven Thompkins",
+      "team": "LV",
+      "pos": "WR",
+      "ecr": 749,
+      "average_expert_rank": 722.5,
+      "rank_std_dev": 95.5,
+      "pos_rank": "WR243",
+      "tier": 15
+    },
+    {
+      "player": "Shedrick Jackson",
+      "team": "LV",
+      "pos": "WR",
+      "ecr": 750,
+      "average_expert_rank": 723,
+      "rank_std_dev": 103,
+      "pos_rank": "WR244",
+      "tier": 15
+    },
+    {
+      "player": "Nikola Kalinic",
+      "team": "CHI",
+      "pos": "TE",
+      "ecr": 751,
+      "average_expert_rank": 723.5,
+      "rank_std_dev": 0.5,
+      "pos_rank": "TE181",
+      "tier": 15
+    },
+    {
+      "player": "Kene Nwangwu",
+      "team": "NYJ",
+      "pos": "RB",
+      "ecr": 752,
+      "average_expert_rank": 725,
+      "rank_std_dev": 5,
+      "pos_rank": "RB193",
+      "tier": 15
+    },
+    {
+      "player": "Cody White",
+      "team": "SEA",
+      "pos": "WR",
+      "ecr": 753,
+      "average_expert_rank": 726,
+      "rank_std_dev": 98,
+      "pos_rank": "WR245",
+      "tier": 15
+    },
+    {
+      "player": "Johnny Pascuzzi",
+      "team": "LAC",
+      "pos": "TE",
+      "ecr": 754,
+      "average_expert_rank": 726,
+      "rank_std_dev": 0,
+      "pos_rank": "TE182",
+      "tier": 15
+    },
+    {
+      "player": "Dareke Young",
+      "team": "LV",
+      "pos": "WR",
+      "ecr": 755,
+      "average_expert_rank": 727.5,
+      "rank_std_dev": 84.5,
+      "pos_rank": "WR246",
+      "tier": 15
+    },
+    {
+      "player": "Chamon Metayer",
+      "team": "FA",
+      "pos": "TE",
+      "ecr": 756,
+      "average_expert_rank": 728,
+      "rank_std_dev": 1,
+      "pos_rank": "TE183",
+      "tier": 15
+    },
+    {
+      "player": "Dante Pettis",
+      "team": "BUF",
+      "pos": "WR",
+      "ecr": 757,
+      "average_expert_rank": 728.5,
+      "rank_std_dev": 99.5,
+      "pos_rank": "WR247",
+      "tier": 15
+    },
+    {
+      "player": "Nikko Remigio",
+      "team": "KC",
+      "pos": "WR",
+      "ecr": 758,
+      "average_expert_rank": 729.5,
+      "rank_std_dev": 99.5,
+      "pos_rank": "WR248",
+      "tier": 15
+    },
+    {
+      "player": "Jalin Hyatt",
+      "team": "NYG",
+      "pos": "WR",
+      "ecr": 759,
+      "average_expert_rank": 730,
+      "rank_std_dev": 92,
+      "pos_rank": "WR249",
+      "tier": 15
+    },
+    {
+      "player": "Laquon Treadwell",
+      "team": "IND",
+      "pos": "WR",
+      "ecr": 760,
+      "average_expert_rank": 730.5,
+      "rank_std_dev": 63.5,
+      "pos_rank": "WR250",
+      "tier": 15
+    },
+    {
+      "player": "Keleki Latu",
+      "team": "BUF",
+      "pos": "TE",
+      "ecr": 761,
+      "average_expert_rank": 730.5,
+      "rank_std_dev": 1.5,
+      "pos_rank": "TE184",
+      "tier": 15
+    },
+    {
+      "player": "Chris Moore",
+      "team": "BAL",
+      "pos": "WR",
+      "ecr": 762,
+      "average_expert_rank": 731.5,
+      "rank_std_dev": 99.5,
+      "pos_rank": "WR251",
+      "tier": 15
+    },
+    {
+      "player": "Bryce Oliver",
+      "team": "TEN",
+      "pos": "WR",
+      "ecr": 763,
+      "average_expert_rank": 731.5,
+      "rank_std_dev": 89.5,
+      "pos_rank": "WR252",
+      "tier": 15
+    },
+    {
+      "player": "Shane Zylstra",
+      "team": "BUF",
+      "pos": "TE",
+      "ecr": 764,
+      "average_expert_rank": 732.5,
+      "rank_std_dev": 2.5,
+      "pos_rank": "TE185",
+      "tier": 15
+    },
+    {
+      "player": "Cam Grandy",
+      "team": "CIN",
+      "pos": "TE",
+      "ecr": 765,
+      "average_expert_rank": 734,
+      "rank_std_dev": 3,
+      "pos_rank": "TE186",
+      "tier": 15
+    },
+    {
+      "player": "Zack Moss",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 766,
+      "average_expert_rank": 734.5,
+      "rank_std_dev": 7.5,
+      "pos_rank": "RB194",
+      "tier": 15
+    },
+    {
+      "player": "Hayden Large",
+      "team": "CHI",
+      "pos": "TE",
+      "ecr": 767,
+      "average_expert_rank": 736,
+      "rank_std_dev": 4,
+      "pos_rank": "TE187",
+      "tier": 15
+    },
+    {
+      "player": "Terion Stewart",
+      "team": "KC",
+      "pos": "RB",
+      "ecr": 768,
+      "average_expert_rank": 738,
+      "rank_std_dev": 14,
+      "pos_rank": "RB195",
+      "tier": 15
+    },
+    {
+      "player": "Dallen Bentley",
+      "team": "DEN",
+      "pos": "TE",
+      "ecr": 769,
+      "average_expert_rank": 738.5,
+      "rank_std_dev": 4.5,
+      "pos_rank": "TE188",
+      "tier": 15
+    },
+    {
+      "player": "Simi Fehoko",
+      "team": "ARI",
+      "pos": "WR",
+      "ecr": 770,
+      "average_expert_rank": 740.5,
+      "rank_std_dev": 60.5,
+      "pos_rank": "WR253",
+      "tier": 15
+    },
+    {
+      "player": "Josh Kattus",
+      "team": "CIN",
+      "pos": "TE",
+      "ecr": 771,
+      "average_expert_rank": 740.5,
+      "rank_std_dev": 5.5,
+      "pos_rank": "TE189",
+      "tier": 15
+    },
+    {
+      "player": "Lucas Scott",
+      "team": "BAL",
+      "pos": "RB",
+      "ecr": 772,
+      "average_expert_rank": 741,
+      "rank_std_dev": 8,
+      "pos_rank": "RB196",
+      "tier": 15
+    },
+    {
+      "player": "Desmond Reid",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 773,
+      "average_expert_rank": 741,
+      "rank_std_dev": 5,
+      "pos_rank": "RB197",
+      "tier": 15
+    },
+    {
+      "player": "Tom Kennedy",
+      "team": "DET",
+      "pos": "WR",
+      "ecr": 774,
+      "average_expert_rank": 741.5,
+      "rank_std_dev": 100.5,
+      "pos_rank": "WR254",
+      "tier": 15
+    },
+    {
+      "player": "Ryan Miller",
+      "team": "NYG",
+      "pos": "WR",
+      "ecr": 775,
+      "average_expert_rank": 742,
+      "rank_std_dev": 94,
+      "pos_rank": "WR255",
+      "tier": 15
+    },
+    {
+      "player": "Stephen Carlson",
+      "team": "CHI",
+      "pos": "TE",
+      "ecr": 776,
+      "average_expert_rank": 742.5,
+      "rank_std_dev": 6.5,
+      "pos_rank": "TE190",
+      "tier": 15
+    },
+    {
+      "player": "Cody Schrader",
+      "team": "DEN",
+      "pos": "RB",
+      "ecr": 777,
+      "average_expert_rank": 744,
+      "rank_std_dev": 19,
+      "pos_rank": "RB198",
+      "tier": 15
+    },
+    {
+      "player": "Gage Larvadain",
+      "team": "CLE",
+      "pos": "WR",
+      "ecr": 778,
+      "average_expert_rank": 744.5,
+      "rank_std_dev": 100.5,
+      "pos_rank": "WR256",
+      "tier": 15
+    },
+    {
+      "player": "Austin Trammell",
+      "team": "JAC",
+      "pos": "WR",
+      "ecr": 779,
+      "average_expert_rank": 744.5,
+      "rank_std_dev": 95.5,
+      "pos_rank": "WR257",
+      "tier": 15
+    },
+    {
+      "player": "Coleman Bennett",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 780,
+      "average_expert_rank": 744.5,
+      "rank_std_dev": 22.5,
+      "pos_rank": "RB199",
+      "tier": 15
+    },
+    {
+      "player": "Dan Villari",
+      "team": "LAR",
+      "pos": "TE",
+      "ecr": 781,
+      "average_expert_rank": 744.5,
+      "rank_std_dev": 7.5,
+      "pos_rank": "TE191",
+      "tier": 15
+    },
+    {
+      "player": "Tay Martin",
+      "team": "DET",
+      "pos": "WR",
+      "ecr": 782,
+      "average_expert_rank": 745,
+      "rank_std_dev": 94,
+      "pos_rank": "WR258",
+      "tier": 15
+    },
+    {
+      "player": "Davon Booth",
+      "team": "CLE",
+      "pos": "RB",
+      "ecr": 783,
+      "average_expert_rank": 745,
+      "rank_std_dev": 28,
+      "pos_rank": "RB200",
+      "tier": 15
+    },
+    {
+      "player": "Charlie Jones",
+      "team": "CIN",
+      "pos": "WR",
+      "ecr": 784,
+      "average_expert_rank": 745.5,
+      "rank_std_dev": 81.5,
+      "pos_rank": "WR259",
+      "tier": 15
+    },
+    {
+      "player": "Mark Redman",
+      "team": "LAR",
+      "pos": "TE",
+      "ecr": 785,
+      "average_expert_rank": 746.5,
+      "rank_std_dev": 8.5,
+      "pos_rank": "TE192",
+      "tier": 15
+    },
+    {
+      "player": "Ja'Quinden Jackson",
+      "team": "PHI",
+      "pos": "RB",
+      "ecr": 786,
+      "average_expert_rank": 747.5,
+      "rank_std_dev": 3.5,
+      "pos_rank": "RB201",
+      "tier": 15
+    },
+    {
+      "player": "Carlos Washington Jr.",
+      "team": "MIA",
+      "pos": "RB",
+      "ecr": 787,
+      "average_expert_rank": 748,
+      "rank_std_dev": 10,
+      "pos_rank": "RB202",
+      "tier": 15
+    },
+    {
+      "player": "Britain Covey",
+      "team": "PHI",
+      "pos": "WR",
+      "ecr": 788,
+      "average_expert_rank": 748.5,
+      "rank_std_dev": 95.5,
+      "pos_rank": "WR260",
+      "tier": 15
+    },
+    {
+      "player": "Rohan Jones",
+      "team": "LAR",
+      "pos": "TE",
+      "ecr": 789,
+      "average_expert_rank": 749.5,
+      "rank_std_dev": 8.5,
+      "pos_rank": "TE193",
+      "tier": 15
+    },
+    {
+      "player": "Trent Sherfield Sr.",
+      "team": "BUF",
+      "pos": "WR",
+      "ecr": 790,
+      "average_expert_rank": 753,
+      "rank_std_dev": 84,
+      "pos_rank": "WR261",
+      "tier": 15
+    },
+    {
+      "player": "Mason Kinsey",
+      "team": "TEN",
+      "pos": "WR",
+      "ecr": 791,
+      "average_expert_rank": 753.5,
+      "rank_std_dev": 95.5,
+      "pos_rank": "WR262",
+      "tier": 15
+    },
+    {
+      "player": "KhaDarel Hodge",
+      "team": "SF",
+      "pos": "WR",
+      "ecr": 792,
+      "average_expert_rank": 753.5,
+      "rank_std_dev": 93.5,
+      "pos_rank": "WR263",
+      "tier": 15
+    },
+    {
+      "player": "Jeff Wilson Jr.",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 793,
+      "average_expert_rank": 754.5,
+      "rank_std_dev": 4.5,
+      "pos_rank": "RB203",
+      "tier": 15
+    },
+    {
+      "player": "Evan Hull",
+      "team": "ARI",
+      "pos": "RB",
+      "ecr": 794,
+      "average_expert_rank": 756.5,
+      "rank_std_dev": 28.5,
+      "pos_rank": "RB204",
+      "tier": 15
+    },
+    {
+      "player": "Gabe Davis",
+      "team": "FA",
+      "pos": "WR",
+      "ecr": 795,
+      "average_expert_rank": 760,
+      "rank_std_dev": 46,
+      "pos_rank": "WR264",
+      "tier": 15
+    },
+    {
+      "player": "Jaden Nixon",
+      "team": "GB",
+      "pos": "RB",
+      "ecr": 796,
+      "average_expert_rank": 760,
+      "rank_std_dev": 12,
+      "pos_rank": "RB205",
+      "tier": 15
+    },
+    {
+      "player": "Royce Freeman",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 797,
+      "average_expert_rank": 760.5,
+      "rank_std_dev": 0.5,
+      "pos_rank": "RB206",
+      "tier": 15
+    },
+    {
+      "player": "Trey Sermon",
+      "team": "ATL",
+      "pos": "RB",
+      "ecr": 798,
+      "average_expert_rank": 762,
+      "rank_std_dev": 21,
+      "pos_rank": "RB207",
+      "tier": 15
+    },
+    {
+      "player": "Samori Toure",
+      "team": "PHI",
+      "pos": "WR",
+      "ecr": 799,
+      "average_expert_rank": 763.5,
+      "rank_std_dev": 87.5,
+      "pos_rank": "WR265",
+      "tier": 15
+    },
+    {
+      "player": "Jason Brownlee",
+      "team": "KC",
+      "pos": "WR",
+      "ecr": 800,
+      "average_expert_rank": 763.5,
+      "rank_std_dev": 82.5,
+      "pos_rank": "WR266",
+      "tier": 15
+    },
+    {
+      "player": "Xavier Gipson",
+      "team": "NYG",
+      "pos": "WR",
+      "ecr": 801,
+      "average_expert_rank": 764,
+      "rank_std_dev": 89,
+      "pos_rank": "WR267",
+      "tier": 15
+    },
+    {
+      "player": "Tim Jones",
+      "team": "JAC",
+      "pos": "WR",
+      "ecr": 802,
+      "average_expert_rank": 764.5,
+      "rank_std_dev": 87.5,
+      "pos_rank": "WR268",
+      "tier": 15
+    },
+    {
+      "player": "EJ Smith",
+      "team": "KC",
+      "pos": "RB",
+      "ecr": 803,
+      "average_expert_rank": 764.5,
+      "rank_std_dev": 25.5,
+      "pos_rank": "RB208",
+      "tier": 15
+    },
+    {
+      "player": "LaJohntay Wester",
+      "team": "BAL",
+      "pos": "WR",
+      "ecr": 804,
+      "average_expert_rank": 765.5,
+      "rank_std_dev": 82.5,
+      "pos_rank": "WR269",
+      "tier": 15
+    },
+    {
+      "player": "Joshua Pitsenberger",
+      "team": "HOU",
+      "pos": "RB",
+      "ecr": 805,
+      "average_expert_rank": 766.5,
+      "rank_std_dev": 26.5,
+      "pos_rank": "RB209",
+      "tier": 15
+    },
+    {
+      "player": "Damon Bankston",
+      "team": "NYG",
+      "pos": "RB",
+      "ecr": 806,
+      "average_expert_rank": 767,
+      "rank_std_dev": 24,
+      "pos_rank": "RB210",
+      "tier": 15
+    },
+    {
+      "player": "D'Onta Foreman",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 807,
+      "average_expert_rank": 767,
+      "rank_std_dev": 2,
+      "pos_rank": "RB211",
+      "tier": 15
+    },
+    {
+      "player": "Trayveon Williams",
+      "team": "DET",
+      "pos": "RB",
+      "ecr": 808,
+      "average_expert_rank": 767,
+      "rank_std_dev": 2,
+      "pos_rank": "RB212",
+      "tier": 15
+    },
+    {
+      "player": "Clyde Edwards-Helaire",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 809,
+      "average_expert_rank": 768.5,
+      "rank_std_dev": 6.5,
+      "pos_rank": "RB213",
+      "tier": 15
+    },
+    {
+      "player": "Emmanuel Henderson Jr.",
+      "team": "SEA",
+      "pos": "WR",
+      "ecr": 810,
+      "average_expert_rank": 769.5,
+      "rank_std_dev": 14.5,
+      "pos_rank": "WR270",
+      "tier": 15
+    },
+    {
+      "player": "Sam Scott",
+      "team": "NYJ",
+      "pos": "RB",
+      "ecr": 811,
+      "average_expert_rank": 769.5,
+      "rank_std_dev": 13.5,
+      "pos_rank": "RB214",
+      "tier": 15
+    },
+    {
+      "player": "Dare Ogunbowale",
+      "team": "LV",
+      "pos": "RB",
+      "ecr": 812,
+      "average_expert_rank": 769.5,
+      "rank_std_dev": 1.5,
+      "pos_rank": "RB215",
+      "tier": 15
+    },
+    {
+      "player": "Alex Bachman",
+      "team": "LAR",
+      "pos": "WR",
+      "ecr": 813,
+      "average_expert_rank": 771,
+      "rank_std_dev": 83,
+      "pos_rank": "WR271",
+      "tier": 15
+    },
+    {
+      "player": "Kendall Milton",
+      "team": "CIN",
+      "pos": "RB",
+      "ecr": 814,
+      "average_expert_rank": 771,
+      "rank_std_dev": 24,
+      "pos_rank": "RB216",
+      "tier": 15
+    },
+    {
+      "player": "Myles Gaskin",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 815,
+      "average_expert_rank": 771.5,
+      "rank_std_dev": 5.5,
+      "pos_rank": "RB217",
+      "tier": 15
+    },
+    {
+      "player": "Tejhaun Palmer",
+      "team": "NE",
+      "pos": "WR",
+      "ecr": 816,
+      "average_expert_rank": 772.5,
+      "rank_std_dev": 77.5,
+      "pos_rank": "WR272",
+      "tier": 15
+    },
+    {
+      "player": "Chris Collier",
+      "team": "LV",
+      "pos": "RB",
+      "ecr": 817,
+      "average_expert_rank": 773,
+      "rank_std_dev": 16,
+      "pos_rank": "RB218",
+      "tier": 15
+    },
+    {
+      "player": "Darrynton Evans",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 818,
+      "average_expert_rank": 773,
+      "rank_std_dev": 3,
+      "pos_rank": "RB219",
+      "tier": 15
+    },
+    {
+      "player": "Amar Johnson",
+      "team": "LAC",
+      "pos": "RB",
+      "ecr": 819,
+      "average_expert_rank": 773.5,
+      "rank_std_dev": 28.5,
+      "pos_rank": "RB220",
+      "tier": 15
+    },
+    {
+      "player": "TJ Harden",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 820,
+      "average_expert_rank": 773.5,
+      "rank_std_dev": 23.5,
+      "pos_rank": "RB221",
+      "tier": 15
+    },
+    {
+      "player": "Tyrion Davis-Price",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 821,
+      "average_expert_rank": 775,
+      "rank_std_dev": 4,
+      "pos_rank": "RB222",
+      "tier": 15
+    },
+    {
+      "player": "Ke'Shawn Williams",
+      "team": "CIN",
+      "pos": "WR",
+      "ecr": 822,
+      "average_expert_rank": 776,
+      "rank_std_dev": 79,
+      "pos_rank": "WR273",
+      "tier": 15
+    },
+    {
+      "player": "Hassan Haskins",
+      "team": "NE",
+      "pos": "RB",
+      "ecr": 823,
+      "average_expert_rank": 776.5,
+      "rank_std_dev": 4.5,
+      "pos_rank": "RB223",
+      "tier": 15
+    },
+    {
+      "player": "Jimmy Holiday",
+      "team": "KC",
+      "pos": "WR",
+      "ecr": 824,
+      "average_expert_rank": 777.5,
+      "rank_std_dev": 78.5,
+      "pos_rank": "WR274",
+      "tier": 15
+    },
+    {
+      "player": "Dalen Cambre",
+      "team": "NYG",
+      "pos": "WR",
+      "ecr": 825,
+      "average_expert_rank": 779,
+      "rank_std_dev": 78,
+      "pos_rank": "WR275",
+      "tier": 15
+    },
+    {
+      "player": "Gregory Desrosiers",
+      "team": "LAC",
+      "pos": "RB",
+      "ecr": 826,
+      "average_expert_rank": 780.5,
+      "rank_std_dev": 19.5,
+      "pos_rank": "RB224",
+      "tier": 15
+    },
+    {
+      "player": "Malik Turner",
+      "team": "SF",
+      "pos": "WR",
+      "ecr": 827,
+      "average_expert_rank": 783,
+      "rank_std_dev": 75,
+      "pos_rank": "WR276",
+      "tier": 15
+    },
+    {
+      "player": "Jackson Acker",
+      "team": "FA",
+      "pos": "RB",
+      "ecr": 828,
+      "average_expert_rank": 783.5,
+      "rank_std_dev": 20.5,
+      "pos_rank": "RB225",
+      "tier": 15
+    },
+    {
+      "player": "Brandon Smith",
+      "team": "PIT",
+      "pos": "WR",
+      "ecr": 829,
+      "average_expert_rank": 785,
+      "rank_std_dev": 74,
+      "pos_rank": "WR277",
+      "tier": 15
+    },
+    {
+      "player": "Brock Lampe",
+      "team": "SEA",
+      "pos": "RB",
+      "ecr": 830,
+      "average_expert_rank": 786,
+      "rank_std_dev": 19,
+      "pos_rank": "RB226",
+      "tier": 15
+    },
+    {
+      "player": "Brandon Johnson",
+      "team": "LV",
+      "pos": "WR",
+      "ecr": 831,
+      "average_expert_rank": 798.5,
+      "rank_std_dev": 44.5,
+      "pos_rank": "WR278",
+      "tier": 15
+    },
+    {
+      "player": "Camden Brown",
+      "team": "DAL",
+      "pos": "WR",
+      "ecr": 832,
+      "average_expert_rank": 802,
+      "rank_std_dev": 21,
+      "pos_rank": "WR279",
+      "tier": 15
+    },
+    {
+      "player": "CJ Williams",
+      "team": "JAC",
+      "pos": "WR",
+      "ecr": 833,
+      "average_expert_rank": 804.5,
+      "rank_std_dev": 28.5,
+      "pos_rank": "WR280",
+      "tier": 16
+    },
+    {
+      "player": "Tyren Montgomery",
+      "team": "TEN",
+      "pos": "WR",
+      "ecr": 834,
+      "average_expert_rank": 806,
+      "rank_std_dev": 19,
+      "pos_rank": "WR281",
+      "tier": 16
+    },
+    {
+      "player": "Dontae Fleming",
+      "team": "MIN",
+      "pos": "WR",
+      "ecr": 835,
+      "average_expert_rank": 811,
+      "rank_std_dev": 21,
+      "pos_rank": "WR282",
+      "tier": 16
+    },
+    {
+      "player": "Dillon Bell",
+      "team": "MIN",
+      "pos": "WR",
+      "ecr": 836,
+      "average_expert_rank": 813,
+      "rank_std_dev": 21,
+      "pos_rank": "WR283",
+      "tier": 16
+    },
+    {
+      "player": "Trey Palmer",
+      "team": "NO",
+      "pos": "WR",
+      "ecr": 837,
+      "average_expert_rank": 814.5,
+      "rank_std_dev": 20.5,
+      "pos_rank": "WR284",
+      "tier": 16
+    },
+    {
+      "player": "Johnny Wilson",
+      "team": "PHI",
+      "pos": "WR",
+      "ecr": 838,
+      "average_expert_rank": 816.5,
+      "rank_std_dev": 21.5,
+      "pos_rank": "WR285",
+      "tier": 16
+    },
+    {
+      "player": "Beaux Collins",
+      "team": "ATL",
+      "pos": "WR",
+      "ecr": 839,
+      "average_expert_rank": 818.5,
+      "rank_std_dev": 22.5,
+      "pos_rank": "WR286",
+      "tier": 16
+    }
+  ]
+}

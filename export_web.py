@@ -4,7 +4,7 @@ Also computes a single priority-ordered [tag] per player for quick scanning."""
 import json, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SRC = os.path.join(HERE, "..", "board.json")
+SRC = os.environ.get("FANTASY_BOARD_JSON", os.path.join(HERE, "model", "data", "board.json"))
 OUT = os.path.join(HERE, "board.js")
 
 def cut(s, n):
@@ -16,29 +16,9 @@ def cut(s, n):
 
 SEVERE_INJURY = {"IR", "PUP", "DNR", "OUT", "DOUBTFUL"}
 
-# Manual editorial overrides — Jordan's own read overriding the model's rank for a
-# specific pairing. This only reorders the two players (renumbering everyone's rank/
-# positional-rank consistently around the move); it does NOT touch the model's own
-# classification/tag for either player, since that's a separate, backtested signal
-# about evidence vs. ADP, not a "who finishes better" claim. So a moved-up player can
-# still show a Fade tag if the model's usage evidence hasn't caught up yet.
-MANUAL_OVERRIDES = [
-    {"move": "Luther Burden", "above": "Rome Odunze",
-     "note": "Jordan's call: expects Burden to outproduce Odunze in 2026 despite thin 2025 usage data."},
-]
-
 def apply_overrides(players):
+    """Preserve the model's strict standardized-VOR ordering in the web export."""
     order = sorted(players, key=lambda p: p["model_rank"])
-    for ov in MANUAL_OVERRIDES:
-        try:
-            mv = next(p for p in order if p["player"] == ov["move"])
-            order.remove(mv)
-            idx = next(i for i, p in enumerate(order) if p["player"] == ov["above"])
-            order.insert(idx, mv)
-        except StopIteration:
-            print(f"  override skipped (name not found): {ov}")
-    # renumber overall rank + per-position rank from the new order, keeping everything
-    # else (score, classification, tags) exactly as the model computed it
     pos_seen = {}
     for i, p in enumerate(order, 1):
         p["_rank_web"] = i
@@ -48,6 +28,8 @@ def apply_overrides(players):
 
 def tag_for(p):
     """One priority-ordered tag: injury > rookie > team change > crowded role > value read."""
+    if p.get("tag"):
+        return p["tag"]
     inj = (p.get("injury_status") or "").strip().upper()
     if inj in SEVERE_INJURY:
         return "Injured"
@@ -81,6 +63,7 @@ def main():
             "pr": p["_pos_rank_web"], "ti": p["tier"], "s": p["playr_score"], "c": p["classification"],
             "adp": p["adp"], "ecr": p["ecr"], "wk": p["winks_skill"], "pj": p.get("proj_ppg"),
             "ep": p.get("edge_pts_per_game"), "cf": p["confidence"],
+            "zv": p.get("z_vor"), "rp": p.get("replacement_ppg"), "psd": p.get("position_ppg_sd"),
             "p90": sp.get("p90"), "sw": sp.get("spike_weeks"), "g": sp.get("games"), "bw": sp.get("best"),
             "ppg": wa.get("ppg"), "cont": p.get("contingency_ppg"),
             "rl": s.get("role_language"), "sq": cut(s.get("key_quote"), 260) or None,

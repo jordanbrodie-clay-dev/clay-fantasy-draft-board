@@ -1,0 +1,1202 @@
+[
+  {
+    "player": "Puka Nacua",
+    "pos": "WR",
+    "team": "LAR",
+    "sportradar_id": "111be44d-7bc2-4cad-934d-c9e946293b2f"
+  },
+  {
+    "player": "Jahmyr Gibbs",
+    "pos": "RB",
+    "team": "DET",
+    "sportradar_id": "fef9457e-6497-47de-9bf2-cc3b95929375"
+  },
+  {
+    "player": "Jaxon Smith-Njigba",
+    "pos": "WR",
+    "team": "SEA",
+    "sportradar_id": "6215db71-1e13-4c62-8f14-2005d33dee47"
+  },
+  {
+    "player": "Bijan Robinson",
+    "pos": "RB",
+    "team": "ATL",
+    "sportradar_id": "f78d68c2-f9da-48e7-b954-26b69efd828d"
+  },
+  {
+    "player": "Amon-Ra St. Brown",
+    "pos": "WR",
+    "team": "DET",
+    "sportradar_id": "26ef0447-29b8-4dd1-9831-dcbf8132bb74"
+  },
+  {
+    "player": "Jonathan Taylor",
+    "pos": "RB",
+    "team": "IND",
+    "sportradar_id": "925195a4-06ba-4e37-ae7d-a3d6a5419139"
+  },
+  {
+    "player": "Ja'Marr Chase",
+    "pos": "WR",
+    "team": "CIN",
+    "sportradar_id": "fa99e984-d63b-4ef4-a164-407f68a7eeaf"
+  },
+  {
+    "player": "Christian McCaffrey",
+    "pos": "RB",
+    "team": "SF",
+    "sportradar_id": "f96db0af-5e25-42d1-a07a-49b4e065b364"
+  },
+  {
+    "player": "Justin Jefferson",
+    "pos": "WR",
+    "team": "MIN",
+    "sportradar_id": "a8a90d29-7f7e-40d1-815d-fc692ecf75a7"
+  },
+  {
+    "player": "CeeDee Lamb",
+    "pos": "WR",
+    "team": "DAL",
+    "sportradar_id": "a72ea15b-5199-4101-a300-846e1c655add"
+  },
+  {
+    "player": "Saquon Barkley",
+    "pos": "RB",
+    "team": "PHI",
+    "sportradar_id": "9811b753-347c-467a-b3cb-85937e71e2b9"
+  },
+  {
+    "player": "James Cook",
+    "pos": "RB",
+    "team": "BUF",
+    "sportradar_id": "ce5de0e5-9f76-42ee-b93a-3ef88af9b0a7"
+  },
+  {
+    "player": "Trey McBride",
+    "pos": "TE",
+    "team": "ARI",
+    "sportradar_id": "734d54cc-c869-4e2f-a60f-c59c493f5110"
+  },
+  {
+    "player": "Brock Bowers",
+    "pos": "TE",
+    "team": "LV",
+    "sportradar_id": "ad9fc7e3-0a6d-4e41-84c2-cf43b71aee13"
+  },
+  {
+    "player": "Drake London",
+    "pos": "WR",
+    "team": "ATL",
+    "sportradar_id": "5053f9ae-15d9-4730-833d-484886b6f890"
+  },
+  {
+    "player": "Josh Allen",
+    "pos": "QB",
+    "team": "BUF",
+    "sportradar_id": "3069db07-aa43-4503-ab11-2ae5c0002721"
+  },
+  {
+    "player": "De'Von Achane",
+    "pos": "RB",
+    "team": "MIA",
+    "sportradar_id": "a4ef921b-8767-4b4f-a651-7675c00f9af0"
+  },
+  {
+    "player": "Kenneth Walker III",
+    "pos": "RB",
+    "team": "KC",
+    "sportradar_id": "22ee9bac-a64c-4d44-94fc-51d775465b3b"
+  },
+  {
+    "player": "Ashton Jeanty",
+    "pos": "RB",
+    "team": "LV",
+    "sportradar_id": "320fc4b7-76c7-43af-bbfd-1a22ba8f78cb"
+  },
+  {
+    "player": "A.J. Brown",
+    "pos": "WR",
+    "team": "NE",
+    "sportradar_id": "a9e580f2-1fbe-46fb-887c-c84089b507e4"
+  },
+  {
+    "player": "Nico Collins",
+    "pos": "WR",
+    "team": "HOU",
+    "sportradar_id": "bd56a50c-5fae-4ee2-8363-f74ae07b6887"
+  },
+  {
+    "player": "Chase Brown",
+    "pos": "RB",
+    "team": "CIN",
+    "sportradar_id": "d74ff06d-905d-4fed-8f98-b5f6d4549333"
+  },
+  {
+    "player": "George Pickens",
+    "pos": "WR",
+    "team": "DAL",
+    "sportradar_id": "018e8f25-54e5-44f1-967a-7ff237f1c52f"
+  },
+  {
+    "player": "Derrick Henry",
+    "pos": "RB",
+    "team": "BAL",
+    "sportradar_id": "87c481c7-7414-43cc-82df-19ca0c2ae22e"
+  },
+  {
+    "player": "Malik Nabers",
+    "pos": "WR",
+    "team": "NYG",
+    "sportradar_id": "55ef2022-50c2-465b-839e-c0f4c9e7c55c"
+  },
+  {
+    "player": "Omarion Hampton",
+    "pos": "RB",
+    "team": "LAC",
+    "sportradar_id": "3e1b7908-79ee-4a23-97b9-5190725a2e5e"
+  },
+  {
+    "player": "DeVonta Smith",
+    "pos": "WR",
+    "team": "PHI",
+    "sportradar_id": "28fe52c0-4b32-11f1-bb94-572e588a4e80"
+  },
+  {
+    "player": "Lamar Jackson",
+    "pos": "QB",
+    "team": "BAL",
+    "sportradar_id": "22e0f7ed-9b46-4a75-9780-d9b66c245744"
+  },
+  {
+    "player": "Chris Olave",
+    "pos": "WR",
+    "team": "NO",
+    "sportradar_id": "2375d572-a36c-4365-bb3f-87e156526e2f"
+  },
+  {
+    "player": "Rashee Rice",
+    "pos": "WR",
+    "team": "KC",
+    "sportradar_id": "cbd73c09-da07-48b0-a0d6-f248dfa631b6"
+  },
+  {
+    "player": "Zay Flowers",
+    "pos": "WR",
+    "team": "BAL",
+    "sportradar_id": "2b6d74b7-10fb-4f17-99c8-9bb557fb475b"
+  },
+  {
+    "player": "Colston Loveland",
+    "pos": "TE",
+    "team": "CHI",
+    "sportradar_id": "62cd2cd5-8b40-4ee6-bfb8-0083edd105a2"
+  },
+  {
+    "player": "Kyren Williams",
+    "pos": "RB",
+    "team": "LAR",
+    "sportradar_id": "19d44771-8f1d-4127-9b7d-230da137f15d"
+  },
+  {
+    "player": "Tee Higgins",
+    "pos": "WR",
+    "team": "CIN",
+    "sportradar_id": "7963b029-5de4-4541-b00a-44eefe4349af"
+  },
+  {
+    "player": "Breece Hall",
+    "pos": "RB",
+    "team": "NYJ",
+    "sportradar_id": "db1053d7-3343-43a3-9aab-8353f10f1221"
+  },
+  {
+    "player": "Joe Burrow",
+    "pos": "QB",
+    "team": "CIN",
+    "sportradar_id": "3023ac10-4e7f-425f-9fc5-2b8e6332c92e"
+  },
+  {
+    "player": "Javonte Williams",
+    "pos": "RB",
+    "team": "DAL",
+    "sportradar_id": "889dcdc5-3d88-45df-9677-5ad7ff87c011"
+  },
+  {
+    "player": "Jeremiyah Love",
+    "pos": "RB",
+    "team": "ARI",
+    "sportradar_id": "ca61f1e4-5a51-45b8-b8e3-f6564d9c2648"
+  },
+  {
+    "player": "Tetairoa McMillan",
+    "pos": "WR",
+    "team": "CAR",
+    "sportradar_id": "874de000-586c-4999-ac12-02766563e200"
+  },
+  {
+    "player": "Josh Jacobs",
+    "pos": "RB",
+    "team": "GB",
+    "sportradar_id": "61694ab9-b099-408e-b48d-6a643dd069ec"
+  },
+  {
+    "player": "Emeka Egbuka",
+    "pos": "WR",
+    "team": "TB",
+    "sportradar_id": "00cea287-1fa0-4584-803f-59f546ef8722"
+  },
+  {
+    "player": "Drake Maye",
+    "pos": "QB",
+    "team": "NE",
+    "sportradar_id": "d0c0630e-8925-4b81-a32b-e4146d95f01f"
+  },
+  {
+    "player": "Garrett Wilson",
+    "pos": "WR",
+    "team": "NYJ",
+    "sportradar_id": "68d72fe0-79b2-4fdb-afd5-6c79676e77f3"
+  },
+  {
+    "player": "Jaylen Waddle",
+    "pos": "WR",
+    "team": "DEN",
+    "sportradar_id": "0ff9a975-669d-4851-a95d-ab28d9fc29c4"
+  },
+  {
+    "player": "Tyler Warren",
+    "pos": "TE",
+    "team": "IND",
+    "sportradar_id": "c8fe3913-1210-4142-b9c1-c119ef702ca5"
+  },
+  {
+    "player": "Travis Etienne Jr.",
+    "pos": "RB",
+    "team": "NO",
+    "sportradar_id": "970693f0-0af4-4627-ac0c-bf519f7433ee"
+  },
+  {
+    "player": "Ladd McConkey",
+    "pos": "WR",
+    "team": "LAC",
+    "sportradar_id": "473bc7e5-c393-4f21-9e49-3ffc16711238"
+  },
+  {
+    "player": "Terry McLaurin",
+    "pos": "WR",
+    "team": "WAS",
+    "sportradar_id": "7e8c4641-2beb-4213-ba22-69fe0307005f"
+  },
+  {
+    "player": "Jalen Hurts",
+    "pos": "QB",
+    "team": "PHI",
+    "sportradar_id": "64bd0f02-6a5d-407e-98f1-fd02048ea21d"
+  },
+  {
+    "player": "Jayden Daniels",
+    "pos": "QB",
+    "team": "WAS",
+    "sportradar_id": "bab8c65a-9fff-410d-8e34-dc2f636d890e"
+  },
+  {
+    "player": "Davante Adams",
+    "pos": "WR",
+    "team": "LAR",
+    "sportradar_id": "e7d6ae25-bf15-4660-8b37-c37716551de3"
+  },
+  {
+    "player": "Cam Skattebo",
+    "pos": "RB",
+    "team": "NYG",
+    "sportradar_id": "e1f0c72d-f4d0-4c24-93a4-8a12b9a2efd2"
+  },
+  {
+    "player": "Mike Evans",
+    "pos": "WR",
+    "team": "SF",
+    "sportradar_id": "c48c21d9-0ae5-478c-ad34-30a660cfa9b8"
+  },
+  {
+    "player": "Jameson Williams",
+    "pos": "WR",
+    "team": "DET",
+    "sportradar_id": "590adb00-5598-47ad-b6d4-16a6c5519847"
+  },
+  {
+    "player": "Tucker Kraft",
+    "pos": "TE",
+    "team": "GB",
+    "sportradar_id": "3a084c5f-6b9f-4703-a0c7-1566bc4b1129"
+  },
+  {
+    "player": "Dak Prescott",
+    "pos": "QB",
+    "team": "DAL",
+    "sportradar_id": "86197778-8d4b-4eba-affe-08ef7be7c70b"
+  },
+  {
+    "player": "Luther Burden",
+    "pos": "WR",
+    "team": "CHI",
+    "sportradar_id": "a4c21977-c9d1-40f8-abee-0862dfab9195"
+  },
+  {
+    "player": "Rome Odunze",
+    "pos": "WR",
+    "team": "CHI",
+    "sportradar_id": "f64694e0-0381-11ef-973d-5176a0ecbee4"
+  },
+  {
+    "player": "D'Andre Swift",
+    "pos": "RB",
+    "team": "CHI",
+    "sportradar_id": "cc4b5f58-a11c-4450-a1df-617ad88336e4"
+  },
+  {
+    "player": "D.J. Moore",
+    "pos": "WR",
+    "team": "BUF",
+    "sportradar_id": "d8202e6d-d03b-4cd1-a793-ff8fd39d9755"
+  },
+  {
+    "player": "Quinshon Judkins",
+    "pos": "RB",
+    "team": "CLE",
+    "sportradar_id": "268c6ae2-278b-49f8-b7cd-b367944412f3"
+  },
+  {
+    "player": "Bucky Irving",
+    "pos": "RB",
+    "team": "TB",
+    "sportradar_id": "c5249c6f-bd1b-4352-8228-de2bd499ca0d"
+  },
+  {
+    "player": "Caleb Williams",
+    "pos": "QB",
+    "team": "CHI",
+    "sportradar_id": "49d4b627-3f19-49a8-ae33-f539e0fb1f88"
+  },
+  {
+    "player": "Christian Watson",
+    "pos": "WR",
+    "team": "GB",
+    "sportradar_id": "47d97f44-b4aa-46d2-816c-5b5a1fe48d46"
+  },
+  {
+    "player": "Justin Herbert",
+    "pos": "QB",
+    "team": "LAC",
+    "sportradar_id": "f0a8f8e3-b9e9-46ed-85e4-eec6452a8a44"
+  },
+  {
+    "player": "Harold Fannin",
+    "pos": "TE",
+    "team": "CLE",
+    "sportradar_id": "8bdf2df7-b51c-4404-b153-8dc62b1e0845"
+  },
+  {
+    "player": "Kyle Pitts",
+    "pos": "TE",
+    "team": "ATL",
+    "sportradar_id": "1f3deb24-9ff8-4769-8f42-825eff7742f6"
+  },
+  {
+    "player": "Bhayshul Tuten",
+    "pos": "RB",
+    "team": "JAX",
+    "sportradar_id": "26d4b13e-a555-4519-9356-cd16c65384e7"
+  },
+  {
+    "player": "TreVeyon Henderson",
+    "pos": "RB",
+    "team": "NE",
+    "sportradar_id": "0d9788e6-03ee-416d-8ba2-deb57037d209"
+  },
+  {
+    "player": "David Montgomery",
+    "pos": "RB",
+    "team": "HOU",
+    "sportradar_id": "1c9e1cd5-8cb1-4a15-a2c8-3a0c0fd5423c"
+  },
+  {
+    "player": "Trevor Lawrence",
+    "pos": "QB",
+    "team": "JAX",
+    "sportradar_id": "aaa8b42c-4d87-45f6-bfd2-e31cfed9a736"
+  },
+  {
+    "player": "Carnell Tate",
+    "pos": "WR",
+    "team": "TEN",
+    "sportradar_id": "a8693aee-cde4-464f-a0d8-355fb72c041d"
+  },
+  {
+    "player": "Alec Pierce",
+    "pos": "WR",
+    "team": "IND",
+    "sportradar_id": "a67ee8f8-e9de-4fb9-90b6-edca2f83f6d8"
+  },
+  {
+    "player": "Jaylen Warren",
+    "pos": "RB",
+    "team": "PIT",
+    "sportradar_id": "7e397190-ca24-11ec-9f1c-b7114d38a85b"
+  },
+  {
+    "player": "Chuba Hubbard",
+    "pos": "RB",
+    "team": "CAR",
+    "sportradar_id": "32205e74-b23f-420a-b312-465b29260745"
+  },
+  {
+    "player": "Jadarian Price",
+    "pos": "RB",
+    "team": "SEA",
+    "sportradar_id": "17b64129-5118-4525-ac9a-d79ff5313568"
+  },
+  {
+    "player": "Sam LaPorta",
+    "pos": "TE",
+    "team": "DET",
+    "sportradar_id": "3059f1e5-1871-4458-9e90-9b9917874c61"
+  },
+  {
+    "player": "Matthew Stafford",
+    "pos": "QB",
+    "team": "LAR",
+    "sportradar_id": "ade43b1a-0601-4672-83b6-d246bc066a19"
+  },
+  {
+    "player": "Brock Purdy",
+    "pos": "QB",
+    "team": "SF",
+    "sportradar_id": "d5aef708-ad61-4ab8-a637-62ff96e92040"
+  },
+  {
+    "player": "DK Metcalf",
+    "pos": "WR",
+    "team": "PIT",
+    "sportradar_id": "754faf0f-40f7-45f0-b23b-6ce990ecaf26"
+  },
+  {
+    "player": "Parker Washington",
+    "pos": "WR",
+    "team": "JAX",
+    "sportradar_id": "c05863ec-3414-4ae6-a8d2-830aed99b6d3"
+  },
+  {
+    "player": "George Kittle",
+    "pos": "TE",
+    "team": "SF",
+    "sportradar_id": "2ada91b0-036e-454f-83c3-6d939ff584a9"
+  },
+  {
+    "player": "Brian Thomas",
+    "pos": "WR",
+    "team": "JAX",
+    "sportradar_id": "271a233e-68b3-4261-a3aa-7667eaf9d3cc"
+  },
+  {
+    "player": "Rico Dowdle",
+    "pos": "RB",
+    "team": "PIT",
+    "sportradar_id": "bba755a2-63b6-4ac1-b806-0609816135de"
+  },
+  {
+    "player": "Rhamondre Stevenson",
+    "pos": "RB",
+    "team": "NE",
+    "sportradar_id": "6260e78a-64e2-4f7e-9bf8-39948a17a370"
+  },
+  {
+    "player": "Patrick Mahomes",
+    "pos": "QB",
+    "team": "KC",
+    "sportradar_id": "11cad59d-90dd-449c-a839-dddaba4fe16c"
+  },
+  {
+    "player": "Marvin Harrison",
+    "pos": "WR",
+    "team": "ARI",
+    "sportradar_id": "e8da21a8-796d-48a2-b644-57d08983ae01"
+  },
+  {
+    "player": "Michael Pittman Jr.",
+    "pos": "WR",
+    "team": "PIT",
+    "sportradar_id": "1aefd5e2-1f85-471a-91a5-4aad4cf6fe6d"
+  },
+  {
+    "player": "Jaxson Dart",
+    "pos": "QB",
+    "team": "NYG",
+    "sportradar_id": "53848cba-bcad-4cd0-bb35-0a1f6ed111d1"
+  },
+  {
+    "player": "Makai Lemon",
+    "pos": "WR",
+    "team": "PHI",
+    "sportradar_id": "a6a64214-6f1d-4682-9559-287fb4fe7461"
+  },
+  {
+    "player": "Tony Pollard",
+    "pos": "RB",
+    "team": "TEN",
+    "sportradar_id": "33b0227d-4c21-4e71-b4cd-be35f7db9123"
+  },
+  {
+    "player": "Jordyn Tyson",
+    "pos": "WR",
+    "team": "NO",
+    "sportradar_id": "5368ab1c-5463-4326-86c0-17c06bf51c9d"
+  },
+  {
+    "player": "Bo Nix",
+    "pos": "QB",
+    "team": "DEN",
+    "sportradar_id": "f056c8ed-6ee5-492c-af11-3f7e3d97195c"
+  },
+  {
+    "player": "RJ Harvey",
+    "pos": "RB",
+    "team": "DEN",
+    "sportradar_id": "fc6dbb83-b2b1-4962-b793-e79b2378b525"
+  },
+  {
+    "player": "Quentin Johnston",
+    "pos": "WR",
+    "team": "LAC",
+    "sportradar_id": "e648bc98-bc81-44d0-8d4b-b9223c497ff4"
+  },
+  {
+    "player": "Dalton Kincaid",
+    "pos": "TE",
+    "team": "BUF",
+    "sportradar_id": "b961fa15-0676-4948-b95f-56d06319d40e"
+  },
+  {
+    "player": "Wan'Dale Robinson",
+    "pos": "WR",
+    "team": "TEN",
+    "sportradar_id": "582dfe0e-98f3-48a5-8a2d-a52baa926b05"
+  },
+  {
+    "player": "Jordan Addison",
+    "pos": "WR",
+    "team": "MIN",
+    "sportradar_id": "63fdd64e-1a23-4b77-9536-b1609f3a708c"
+  },
+  {
+    "player": "J.K. Dobbins",
+    "pos": "RB",
+    "team": "DEN",
+    "sportradar_id": "a57b9914-4315-4295-98b4-9b348c52d6a1"
+  },
+  {
+    "player": "Dallas Goedert",
+    "pos": "TE",
+    "team": "PHI",
+    "sportradar_id": "e8029983-87cf-49a2-bc04-04c8233a0630"
+  },
+  {
+    "player": "Rachaad White",
+    "pos": "RB",
+    "team": "WAS",
+    "sportradar_id": "4d3f2f57-215c-4cb4-bf75-a7ecdcdded70"
+  },
+  {
+    "player": "Kyler Murray",
+    "pos": "QB",
+    "team": "MIN",
+    "sportradar_id": "dd5a6b6e-ffae-45a5-b8e6-718a9251f374"
+  },
+  {
+    "player": "Courtland Sutton",
+    "pos": "WR",
+    "team": "DEN",
+    "sportradar_id": "b55ae5ba-593f-4560-9cab-14e10698e01d"
+  },
+  {
+    "player": "Kyle Monangai",
+    "pos": "RB",
+    "team": "CHI",
+    "sportradar_id": "6edec23b-f938-40f7-a151-1db5374880dd"
+  },
+  {
+    "player": "Michael Wilson",
+    "pos": "WR",
+    "team": "ARI",
+    "sportradar_id": "b91be982-fccd-448e-869b-e9b5148a1730"
+  },
+  {
+    "player": "Travis Kelce",
+    "pos": "TE",
+    "team": "KC",
+    "sportradar_id": "c3859e06-5f23-4302-a71b-04820a899d5f"
+  },
+  {
+    "player": "Jonathon Brooks",
+    "pos": "RB",
+    "team": "CAR",
+    "sportradar_id": "5c842941-844b-4f6a-bce4-26b377146674"
+  },
+  {
+    "player": "Jordan Love",
+    "pos": "QB",
+    "team": "GB",
+    "sportradar_id": "e5094779-e94f-4052-8597-bdbee3719f6b"
+  },
+  {
+    "player": "Blake Corum",
+    "pos": "RB",
+    "team": "LAR",
+    "sportradar_id": "93ba1da2-3679-4ddc-9687-0802349f9ee2"
+  },
+  {
+    "player": "Chris Godwin",
+    "pos": "WR",
+    "team": "TB",
+    "sportradar_id": "baa61bb5-f8d0-4f90-bbe2-028576b8d33d"
+  },
+  {
+    "player": "Mark Andrews",
+    "pos": "TE",
+    "team": "BAL",
+    "sportradar_id": "0618f387-9b72-4270-8b8f-dec4cccc9e4a"
+  },
+  {
+    "player": "Chris Rodriguez",
+    "pos": "RB",
+    "team": "JAX",
+    "sportradar_id": "ae5c4758-cb53-4f17-8763-b91381036af3"
+  },
+  {
+    "player": "Jake Ferguson",
+    "pos": "TE",
+    "team": "DAL",
+    "sportradar_id": "f46eab3d-d7dd-4420-b3f9-6da9ac1308ab"
+  },
+  {
+    "player": "Jacory Croskey-Merritt",
+    "pos": "RB",
+    "team": "WAS",
+    "sportradar_id": "202b8be6-40d2-49ed-b256-312ac45ec70f"
+  },
+  {
+    "player": "Jakobi Meyers",
+    "pos": "WR",
+    "team": "JAX",
+    "sportradar_id": "73e194d1-a4b7-4de4-b1c2-3c24ef502918"
+  },
+  {
+    "player": "Romeo Doubs",
+    "pos": "WR",
+    "team": "NE",
+    "sportradar_id": "5f559fde-3a5f-4df6-99a2-cd1a4b103c68"
+  },
+  {
+    "player": "Baker Mayfield",
+    "pos": "QB",
+    "team": "TB",
+    "sportradar_id": "30198d30-9769-4e10-ac86-b4c91d940802"
+  },
+  {
+    "player": "Aaron Jones",
+    "pos": "RB",
+    "team": "MIN",
+    "sportradar_id": "27dd5b6e-ea65-4622-a6b4-460fd144407c"
+  },
+  {
+    "player": "Jared Goff",
+    "pos": "QB",
+    "team": "DET",
+    "sportradar_id": "aba8f925-ffbf-4654-bfa7-a25d3d237494"
+  },
+  {
+    "player": "Jayden Reed",
+    "pos": "WR",
+    "team": "GB",
+    "sportradar_id": "23a306bc-5f77-4574-a575-bd599f243185"
+  },
+  {
+    "player": "Josh Downs",
+    "pos": "WR",
+    "team": "IND",
+    "sportradar_id": "dd227f4a-0785-482d-a28b-f231c7f3b73f"
+  },
+  {
+    "player": "KC Concepcion",
+    "pos": "WR",
+    "team": "CLE",
+    "sportradar_id": "395b5873-4054-4190-913c-60b664d11e61"
+  },
+  {
+    "player": "Malik Willis",
+    "pos": "QB",
+    "team": "MIA",
+    "sportradar_id": "55aefcf9-4dfb-4994-883f-4d537a6f1ddb"
+  },
+  {
+    "player": "Tyrone Tracy",
+    "pos": "RB",
+    "team": "NYG",
+    "sportradar_id": "fc6c7973-79a9-4974-855e-bc13400fe641"
+  },
+  {
+    "player": "Xavier Worthy",
+    "pos": "WR",
+    "team": "KC",
+    "sportradar_id": "52e049b1-0a7a-4e7f-9866-d2848e9cc478"
+  },
+  {
+    "player": "Jordan Mason",
+    "pos": "RB",
+    "team": "MIN",
+    "sportradar_id": "af9f7390-ca80-11ec-97ae-e1573849d1a6"
+  },
+  {
+    "player": "Oronde Gadsden",
+    "pos": "TE",
+    "team": "LAC",
+    "sportradar_id": "6af50530-145a-4b34-946d-ce1a7f7d3166"
+  },
+  {
+    "player": "Deebo Samuel",
+    "pos": "WR",
+    "team": "SF",
+    "sportradar_id": "628a6a0a-4fde-4024-8d7c-28674953d5af"
+  },
+  {
+    "player": "Juwan Johnson",
+    "pos": "TE",
+    "team": "NO",
+    "sportradar_id": "0226b03b-f91d-4223-9813-9fcd2e9c3acc"
+  },
+  {
+    "player": "Woody Marks",
+    "pos": "RB",
+    "team": "HOU",
+    "sportradar_id": "b900661b-b5df-47c8-819d-bb13b106a60b"
+  },
+  {
+    "player": "Stefon Diggs",
+    "pos": "WR",
+    "team": "WAS",
+    "sportradar_id": "a1c40664-b265-4083-aad2-54b4c734f2c5"
+  },
+  {
+    "player": "Khalil Shakir",
+    "pos": "WR",
+    "team": "BUF",
+    "sportradar_id": "0ce9ddce-bdf6-469c-8a32-9cf0ed3714a4"
+  },
+  {
+    "player": "De'Zhaun Stribling",
+    "pos": "WR",
+    "team": "SF",
+    "sportradar_id": "ca6fa516-adeb-4fd2-9408-17c9c2e38798"
+  },
+  {
+    "player": "Brenton Strange",
+    "pos": "TE",
+    "team": "JAX",
+    "sportradar_id": "94f135f7-9d54-4cbd-b560-fcaf83d414b0"
+  },
+  {
+    "player": "Omar Cooper",
+    "pos": "WR",
+    "team": "NYJ",
+    "sportradar_id": "72594204-b4a9-4f08-907d-029d8a425ddb"
+  },
+  {
+    "player": "Alvin Kamara",
+    "pos": "RB",
+    "team": "NO",
+    "sportradar_id": "d9c857b2-97da-4fb8-a527-afbbb2a67413"
+  },
+  {
+    "player": "Hunter Henry",
+    "pos": "TE",
+    "team": "NE",
+    "sportradar_id": "705899da-3c20-4bc3-b5d0-2e6e40655131"
+  },
+  {
+    "player": "Tyler Shough",
+    "pos": "QB",
+    "team": "NO",
+    "sportradar_id": "94b8f9e1-3109-4429-8f71-4f79d7588237"
+  },
+  {
+    "player": "Jalen McMillan",
+    "pos": "WR",
+    "team": "TB",
+    "sportradar_id": "c2b25795-8c63-425a-8790-f6d626dbf0d3"
+  },
+  {
+    "player": "Matthew Golden",
+    "pos": "WR",
+    "team": "GB",
+    "sportradar_id": "d1963360-c011-4764-9a36-9e627073f68f"
+  },
+  {
+    "player": "Jalen Coker",
+    "pos": "WR",
+    "team": "CAR",
+    "sportradar_id": "67977ab0-070b-11ef-978d-05d80704d329"
+  },
+  {
+    "player": "Zach Charbonnet",
+    "pos": "RB",
+    "team": "SEA",
+    "sportradar_id": "7d7f1628-85a7-4633-9ffe-d82fc2761b00"
+  },
+  {
+    "player": "Rashid Shaheed",
+    "pos": "WR",
+    "team": "SEA",
+    "sportradar_id": "e1ecc660-cc9f-11ec-952e-a10f2c98fc4d"
+  },
+  {
+    "player": "Isiah Pacheco",
+    "pos": "RB",
+    "team": "DET",
+    "sportradar_id": "3a25c037-fa30-4740-b742-ec8e4f1a2a25"
+  },
+  {
+    "player": "Chig Okonkwo",
+    "pos": "TE",
+    "team": "WAS",
+    "sportradar_id": "14e11f9b-58c8-437f-abc0-a4e4df9a7c47"
+  },
+  {
+    "player": "Isaiah Likely",
+    "pos": "TE",
+    "team": "NYG",
+    "sportradar_id": "f9279edb-cfa7-4f7d-91df-b81cbf3e133e"
+  },
+  {
+    "player": "Jayden Higgins",
+    "pos": "WR",
+    "team": "HOU",
+    "sportradar_id": "f55444a9-ccad-4343-bb03-caca6ea3de99"
+  },
+  {
+    "player": "Sam Darnold",
+    "pos": "QB",
+    "team": "SEA",
+    "sportradar_id": "13d826c5-9b22-4e0a-a877-02d8c84c546b"
+  },
+  {
+    "player": "Antonio Williams",
+    "pos": "WR",
+    "team": "WAS",
+    "sportradar_id": "d80b6d95-5b56-4e52-9a19-05957961f506"
+  },
+  {
+    "player": "Jonah Coleman",
+    "pos": "RB",
+    "team": "DEN",
+    "sportradar_id": "0ff54d6c-4d2a-4974-9815-b889e7dc293e"
+  },
+  {
+    "player": "Keaton Mitchell",
+    "pos": "RB",
+    "team": "LAC",
+    "sportradar_id": "16341d80-f01f-11ed-97df-a94b89ac5704"
+  },
+  {
+    "player": "C.J. Stroud",
+    "pos": "QB",
+    "team": "HOU",
+    "sportradar_id": "7e91086f-9ca4-4bd9-a099-b88b2f37e6c6"
+  },
+  {
+    "player": "Denzel Boston",
+    "pos": "WR",
+    "team": "CLE",
+    "sportradar_id": "a17e4b32-20bb-4552-855e-0aa3cf0bafab"
+  },
+  {
+    "player": "Daniel Jones",
+    "pos": "QB",
+    "team": "IND",
+    "sportradar_id": "0042266b-cb28-4012-bfd2-06650badad97"
+  },
+  {
+    "player": "Jauan Jennings",
+    "pos": "WR",
+    "team": "MIN",
+    "sportradar_id": "3ae9f0fa-c711-4663-80cf-4707856c07aa"
+  },
+  {
+    "player": "Tyjae Spears",
+    "pos": "RB",
+    "team": "TEN",
+    "sportradar_id": "af71f149-7758-40b7-973a-9fe6320cf4f5"
+  },
+  {
+    "player": "Travis Hunter",
+    "pos": "WR",
+    "team": "JAX",
+    "sportradar_id": "4a975d4c-d7cd-45ef-b258-db45187140eb"
+  },
+  {
+    "player": "Tyler Allgeier",
+    "pos": "RB",
+    "team": "ARI",
+    "sportradar_id": "f4529909-1a02-4f4b-a1f3-315cad100683"
+  },
+  {
+    "player": "Bryce Young",
+    "pos": "QB",
+    "team": "CAR",
+    "sportradar_id": "38475bfa-9773-4c3b-9157-a0dbd576fa22"
+  },
+  {
+    "player": "Brandon Aiyuk",
+    "pos": "WR",
+    "team": "SF",
+    "sportradar_id": "c90471cc-fa60-4416-9388-5aebb5d877eb"
+  },
+  {
+    "player": "Kenyon Sadiq",
+    "pos": "TE",
+    "team": "NYJ",
+    "sportradar_id": "554e5567-f992-4071-8366-5fa5c316b07c"
+  },
+  {
+    "player": "Fernando Mendoza",
+    "pos": "QB",
+    "team": "LV",
+    "sportradar_id": "b1ded115-092a-4199-9a55-cab9f4b5bb18"
+  },
+  {
+    "player": "Tre Tucker",
+    "pos": "WR",
+    "team": "LV",
+    "sportradar_id": "9beb72c5-5a81-413c-ada3-ff4854c95cf4"
+  },
+  {
+    "player": "Braelon Allen",
+    "pos": "RB",
+    "team": "NYJ",
+    "sportradar_id": "d7f72deb-c1e2-47a2-b651-887f0e33dc44"
+  },
+  {
+    "player": "Jerry Jeudy",
+    "pos": "WR",
+    "team": "CLE",
+    "sportradar_id": "eaaa4a61-c2a7-4926-8e9b-3ec71be2f991"
+  },
+  {
+    "player": "Dalton Schultz",
+    "pos": "TE",
+    "team": "HOU",
+    "sportradar_id": "8caec1b4-e0b6-4a84-b8c8-617d6e91ef6a"
+  },
+  {
+    "player": "Brian Robinson",
+    "pos": "RB",
+    "team": "ATL",
+    "sportradar_id": "795f636e-6f7f-4bc7-a346-2862272abead"
+  },
+  {
+    "player": "Tank Bigsby",
+    "pos": "RB",
+    "team": "PHI",
+    "sportradar_id": "2034916c-8062-46e3-8d0c-d0dec694e2d1"
+  },
+  {
+    "player": "Emmett Johnson",
+    "pos": "RB",
+    "team": "KC",
+    "sportradar_id": "ec3e0874-c2bc-49f6-b4b1-dfc874eecb9b"
+  },
+  {
+    "player": "Kaytron Allen",
+    "pos": "RB",
+    "team": "WAS",
+    "sportradar_id": "7980dd2b-0ce0-4936-aaff-536c09608429"
+  },
+  {
+    "player": "AJ Barner",
+    "pos": "TE",
+    "team": "SEA",
+    "sportradar_id": "e96127b4-d381-43d4-b0ae-8790c706756f"
+  },
+  {
+    "player": "Cam Ward",
+    "pos": "QB",
+    "team": "TEN",
+    "sportradar_id": "3c76cab3-3df2-43dd-acaa-57e055bd32d0"
+  },
+  {
+    "player": "Mike Washington",
+    "pos": "RB",
+    "team": "LV",
+    "sportradar_id": "b783f45a-16ea-4145-9f3a-fafaa1bb0058"
+  },
+  {
+    "player": "Calvin Ridley",
+    "pos": "WR",
+    "team": "TEN",
+    "sportradar_id": "926e2674-52d6-4cec-9991-46ee85cc8cfd"
+  },
+  {
+    "player": "Dylan Sampson",
+    "pos": "RB",
+    "team": "CLE",
+    "sportradar_id": "6ea71d26-623a-4178-a93a-215678244902"
+  },
+  {
+    "player": "Jalen Nailor",
+    "pos": "WR",
+    "team": "LV",
+    "sportradar_id": "3f9e3634-54d7-46a4-bf26-67274500c907"
+  },
+  {
+    "player": "Adonai Mitchell",
+    "pos": "WR",
+    "team": "NYJ",
+    "sportradar_id": "190dbc97-2b7c-4023-b6b0-5729b854b60b"
+  },
+  {
+    "player": "Jacoby Brissett",
+    "pos": "QB",
+    "team": "ARI",
+    "sportradar_id": "ad2258ab-67f0-41c2-bcf3-f3ba145187dc"
+  },
+  {
+    "player": "Dontayvion Wicks",
+    "pos": "WR",
+    "team": "PHI",
+    "sportradar_id": "ea3d1393-8c3b-4e81-a519-f636d28d692e"
+  },
+  {
+    "player": "Emanuel Wilson",
+    "pos": "RB",
+    "team": "SEA",
+    "sportradar_id": "05266280-f323-11ed-bd27-0bcbcaae8d67"
+  },
+  {
+    "player": "T.J. Hockenson",
+    "pos": "TE",
+    "team": "MIN",
+    "sportradar_id": "bd1120b6-38b3-4225-a4b0-20660a149d0d"
+  },
+  {
+    "player": "Sean Tucker",
+    "pos": "RB",
+    "team": "TB",
+    "sportradar_id": "6d616c10-f35e-11ed-b721-9b68b08a2e09"
+  },
+  {
+    "player": "Kaelon Black",
+    "pos": "RB",
+    "team": "SF",
+    "sportradar_id": "4dea3ae1-8c53-4ef1-bd72-e2d2dfb3fa97"
+  },
+  {
+    "player": "Tre' Harris",
+    "pos": "WR",
+    "team": "LAC",
+    "sportradar_id": "a45328a1-7d0e-451a-8176-ea30f0e1c86f"
+  },
+  {
+    "player": "Ryan Flournoy",
+    "pos": "WR",
+    "team": "DAL",
+    "sportradar_id": "ebf6bc25-5e74-4588-86d6-5dadba3f9bcd"
+  },
+  {
+    "player": "Kayshon Boutte",
+    "pos": "WR",
+    "team": "NE",
+    "sportradar_id": "9c054866-5e6c-460b-9af3-ebf91e7d0a3e"
+  },
+  {
+    "player": "Geno Smith",
+    "pos": "QB",
+    "team": "NYJ",
+    "sportradar_id": "cfc93f5e-105e-4a5e-88d3-f4279893cfa8"
+  },
+  {
+    "player": "Chris Bell",
+    "pos": "WR",
+    "team": "MIA",
+    "sportradar_id": "e1d2a5a1-71a9-4053-b475-8e5075cb1860"
+  },
+  {
+    "player": "Cade Otton",
+    "pos": "TE",
+    "team": "TB",
+    "sportradar_id": "f23517bd-ae85-484a-8ecb-1f7a2d851e48"
+  },
+  {
+    "player": "Isaac TeSlaa",
+    "pos": "WR",
+    "team": "DET",
+    "sportradar_id": "41e5e4a9-f04c-462e-a1d1-e35a8115b974"
+  },
+  {
+    "player": "Eli Stowers",
+    "pos": "TE",
+    "team": "PHI",
+    "sportradar_id": "287b7f15-ebe2-433f-af00-b1755576f8f8"
+  },
+  {
+    "player": "Gunnar Helm",
+    "pos": "TE",
+    "team": "TEN",
+    "sportradar_id": "beb69cba-f240-43ed-88d3-50d066cf55d4"
+  },
+  {
+    "player": "Aaron Rodgers",
+    "pos": "QB",
+    "team": "PIT",
+    "sportradar_id": "0ce48193-e2fa-466e-a986-33f751add206"
+  },
+  {
+    "player": "Justice Hill",
+    "pos": "RB",
+    "team": "BAL",
+    "sportradar_id": "528e71ec-8fb3-4928-ace5-fc5ffbf26eb3"
+  },
+  {
+    "player": "Terrance Ferguson",
+    "pos": "TE",
+    "team": "LAR",
+    "sportradar_id": "fdfc7b8e-a202-4459-91f8-be6e053e5d29"
+  },
+  {
+    "player": "Cooper Kupp",
+    "pos": "WR",
+    "team": "SEA",
+    "sportradar_id": "2806e915-c46f-492f-8a29-71d3a85e5620"
+  },
+  {
+    "player": "David Njoku",
+    "pos": "TE",
+    "team": "LAC",
+    "sportradar_id": "8f86fcea-90e8-49ea-bc78-5c7659313e57"
+  },
+  {
+    "player": "Chris Brazzell",
+    "pos": "WR",
+    "team": "CAR",
+    "sportradar_id": "0dcab415-e4a8-4f37-8164-45b9f23c668a"
+  },
+  {
+    "player": "Jack Bech",
+    "pos": "WR",
+    "team": "LV",
+    "sportradar_id": "01079767-a3a3-437d-b935-ea0ecb1fe68b"
+  },
+  {
+    "player": "Chris Brooks",
+    "pos": "RB",
+    "team": "GB",
+    "sportradar_id": "35a0d440-f017-11ed-bedb-53f19b227cc3"
+  }
+]
