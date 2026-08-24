@@ -9,6 +9,7 @@
   const SKEY = "clay-board-settings";
   const HKEY = "clay-board-hidden-positions";
   const RKEY = "clay-board-room-compact";
+  const SIMKEY = "clay-board-simulation-checkpoint";
   const byId = new Map(B.map((player) => [player.id, player]));
 
   function migrateId(value) {
@@ -29,6 +30,15 @@
     const raw = saved ?? JSON.parse(localStorage.getItem(OLD_WKEY) || "[]");
     return raw.map(migrateId).filter((id, index, rows) => id && rows.indexOf(id) === index);
   }
+  function loadSimulationCheckpoint() {
+    const saved = JSON.parse(localStorage.getItem(SIMKEY) || "null");
+    if (!saved || typeof saved.state !== "object" || !Array.isArray(saved.pickOrder)) return null;
+    const state = Object.fromEntries(Object.entries(saved.state).map(([key, value]) => [migrateId(key), value]).filter(([key]) => key));
+    const order = saved.pickOrder.map(migrateId).filter((id, index, rows) => id && rows.indexOf(id) === index);
+    const savedQueue = Array.isArray(saved.queue) ? saved.queue : [];
+    const restoredQueue = savedQueue.map(migrateId).filter((id, index, rows) => id && rows.indexOf(id) === index);
+    return { state, pickOrder: order, queue: restoredQueue };
+  }
   function mergeSettings(saved) {
     const base = structuredClone(D.DEFAULTS);
     if (!saved) return base;
@@ -41,6 +51,7 @@
   let settings = mergeSettings(JSON.parse(localStorage.getItem(SKEY) || "null"));
   let hiddenPositions = new Set(JSON.parse(localStorage.getItem(HKEY) || "[]").filter((pos) => ["QB", "RB", "WR", "TE", "K", "DEF"].includes(pos)));
   let roomCompact = JSON.parse(localStorage.getItem(RKEY) || "true");
+  let simulationCheckpoint = loadSimulationCheckpoint();
   let f = { pos: "All", cls: "All", draft: "Available", q: "", sort: "r", hideFades: false };
   let open = new Set();
   const TAGCOLOR = { Injured: "amber", "Injury risk": "amber", "Crowded role": "amber", Rookie: "gray", "New team": "gray", "High value": "matcha", "Fade risk": "brick", Sleeper: "blue" };
@@ -56,6 +67,8 @@
     localStorage.setItem(SKEY, JSON.stringify(settings));
     localStorage.setItem(HKEY, JSON.stringify([...hiddenPositions]));
     localStorage.setItem(RKEY, JSON.stringify(roomCompact));
+    if (simulationCheckpoint) localStorage.setItem(SIMKEY, JSON.stringify(simulationCheckpoint));
+    else localStorage.removeItem(SIMKEY);
   }
   save();
 
@@ -101,6 +114,10 @@
     const round = result.decisionPick ? Math.ceil(result.decisionPick / settings.teams) : null;
     const room = document.getElementById("draftRoom");
     room.classList.toggle("compact", roomCompact);
+    room.classList.toggle("simulating", Boolean(simulationCheckpoint));
+    document.getElementById("simulationBadge").hidden = !simulationCheckpoint;
+    document.getElementById("exitSimBtn").hidden = !simulationCheckpoint;
+    document.getElementById("keepSimBtn").hidden = !simulationCheckpoint;
     document.getElementById("roomToggleBtn").textContent = roomCompact ? "Expand strategy" : "Collapse strategy";
     document.getElementById("clockTitle").textContent = result.decisionPick
       ? `${result.onClock ? "You’re on the clock" : "Planning ahead"} · Pick ${result.decisionPick} (Round ${round})`
@@ -200,8 +217,25 @@
   function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
   function simulate() {
     const result = D.simulateToMyPick(B, st, settings);
+    if (!result.picks.length) return;
+    if (!simulationCheckpoint) {
+      simulationCheckpoint = { state: structuredClone(st), pickOrder: [...pickOrder], queue: [...queue] };
+    }
     st = result.state;
     result.picks.forEach((pick) => pickOrder.push(pick.player.id));
+    save(); render();
+  }
+  function exitSimulation() {
+    if (!simulationCheckpoint) return;
+    st = structuredClone(simulationCheckpoint.state);
+    pickOrder = [...simulationCheckpoint.pickOrder];
+    queue = [...simulationCheckpoint.queue];
+    simulationCheckpoint = null;
+    save(); render();
+  }
+  function keepSimulation() {
+    if (!simulationCheckpoint) return;
+    simulationCheckpoint = null;
     save(); render();
   }
   function openSettings() {
@@ -244,11 +278,13 @@
   document.getElementById("saveSettings").onclick = saveSettings;
   document.getElementById("defaultSettings").onclick = () => { settings = structuredClone(D.DEFAULTS); save(); openSettings(); render(); };
   document.getElementById("simBtn").onclick = simulate;
+  document.getElementById("exitSimBtn").onclick = exitSimulation;
+  document.getElementById("keepSimBtn").onclick = keepSimulation;
   document.getElementById("roomToggleBtn").onclick = () => { roomCompact = !roomCompact; save(); renderDraftRoom(); };
   document.getElementById("aboutBtn").onclick = () => document.getElementById("modal").classList.add("on");
   document.getElementById("closeModal").onclick = () => document.getElementById("modal").classList.remove("on");
   document.querySelectorAll(".modal").forEach((modal) => modal.addEventListener("click", (event) => { if (event.target === modal) modal.classList.remove("on"); }));
-  document.getElementById("resetBtn").onclick = () => { if (confirm("Clear all draft picks? (Your queue and league settings are kept.)")) { st = {}; pickOrder = []; save(); render(); } };
+  document.getElementById("resetBtn").onclick = () => { if (confirm("Clear all draft picks? (Your queue and league settings are kept.)")) { st = {}; pickOrder = []; simulationCheckpoint = null; save(); render(); } };
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") { document.querySelectorAll(".modal.on,.panel.on").forEach((element) => element.classList.remove("on")); return; }
     const row = document.activeElement?.closest?.("tr.pr"); if (!row) return; const id = row.dataset.id;

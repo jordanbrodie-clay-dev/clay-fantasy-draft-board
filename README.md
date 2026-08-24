@@ -9,6 +9,8 @@ The source-controlled scoring and refresh pipeline lives in `model/`.
 **Draft live from the board.** Configure league size, snake slot, starters, flex,
 bench, K, and D/ST; simulate opponents to your next pick; and use the ordered
 draft queue. State persists in localStorage, so a mid-draft refresh loses nothing.
+Simulations are reversible previews: exit to restore the exact pre-simulation draft
+and queue, or keep the generated scenario and continue from it.
 The strategy room defaults to a compact summary bar and expands on demand. Position
 visibility is multi-select and persistent, so QB/TE or any other positions can be
 hidden from both the table and live recommendations. Desktop table headers remain
