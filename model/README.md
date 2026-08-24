@@ -21,7 +21,7 @@ This makes player quality comparable across positions. It is deliberately **not*
 3. The standardized position-value drop caused by waiting.
 4. Whether the current roster still needs a starter, flex option, or only bench depth.
 
-Position-drop urgency is the main decision signal; raw player quality is only a tiebreaker. K and D/ST use Sleeper ADP and are strongly deferred until the final three rounds unless roster settings require otherwise.
+Smart Rank/BPA is the decision foundation. Position-drop urgency can override it only within three rank spots and only when the scarcity and total-score advantages are both material. RB/WR depth keeps a strong early-round asset value, allowing three-RB or other BPA-heavy starts; backup QB/TE and specialists remain more heavily discounted. K and D/ST use Sleeper ADP and are strongly deferred until the final three rounds unless roster settings require otherwise.
 
 ## Historical calibration
 

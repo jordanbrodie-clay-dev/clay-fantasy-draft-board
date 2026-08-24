@@ -113,23 +113,28 @@
     sim.textContent = `Simulate ${Math.max(0, result.decisionPick - result.currentPick)} picks to my turn`;
     if (!result.recommendations.length) { document.getElementById("compactRec").textContent = "No eligible positions are visible."; body.innerHTML = "<div class=recmain>No eligible recommendations remain. Reveal a position to add it back to the decision engine.</div>"; return; }
     const top = result.recommendations[0];
+    const bpa = result.bestAvailable;
     const alternative = top.laterAlternative;
     const drop = Math.max(0, top.value - top.futureValue);
     const decisionPrefix = result.onClock ? "" : `${pct(top.reachesDecision)} chance he reaches your pick ${result.decisionPick}. `;
+    const strategyAlternative = result.strategyPick?.id !== top.player.id ? result.strategyPick : null;
+    const bpaRead = bpa?.id === top.player.id
+      ? ` He is the highest-ranked available player (Smart #${top.player.r}).${strategyAlternative ? ` The fit model liked ${strategyAlternative.n}, but the scarcity edge was not strong enough to pass BPA.` : ""}`
+      : ` Pure BPA is ${bpa?.n} (Smart #${bpa?.r}); this is a ${top.rankGap}-spot strategy override.`;
     const marketRead = top.player.wk
       ? ` Winks ranks him #${top.player.wk}; the model's buy window is picks ${Math.round(top.player.be)}–${Math.round(top.player.bl)}.`
       : "";
-    document.getElementById("compactRec").innerHTML = `<b>${esc(top.player.n)}</b> · ${top.player.p}${top.player.pr} · ${pct(top.survival)} there next pick · ${drop.toFixed(2)}σ drop if you wait`;
+    document.getElementById("compactRec").innerHTML = `<b>${esc(top.player.n)}</b> · Smart #${top.player.r} · ${bpa?.id === top.player.id ? "BPA" : `${top.rankGap}-spot override`} · ${drop.toFixed(2)}σ drop if you wait`;
     const explanation = alternative
-      ? `${decisionPrefix}${pct(top.survival)} chance he then reaches pick ${top.nextPick}. If you wait at ${top.player.p === "DEF" ? "D/ST" : top.player.p}, the best likely option is ${alternative.n}; the modeled position drop is ${drop.toFixed(2)}σ.${marketRead}`
-      : `${decisionPrefix}The model sees no dependable ${top.player.p} alternative at pick ${top.nextPick}; this is a positional-cliff selection.${marketRead}`;
+      ? `${decisionPrefix}${pct(top.survival)} chance he then reaches pick ${top.nextPick}. If you wait at ${top.player.p === "DEF" ? "D/ST" : top.player.p}, the best likely option is ${alternative.n}; the modeled position drop is ${drop.toFixed(2)}σ.${bpaRead}${marketRead}`
+      : `${decisionPrefix}The model sees no dependable ${top.player.p} alternative at pick ${top.nextPick}; this is a positional-cliff selection.${bpaRead}${marketRead}`;
     body.innerHTML = `<div class="recmain">
-      <div class="eyebrow">Best roster decision now</div>
+      <div class="eyebrow">Best pick now · BPA guarded</div>
       <div class="recname">${esc(top.player.n)} <span class="pmeta">${top.player.p === "DEF" ? "D/ST" : top.player.p}${top.player.pr} · ${esc(top.player.t)}</span></div>
       <p class="recwhy">${esc(explanation)}</p>
-      <div class="recmetrics"><div class="recmetric"><b>${top.value.toFixed(2)}σ</b><span>above replacement</span></div><div class="recmetric"><b>${pct(top.survival)}</b><span>there next pick</span></div><div class="recmetric"><b>${drop.toFixed(2)}σ</b><span>position drop if waiting</span></div><div class="recmetric"><b>${n1(top.player.adp)}</b><span>Sleeper ADP</span></div><div class="recmetric"><b>${top.player.wk ?? "—"}</b><span>Winks rank</span></div><div class="recmetric"><b>${top.player.hhr == null ? "—" : pct(top.player.hhr)}</b><span>historical starter hit</span></div></div>
+      <div class="recmetrics"><div class="recmetric"><b>#${top.player.r}</b><span>Smart rank / BPA</span></div><div class="recmetric"><b>${top.value.toFixed(2)}σ</b><span>above replacement</span></div><div class="recmetric"><b>${pct(top.survival)}</b><span>there next pick</span></div><div class="recmetric"><b>${drop.toFixed(2)}σ</b><span>position drop if waiting</span></div><div class="recmetric"><b>${n1(top.player.adp)}</b><span>Sleeper ADP</span></div><div class="recmetric"><b>${top.player.wk ?? "—"}</b><span>Winks rank</span></div><div class="recmetric"><b>${top.player.hhr == null ? "—" : pct(top.player.hhr)}</b><span>historical starter hit</span></div></div>
       <div class="hactions" style="margin-top:14px"><button class="btn-primary" data-draft="${top.player.id}">Draft to my team</button><button class="btn" data-queue="${top.player.id}">${queue.includes(top.player.id) ? "Remove from queue" : "Add to queue"}</button></div>
-    </div><div class="reclist"><div class="eyebrow">Decision board</div>${result.recommendations.slice(0, 6).map((item, index) => `<div class="recline"><span class="rank">${index + 1}</span><span><b>${esc(item.player.n)}</b><span class="pmeta"> ${item.player.p === "DEF" ? "D/ST" : item.player.p} · ${n1(item.player.adp)} ADP · Winks ${item.player.wk ?? "—"}</span><br><span class="pmeta">${pct(item.survival)} to pick ${item.nextPick} · ${item.urgency.toFixed(2)}σ urgency</span></span><button class="btn mini" data-queue="${item.player.id}">${queue.includes(item.player.id) ? "Queued" : "+ Queue"}</button></div>`).join("")}</div>
+    </div><div class="reclist"><div class="eyebrow">Decision board · BPA first</div>${result.recommendations.slice(0, 6).map((item, index) => `<div class="recline"><span class="rank">${index + 1}</span><span><b>${esc(item.player.n)}</b><span class="pmeta"> ${item.player.p === "DEF" ? "D/ST" : item.player.p} · Smart #${item.player.r} · Winks ${item.player.wk ?? "—"}</span><br><span class="pmeta">${pct(item.survival)} to pick ${item.nextPick} · ${item.urgency.toFixed(2)}σ urgency${item.rankGap ? ` · ${item.rankGap} spots behind BPA` : " · BPA"}</span></span><button class="btn mini" data-queue="${item.player.id}">${queue.includes(item.player.id) ? "Queued" : "+ Queue"}</button></div>`).join("")}</div>
     <div class="positionplans"><div class="eyebrow">Position timing · quality rank is not draft rank</div><div class="positiongrid">${result.positionPlans.map((item) => { const waitDrop = Math.max(0, item.value - item.futureValue); const later = item.laterAlternative; return `<div class="positioncard"><div><span class="draftbadge">${item.position}</span><b>${esc(item.player.n)}</b></div><p><b>${item.player.p}${item.player.pr}</b> quality · Winks ${item.player.wk ?? "—"} · buy ${Math.round(item.player.be)}–${Math.round(item.player.bl)}</p><p>${pct(item.survival)} to pick ${item.nextPick}${later ? ` · likely ${esc(later.n)}` : " · no dependable fallback"} · <b>${waitDrop.toFixed(2)}σ</b> drop</p></div>`; }).join("")}</div></div>`;
   }
 

@@ -54,19 +54,24 @@
       return counts;
     }, {});
   }
-  function needFactor(position, roster, settings) {
+  function needFactor(position, roster, settings, decisionPick = 1) {
     const counts = rosterCounts(roster);
     const required = Number(settings.slots[position]) || 0;
-    if (counts[position] < required) return 1;
+    const count = counts[position] || 0;
+    if (count < required) return 1;
     if (FLEX_POSITIONS.has(position)) {
       const flexUsed = [...FLEX_POSITIONS].reduce((sum, pos) => {
         const base = Number(settings.slots[pos]) || 0;
         return sum + Math.max(0, (counts[pos] || 0) - base);
       }, 0);
-      if (flexUsed < (Number(settings.slots.FLEX) || 0)) return 0.88;
-      return position === "RB" || position === "WR" ? 0.55 : 0.30;
+      if (flexUsed < (Number(settings.slots.FLEX) || 0)) return position === "RB" || position === "WR" ? 0.94 : 0.68;
+      // Early RB/WR depth is an asset, not dead roster weight. This intentionally
+      // permits three-RB starts (and similar BPA builds) while still discounting
+      // backups relative to unfilled starters.
+      const round = Math.ceil(decisionPick / settings.teams);
+      return position === "RB" || position === "WR" ? (round <= 6 ? 0.82 : 0.68) : 0.32;
     }
-    if (position === "QB" || position === "TE") return 0.28;
+    if (position === "QB" || position === "TE") return 0.30;
     return 0.05;
   }
   function expectedFutureAtPosition(available, position, fromPick, toPick) {
@@ -106,9 +111,11 @@
     const nextPick = decisionPicks[1] ?? decisionPick + settings.teams;
     const onClock = decisionPick === currentPick;
     const queue = new Set(queueIds);
+    const bestAvailable = [...available].sort((a, b) => a.r - b.r)[0] ?? null;
+    const bestAvailableRank = Number(bestAvailable?.r) || 999;
     const scored = available.map((player) => {
       const value = Math.max(0, playerValue(player));
-      const need = needFactor(player.p, roster, settings);
+      const need = needFactor(player.p, roster, settings, decisionPick);
       const future = expectedFutureAtPosition(available, player.p, decisionPick, nextPick);
       const urgency = Math.max(0, value - future.expected) * need;
       const survival = conditionalAvailability(player, decisionPick, nextPick);
@@ -122,11 +129,12 @@
       const reachPenalty = Math.min(3, reachPicks / settings.teams) * 0.55;
       const historicalHit = Number.isFinite(Number(player.hhr)) ? Number(player.hhr) : 0.5;
       const evidenceFactor = 0.94 + 0.12 * historicalHit;
-      // Urgency (the loss if this position is deferred) drives the decision. Raw
-      // player quality is deliberately a small tiebreaker so a late-ADP QB/TE does
-      // not jump several rounds simply because its standardized position value is high.
-      const decisionScore = (2.4 * urgency + 0.08 * value * need + 0.25 * pressure) * evidenceFactor
-        + (queue.has(player.id) ? 0.08 : 0) - penalty - reachPenalty;
+      const rankGap = Math.max(0, (Number(player.r) || 999) - bestAvailableRank);
+      const bpaPenalty = Math.min(2.4, rankGap * 0.08);
+      // BPA is the foundation. Scarcity can break a close call, but it must earn
+      // any departure from the highest Smart Rank rather than winning on fit alone.
+      const decisionScore = (1.8 * urgency + 0.22 * value * need + 0.25 * pressure) * evidenceFactor
+        + (queue.has(player.id) ? 0.08 : 0) - penalty - reachPenalty - bpaPenalty;
       const score = decisionScore * (decisionPick === currentPick ? 1 : reachesDecision);
       return {
         player,
@@ -141,13 +149,33 @@
         futureValue: future.expected,
         reachPenalty,
         historicalHit,
+        rankGap,
+        bpaPenalty,
       };
     }).sort((a, b) => b.score - a.score || a.player.r - b.player.r);
+    const strategyLeader = scored[0] ?? null;
+    const bpaCandidate = scored.find((candidate) => candidate.player.id === bestAvailable?.id) ?? null;
+    const urgencyAdvantage = strategyLeader && bpaCandidate ? strategyLeader.urgency - bpaCandidate.urgency : 0;
+    const scoreAdvantage = strategyLeader && bpaCandidate ? strategyLeader.score - bpaCandidate.score : 0;
+    // A strategy pick may pass BPA only on strong evidence and only within a tight
+    // rank neighborhood. This preserves the future-availability edge without
+    // allowing "best fit" to create a full-tier reach.
+    const overrideApplied = Boolean(
+      strategyLeader && bpaCandidate && strategyLeader.player.id !== bpaCandidate.player.id
+      && strategyLeader.rankGap <= 3 && urgencyAdvantage >= 0.75 && scoreAdvantage >= 0.35
+    );
+    const ordered = overrideApplied || !bpaCandidate
+      ? scored
+      : [bpaCandidate, ...scored.filter((candidate) => candidate !== bpaCandidate)];
     const positionPlans = ["QB", "RB", "WR", "TE"].map((position) => {
       const item = scored.find((candidate) => candidate.player.p === position);
       return item ? { position, ...item } : null;
     }).filter(Boolean);
-    return { currentPick, decisionPick, nextPick, onClock, recommendations: scored.slice(0, 8), positionPlans };
+    return {
+      currentPick, decisionPick, nextPick, onClock, bestAvailable,
+      strategyPick: strategyLeader?.player ?? null, overrideApplied,
+      recommendations: ordered.slice(0, 8), positionPlans,
+    };
   }
   function hashNoise(text) {
     let hash = 2166136261;

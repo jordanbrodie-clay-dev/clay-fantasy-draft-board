@@ -28,6 +28,9 @@ const settings = structuredClone(draft.DEFAULTS);
 assert.deepEqual(Array.from(draft.myPicksFrom(1, settings, 4)), [1, 24, 25, 48]);
 settings.slot = 12;
 assert.deepEqual(Array.from(draft.myPicksFrom(1, settings, 4)), [12, 13, 36, 37]);
+assert.equal(draft.needFactor("QB", [], settings, 1), 1);
+assert.equal(draft.needFactor("RB", [{ p: "RB" }, { p: "RB" }], settings, 25), 0.94);
+assert.equal(draft.needFactor("RB", [{ p: "RB" }, { p: "RB" }, { p: "RB" }], settings, 37), 0.82);
 
 settings.slot = 1;
 const opening = draft.recommendations(board, {}, settings);
@@ -37,6 +40,31 @@ assert.equal(opening.recommendations.slice(0, 8).some((item) => item.player.spec
 const noQuarterbacksOrTightEnds = draft.recommendations(board, {}, settings, [], ["QB", "TE"]);
 assert.equal(noQuarterbacksOrTightEnds.recommendations.some((item) => ["QB", "TE"].includes(item.player.p)), false);
 assert.equal(noQuarterbacksOrTightEnds.positionPlans.some((item) => ["QB", "TE"].includes(item.position)), false);
+
+// Regression: at the 12/13 turn, positional fit previously elevated Trey
+// McBride over materially higher Smart Rank players. BPA must now lead unless a
+// nearby strategy alternative clears the explicit scarcity override threshold.
+const turnSettings = structuredClone(draft.DEFAULTS);
+turnSettings.slot = 12;
+let turnState = draft.simulateToMyPick(board, {}, turnSettings).state;
+const firstTurnPick = draft.recommendations(board, turnState, turnSettings).recommendations[0].player;
+turnState[firstTurnPick.id] = "mine";
+const secondTurn = draft.recommendations(board, turnState, turnSettings);
+assert.equal(secondTurn.recommendations[0].player.id, secondTurn.bestAvailable.id);
+assert.notEqual(secondTurn.recommendations[0].player.n, "Trey McBride");
+
+// BPA roster construction: two early RBs must not block a third RB when that
+// player is the top remaining asset and the FLEX/depth value is still high.
+const depthSettings = structuredClone(draft.DEFAULTS);
+depthSettings.slot = 3;
+const depthState = {};
+board.slice(0, 26).forEach((player) => { depthState[player.id] = "taken"; });
+board.slice(0, 26).filter((player) => player.p === "RB").slice(0, 2)
+  .forEach((player) => { depthState[player.id] = "mine"; });
+const depthDecision = draft.recommendations(board, depthState, depthSettings);
+assert.equal(depthDecision.currentPick, 27);
+assert.equal(depthDecision.recommendations[0].player.n, "Breece Hall");
+assert.equal(depthDecision.recommendations[0].need, 0.94);
 
 const round11 = {};
 board.filter((player) => !player.spec).slice(0, 120).forEach((player) => { round11[player.id] = "taken"; });

@@ -22,7 +22,7 @@ Three Clay workflows, authored from the command line with the Clay CLI:
 2. **Team environment** — all 32 teams: Vegas win totals, O-line ranks, coaching changes, vacated carries and targets.
 3. **Coach sentiment** — player news, beat reporting and direct coach quotes, graded for role language. Concrete role statements ("first-team reps") are separated from generic August coachspeak ("he's looked great"); only the specific kind moves a score.
 
-Scoring: six weighted buckets (opportunity, production, situation, efficiency, market, regression) × a risk multiplier determine player quality within position. Standardized value above replacement is one input. The published Smart Rank is anchored to Sleeper ADP, while the live recommendation engine optimizes expected completed-roster value using current roster need, positional cliffs, and the probability each player survives to the user's next pick.
+Scoring: six weighted buckets (opportunity, production, situation, efficiency, market, regression) × a risk multiplier determine player quality within position. Standardized value above replacement is one input. The published Smart Rank is anchored to Sleeper ADP. Live recommendations start with the best available Smart Rank; future availability may override BPA only within three rank spots and only when both the modeled scarcity and decision-score advantages clear explicit thresholds. Early RB/WR depth retains meaningful value, so BPA builds such as three early running backs are supported rather than treated as roster mistakes.
 
 Calibrated against five completed seasons of real preseason ADP and outcomes (2020–2024; 851 matched player-seasons).
 
