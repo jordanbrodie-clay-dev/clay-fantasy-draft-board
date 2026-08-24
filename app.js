@@ -83,6 +83,15 @@
     document.getElementById("hidePosF").innerHTML = `<span class="chiplabel">Hide</span>${["QB", "RB", "WR", "TE", "K", "DEF"].map((pos) => `<button class="chip" data-hide-pos="${pos}" aria-pressed="${hiddenPositions.has(pos)}">${pos === "DEF" ? "D/ST" : pos}</button>`).join("")}`;
   }
   function currentDecision() { return D.recommendations(B, st, settings, queue, [...hiddenPositions]); }
+  function simulationDelta() {
+    if (!simulationCheckpoint) return { opponentPicks: 0, myPicks: 0 };
+    return Object.entries(st).reduce((delta, [id, status]) => {
+      if (simulationCheckpoint.state[id] === status) return delta;
+      if (status === "mine") delta.myPicks += 1;
+      else if (status === "taken") delta.opponentPicks += 1;
+      return delta;
+    }, { opponentPicks: 0, myPicks: 0 });
+  }
   function view() {
     let players = B.filter((player) => {
       if (f.pos !== "All" && player.p !== f.pos) return false;
@@ -113,23 +122,42 @@
     const body = document.getElementById("recommendationBody");
     const round = result.decisionPick ? Math.ceil(result.decisionPick / settings.teams) : null;
     const room = document.getElementById("draftRoom");
+    const delta = simulationDelta();
     room.classList.toggle("compact", roomCompact);
     room.classList.toggle("simulating", Boolean(simulationCheckpoint));
-    document.getElementById("simulationBadge").hidden = !simulationCheckpoint;
+    const simulationBadge = document.getElementById("simulationBadge");
+    simulationBadge.hidden = !simulationCheckpoint;
+    simulationBadge.textContent = `Preview · ${delta.opponentPicks} opponent · ${delta.myPicks} mine`;
     document.getElementById("exitSimBtn").hidden = !simulationCheckpoint;
-    document.getElementById("keepSimBtn").hidden = !simulationCheckpoint;
+    const keep = document.getElementById("keepSimBtn");
+    keep.hidden = !simulationCheckpoint;
+    keep.textContent = delta.myPicks
+      ? `Keep scenario (${delta.myPicks} mine)`
+      : `Keep ${delta.opponentPicks} opponent picks only`;
+    keep.title = delta.myPicks
+      ? "Commit the simulated opponent picks and your drafted players."
+      : "No player has been drafted to your team in this preview yet.";
     document.getElementById("roomToggleBtn").textContent = roomCompact ? "Expand strategy" : "Collapse strategy";
     document.getElementById("clockTitle").textContent = result.decisionPick
       ? `${result.onClock ? "You’re on the clock" : "Planning ahead"} · Pick ${result.decisionPick} (Round ${round})`
       : "Draft complete";
-    document.getElementById("clockSub").textContent = result.nextPick
-      ? `Your following pick is ${result.nextPick}. Recommendations compare today’s option with the expected player pool then.`
-      : "No future selection remains under the current roster settings.";
+    document.getElementById("clockSub").textContent = simulationCheckpoint && result.onClock
+      ? "This is your simulated turn. Draft a player to add him to My team, then simulate forward—or keep or exit the scenario."
+      : result.nextPick
+        ? `Your following pick is ${result.nextPick}. Recommendations compare today’s option with the expected player pool then.`
+        : "No future selection remains under the current roster settings.";
     const sim = document.getElementById("simBtn");
+    const quickDraft = document.getElementById("quickDraftBtn");
     sim.hidden = result.onClock || !result.decisionPick;
     sim.textContent = `Simulate ${Math.max(0, result.decisionPick - result.currentPick)} picks to my turn`;
+    quickDraft.hidden = true;
+    quickDraft.removeAttribute("data-draft");
     if (!result.recommendations.length) { document.getElementById("compactRec").textContent = "No eligible positions are visible."; body.innerHTML = "<div class=recmain>No eligible recommendations remain. Reveal a position to add it back to the decision engine.</div>"; return; }
     const top = result.recommendations[0];
+    quickDraft.hidden = !result.onClock;
+    quickDraft.dataset.draft = top.player.id;
+    quickDraft.textContent = `Draft ${top.player.n}`;
+    quickDraft.title = `Add ${top.player.n} to My team at pick ${result.decisionPick}.`;
     const bpa = result.bestAvailable;
     const alternative = top.laterAlternative;
     const drop = Math.max(0, top.value - top.futureValue);

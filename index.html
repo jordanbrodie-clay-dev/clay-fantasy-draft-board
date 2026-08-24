@@ -32,6 +32,7 @@
   --font:Roobert,Inter,-apple-system,BlinkMacSystemFont,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
 body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
 .num{font-variant-numeric:tabular-nums}
 .wrap{max-width:1360px;margin:0 auto;padding:0 20px}
@@ -255,7 +256,7 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
   <section class="draftroom compact" id="draftRoom" aria-live="polite">
     <div class="drafttop">
       <div><div class="eyebrow">Smart draft room <span class="draftbadge simulation-badge" id="simulationBadge" hidden>Simulation preview</span></div><h2 id="clockTitle">Loading draft state…</h2><p id="clockSub"></p><p class="compactrec" id="compactRec"></p></div>
-      <div class="hactions"><button class="btn" id="simBtn">Simulate to my pick</button><button class="btn btn-exit-sim" id="exitSimBtn" hidden>Exit simulation</button><button class="btn" id="keepSimBtn" hidden>Keep scenario</button><button class="btn" id="roomToggleBtn">Expand strategy</button><button class="btn" id="roomSettingsBtn">Edit league</button></div>
+      <div class="hactions"><button class="btn btn-primary quick-draft" id="quickDraftBtn" hidden>Draft recommendation</button><button class="btn" id="simBtn">Simulate to my pick</button><button class="btn btn-exit-sim" id="exitSimBtn" hidden>Exit simulation</button><button class="btn" id="keepSimBtn" hidden>Keep scenario</button><button class="btn" id="roomToggleBtn">Expand strategy</button><button class="btn" id="roomSettingsBtn">Edit league</button></div>
     </div>
     <div class="recgrid" id="recommendationBody"></div>
   </section>

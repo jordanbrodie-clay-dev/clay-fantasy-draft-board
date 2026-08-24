@@ -10,7 +10,9 @@ The source-controlled scoring and refresh pipeline lives in `model/`.
 bench, K, and D/ST; simulate opponents to your next pick; and use the ordered
 draft queue. State persists in localStorage, so a mid-draft refresh loses nothing.
 Simulations are reversible previews: exit to restore the exact pre-simulation draft
-and queue, or keep the generated scenario and continue from it.
+and queue, or draft players at each simulated turn and keep the generated scenario.
+The compact strategy bar includes the current recommendation as a one-click draft
+action and shows exactly how many opponent picks and user picks the preview contains.
 The strategy room defaults to a compact summary bar and expands on demand. Position
 visibility is multi-select and persistent, so QB/TE or any other positions can be
 hidden from both the table and live recommendations. Desktop table headers remain
