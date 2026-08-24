@@ -56,7 +56,8 @@ h1{font-size:30px;font-weight:600;letter-spacing:-.01em;line-height:1.15}
 .crow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 input[type=search]{background:var(--surface);border:1px solid var(--line2);border-radius:8px;padding:9px 12px;color:var(--text);font:inherit;min-width:210px}
 input[type=search]::placeholder{color:var(--faint)}
-.chips{display:flex;gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:3px}
+.chips{display:flex;gap:4px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:3px}
+.chiplabel{color:var(--faint);font-size:11px;padding:0 4px 0 7px;text-transform:uppercase;letter-spacing:.06em}
 .chip{background:transparent;border:0;border-radius:7px;padding:6px 11px;color:var(--muted);font:inherit;font-size:13px;cursor:pointer}
 .chip:hover{color:var(--text)}
 .chip[aria-pressed=true]{background:var(--matcha);color:var(--matcha-ink);font-weight:600}
@@ -70,8 +71,8 @@ select{background:var(--surface);border:1px solid var(--line2);border-radius:8px
 .hint{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;margin:0 0 8px}
 /* no overflow clipping here — a clipping ancestor disables position:sticky on thead */
 .tablewrap{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:40px}
-table{width:100%;border-collapse:collapse}
-thead th{position:sticky;top:66px;z-index:30;background:#12111a;border-bottom:1px solid var(--line2);color:var(--muted);font-weight:500;font-size:12px;text-align:right;padding:11px 10px;white-space:nowrap}
+table{width:100%;border-collapse:separate;border-spacing:0}
+thead th{position:sticky;top:var(--controls-height,66px);z-index:30;background:#12111a;border-bottom:1px solid var(--line2);color:var(--muted);font-weight:500;font-size:12px;text-align:right;padding:11px 10px;white-space:nowrap;box-shadow:0 1px 0 var(--line2),0 8px 14px rgba(0,0,0,.18)}
 thead th:first-child{border-top-left-radius:11px}
 thead th:last-child{border-top-right-radius:11px}
 tbody tr:last-child td{border-bottom:0}
@@ -132,9 +133,11 @@ tr.det td{background:var(--bg);border-bottom:1px solid var(--line2);padding:0}
 .grp{margin-top:16px}
 .grp .gh{color:var(--matcha);font-size:12px;font-weight:600;margin-bottom:6px}
 .mrow{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--line);font-size:13px}
-.draftroom{background:linear-gradient(135deg,rgba(127,176,105,.10),rgba(107,143,199,.05));border:1px solid var(--matcha-dim);border-radius:14px;padding:18px;margin:20px 0 12px}
+.draftroom{background:linear-gradient(135deg,rgba(127,176,105,.10),rgba(107,143,199,.05));border:1px solid var(--matcha-dim);border-radius:14px;padding:18px;margin:14px 0 10px}
 .drafttop{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .drafttop h2{font-size:20px;font-weight:600}.drafttop p{color:var(--muted);margin-top:3px}
+.compactrec{display:none;color:var(--muted);font-size:13px;margin-top:4px}.compactrec b{color:var(--text)}
+.draftroom.compact{padding:10px 14px}.draftroom.compact .drafttop{align-items:center}.draftroom.compact .drafttop h2{font-size:16px}.draftroom.compact #clockSub,.draftroom.compact .recgrid{display:none}.draftroom.compact .compactrec{display:block}
 .recgrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:14px;margin-top:14px}
 .recmain,.reclist{background:rgba(14,13,18,.72);border:1px solid var(--line2);border-radius:11px;padding:14px}
 .eyebrow{color:var(--matcha);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
@@ -231,6 +234,7 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
   <div class="chips" id="posF"></div>
   <div class="chips" id="clsF"></div>
   <div class="chips"><button class="chip" id="hideFadesBtn" data-k="toggle" data-v="hideFades">Hide fades</button></div>
+  <div class="chips" id="hidePosF" aria-label="Hide positions"></div>
   <div class="chips" id="draftF"></div>
   <select id="sort">
     <option value="r">Sort: Smart draft rank</option>
@@ -245,15 +249,15 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
 </div></div></div>
 
 <div class="wrap">
-  <section class="draftroom" aria-live="polite">
+  <section class="draftroom compact" id="draftRoom" aria-live="polite">
     <div class="drafttop">
-      <div><div class="eyebrow">Smart draft room</div><h2 id="clockTitle">Loading draft state…</h2><p id="clockSub"></p></div>
-      <div class="hactions"><button class="btn" id="simBtn">Simulate to my pick</button><button class="btn" id="roomSettingsBtn">Edit league</button></div>
+      <div><div class="eyebrow">Smart draft room</div><h2 id="clockTitle">Loading draft state…</h2><p id="clockSub"></p><p class="compactrec" id="compactRec"></p></div>
+      <div class="hactions"><button class="btn" id="simBtn">Simulate to my pick</button><button class="btn" id="roomToggleBtn">Expand strategy</button><button class="btn" id="roomSettingsBtn">Edit league</button></div>
     </div>
     <div class="recgrid" id="recommendationBody"></div>
   </section>
   <div class="tiles">
-    <div class="tile"><div class="lbl">Total players</div><div class="val num" id="tTotal">240</div></div>
+    <div class="tile"><div class="lbl">Players shown</div><div class="val num" id="tTotal">240</div></div>
     <div class="tile"><div class="lbl">Targets</div><div class="val num pos" id="tTar">0</div></div>
     <div class="tile"><div class="lbl">Fades</div><div class="val num neg" id="tFade">0</div></div>
     <div class="tile"><div class="lbl">Avg projected ppg, top 24</div><div class="val num" style="color:var(--matcha)" id="tPpg">0</div></div>

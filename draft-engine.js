@@ -94,9 +94,10 @@
     if (count >= (Number(settings.slots[player.p]) || 0)) return 100;
     return round < rounds - 2 ? 100 : 0;
   }
-  function recommendations(players, state, settings, queueIds = []) {
+  function recommendations(players, state, settings, queueIds = [], excludedPositions = []) {
     const draftedIds = new Set(Object.keys(state));
-    const available = players.filter((player) => !draftedIds.has(player.id));
+    const excluded = new Set(excludedPositions);
+    const available = players.filter((player) => !draftedIds.has(player.id) && !excluded.has(player.p));
     const roster = players.filter((player) => state[player.id] === "mine");
     const currentPick = draftedIds.size + 1;
     const decisionPicks = myPicksFrom(currentPick, settings, 3);

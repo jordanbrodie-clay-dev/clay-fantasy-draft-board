@@ -34,6 +34,9 @@ const opening = draft.recommendations(board, {}, settings);
 assert.equal(opening.onClock, true);
 assert.equal(opening.recommendations[0].player.n, "Jahmyr Gibbs");
 assert.equal(opening.recommendations.slice(0, 8).some((item) => item.player.spec), false);
+const noQuarterbacksOrTightEnds = draft.recommendations(board, {}, settings, [], ["QB", "TE"]);
+assert.equal(noQuarterbacksOrTightEnds.recommendations.some((item) => ["QB", "TE"].includes(item.player.p)), false);
+assert.equal(noQuarterbacksOrTightEnds.positionPlans.some((item) => ["QB", "TE"].includes(item.position)), false);
 
 const round11 = {};
 board.filter((player) => !player.spec).slice(0, 120).forEach((player) => { round11[player.id] = "taken"; });

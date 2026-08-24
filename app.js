@@ -7,6 +7,8 @@
   const OLD_WKEY = "clay-board-watch";
   const QKEY = "clay-board-queue";
   const SKEY = "clay-board-settings";
+  const HKEY = "clay-board-hidden-positions";
+  const RKEY = "clay-board-room-compact";
   const byId = new Map(B.map((player) => [player.id, player]));
 
   function migrateId(value) {
@@ -37,6 +39,8 @@
   let pickOrder = loadOrder();
   let queue = loadQueue();
   let settings = mergeSettings(JSON.parse(localStorage.getItem(SKEY) || "null"));
+  let hiddenPositions = new Set(JSON.parse(localStorage.getItem(HKEY) || "[]").filter((pos) => ["QB", "RB", "WR", "TE", "K", "DEF"].includes(pos)));
+  let roomCompact = JSON.parse(localStorage.getItem(RKEY) || "true");
   let f = { pos: "All", cls: "All", draft: "Available", q: "", sort: "r", hideFades: false };
   let open = new Set();
   const TAGCOLOR = { Injured: "amber", "Injury risk": "amber", "Crowded role": "amber", Rookie: "gray", "New team": "gray", "High value": "matcha", "Fade risk": "brick", Sleeper: "blue" };
@@ -50,6 +54,8 @@
     localStorage.setItem(OKEY, JSON.stringify(pickOrder));
     localStorage.setItem(QKEY, JSON.stringify(queue));
     localStorage.setItem(SKEY, JSON.stringify(settings));
+    localStorage.setItem(HKEY, JSON.stringify([...hiddenPositions]));
+    localStorage.setItem(RKEY, JSON.stringify(roomCompact));
   }
   save();
 
@@ -61,11 +67,13 @@
     chips(document.getElementById("clsF"), ["All", "Target", "Value", "Fade", "Fair"], "cls");
     chips(document.getElementById("draftF"), ["Available", "Taken", "My team", "Queue", "All"], "draft");
     document.getElementById("hideFadesBtn").setAttribute("aria-pressed", f.hideFades);
+    document.getElementById("hidePosF").innerHTML = `<span class="chiplabel">Hide</span>${["QB", "RB", "WR", "TE", "K", "DEF"].map((pos) => `<button class="chip" data-hide-pos="${pos}" aria-pressed="${hiddenPositions.has(pos)}">${pos === "DEF" ? "D/ST" : pos}</button>`).join("")}`;
   }
-  function currentDecision() { return D.recommendations(B, st, settings, queue); }
+  function currentDecision() { return D.recommendations(B, st, settings, queue, [...hiddenPositions]); }
   function view() {
     let players = B.filter((player) => {
       if (f.pos !== "All" && player.p !== f.pos) return false;
+      if (hiddenPositions.has(player.p)) return false;
       if (f.cls !== "All" && player.c !== f.cls) return false;
       if (f.hideFades && player.c === "Fade") return false;
       const status = st[player.id];
@@ -91,6 +99,9 @@
     const result = currentDecision();
     const body = document.getElementById("recommendationBody");
     const round = result.decisionPick ? Math.ceil(result.decisionPick / settings.teams) : null;
+    const room = document.getElementById("draftRoom");
+    room.classList.toggle("compact", roomCompact);
+    document.getElementById("roomToggleBtn").textContent = roomCompact ? "Expand strategy" : "Collapse strategy";
     document.getElementById("clockTitle").textContent = result.decisionPick
       ? `${result.onClock ? "You’re on the clock" : "Planning ahead"} · Pick ${result.decisionPick} (Round ${round})`
       : "Draft complete";
@@ -100,7 +111,7 @@
     const sim = document.getElementById("simBtn");
     sim.hidden = result.onClock || !result.decisionPick;
     sim.textContent = `Simulate ${Math.max(0, result.decisionPick - result.currentPick)} picks to my turn`;
-    if (!result.recommendations.length) { body.innerHTML = "<div class=recmain>No eligible recommendations remain.</div>"; return; }
+    if (!result.recommendations.length) { document.getElementById("compactRec").textContent = "No eligible positions are visible."; body.innerHTML = "<div class=recmain>No eligible recommendations remain. Reveal a position to add it back to the decision engine.</div>"; return; }
     const top = result.recommendations[0];
     const alternative = top.laterAlternative;
     const drop = Math.max(0, top.value - top.futureValue);
@@ -108,6 +119,7 @@
     const marketRead = top.player.wk
       ? ` Winks ranks him #${top.player.wk}; the model's buy window is picks ${Math.round(top.player.be)}–${Math.round(top.player.bl)}.`
       : "";
+    document.getElementById("compactRec").innerHTML = `<b>${esc(top.player.n)}</b> · ${top.player.p}${top.player.pr} · ${pct(top.survival)} there next pick · ${drop.toFixed(2)}σ drop if you wait`;
     const explanation = alternative
       ? `${decisionPrefix}${pct(top.survival)} chance he then reaches pick ${top.nextPick}. If you wait at ${top.player.p === "DEF" ? "D/ST" : top.player.p}, the best likely option is ${alternative.n}; the modeled position drop is ${drop.toFixed(2)}σ.${marketRead}`
       : `${decisionPrefix}The model sees no dependable ${top.player.p} alternative at pick ${top.nextPick}; this is a positional-cliff selection.${marketRead}`;
@@ -138,7 +150,7 @@
     document.getElementById("queueN").textContent = queue.length;
     document.getElementById("dcount").textContent = Object.keys(st).length;
     document.getElementById("playerN").textContent = B.length;
-    document.getElementById("tTotal").textContent = B.length;
+    document.getElementById("tTotal").textContent = rows.length;
     const count = (classification) => B.filter((player) => player.c === classification).length;
     document.getElementById("cT").textContent = count("Target"); document.getElementById("cV").textContent = count("Value"); document.getElementById("cF").textContent = count("Fade");
     document.getElementById("tTar").textContent = count("Target"); document.getElementById("tFade").textContent = count("Fade");
@@ -200,8 +212,15 @@
   }
 
   document.addEventListener("click", (event) => {
+    const hidePosition = event.target.closest("[data-hide-pos]");
+    if (hidePosition) {
+      const pos = hidePosition.dataset.hidePos;
+      hiddenPositions.has(pos) ? hiddenPositions.delete(pos) : hiddenPositions.add(pos);
+      if (f.pos === pos && hiddenPositions.has(pos)) f.pos = "All";
+      save(); renderChips(); render(); return;
+    }
     const chip = event.target.closest(".chip");
-    if (chip) { if (chip.dataset.k === "toggle") f[chip.dataset.v] = !f[chip.dataset.v]; else f[chip.dataset.k] = chip.dataset.v; renderChips(); render(); return; }
+    if (chip) { if (chip.dataset.k === "toggle") f[chip.dataset.v] = !f[chip.dataset.v]; else { f[chip.dataset.k] = chip.dataset.v; if (chip.dataset.k === "pos" && chip.dataset.v !== "All") hiddenPositions.delete(chip.dataset.v); } save(); renderChips(); render(); return; }
     const taken = event.target.closest("[data-tk]"); if (taken) { setState(taken.dataset.tk, taken.checked ? "taken" : null); event.stopPropagation(); return; }
     const mine = event.target.closest("[data-mine]"); if (mine) { setState(mine.dataset.mine, st[mine.dataset.mine] === "mine" ? null : "mine"); event.stopPropagation(); return; }
     const draft = event.target.closest("[data-draft]"); if (draft) { setState(draft.dataset.draft, "mine"); event.stopPropagation(); return; }
@@ -220,6 +239,7 @@
   document.getElementById("saveSettings").onclick = saveSettings;
   document.getElementById("defaultSettings").onclick = () => { settings = structuredClone(D.DEFAULTS); save(); openSettings(); render(); };
   document.getElementById("simBtn").onclick = simulate;
+  document.getElementById("roomToggleBtn").onclick = () => { roomCompact = !roomCompact; save(); renderDraftRoom(); };
   document.getElementById("aboutBtn").onclick = () => document.getElementById("modal").classList.add("on");
   document.getElementById("closeModal").onclick = () => document.getElementById("modal").classList.remove("on");
   document.querySelectorAll(".modal").forEach((modal) => modal.addEventListener("click", (event) => { if (event.target === modal) modal.classList.remove("on"); }));
@@ -231,5 +251,8 @@
     if (event.key.toLowerCase() === "m") setState(id, st[id] === "mine" ? null : "mine");
     if (event.key.toLowerCase() === "q") toggleQueue(id);
   });
-  renderChips(); render();
+  const controls = document.querySelector(".controls");
+  const syncStickyOffset = () => document.documentElement.style.setProperty("--controls-height", `${Math.ceil(controls.getBoundingClientRect().height)}px`);
+  new ResizeObserver(syncStickyOffset).observe(controls);
+  renderChips(); render(); syncStickyOffset();
 })();
