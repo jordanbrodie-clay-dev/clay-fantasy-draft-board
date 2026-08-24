@@ -13,6 +13,11 @@ Simulations are reversible previews: exit to restore the exact pre-simulation dr
 and queue, or draft players at each simulated turn and keep the generated scenario.
 The compact strategy bar includes the current recommendation as a one-click draft
 action and shows exactly how many opponent picks and user picks the preview contains.
+When planning ahead, that action can lock a player at the upcoming user pick while
+simulating the intervening selections without allowing an opponent to take him.
+Taken and My Team remain manual toggles outside simulation. Individual hard fades
+persist, disappear from the board and recommendations, and can be restored through
+the Hidden filter.
 The strategy room defaults to a compact summary bar and expands on demand. Position
 visibility is multi-select and persistent, so QB/TE or any other positions can be
 hidden from both the table and live recommendations. Desktop table headers remain
@@ -26,7 +31,7 @@ Three Clay workflows, authored from the command line with the Clay CLI:
 2. **Team environment** — all 32 teams: Vegas win totals, O-line ranks, coaching changes, vacated carries and targets.
 3. **Coach sentiment** — player news, beat reporting and direct coach quotes, graded for role language. Concrete role statements ("first-team reps") are separated from generic August coachspeak ("he's looked great"); only the specific kind moves a score.
 
-Scoring: six weighted buckets (opportunity, production, situation, efficiency, market, regression) × a risk multiplier determine player quality within position. Standardized value above replacement is one input. The published Smart Rank is anchored to Sleeper ADP. Live recommendations start with the best available Smart Rank; future availability may override BPA only within three rank spots and only when both the modeled scarcity and decision-score advantages clear explicit thresholds. Early RB/WR depth retains meaningful value, so BPA builds such as three early running backs are supported rather than treated as roster mistakes.
+Scoring: six weighted buckets (opportunity, production, situation, efficiency, market, regression) × a risk multiplier determine player quality within position. Standardized value above replacement is one input. The published Smart Rank is anchored to Sleeper ADP. Live recommendations start with the best available Smart Rank. Future availability may normally override BPA only inside three rank spots and only when both scarcity and decision-score advantages clear explicit thresholds. From round four onward, an unfilled starter facing a strong measured two-turn tier cliff can widen that bound to at most one league round; acquisition-window penalties still prevent early QB/TE reaches. Early RB/WR depth retains meaningful value, so BPA builds such as three early running backs are supported rather than treated as roster mistakes.
 
 Calibrated against five completed seasons of real preseason ADP and outcomes (2020–2024; 851 matched player-seasons).
 

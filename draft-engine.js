@@ -54,6 +54,18 @@
       return counts;
     }, {});
   }
+  function unfilledStarterCount(roster, settings) {
+    const counts = rosterCounts(roster);
+    const basePositions = ["QB", "RB", "WR", "TE", "K", "DEF"];
+    const baseMissing = basePositions.reduce((sum, position) => {
+      return sum + Math.max(0, (Number(settings.slots[position]) || 0) - (counts[position] || 0));
+    }, 0);
+    const flexFilled = [...FLEX_POSITIONS].reduce((sum, position) => {
+      const base = Number(settings.slots[position]) || 0;
+      return sum + Math.max(0, (counts[position] || 0) - base);
+    }, 0);
+    return baseMissing + Math.max(0, (Number(settings.slots.FLEX) || 0) - flexFilled);
+  }
   function needFactor(position, roster, settings, decisionPick = 1) {
     const counts = rosterCounts(roster);
     const required = Number(settings.slots[position]) || 0;
@@ -99,17 +111,23 @@
     if (count >= (Number(settings.slots[player.p]) || 0)) return 100;
     return round < rounds - 2 ? 100 : 0;
   }
-  function recommendations(players, state, settings, queueIds = [], excludedPositions = []) {
+  function recommendations(players, state, settings, queueIds = [], excludedPositions = [], excludedPlayerIds = []) {
     const draftedIds = new Set(Object.keys(state));
     const excluded = new Set(excludedPositions);
-    const available = players.filter((player) => !draftedIds.has(player.id) && !excluded.has(player.p));
+    const excludedPlayers = new Set(excludedPlayerIds);
+    const available = players.filter((player) => !draftedIds.has(player.id) && !excluded.has(player.p) && !excludedPlayers.has(player.id));
     const roster = players.filter((player) => state[player.id] === "mine");
     const currentPick = draftedIds.size + 1;
     const decisionPicks = myPicksFrom(currentPick, settings, 3);
     if (!decisionPicks.length) return { currentPick, decisionPick: null, nextPick: null, onClock: false, recommendations: [] };
     const decisionPick = decisionPicks[0];
     const nextPick = decisionPicks[1] ?? decisionPick + settings.teams;
+    const nextTwoPick = decisionPicks[2] ?? nextPick + settings.teams;
     const onClock = decisionPick === currentPick;
+    const counts = rosterCounts(roster);
+    const unfilledStarters = unfilledStarterCount(roster, settings);
+    const remainingRosterPicks = myPicksFrom(currentPick, settings, totalRounds(settings)).length;
+    const rosterSlack = Math.max(0, remainingRosterPicks - unfilledStarters);
     const queue = new Set(queueIds);
     const bestAvailable = [...available].sort((a, b) => a.r - b.r)[0] ?? null;
     const bestAvailableRank = Number(bestAvailable?.r) || 999;
@@ -117,11 +135,25 @@
       const value = Math.max(0, playerValue(player));
       const need = needFactor(player.p, roster, settings, decisionPick);
       const future = expectedFutureAtPosition(available, player.p, decisionPick, nextPick);
-      const urgency = Math.max(0, value - future.expected) * need;
+      const futureTwo = expectedFutureAtPosition(available, player.p, decisionPick, nextTwoPick);
+      const baseUrgency = Math.max(0, value - future.expected) * need;
       const survival = conditionalAvailability(player, decisionPick, nextPick);
+      const twoPickSurvival = conditionalAvailability(player, decisionPick, nextTwoPick);
       const reachesDecision = conditionalAvailability(player, currentPick, decisionPick);
       const pressure = 1 - survival;
       const penalty = specialistPenalty(player, decisionPick, roster, settings);
+      const starterOpen = (counts[player.p] || 0) < (Number(settings.slots[player.p]) || 0);
+      const tierCliff = starterOpen ? Math.max(0, value - futureTwo.expected) : 0;
+      const completionPressure = starterOpen ? clamp((3 - rosterSlack) / 3, 0, 1) : 0;
+      const tierPressureWeight = player.p === "QB" || player.p === "TE" ? 1 : 0.35;
+      // Empty starters gain urgency from the quality cliff over the user's next two
+      // turns, the chance this exact player disappears, and late-draft roster
+      // feasibility. This is intentionally market-aware rather than a fixed
+      // "draft a QB in round six" command.
+      const starterPressure = starterOpen
+        ? tierPressureWeight * (0.55 * tierCliff + 0.25 * (1 - twoPickSurvival) * value) + 0.80 * completionPressure
+        : 0;
+      const urgency = baseUrgency + starterPressure;
       // Do not pay materially ahead of the multi-source acquisition window. This
       // keeps elite one-QB profiles from becoming first-round recommendations just
       // because their above-replacement z-score is large.
@@ -133,7 +165,7 @@
       const bpaPenalty = Math.min(2.4, rankGap * 0.08);
       // BPA is the foundation. Scarcity can break a close call, but it must earn
       // any departure from the highest Smart Rank rather than winning on fit alone.
-      const decisionScore = (1.8 * urgency + 0.22 * value * need + 0.25 * pressure) * evidenceFactor
+      const decisionScore = (1.8 * baseUrgency + 1.05 * starterPressure + 0.22 * value * need + 0.25 * pressure) * evidenceFactor
         + (queue.has(player.id) ? 0.08 : 0) - penalty - reachPenalty - bpaPenalty;
       const score = decisionScore * (decisionPick === currentPick ? 1 : reachesDecision);
       return {
@@ -142,11 +174,18 @@
         value,
         need,
         urgency,
+        baseUrgency,
+        starterOpen,
+        starterPressure,
+        tierCliff,
         survival,
+        twoPickSurvival,
         reachesDecision,
         nextPick,
+        nextTwoPick,
         laterAlternative: future.likelyAlternative,
         futureValue: future.expected,
+        futureTwoValue: futureTwo.expected,
         reachPenalty,
         historicalHit,
         rankGap,
@@ -157,12 +196,16 @@
     const bpaCandidate = scored.find((candidate) => candidate.player.id === bestAvailable?.id) ?? null;
     const urgencyAdvantage = strategyLeader && bpaCandidate ? strategyLeader.urgency - bpaCandidate.urgency : 0;
     const scoreAdvantage = strategyLeader && bpaCandidate ? strategyLeader.score - bpaCandidate.score : 0;
+    const decisionRound = Math.ceil(decisionPick / settings.teams);
+    const overrideRankLimit = strategyLeader?.starterPressure >= 0.60
+      ? (decisionRound >= 4 ? Math.max(6, settings.teams) : 6)
+      : strategyLeader?.starterPressure >= 0.35 ? Math.max(4, Math.ceil(settings.teams / 2)) : 3;
     // A strategy pick may pass BPA only on strong evidence and only within a tight
     // rank neighborhood. This preserves the future-availability edge without
     // allowing "best fit" to create a full-tier reach.
     const overrideApplied = Boolean(
       strategyLeader && bpaCandidate && strategyLeader.player.id !== bpaCandidate.player.id
-      && strategyLeader.rankGap <= 3 && urgencyAdvantage >= 0.75 && scoreAdvantage >= 0.35
+      && strategyLeader.rankGap <= overrideRankLimit && urgencyAdvantage >= 0.75 && scoreAdvantage >= 0.35
     );
     const ordered = overrideApplied || !bpaCandidate
       ? scored
@@ -173,7 +216,8 @@
     }).filter(Boolean);
     return {
       currentPick, decisionPick, nextPick, onClock, bestAvailable,
-      strategyPick: strategyLeader?.player ?? null, overrideApplied,
+      strategyPick: strategyLeader?.player ?? null, overrideApplied, overrideRankLimit,
+      unfilledStarters, remainingRosterPicks, rosterSlack,
       recommendations: ordered.slice(0, 8), positionPlans,
     };
   }
@@ -185,15 +229,16 @@
     }
     return ((hash >>> 0) / 4294967295) * 2 - 1;
   }
-  function simulateToMyPick(players, state, settings) {
+  function simulateToMyPick(players, state, settings, protectedPlayerIds = []) {
     const nextState = { ...state };
+    const protectedPlayers = new Set(protectedPlayerIds);
     const picks = [];
     const finalPick = totalRounds(settings) * settings.teams;
     let pick = Object.keys(nextState).length + 1;
     while (pick <= finalPick && ownerOfPick(pick, settings) !== settings.slot) {
       const round = Math.ceil(pick / settings.teams);
       const specialistTooEarly = round < totalRounds(settings) - 2;
-      const available = players.filter((player) => !nextState[player.id]);
+      const available = players.filter((player) => !nextState[player.id] && !protectedPlayers.has(player.id));
       const chosen = available.map((player) => {
         const specialist = player.p === "K" || player.p === "DEF";
         const noise = hashNoise(`${player.id}:${pick}`) * (Number(player.asd) || 8) * 0.42;
@@ -214,6 +259,7 @@
     myPicksFrom,
     rawAvailability,
     conditionalAvailability,
+    unfilledStarterCount,
     needFactor,
     expectedFutureAtPosition,
     recommendations,

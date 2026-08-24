@@ -86,6 +86,7 @@ tbody tr.pr:hover{background:var(--surface2)}
 tbody tr.taken{opacity:.42}
 tbody tr.taken .pname{text-decoration:line-through}
 tbody tr.mine{background:rgba(127,176,105,.07);box-shadow:inset 3px 0 0 var(--matcha)}
+tbody tr.hard-faded{background:rgba(181,84,74,.06);box-shadow:inset 3px 0 0 var(--brick)}
 .pname{font-weight:500}
 .pmeta{color:var(--faint);font-size:12px}
 .tag{display:inline-block;font-size:11px;font-weight:500;margin-left:6px;padding:1px 6px;border-radius:5px;border:1px solid;white-space:nowrap}
@@ -266,7 +267,7 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
     <div class="tile"><div class="lbl">Fades</div><div class="val num neg" id="tFade">0</div></div>
     <div class="tile"><div class="lbl">Avg projected ppg, top 24</div><div class="val num" style="color:var(--matcha)" id="tPpg">0</div></div>
   </div>
-  <p class="hint"><span class="chev">▸</span> Smart rank respects market cost. Quality rank isolates the underlying model. Click a player for details.</p>
+  <p class="hint"><span class="chev">▸</span> Smart rank respects market cost. Click a player to hard-fade him, or use Taken and ★ at any time without entering simulation.</p>
   <div class="tablewrap"><table>
     <thead><tr>
       <th>Taken</th><th>Mine</th><th>Queue</th>
@@ -328,7 +329,7 @@ footer{color:var(--faint);font-size:12px;padding:22px 0 50px;border-top:1px soli
     <div class="step"><h5><span class="snum">1</span>Author workflows from the CLI</h5><p>Used the Clay CLI to create multi-node workflows programmatically instead of clicking through a UI. Three workflows: player research, team environment, and coach sentiment.</p></div>
     <div class="step"><h5><span class="snum">2</span>Pull structured data via API</h5><p>Each workflow chains search → scrape → structured extraction, returning typed JSON with a source URL for every value. 200 players enriched with 2025 usage, efficiency, Vegas props, and injury history. A second workflow built all 32 team environments: Vegas win totals, offensive line ranks, coaching changes, and vacated carries and targets.</p></div>
     <div class="step"><h5><span class="snum">3</span>Add qualitative signal</h5><p>A third workflow reads player news, beat reporting, and direct coach quotes, then grades role language. Critically it separates concrete role statements ("he'll be our starter", "first-team reps") from generic August coachspeak ("he's looked great") — only the specific kind is allowed to move a score. Generic praise is flagged and scored zero.</p></div>
-    <div class="step"><h5><span class="snum">4</span>Draft BPA intelligently</h5><p>Smart rank blends Sleeper, ECR, and a 1.5× Winks anchor. The simulator begins with the highest-ranked available player, then checks acquisition windows and the projected positional cliff. A strategy pick can pass BPA only within three rank spots and only with a material scarcity advantage. Early RB/WR depth remains valuable, so the engine supports BPA-heavy starts instead of forcing a tidy starting lineup.</p></div>
+    <div class="step"><h5><span class="snum">4</span>Draft BPA intelligently</h5><p>Smart rank blends Sleeper, ECR, and a 1.5× Winks anchor. The simulator begins with the highest-ranked available player, then checks acquisition windows, the projected positional cliff across your next two turns, and which starters your roster still lacks. A strategy pick can pass BPA only inside a bounded rank neighborhood and only with a material scarcity advantage. Early RB/WR depth remains valuable, so the engine supports BPA-heavy starts instead of forcing a tidy starting lineup.</p></div>
   </div>
   <div class="ref">
     <h4 style="font-size:16px;font-weight:600;margin-bottom:4px">How it was refined</h4>

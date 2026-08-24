@@ -8,6 +8,7 @@
   const QKEY = "clay-board-queue";
   const SKEY = "clay-board-settings";
   const HKEY = "clay-board-hidden-positions";
+  const PKEY = "clay-board-hidden-players";
   const RKEY = "clay-board-room-compact";
   const SIMKEY = "clay-board-simulation-checkpoint";
   const byId = new Map(B.map((player) => [player.id, player]));
@@ -50,6 +51,7 @@
   let queue = loadQueue();
   let settings = mergeSettings(JSON.parse(localStorage.getItem(SKEY) || "null"));
   let hiddenPositions = new Set(JSON.parse(localStorage.getItem(HKEY) || "[]").filter((pos) => ["QB", "RB", "WR", "TE", "K", "DEF"].includes(pos)));
+  let hiddenPlayers = new Set(JSON.parse(localStorage.getItem(PKEY) || "[]").map(migrateId).filter(Boolean));
   let roomCompact = JSON.parse(localStorage.getItem(RKEY) || "true");
   let simulationCheckpoint = loadSimulationCheckpoint();
   let f = { pos: "All", cls: "All", draft: "Available", q: "", sort: "r", hideFades: false };
@@ -66,6 +68,7 @@
     localStorage.setItem(QKEY, JSON.stringify(queue));
     localStorage.setItem(SKEY, JSON.stringify(settings));
     localStorage.setItem(HKEY, JSON.stringify([...hiddenPositions]));
+    localStorage.setItem(PKEY, JSON.stringify([...hiddenPlayers]));
     localStorage.setItem(RKEY, JSON.stringify(roomCompact));
     if (simulationCheckpoint) localStorage.setItem(SIMKEY, JSON.stringify(simulationCheckpoint));
     else localStorage.removeItem(SIMKEY);
@@ -78,11 +81,12 @@
   function renderChips() {
     chips(document.getElementById("posF"), ["All", "QB", "RB", "WR", "TE", "K", "DEF"], "pos");
     chips(document.getElementById("clsF"), ["All", "Target", "Value", "Fade", "Fair"], "cls");
-    chips(document.getElementById("draftF"), ["Available", "Taken", "My team", "Queue", "All"], "draft");
+    chips(document.getElementById("draftF"), ["Available", "Taken", "My team", "Queue", "Hidden", "All"], "draft");
+    document.querySelector('#draftF [data-v="Hidden"]').textContent = `Hidden (${hiddenPlayers.size})`;
     document.getElementById("hideFadesBtn").setAttribute("aria-pressed", f.hideFades);
     document.getElementById("hidePosF").innerHTML = `<span class="chiplabel">Hide</span>${["QB", "RB", "WR", "TE", "K", "DEF"].map((pos) => `<button class="chip" data-hide-pos="${pos}" aria-pressed="${hiddenPositions.has(pos)}">${pos === "DEF" ? "D/ST" : pos}</button>`).join("")}`;
   }
-  function currentDecision() { return D.recommendations(B, st, settings, queue, [...hiddenPositions]); }
+  function currentDecision() { return D.recommendations(B, st, settings, queue, [...hiddenPositions], [...hiddenPlayers]); }
   function simulationDelta() {
     if (!simulationCheckpoint) return { opponentPicks: 0, myPicks: 0 };
     return Object.entries(st).reduce((delta, [id, status]) => {
@@ -94,6 +98,10 @@
   }
   function view() {
     let players = B.filter((player) => {
+      const hardFaded = hiddenPlayers.has(player.id);
+      if (f.draft === "Hidden") {
+        if (!hardFaded) return false;
+      } else if (hardFaded) return false;
       if (f.pos !== "All" && player.p !== f.pos) return false;
       if (hiddenPositions.has(player.p)) return false;
       if (f.cls !== "All" && player.c !== f.cls) return false;
@@ -151,17 +159,22 @@
     sim.hidden = result.onClock || !result.decisionPick;
     sim.textContent = `Simulate ${Math.max(0, result.decisionPick - result.currentPick)} picks to my turn`;
     quickDraft.hidden = true;
-    quickDraft.removeAttribute("data-draft");
+    quickDraft.removeAttribute("data-pick-player");
     if (!result.recommendations.length) { document.getElementById("compactRec").textContent = "No eligible positions are visible."; body.innerHTML = "<div class=recmain>No eligible recommendations remain. Reveal a position to add it back to the decision engine.</div>"; return; }
     const top = result.recommendations[0];
-    quickDraft.hidden = !result.onClock;
-    quickDraft.dataset.draft = top.player.id;
-    quickDraft.textContent = `Draft ${top.player.n}`;
-    quickDraft.title = `Add ${top.player.n} to My team at pick ${result.decisionPick}.`;
+    quickDraft.hidden = !result.decisionPick;
+    quickDraft.dataset.pickPlayer = top.player.id;
+    quickDraft.textContent = result.onClock ? `Draft ${top.player.n}` : `Lock ${top.player.n} at pick ${result.decisionPick}`;
+    quickDraft.title = result.onClock
+      ? `Add ${top.player.n} to My team at pick ${result.decisionPick}.`
+      : `Reserve ${top.player.n}, simulate the ${result.decisionPick - result.currentPick} intervening picks, and add him to My team at pick ${result.decisionPick}.`;
     const bpa = result.bestAvailable;
     const alternative = top.laterAlternative;
     const drop = Math.max(0, top.value - top.futureValue);
     const decisionPrefix = result.onClock ? "" : `${pct(top.reachesDecision)} chance he reaches your pick ${result.decisionPick}. `;
+    const starterRead = top.starterOpen && top.starterPressure >= 0.15
+      ? ` Your ${top.player.p === "DEF" ? "D/ST" : top.player.p} starter is open; across your next two turns, his survival is ${pct(top.twoPickSurvival)} and the modeled tier drop is ${Math.max(0, top.value - top.futureTwoValue).toFixed(2)}σ.`
+      : "";
     const strategyAlternative = result.strategyPick?.id !== top.player.id ? result.strategyPick : null;
     const bpaRead = bpa?.id === top.player.id
       ? ` He is the highest-ranked available player (Smart #${top.player.r}).${strategyAlternative ? ` The fit model liked ${strategyAlternative.n}, but the scarcity edge was not strong enough to pass BPA.` : ""}`
@@ -171,14 +184,14 @@
       : "";
     document.getElementById("compactRec").innerHTML = `<b>${esc(top.player.n)}</b> · Smart #${top.player.r} · ${bpa?.id === top.player.id ? "BPA" : `${top.rankGap}-spot override`} · ${drop.toFixed(2)}σ drop if you wait`;
     const explanation = alternative
-      ? `${decisionPrefix}${pct(top.survival)} chance he then reaches pick ${top.nextPick}. If you wait at ${top.player.p === "DEF" ? "D/ST" : top.player.p}, the best likely option is ${alternative.n}; the modeled position drop is ${drop.toFixed(2)}σ.${bpaRead}${marketRead}`
-      : `${decisionPrefix}The model sees no dependable ${top.player.p} alternative at pick ${top.nextPick}; this is a positional-cliff selection.${bpaRead}${marketRead}`;
+      ? `${decisionPrefix}${pct(top.survival)} chance he then reaches pick ${top.nextPick}. If you wait at ${top.player.p === "DEF" ? "D/ST" : top.player.p}, the best likely option is ${alternative.n}; the modeled position drop is ${drop.toFixed(2)}σ.${starterRead}${bpaRead}${marketRead}`
+      : `${decisionPrefix}The model sees no dependable ${top.player.p} alternative at pick ${top.nextPick}; this is a positional-cliff selection.${starterRead}${bpaRead}${marketRead}`;
     body.innerHTML = `<div class="recmain">
       <div class="eyebrow">Best pick now · BPA guarded</div>
       <div class="recname">${esc(top.player.n)} <span class="pmeta">${top.player.p === "DEF" ? "D/ST" : top.player.p}${top.player.pr} · ${esc(top.player.t)}</span></div>
       <p class="recwhy">${esc(explanation)}</p>
-      <div class="recmetrics"><div class="recmetric"><b>#${top.player.r}</b><span>Smart rank / BPA</span></div><div class="recmetric"><b>${top.value.toFixed(2)}σ</b><span>above replacement</span></div><div class="recmetric"><b>${pct(top.survival)}</b><span>there next pick</span></div><div class="recmetric"><b>${drop.toFixed(2)}σ</b><span>position drop if waiting</span></div><div class="recmetric"><b>${n1(top.player.adp)}</b><span>Sleeper ADP</span></div><div class="recmetric"><b>${top.player.wk ?? "—"}</b><span>Winks rank</span></div><div class="recmetric"><b>${top.player.hhr == null ? "—" : pct(top.player.hhr)}</b><span>historical starter hit</span></div></div>
-      <div class="hactions" style="margin-top:14px"><button class="btn-primary" data-draft="${top.player.id}">Draft to my team</button><button class="btn" data-queue="${top.player.id}">${queue.includes(top.player.id) ? "Remove from queue" : "Add to queue"}</button></div>
+      <div class="recmetrics"><div class="recmetric"><b>#${top.player.r}</b><span>Smart rank / BPA</span></div><div class="recmetric"><b>${top.value.toFixed(2)}σ</b><span>above replacement</span></div><div class="recmetric"><b>${pct(top.survival)}</b><span>there next pick</span></div><div class="recmetric"><b>${pct(top.twoPickSurvival)}</b><span>there in two turns</span></div><div class="recmetric"><b>${top.starterPressure.toFixed(2)}σ</b><span>open-starter pressure</span></div><div class="recmetric"><b>${drop.toFixed(2)}σ</b><span>position drop if waiting</span></div><div class="recmetric"><b>${n1(top.player.adp)}</b><span>Sleeper ADP</span></div><div class="recmetric"><b>${top.player.wk ?? "—"}</b><span>Winks rank</span></div><div class="recmetric"><b>${top.player.hhr == null ? "—" : pct(top.player.hhr)}</b><span>historical starter hit</span></div></div>
+      <div class="hactions" style="margin-top:14px"><button class="btn-primary" data-pick-player="${top.player.id}">${result.onClock ? "Draft to my team" : `Lock for pick ${result.decisionPick}`}</button><button class="btn" data-queue="${top.player.id}">${queue.includes(top.player.id) ? "Remove from queue" : "Add to queue"}</button><button class="btn" data-hide-player="${top.player.id}">Hard fade</button></div>
     </div><div class="reclist"><div class="eyebrow">Decision board · BPA first</div>${result.recommendations.slice(0, 6).map((item, index) => `<div class="recline"><span class="rank">${index + 1}</span><span><b>${esc(item.player.n)}</b><span class="pmeta"> ${item.player.p === "DEF" ? "D/ST" : item.player.p} · Smart #${item.player.r} · Winks ${item.player.wk ?? "—"}</span><br><span class="pmeta">${pct(item.survival)} to pick ${item.nextPick} · ${item.urgency.toFixed(2)}σ urgency${item.rankGap ? ` · ${item.rankGap} spots behind BPA` : " · BPA"}</span></span><button class="btn mini" data-queue="${item.player.id}">${queue.includes(item.player.id) ? "Queued" : "+ Queue"}</button></div>`).join("")}</div>
     <div class="positionplans"><div class="eyebrow">Position timing · quality rank is not draft rank</div><div class="positiongrid">${result.positionPlans.map((item) => { const waitDrop = Math.max(0, item.value - item.futureValue); const later = item.laterAlternative; return `<div class="positioncard"><div><span class="draftbadge">${item.position}</span><b>${esc(item.player.n)}</b></div><p><b>${item.player.p}${item.player.pr}</b> quality · Winks ${item.player.wk ?? "—"} · buy ${Math.round(item.player.be)}–${Math.round(item.player.bl)}</p><p>${pct(item.survival)} to pick ${item.nextPick}${later ? ` · likely ${esc(later.n)}` : " · no dependable fallback"} · <b>${waitDrop.toFixed(2)}σ</b> drop</p></div>`; }).join("")}</div></div>`;
   }
@@ -190,10 +203,10 @@
     tbody.innerHTML = rows.map((player) => {
       const status = st[player.id];
       const queued = queue.includes(player.id);
-      const rowClass = ["pr", status === "taken" ? "taken" : "", status === "mine" ? "mine" : "", open.has(player.id) ? "open" : ""].join(" ");
+      const rowClass = ["pr", status === "taken" ? "taken" : "", status === "mine" ? "mine" : "", hiddenPlayers.has(player.id) ? "hard-faded" : "", open.has(player.id) ? "open" : ""].join(" ");
       const nextChance = decision.nextPick ? D.conditionalAvailability(player, decision.decisionPick, decision.nextPick) : 0;
-      const detail = open.has(player.id) ? `<tr class="det"><td colspan="16"><div class="det-in"><div><h4>Insights</h4><p>${esc(player.i)}</p>${player.d ? `<h4>Draft note</h4><p>${esc(player.d)}</p>` : ""}${player.sq ? `<h4>Coach quote excerpt</h4><p class="quote">${esc(player.sq)}</p>` : ""}${player.hc ? `<h4>Signal check</h4><p style="color:var(--muted)">${esc(player.hc)}</p>` : ""}</div><div><div class="kv"><span>Smart rank</span><b class="num">${player.r}</b></div><div class="kv"><span>Winks / ECR / quality rank</span><b class="num">${player.wk ?? "—"} / ${player.ecr ?? "—"} / ${player.qr ?? "—"}</b></div><div class="kv"><span>Buy window / consensus pick</span><b class="num">${n1(player.be)}–${n1(player.bl)} / ${n1(player.cp)}</b></div><div class="kv"><span>Sleeper ADP</span><b class="num">${n1(player.adp)}</b></div><div class="kv"><span>Projected / replacement PPG</span><b class="num">${n1(player.pj)} / ${n1(player.rp)}</b></div><div class="kv"><span>Value above replacement</span><b class="num">${player.zv == null ? "—" : player.zv.toFixed(2) + "σ"}</b></div><div class="kv"><span>Historical position/round result</span><b class="num">${player.hhr == null ? "—" : `${pct(player.hhr)} starter hit · ${player.hvor > 0 ? "+" : ""}${n1(player.hvor)} VOR PPG (n=${player.hn})`}</b></div><div class="kv"><span>There at pick ${decision.nextPick ?? "—"}</span><b class="num">${decision.nextPick ? pct(nextChance) : "—"}</b></div><div class="kv"><span>Coach role language</span><b>${esc(player.rl || (player.spec ? "Sleeper-only" : "no signal"))}</b></div><div class="kv"><span>Data confidence</span><b>${player.cf}</b></div></div></div></td></tr>` : "";
-      return `<tr class="${rowClass}" data-id="${player.id}" tabindex="0"><td><input type="checkbox" class="tk" data-tk="${player.id}" ${status === "taken" ? "checked" : ""} aria-label="Taken"></td><td><button class="star" data-mine="${player.id}" aria-pressed="${status === "mine"}" title="My team (M)">★</button></td><td><button class="watch" data-queue="${player.id}" aria-pressed="${queued}" title="Draft queue (Q)">☷</button></td><td class="num" style="color:var(--faint)">${player.r}</td><td><div class="pname">${esc(player.n)}${tagHtml(player)}</div><div class="pmeta">${player.t} · ${player.p === "DEF" ? "D/ST" : player.p}${player.pr}</div></td><td class="num">${player.ti}</td><td class="num" style="color:var(--matcha);font-weight:600">${n1(player.s)}</td><td class="num">${n1(player.pj)}</td><td class="num">${n1(player.adp)}</td><td class="num">${player.wk ?? "—"}</td><td class="num">${player.qr ?? "—"}</td><td class="num">${decision.nextPick ? pct(nextChance) : "—"}</td><td class="num ${player.zv > 0 ? "pos" : player.zv < 0 ? "neg" : ""}">${player.spec ? "market" : player.zv == null ? "—" : player.zv.toFixed(2) + "σ"}</td><td><span class="badge b-${player.c}">${player.c}</span></td><td><span class="cf cf-${player.cf}">${player.cf}</span></td><td><span class="chev">▸</span></td></tr>${detail}`;
+      const detail = open.has(player.id) ? `<tr class="det"><td colspan="16"><div class="det-in"><div><h4>Insights</h4><p>${esc(player.i)}</p>${player.d ? `<h4>Draft note</h4><p>${esc(player.d)}</p>` : ""}${player.sq ? `<h4>Coach quote excerpt</h4><p class="quote">${esc(player.sq)}</p>` : ""}${player.hc ? `<h4>Signal check</h4><p style="color:var(--muted)">${esc(player.hc)}</p>` : ""}<button class="btn" data-hide-player="${player.id}">${hiddenPlayers.has(player.id) ? "Restore player" : "Hard fade player"}</button></div><div><div class="kv"><span>Smart rank</span><b class="num">${player.r}</b></div><div class="kv"><span>Winks / ECR / quality rank</span><b class="num">${player.wk ?? "—"} / ${player.ecr ?? "—"} / ${player.qr ?? "—"}</b></div><div class="kv"><span>Buy window / consensus pick</span><b class="num">${n1(player.be)}–${n1(player.bl)} / ${n1(player.cp)}</b></div><div class="kv"><span>Sleeper ADP</span><b class="num">${n1(player.adp)}</b></div><div class="kv"><span>Projected / replacement PPG</span><b class="num">${n1(player.pj)} / ${n1(player.rp)}</b></div><div class="kv"><span>Value above replacement</span><b class="num">${player.zv == null ? "—" : player.zv.toFixed(2) + "σ"}</b></div><div class="kv"><span>Historical position/round result</span><b class="num">${player.hhr == null ? "—" : `${pct(player.hhr)} starter hit · ${player.hvor > 0 ? "+" : ""}${n1(player.hvor)} VOR PPG (n=${player.hn})`}</b></div><div class="kv"><span>There at pick ${decision.nextPick ?? "—"}</span><b class="num">${decision.nextPick ? pct(nextChance) : "—"}</b></div><div class="kv"><span>Coach role language</span><b>${esc(player.rl || (player.spec ? "Sleeper-only" : "no signal"))}</b></div><div class="kv"><span>Data confidence</span><b>${player.cf}</b></div></div></div></td></tr>` : "";
+      return `<tr class="${rowClass}" data-id="${player.id}" tabindex="0"><td><input type="checkbox" class="tk" data-tk="${player.id}" ${status === "taken" ? "checked" : ""} aria-label="Toggle ${esc(player.n)} as taken without simulation"></td><td><button class="star" data-mine="${player.id}" aria-pressed="${status === "mine"}" aria-label="Toggle ${esc(player.n)} on My team without simulation" title="Toggle My team manually (M)">★</button></td><td><button class="watch" data-queue="${player.id}" aria-pressed="${queued}" title="Draft queue (Q)">☷</button></td><td class="num" style="color:var(--faint)">${player.r}</td><td><div class="pname">${esc(player.n)}${tagHtml(player)}</div><div class="pmeta">${player.t} · ${player.p === "DEF" ? "D/ST" : player.p}${player.pr}</div></td><td class="num">${player.ti}</td><td class="num" style="color:var(--matcha);font-weight:600">${n1(player.s)}</td><td class="num">${n1(player.pj)}</td><td class="num">${n1(player.adp)}</td><td class="num">${player.wk ?? "—"}</td><td class="num">${player.qr ?? "—"}</td><td class="num">${decision.nextPick ? pct(nextChance) : "—"}</td><td class="num ${player.zv > 0 ? "pos" : player.zv < 0 ? "neg" : ""}">${player.spec ? "market" : player.zv == null ? "—" : player.zv.toFixed(2) + "σ"}</td><td><span class="badge b-${player.c}">${player.c}</span></td><td><span class="cf cf-${player.cf}">${player.cf}</span></td><td><span class="chev">▸</span></td></tr>${detail}`;
     }).join("");
     const mine = B.filter((player) => st[player.id] === "mine");
     document.getElementById("mineN").textContent = mine.length;
@@ -214,7 +227,7 @@
     const top = currentDecision().recommendations.slice(0, 3);
     document.getElementById("bestAv").innerHTML = `<h4 style="color:var(--muted);font-size:12px;margin-bottom:6px">Smart recommendations</h4>${top.map((item) => `<div class="mrow"><span>${esc(item.player.n)} <span class="pmeta">${item.player.p}</span></span><b class="num">${item.urgency.toFixed(2)}σ urgent</b></div>`).join("") || "<div class=pmeta>Draft complete</div>"}`;
     const queued = queue.map((id) => byId.get(id)).filter(Boolean);
-    document.getElementById("queueBody").innerHTML = `<div class="grp"><div class="gh" style="display:flex;justify-content:space-between"><span>Draft queue</span>${queued.length ? "<button class=\"btn mini\" id=\"clearQueue\">Clear</button>" : ""}</div>${queued.length ? queued.map((player, index) => `<div class="mrow"><span><b>${index + 1}.</b> ${esc(player.n)} <span class="pmeta">${player.p}</span></span><span class="queue-actions"><button class="btn mini" data-qmove="up" data-id="${player.id}">↑</button><button class="btn mini" data-qmove="down" data-id="${player.id}">↓</button><button class="btn mini" data-draft="${player.id}">Draft</button><button class="btn mini" data-queue="${player.id}">×</button></span></div>`).join("") : "<p class=pmeta>Add players from the board or decision panel, then reorder them here.</p>"}</div>`;
+    document.getElementById("queueBody").innerHTML = `<div class="grp"><div class="gh" style="display:flex;justify-content:space-between"><span>Draft queue</span>${queued.length ? "<button class=\"btn mini\" id=\"clearQueue\">Clear</button>" : ""}</div>${queued.length ? queued.map((player, index) => `<div class="mrow"><span><b>${index + 1}.</b> ${esc(player.n)} <span class="pmeta">${player.p}</span></span><span class="queue-actions"><button class="btn mini" data-qmove="up" data-id="${player.id}">↑</button><button class="btn mini" data-qmove="down" data-id="${player.id}">↓</button><button class="btn mini" data-pick-player="${player.id}">Draft</button><button class="btn mini" data-queue="${player.id}">×</button></span></div>`).join("") : "<p class=pmeta>Add players from the board or decision panel, then reorder them here.</p>"}</div>`;
     const orderedRoster = pickOrder.filter((id) => st[id] === "mine").map((id) => byId.get(id)).filter(Boolean);
     const counts = {}; orderedRoster.forEach((player) => { counts[player.p] = (counts[player.p] || 0) + 1; });
     const total = orderedRoster.reduce((sum, player) => sum + (player.pj || 0), 0);
@@ -243,15 +256,44 @@
     [queue[index], queue[next]] = [queue[next], queue[index]]; save(); render();
   }
   function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
-  function simulate() {
-    const result = D.simulateToMyPick(B, st, settings);
-    if (!result.picks.length) return;
+  function beginSimulation() {
     if (!simulationCheckpoint) {
       simulationCheckpoint = { state: structuredClone(st), pickOrder: [...pickOrder], queue: [...queue] };
     }
+  }
+  function simulate() {
+    const result = D.simulateToMyPick(B, st, settings);
+    if (!result.picks.length) return;
+    beginSimulation();
     st = result.state;
     result.picks.forEach((pick) => pickOrder.push(pick.player.id));
     save(); render();
+  }
+  function draftAtDecision(id) {
+    const player = byId.get(id);
+    const decision = currentDecision();
+    if (!player || st[id] || !decision.decisionPick) return;
+    if (!decision.onClock) {
+      beginSimulation();
+      const result = D.simulateToMyPick(B, st, settings, [id]);
+      st = result.state;
+      result.picks.forEach((pick) => pickOrder.push(pick.player.id));
+    }
+    st[id] = "mine";
+    pickOrder = pickOrder.filter((item) => item !== id);
+    pickOrder.push(id);
+    queue = queue.filter((item) => item !== id);
+    save(); render();
+  }
+  function toggleHiddenPlayer(id) {
+    if (!byId.has(id)) return;
+    if (hiddenPlayers.has(id)) hiddenPlayers.delete(id);
+    else {
+      hiddenPlayers.add(id);
+      queue = queue.filter((item) => item !== id);
+    }
+    open.delete(id);
+    save(); renderChips(); render();
   }
   function exitSimulation() {
     if (!simulationCheckpoint) return;
@@ -290,7 +332,8 @@
     if (chip) { if (chip.dataset.k === "toggle") f[chip.dataset.v] = !f[chip.dataset.v]; else { f[chip.dataset.k] = chip.dataset.v; if (chip.dataset.k === "pos" && chip.dataset.v !== "All") hiddenPositions.delete(chip.dataset.v); } save(); renderChips(); render(); return; }
     const taken = event.target.closest("[data-tk]"); if (taken) { setState(taken.dataset.tk, taken.checked ? "taken" : null); event.stopPropagation(); return; }
     const mine = event.target.closest("[data-mine]"); if (mine) { setState(mine.dataset.mine, st[mine.dataset.mine] === "mine" ? null : "mine"); event.stopPropagation(); return; }
-    const draft = event.target.closest("[data-draft]"); if (draft) { setState(draft.dataset.draft, "mine"); event.stopPropagation(); return; }
+    const pickPlayer = event.target.closest("[data-pick-player]"); if (pickPlayer) { draftAtDecision(pickPlayer.dataset.pickPlayer); event.stopPropagation(); return; }
+    const hidePlayer = event.target.closest("[data-hide-player]"); if (hidePlayer) { toggleHiddenPlayer(hidePlayer.dataset.hidePlayer); event.stopPropagation(); return; }
     const queued = event.target.closest("[data-queue]"); if (queued) { toggleQueue(queued.dataset.queue); event.stopPropagation(); return; }
     const mover = event.target.closest("[data-qmove]"); if (mover) { moveQueue(mover.dataset.id, mover.dataset.qmove); event.stopPropagation(); return; }
     if (event.target.id === "clearQueue") { queue = []; save(); render(); return; }
@@ -319,6 +362,7 @@
     if (event.key.toLowerCase() === "t") setState(id, st[id] === "taken" ? null : "taken");
     if (event.key.toLowerCase() === "m") setState(id, st[id] === "mine" ? null : "mine");
     if (event.key.toLowerCase() === "q") toggleQueue(id);
+    if (event.key.toLowerCase() === "h") toggleHiddenPlayer(id);
   });
   const controls = document.querySelector(".controls");
   const syncStickyOffset = () => document.documentElement.style.setProperty("--controls-height", `${Math.ceil(controls.getBoundingClientRect().height)}px`);

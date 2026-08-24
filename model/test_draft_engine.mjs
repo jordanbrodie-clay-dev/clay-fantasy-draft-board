@@ -40,6 +40,12 @@ assert.equal(opening.recommendations.slice(0, 8).some((item) => item.player.spec
 const noQuarterbacksOrTightEnds = draft.recommendations(board, {}, settings, [], ["QB", "TE"]);
 assert.equal(noQuarterbacksOrTightEnds.recommendations.some((item) => ["QB", "TE"].includes(item.player.p)), false);
 assert.equal(noQuarterbacksOrTightEnds.positionPlans.some((item) => ["QB", "TE"].includes(item.position)), false);
+const hardFadeGibbs = draft.recommendations(board, {}, settings, [], [], [board[0].id]);
+assert.notEqual(hardFadeGibbs.recommendations[0].player.id, board[0].id);
+
+const protectedGibbs = draft.simulateToMyPick(board, {}, { ...settings, slot: 12 }, [board[0].id]);
+assert.equal(protectedGibbs.picks.some((pick) => pick.player.id === board[0].id), false);
+assert.equal(protectedGibbs.state[board[0].id], undefined);
 
 // Regression: at the 12/13 turn, positional fit previously elevated Trey
 // McBride over materially higher Smart Rank players. BPA must now lead unless a
@@ -52,6 +58,24 @@ turnState[firstTurnPick.id] = "mine";
 const secondTurn = draft.recommendations(board, turnState, turnSettings);
 assert.equal(secondTurn.recommendations[0].player.id, secondTurn.bestAvailable.id);
 assert.notEqual(secondTurn.recommendations[0].player.n, "Trey McBride");
+
+// Real-board roster-relative timing: after four RB/WR selections, the round-five
+// decision should recognize a collapsing single-starter tier without changing
+// the opening-round BPA behavior asserted above.
+const midRoundSettings = structuredClone(draft.DEFAULTS);
+let midRoundState = {};
+for (let turn = 0; turn < 4; turn += 1) {
+  midRoundState = draft.simulateToMyPick(board, midRoundState, midRoundSettings).state;
+  const decision = draft.recommendations(board, midRoundState, midRoundSettings);
+  const receiverOrBack = decision.recommendations.find((item) => item.player.p === "RB" || item.player.p === "WR").player;
+  midRoundState[receiverOrBack.id] = "mine";
+}
+midRoundState = draft.simulateToMyPick(board, midRoundState, midRoundSettings).state;
+const midRoundDecision = draft.recommendations(board, midRoundState, midRoundSettings);
+assert.equal(midRoundDecision.currentPick, 49);
+assert.ok(["QB", "TE"].includes(midRoundDecision.recommendations[0].player.p));
+assert.equal(midRoundDecision.overrideApplied, true);
+assert.ok(midRoundDecision.recommendations[0].starterPressure >= 0.6);
 
 // BPA roster construction: two early RBs must not block a third RB when that
 // player is the top remaining asset and the FLEX/depth value is still high.
@@ -87,6 +111,26 @@ const scarcityBoard = [
 ];
 const scarcity = draft.recommendations(scarcityBoard, {}, structuredClone(draft.DEFAULTS));
 assert.equal(scarcity.recommendations[0].player.id, "rb-now");
+
+// An empty single-starter position should become urgent when its useful tier is
+// likely to vanish across the next two turns, but its acquisition window must
+// still prevent the same player from becoming an early reach.
+const tierSettings = {
+  teams: 2, slot: 1, snake: true,
+  slots: { QB: 0, RB: 0, WR: 0, TE: 1, FLEX: 0, K: 0, DEF: 0, BENCH: 7 },
+};
+const tierBoard = [
+  { id: "wr-bpa", n: "BPA WR", p: "WR", r: 1, pr: 1, zv: 2.0, adp: 9, asd: 3, be: 9, spk: 9, hhr: 0.7 },
+  { id: "te-cliff", n: "Last Tier TE", p: "TE", r: 4, pr: 1, zv: 1.8, adp: 9, asd: 2, be: 9, spk: 9, hhr: 0.7 },
+  { id: "wr-later", n: "Later WR", p: "WR", r: 10, pr: 2, zv: 1.95, adp: 24, asd: 4, be: 20, spk: 24, hhr: 0.7 },
+  { id: "te-later", n: "Replacement TE", p: "TE", r: 12, pr: 2, zv: 0.3, adp: 18, asd: 3, be: 16, spk: 18, hhr: 0.4 },
+];
+assert.equal(draft.recommendations(tierBoard, {}, tierSettings).recommendations[0].player.id, "wr-bpa");
+const roundFiveState = Object.fromEntries(Array.from({ length: 8 }, (_, index) => [`gone-${index}`, "taken"]));
+const tierDecision = draft.recommendations(tierBoard, roundFiveState, tierSettings);
+assert.equal(tierDecision.recommendations[0].player.id, "te-cliff");
+assert.ok(tierDecision.recommendations[0].starterPressure > 0.75);
+assert.ok(tierDecision.recommendations[0].twoPickSurvival < 0.5);
 
 const calibration = JSON.parse(fs.readFileSync(path.join(root, "model/data/historical_calibration.json"), "utf8"));
 assert.equal(calibration.meta.fold_count, 5);
