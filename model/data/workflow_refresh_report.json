@@ -299,5 +299,173 @@
         "error": "Claygent failed: Tried visiting the candidate pages from the provided Google results (sports.yahoo.com, espn.com, and nfl.com) to extract concrete 2026 camp/offseason role reporting for Sam LaPorta (first-team reps, depth-chart position, snap projections, package usage, competition). The webpage-visit tool returned 'no relevant data' for each page, likely due to dynamic content/transcripts not being accessible. Without extractable text evidence, I can’t confidently identify the best beat-reporting source or the requested role details from the options given."
       }
     ]
-  }
+  },
+  "last_delta_refresh": {
+    "refreshed_at": "2026-08-28T19:06:38.229Z",
+    "workflow_runs": {
+      "research": "run_0tkhuauDAM4MJ48kCPV",
+      "sentiment": "run_0tkhuauvwnG4XBQ8ukq"
+    },
+    "requested": 1,
+    "research_complete": 1,
+    "sentiment_complete": 1,
+    "updated": {
+      "research": [
+        "Ashton Jeanty"
+      ],
+      "sentiment": [
+        "Ashton Jeanty"
+      ]
+    },
+    "failures": {
+      "research": [],
+      "sentiment": []
+    }
+  },
+  "delta_refresh_history": [
+    {
+      "refreshed_at": "2026-08-28T19:02:28.335Z",
+      "workflow_runs": {
+        "research": "run_0tkhu1jMPRPuW4yfxzc",
+        "sentiment": "run_0tkhu1jhoCCRMQwcYCH"
+      },
+      "requested": 19,
+      "research_complete": 8,
+      "sentiment_complete": 16,
+      "updated": {
+        "research": [
+          "Chuba Hubbard",
+          "Brian Thomas",
+          "Alec Pierce",
+          "TreVeyon Henderson",
+          "Kenneth Walker III",
+          "Ashton Jeanty",
+          "Mike Evans",
+          "Breece Hall"
+        ],
+        "sentiment": [
+          "Alec Pierce",
+          "Josh Jacobs",
+          "Mike Washington",
+          "Brian Thomas",
+          "Tyler Warren",
+          "Emeka Egbuka",
+          "Kenneth Walker III",
+          "Chuba Hubbard",
+          "Tucker Kraft",
+          "Zay Flowers",
+          "Sam LaPorta",
+          "Jeremiyah Love",
+          "Mike Evans",
+          "Ja'Marr Chase",
+          "Josh Downs",
+          "Breece Hall"
+        ]
+      },
+      "failures": {
+        "research": [
+          {
+            "player": "Josh Jacobs",
+            "pos": "RB",
+            "team": "GB",
+            "sportradar_id": "61694ab9-b099-408e-b48d-6a643dd069ec",
+            "error": "Claygent failed: From the provided search results, the non-fantasydata.com pages (nbcsports.com, si.com, sports.yahoo.com) do not contain 2025-season advanced efficiency metrics/advanced stat tables for Josh Jacobs (e.g., EPA, yards per route run, expected fantasy points, missed tackles forced). Therefore, none of the listed candidates are likely to satisfy the requirement for 2025 advanced stats."
+          },
+          {
+            "player": "Jeremiyah Love",
+            "pos": "RB",
+            "team": "ARI",
+            "sportradar_id": "ca61f1e4-5a51-45b8-b8e3-f6564d9c2648",
+            "error": "Claygent failed: I could not locate, via the provided search results and a follow-up page visit, a sportsbook (or sportsbook-odds aggregator page that clearly cites sportsbook season-long lines) that lists Jeremiyah Love’s 2026 season-long rushing/receiving/passing yard and TD over/under totals. The available results were news/injury or weekly/single-game related content, and the attempted odds-aggregator sportsbook-style pages did not return extractable season-long prop lines."
+          },
+          {
+            "player": "Zay Flowers",
+            "pos": "WR",
+            "team": "BAL",
+            "sportradar_id": "2b6d74b7-10fb-4f17-99c8-9bb557fb475b",
+            "error": "Claygent failed: None of the provided Google results appear to be a dedicated advanced-stats page for Zay Flowers’ 2025 season (they are largely injury/news articles and one fantasy news page). Therefore I cannot reliably pick a different-domain result that is most likely to contain 2025 advanced efficiency metrics like EPA, yards per route run, or expected fantasy points."
+          },
+          {
+            "player": "Tucker Kraft",
+            "pos": "TE",
+            "team": "GB",
+            "sportradar_id": "3a084c5f-6b9f-4703-a0c7-1566bc4b1129",
+            "error": "Failed to resolve inputs for node \"Extract Usage and Efficiency\": Node \"Extract Usage and Efficiency\" is missing required inputs: page_b_text"
+          },
+          {
+            "player": "Josh Downs",
+            "pos": "WR",
+            "team": "IND",
+            "sportradar_id": "dd227f4a-0785-482d-a28b-f231c7f3b73f",
+            "error": "Claygent failed: From the provided Google results (different domains from fantasydata.com) none of the candidate pages (fantasyfootballcalculator.com news; draftsharks.com injury history) contain Josh Downs 2025-season advanced/efficiency metrics such as yards per route run, EPA, expected fantasy points, or missed tackles forced. Therefore I cannot identify a suitable alternate stats source URL from the given results."
+          },
+          {
+            "player": "Tyler Warren",
+            "pos": "TE",
+            "team": "IND",
+            "sportradar_id": "c8fe3913-1210-4142-b9c1-c119ef702ca5",
+            "error": "Claygent failed: None of the provided Google results are from the preferred stats domains (fantasypoints.com, ftnfantasy.com, rotoviz.com, statmuse.com, pff.com, nfl.com nextgenstats, playerprofiler.com). They are mostly injury news pages (Yahoo, SI, CBS, TheFantasyFootballers) and a YouTube video/forum/reddit, which are unlikely to contain Tyler Warren’s 2025 advanced efficiency/EPA/expected fantasy points stats. Therefore I can’t select an appropriate secondary advanced-stats source from the given options."
+          },
+          {
+            "player": "Rhamondre Stevenson",
+            "pos": "RB",
+            "team": "NE",
+            "sportradar_id": "6260e78a-64e2-4f7e-9bf8-39948a17a370",
+            "error": "Claygent failed: I could not find a sportsbook page that lists Rhamondre Stevenson 2026 season-long over/under props (full-season rushing/receiving/passing yards and total TDs). The available sportsbook-style result I checked (FanDuel roster → player-props) shows “Next Game” player prop lines (single-game), not season-long futures. The other examined aggregator page (BettingPros player-props) did not surface season-long (2026) over/under lines either."
+          },
+          {
+            "player": "Mike Washington",
+            "pos": "RB",
+            "team": "LV",
+            "sportradar_id": "b783f45a-16ea-4145-9f3a-fafaa1bb0058",
+            "error": "Claygent failed: From the provided Google results, none of the candidate non-rotowire domains appear likely to contain 2025 advanced efficiency stats (yards per route run, EPA, expected fantasy points, missed tackles forced). I checked fantasyfootballcalculator.com and it did not show relevant advanced stats, and I also checked the CBS Sports result; it was an article about workload/injury with no advanced/efficiency metrics or tables. Since only these results were available to choose from, I cannot reliably select a source that contains the requested 2025 advanced stats."
+          },
+          {
+            "player": "Emeka Egbuka",
+            "pos": "WR",
+            "team": "TB",
+            "sportradar_id": "00cea287-1fa0-4584-803f-59f546ef8722",
+            "error": "Claygent failed: From the provided Google results, none of the candidate pages are likely to contain Emeka Egbuka’s 2025-season advanced efficiency/EPA/expected fantasy point metrics. The closest options (Fox Sports player page and FantasyPros article) were checked and did not provide relevant advanced stats for 2025. Therefore there is no suitable different-domain result to select from the list."
+          },
+          {
+            "player": "Sam LaPorta",
+            "pos": "TE",
+            "team": "DET",
+            "sportradar_id": "3059f1e5-1871-4458-9e90-9b9917874c61",
+            "error": "Claygent failed: None of the provided Google results (other than rotowire.com, which is the already-chosen stats source) are from preferred advanced-stats domains (fantasypoints.com, ftnfantasy.com, rotoviz.com, statmuse.com, pff.com, nfl.com nextgenstats, playerprofiler.com). The remaining results are news/injury articles (usatoday.com, freep.com, yahoo.com, detroitlions.com video, etc.) or forums/social (reddit, facebook), which are unlikely to contain Sam LaPorta’s 2025-season efficiency/EPA/expected fantasy points advanced metrics. Therefore, I cannot select a valid alternative result that likely contains the required 2025 advanced stats."
+          },
+          {
+            "player": "Ja'Marr Chase",
+            "pos": "WR",
+            "team": "CIN",
+            "sportradar_id": "fa99e984-d63b-4ef4-a164-407f68a7eeaf",
+            "error": "Claygent failed: None of the provided Google results are from the preferred stats/analytics domains (fantasypoints.com, ftnfantasy.com, rotoviz.com, statmuse.com, pff.com, nfl.com nextgenstats, playerprofiler.com) or appear to be pages that contain Ja’Marr Chase’s 2025-season advanced efficiency/EPA route stats. Most results are injury-news articles (SI/Yahoo/FreeP/PrizePicks) or non-stats pages (Facebook/YouTube/Reddit). Therefore I can’t select a result that most likely contains the requested 2025 advanced stats."
+          }
+        ],
+        "sentiment": [
+          {
+            "player": "TreVeyon Henderson",
+            "pos": "RB",
+            "team": "NE",
+            "sportradar_id": "0d9788e6-03ee-416d-8ba2-deb57037d209",
+            "error": "Claygent failed: None of the provided search results (Yahoo, Boston Herald, FoxSports, RotoWire, PrizePicks, Facebook, Reddit) contained direct quotes from the Patriots head coach or offensive coordinator about TreVeyon Henderson’s 2026 role/usage/status based on available page content; the most promising local/major sources either had no coach-quote text detectable or were unavailable via scraping. Therefore I can’t confidently select a single result that likely contains genuine coach quotes."
+          },
+          {
+            "player": "Rhamondre Stevenson",
+            "pos": "RB",
+            "team": "NE",
+            "sportradar_id": "6260e78a-64e2-4f7e-9bf8-39948a17a370",
+            "error": "Claygent failed: From the provided candidate links, none surfaced direct quotes from Patriots head coach or offensive coordinator specifically about Rhamondre Stevenson’s 2026 role/usage/standing. The only explicit direct quotes found were from Stevenson himself (e.g., Yahoo/PatriotsWire and Patriots player media availability pages), while Patriots.com head-coach press conference transcripts/video pages returned no relevant Stevenson-specific coach quote content during checks."
+          },
+          {
+            "player": "Ashton Jeanty",
+            "pos": "RB",
+            "team": "LV",
+            "sportradar_id": "320fc4b7-76c7-43af-bbfd-1a22ba8f78cb",
+            "error": "Claygent failed: Unable to retrieve direct head-coach/offensive-coordinator quotes about Ashton Jeanty from any of the provided candidate results: webpage extraction for the top likely beat outlet (Silver&Black Pride) and for Yahoo and The Sporting Tribune returned no relevant data. Without accessible coach quote text, I cannot confidently select a result that contains genuine coach quotations."
+          }
+        ]
+      }
+    }
+  ]
 }

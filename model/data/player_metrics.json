@@ -116,25 +116,25 @@
     "player": "Chuba Hubbard",
     "pos": "RB",
     "usage": {
-      "snap_share_pct": 47.1,
-      "route_participation_pct": 43.1,
-      "opportunity_share_pct": 42,
+      "snap_share_pct": 38.2,
+      "route_participation_pct": null,
+      "opportunity_share_pct": null,
       "goal_line_carry_share_pct": null,
       "rz_touch_share_pct": null,
-      "touches_per_game": null,
-      "targets_per_game": 2.6,
+      "touches_per_game": 10.9,
+      "targets_per_game": null,
       "yac_per_attempt": null,
       "mtf_per_touch": null,
       "rush_epa_per_att": null,
-      "xfp_per_game": 9.7,
-      "fp_minus_xfp": -1.38,
+      "xfp_per_game": null,
+      "fp_minus_xfp": null,
       "conflicts": []
     },
     "props": {
       "rush_yds_prop": 1195,
       "rec_yds_prop": null,
       "receptions_prop": 43,
-      "total_td_prop": null,
+      "total_td_prop": 10,
       "pass_yds_prop": null,
       "pass_td_prop": null,
       "book": null,
@@ -145,21 +145,20 @@
       "games_missed_2025": 2,
       "soft_tissue_events_2yr": 2,
       "injury_list": [
-        "Dec 28, 2024: calf and knee injuries; placed on season-ending IR (games missed not quantified on page)",
-        "Sep 28, 2025: calf strain (lingering) worsened after Week 4; missed 2 games",
-        "Aug 12, 2026: thigh/hamstring sprain/pull, grade 1 (week-to-week)"
+        "Dec 28, 2024: placed on season-ending IR with calf and knee injuries (games missed not quantified)",
+        "Sep 28, 2025: leg calf strain (lingering calf strain worsened after Week 4); missed 2 games"
       ],
-      "current_recovery_note": "As of the page’s latest update (2026), Hubbard is dealing with a thigh/hamstring sprain/pull listed as week-to-week and expected to be ready for Week 1."
+      "current_recovery_note": "Aug 12, 2026: hamstring/thigh hamstring sprain/pull listed as week-to-week; expected to be ready for Week 1."
     },
     "sources": {
-      "usage": "SOURCE1: https://www.playerprofiler.com/nfl/chuba-hubbard/ | SOURCE2: https://www.rotowire.com/football/player/chuba-hubbard-15242",
+      "usage": "SOURCE1: https://fantasydata.com/nfl/chuba-hubbard-fantasy/21691 | SOURCE2: https://www.rotowire.com/football/player/chuba-hubbard-15242",
       "props": "https://fantasyteamadvice.com/nfl/players/11897/chuba-hubbard/season-long-props/2024",
       "injury": "https://www.draftsharks.com/fantasy/injury-history/chuba-hubbard/10766"
     },
     "notes": {
-      "usage": "SOURCE1 contains 2025 usage/efficiency volume/role metrics (snap/opportunity/route, targets per game, expected fantasy points and diff); SOURCE2 provides 2025 rush/rec totals but lacks the snap/route/opportunity/share efficiency fields required, so those are null.",
-      "props": "Found only Rush Yds (1195), Rush TDs (10), and Rec (43); receiving/TD/passing lines and sportsbook/as-of not shown.",
-      "injury": "Used only injuries explicitly listed on the provided DraftSharks injury-history page; game counts were only available for the 2025 calf strain (2)."
+      "usage": "SOURCE2 provided only select 2025 efficiency/usage metrics (% snaps w/ touch, touches per game, run/after-contact splits). SOURCE1 parsing did not yield reliably mapped 2025 volume/efficiency fields without guessing.",
+      "props": "Found only summary season-long numbers on the page (Rush Yds 1195, Rush TDs 10, Rec 43); sportsbook name and passing/receiving-yard lines not visible.",
+      "injury": "Only quantified games missed for the Sep 28, 2025 calf strain (2). 2024 calf/knee IR entry does not state games missed."
     },
     "refresh_status": "fresh"
   },
@@ -1232,6 +1231,7 @@
     "player": "Alec Pierce",
     "pos": "WR",
     "usage": {
+      "position": "WR",
       "target_share_pct": 18,
       "air_yards_share_pct": 51.8,
       "route_participation_pct": 90.6,
@@ -1243,14 +1243,13 @@
       "epa_per_target": null,
       "xfp_per_game": 10.4,
       "fp_minus_xfp": 1.84,
-      "first_read_target_share_pct": 23.1,
-      "conflicts": []
+      "first_read_target_share_pct": 23.1
     },
     "props": {
       "rush_yds_prop": null,
-      "rec_yds_prop": null,
-      "receptions_prop": null,
-      "total_td_prop": null,
+      "rec_yds_prop": 1003,
+      "receptions_prop": 47,
+      "total_td_prop": 6,
       "pass_yds_prop": null,
       "pass_td_prop": null,
       "book": null,
@@ -1261,21 +1260,21 @@
       "games_missed_2025": 1,
       "soft_tissue_events_2yr": 1,
       "injury_list": [
-        "2024 Dec 15 Head/cranial concussion (Grade 1) — games missed not quantified",
-        "2025 Aug 10 Inguinal groin pull (Grade 1) — games missed not quantified",
-        "2025 Sep 21 Head/cranial concussion (Grade 1) — missed 1 game"
+        "Dec 15, 2024 head/cranial concussion (Grade 1) — games missed not quantified",
+        "Aug 10, 2025 inguinal groin pull (Grade 1) — games missed not quantified",
+        "Sep 21, 2025 head/cranial concussion (Grade 1) — missed 1 game"
       ],
-      "current_recovery_note": "2026: Ankle not declared as of page; earlier ankle surgery (opened training camp on PUP list)."
+      "current_recovery_note": null
     },
     "sources": {
-      "usage": "SOURCE1: https://www.playerprofiler.com/nfl/alec-pierce/ | SOURCE2: https://www.nflsavant.com/player/alec-pierce?tab=routes",
-      "props": "https://fantasyteamadvice.com/nfl/players/12088/alec-pierce/season-long-props/2022",
+      "usage": "SOURCE1: https://www.playerprofiler.com/nfl/alec-pierce/ | SOURCE2: https://www.si.com/nfl/colts/onsi/colts-injury-report-gets-promising-update-with-regular-season-on-the-horizon",
+      "props": "https://fantasyteamadvice.com/nfl/players/12088/alec-pierce/season-long-props",
       "injury": "https://www.draftsharks.com/fantasy/injury-history/alec-pierce/12605"
     },
     "notes": {
-      "usage": "SOURCE2 route-tab content unavailable; SOURCE1 provides 2025 opportunity/productivity metrics for WR Alec Pierce (IND), but EPA-per-target and TPRR were not clearly labeled/mappable in the text extract.",
-      "props": "No usable 2022 season-long prop lines were found on the provided page (likely missing/paywalled), so all fields set to null.",
-      "injury": "Only injuries explicitly listed on the provided Alec Pierce page for 2024–2025 were used; games-missed is null where the page shows ‘—’."
+      "usage": "SOURCE1 contains 2025 WR usage/efficiency metrics for Alec Pierce; SOURCE2 is about 2026 injuries and provides no 2025 usage metrics.",
+      "props": "Only receiving season totals (47 rec, 1003 rec yds, 6 rec TDs) were present; sportsbook season-long line numbers for rushing/passing/total TDs were not shown in the accessible content.",
+      "injury": "Only 2024-2025 injuries explicitly shown on the page were used; game counts are null where the page shows a dash (—). Soft-tissue counted only groin/hamstring/calf/quad (groin pull only)."
     },
     "refresh_status": "fresh"
   },
@@ -2231,47 +2230,47 @@
     "usage": {
       "target_share_pct": 22.8,
       "air_yards_share_pct": 35.3,
-      "route_participation_pct": 74.4,
+      "route_participation_pct": 18.8,
       "snap_share_pct": 66.8,
       "rz_target_share_pct": 24.3,
       "targets_per_game": 7.6,
-      "yprr": null,
-      "tprr": null,
+      "yprr": 1.67,
+      "tprr": 0.286,
       "epa_per_target": null,
-      "xfp_per_game": 12.3,
+      "xfp_per_game": 10.6,
       "fp_minus_xfp": -1.66,
       "first_read_target_share_pct": 34.6
     },
     "props": {
       "rush_yds_prop": null,
-      "rec_yds_prop": 824.5,
+      "rec_yds_prop": null,
       "receptions_prop": null,
-      "total_td_prop": 6.5,
+      "total_td_prop": null,
       "pass_yds_prop": null,
       "pass_td_prop": null,
-      "book": "DraftKings",
-      "as_of": "August 22, 2026"
+      "book": "FanDuel Sportsbook",
+      "as_of": null
     },
     "injury": {
       "games_missed_2024": 3,
       "games_missed_2025": 8,
       "soft_tissue_events_2yr": 2,
       "injury_list": [
-        "2024-10-13 NFL thigh hamstring strain (Grade 2) — missed 3 games",
-        "2025-09-21 NFL thigh hamstring sprain/pull (Grade 1) — missed 3 games",
-        "2025-10-20 Non-NFL shoulder/clavicle fracture — missed 5 games"
+        "Oct 13, 2024 hamstring strain (Grade 2) — missed 3 games",
+        "Sep 21, 2025 thigh hamstring sprain/pull (Grade 1) — missed 3 games",
+        "Oct 20, 2025 shoulder/clavicle fracture — missed 5 games"
       ],
-      "current_recovery_note": null
+      "current_recovery_note": "Active with no injury status; Week 1 (2026) practice listed as full on Wed/Thu/Fri."
     },
     "sources": {
-      "usage": "SOURCE1: https://fantasy.nfl.com/player/mike-evans/profile/2543468/notes | SOURCE2: https://www.playerprofiler.com/nfl/mike-evans/",
-      "props": "https://www.rotowire.com/betting/nfl/player/mike-evans-9253",
+      "usage": "SOURCE1: https://www.rotowire.com/football/player/mike-evans-9253 | SOURCE2: https://www.playerprofiler.com/nfl/mike-evans/",
+      "props": "https://sportsbook.fanduel.com/teams/nfl/roster/mike-evans-52418/player-props",
       "injury": "https://www.draftsharks.com/fantasy/injury-history/mike-evans/6938"
     },
     "notes": {
-      "usage": "SOURCE1 page content did not expose 2025 usage/efficiency fields; SOURCE2 contained 2025-only targets/usage and efficiency (FP/Game vs Expected FP) but did not clearly label YPRR/TPRR or EPA per target.",
-      "props": "Found 2026 receiving TDs (6.5) and receiving yards (824.5) season-long props on DraftKings; no other season-long lines shown.",
-      "injury": "Used only the explicitly listed 2024-2025 injuries on the provided page; game-missed counts were taken verbatim (hamstring soft-tissue events counted as distinct events)."
+      "usage": "2025 matchup confirmed as Mike Evans WR San Francisco 49ers; SOURCE1 provided %Targeted On Route (28.6%) and efficiency baseline, SOURCE2 provided 2025 target/snap/route shares; some efficiency fields (epa_per_target) not available/unmapped so left null.",
+      "props": "Page content shows next-game (Sept 11, 2026) player prop thresholds (e.g., 21.5 rec yds, 48.5 receiving yds, 3.5 receptions) but no 2026 season-long prop lines.",
+      "injury": "Injuries were extracted only from the page’s explicit 2024–2025 injury table entries; soft-tissue count includes only hamstring injuries."
     },
     "refresh_status": "fresh"
   },
@@ -4455,50 +4454,51 @@
     "player": "Brian Thomas",
     "pos": "WR",
     "usage": {
-      "target_share_pct": 19.3,
-      "air_yards_share_pct": 30.8,
-      "route_participation_pct": 85.4,
-      "snap_share_pct": 87.3,
-      "rz_target_share_pct": 10.4,
-      "targets_per_game": 6.5,
-      "yprr": 1.59,
-      "tprr": 0.204,
+      "target_share_pct": 16.7,
+      "air_yards_share_pct": 27,
+      "route_participation_pct": null,
+      "snap_share_pct": 65,
+      "rz_target_share_pct": null,
+      "targets_per_game": null,
+      "yprr": 1.57,
+      "tprr": 0.202,
       "epa_per_target": null,
-      "xfp_per_game": 13,
-      "fp_minus_xfp": -3.05,
-      "first_read_target_share_pct": 25.3
+      "xfp_per_game": null,
+      "fp_minus_xfp": null,
+      "first_read_target_share_pct": null,
+      "conflicts": []
     },
     "props": {
       "rush_yds_prop": null,
-      "rec_yds_prop": null,
+      "rec_yds_prop": 724.5,
       "receptions_prop": null,
-      "total_td_prop": null,
+      "total_td_prop": 4.5,
       "pass_yds_prop": null,
       "pass_td_prop": null,
-      "book": null,
-      "as_of": null
+      "book": "DraftKings",
+      "as_of": "2026-08-26"
     },
     "injury": {
       "games_missed_2024": null,
       "games_missed_2025": 3,
       "soft_tissue_events_2yr": 0,
       "injury_list": [
-        "2025 Nov 2 pedal ankle sprain/pull (Grade 1) — missed 3 games",
-        "2025 Oct 19 right shoulder injury",
-        "2025 Sep 14 hand/wrist sprain/pull",
-        "2024 Oct 27 chest/rib sprain/pull"
+        "2025 Pedal ankle sprain/pull (Grade 1) — missed 3 games",
+        "2025 right shoulder injury — games missed not quantified",
+        "2025 hand/wrist sprain/pull — games missed not quantified",
+        "2024 chest/rib sprain/pull — games missed not quantified"
       ],
       "current_recovery_note": null
     },
     "sources": {
-      "usage": "SOURCE1: https://www.playerprofiler.com/nfl/brian-thomas-jr/ | SOURCE2: https://www.rotowire.com/football/player/brian-thomas-17716",
-      "props": "https://www.bettingpros.com/nfl/odds/player-futures/brian-thomas-jr/",
+      "usage": "SOURCE1: https://fantasydata.com/nfl/brian-thomas-jr-fantasy/24933 | SOURCE2: https://www.rotowire.com/football/player/brian-thomas-17716",
+      "props": "https://www.rotowire.com/betting/nfl/player/brian-thomas-odds-17716",
       "injury": "https://www.draftsharks.com/fantasy/injury-history/brian-thomas-jr/35014"
     },
     "notes": {
-      "usage": "Extracted 2025 WR usage/efficiency metrics from SOURCE1 PlayerProfiler; SOURCE2 lacked matching 2025 advanced-percent fields for mapping.",
-      "props": "No usable 2026 season-long prop lines were retrievable from the provided BettingPros page (content appears not scrapeable/dynamic), so all fields are null.",
-      "injury": "Only one 2024-2025 injury entry includes an explicit games-missed number (2025 ankle sprain: 3); other 2025/2024 injuries are listed without quantified missed games, and no hamstring/groin/calf/quad events are mentioned."
+      "usage": "Used 2025 Jaguars WR Brian Thomas Jr. stats from SOURCE1/SOURCE2; efficiency fields like EPA/XFP and red-zone target share were not shown on the provided page text.",
+      "props": "Found 2026 season-long Receiving TDs (4.5) and Receiving Yards (724.5) for Brian Thomas on DraftKings; other prop types not shown.",
+      "injury": "Games missed are only explicitly quantified for the 2025 pedal ankle injury (3); other listed 2024-2025 injuries do not specify games missed, and no hamstring/groin/calf/quad events are mentioned."
     },
     "refresh_status": "fresh"
   },
@@ -5378,46 +5378,45 @@
     "player": "Breece Hall",
     "pos": "RB",
     "usage": {
-      "snap_share_pct": 64.3,
-      "route_participation_pct": 57.2,
-      "opportunity_share_pct": 73.7,
+      "snap_share_pct": null,
+      "route_participation_pct": null,
+      "opportunity_share_pct": null,
       "goal_line_carry_share_pct": null,
       "rz_touch_share_pct": null,
-      "touches_per_game": 17.4,
-      "targets_per_game": 3,
+      "touches_per_game": null,
+      "targets_per_game": null,
       "yac_per_attempt": null,
       "mtf_per_touch": null,
       "rush_epa_per_att": null,
       "xfp_per_game": null,
-      "fp_minus_xfp": -0.86,
-      "targets_per_game_source_note": "SOURCE1 prints Targets as 48 (3.0 p/g) for 2025; SOURCE2 does not change it in scraped text"
+      "fp_minus_xfp": null,
+      "target_share_pct": 8.7,
+      "conflicts": []
     },
     "props": {
-      "rush_yds_prop": 463,
+      "rush_yds_prop": 999.5,
       "rec_yds_prop": null,
-      "receptions_prop": 19,
+      "receptions_prop": null,
       "total_td_prop": null,
       "pass_yds_prop": null,
-      "pass_td_prop": null,
-      "book": null,
-      "as_of": null
+      "pass_td_prop": null
     },
     "injury": {
       "games_missed_2024": null,
       "games_missed_2025": null,
       "soft_tissue_events_2yr": null,
       "injury_list": [],
-      "current_recovery_note": null
+      "current_recovery_note": "Aug 17, 2026 groin/inguinal strain (grade 2) — expected to miss 2-3 weeks; week 1 practice status Full."
     },
     "sources": {
-      "usage": "SOURCE1: https://www.playerprofiler.com/nfl/breece-hall/ | SOURCE2: https://www.rotowire.com/football/player/breece-hall-15810",
-      "props": "https://fantasyteamadvice.com/nfl/players/11890/breece-hall/season-long-props/2022",
+      "usage": "SOURCE1: https://www.draftsharks.com/fantasy/points-outlook/breece-hall/12577 | SOURCE2: https://ftnfantasy.com/breece-hall-to-miss-2-3-weeks-jonah-coleman-keeps-climbing",
+      "props": "https://www.rotowire.com/betting/nfl/player/breece-hall-odds-15810",
       "injury": "https://www.draftsharks.com/fantasy/injury-history/breece-hall/12577"
     },
     "notes": {
-      "usage": "RB 2025 usage extracted from SOURCE1 (snap/route/opportunity shares, targets per game) and SOURCE2 (touches per game); some efficiency fields (EPA per att, xFP per game, inside-10/goal-line shares, YAC/att, MTf/touch) were not present in the provided scraped excerpts; SOURCE verification: both pages are for Breece Hall (RB, New York Jets).",
-      "props": "On the page, only Rush Yds (463), Rush TDs (4), and Rec (19) were visible; receiving yards, total TD, and passing props plus sportsbook/as-of were not shown (likely paywalled).",
-      "injury": "DraftSharks page provides injury history entries only for 2026 (non-NFL groin strain) and 2022 (ACL tear/meniscus trim); no explicit 2024 or 2025 injury/game-missed data for Breece Hall is shown."
+      "usage": "SOURCE1 provides 2025 RB target share (8.7%) and other 2025 role/efficiency snippets but no snap/route/opportunity/EPa/xFP/FP-xFP or touch-based metrics; SOURCE2 contains no 2025 usage/efficiency numbers (injury-only, 2026 article).",
+      "props": "Found season-long Rushing Yards (999.5) and Rushing TDs (4.5) lines for Breece Hall; no season-long reception/receiving/pass props and no total TD prop.",
+      "injury": "The provided page contains quantified injury details for 2026 and 2022 only; it does not list any Breece Hall injuries or games missed for the 2024 or 2025 NFL seasons."
     },
     "refresh_status": "fresh"
   },
@@ -6262,13 +6261,13 @@
       "rush_epa_per_att": null,
       "xfp_per_game": 14.7,
       "fp_minus_xfp": -0.25,
-      "targets_per_game_note": null,
+      "targets_per_game_source": "SOURCE1",
       "conflicts": []
     },
     "props": {
-      "rush_yds_prop": null,
+      "rush_yds_prop": 975,
       "rec_yds_prop": null,
-      "receptions_prop": null,
+      "receptions_prop": 55,
       "total_td_prop": null,
       "pass_yds_prop": null,
       "pass_td_prop": null,
@@ -6279,20 +6278,18 @@
       "games_missed_2024": null,
       "games_missed_2025": null,
       "soft_tissue_events_2yr": null,
-      "injury_list": [
-        "Nov 23, 2025 (NFL) Pedal ankle sprain/pull (Grade 1) — games missed not quantified"
-      ],
+      "injury_list": [],
       "current_recovery_note": null
     },
     "sources": {
       "usage": "SOURCE1: https://www.playerprofiler.com/nfl/ashton-jeanty/ | SOURCE2: https://www.rotowire.com/football/player/ashton-jeanty-18487",
-      "props": "https://fantasyteamadvice.com/nfl/players/12599/ashton-jeanty/season-long-props/2026",
-      "injury": "https://www.draftsharks.com/fantasy/injury-history/ashton-jeanty/35317"
+      "props": "https://fantasyteamadvice.com/nfl/players/12599/ashton-jeanty/season-long-props/2025",
+      "injury": "https://www.espn.com/nfl/story/_/id/49724805/raiders-klint-kubiak-says-injured-ashton-jeanty-mend"
     },
     "notes": {
-      "usage": "SOURCE1 provides 2025 snap/route/opportunity shares and expected vs actual fantasy points; SOURCE2 confirms 2025 touches/game. Other requested efficiency fields (EPA per target/att, YAC/MTF) not explicitly present in scraped text.",
-      "props": "No usable 2026 season-long prop lines were found on the provided page (page content appears to show dashes and/or is paywalled).",
-      "injury": "Only one 2025 NFL injury is listed with no games-missed count; 2024 entries shown are labeled Non-NFL, so no 2024 NFL games/soft-tissue events can be counted under the rules."
+      "usage": "SOURCE1 provides 2025 snap/route/opportunity and xFP/fp−xFP; SOURCE2 confirms touches per game. No goal-line/RZ share, YAC/MTF, or per-att EPA metrics were explicitly available on the scraped pages.",
+      "props": "Found only visible season-long lines on the page: Rush Yds 975, Rec 55, Rush TDs 5; other required fields plus sportsbook and as-of date were not shown.",
+      "injury": "The provided page only mentions a 2026 practice ankle sprain for Ashton Jeanty and provides no explicit injury history or games-missed information for the 2024 or 2025 seasons."
     },
     "refresh_status": "fresh"
   },
@@ -7385,46 +7382,47 @@
     "player": "TreVeyon Henderson",
     "pos": "RB",
     "usage": {
-      "snap_share_pct": 46.2,
-      "route_participation_pct": 39.3,
-      "opportunity_share_pct": 48.9,
+      "snap_share_pct": 41,
+      "route_participation_pct": null,
+      "opportunity_share_pct": null,
       "goal_line_carry_share_pct": null,
       "rz_touch_share_pct": null,
-      "touches_per_game": null,
-      "targets_per_game": 2.5,
+      "touches_per_game": 12.6,
+      "targets_per_game": null,
       "yac_per_attempt": null,
       "mtf_per_touch": null,
       "rush_epa_per_att": null,
-      "xfp_per_game": 11.4,
-      "fp_minus_xfp": 0.72,
-      "conflicts": []
+      "xfp_per_game": null,
+      "fp_minus_xfp": null
     },
     "props": {
-      "rush_yds_prop": null,
+      "rush_yds_prop": 749.5,
       "rec_yds_prop": null,
       "receptions_prop": null,
       "total_td_prop": null,
       "pass_yds_prop": null,
       "pass_td_prop": null,
-      "book": null,
-      "as_of": null
+      "book": "DraftKings",
+      "as_of": "August 27, 2026"
     },
     "injury": {
       "games_missed_2024": null,
       "games_missed_2025": null,
-      "soft_tissue_events_2yr": 0,
-      "injury_list": [],
+      "soft_tissue_events_2yr": null,
+      "injury_list": [
+        "2025 Dec 21 head/cranial concussion (Grade 1), games missed not quantified (cleared concussion protocol; active next game)"
+      ],
       "current_recovery_note": null
     },
     "sources": {
-      "usage": "SOURCE1: https://www.playerprofiler.com/nfl/treveyon-henderson/ | SOURCE2: https://www.rotoviz.com/2025/11/week-10-running-back-advanced-stats-the-treveyon-henderson-effect/",
-      "props": "https://fantasyteamadvice.com/nfl/players/12620/treveyon-henderson/season-long-props/2026",
+      "usage": "SOURCE1: https://www.rotowire.com/football/player/treveyon-henderson-18517 | SOURCE2: https://www.foxsports.com/nfl/treveyon-henderson-player",
+      "props": "https://www.rotowire.com/betting/nfl/player/treveyon-henderson-odds-18517",
       "injury": "https://www.draftsharks.com/fantasy/injury-history/treveyon-henderson/35323"
     },
     "notes": {
-      "usage": "SOURCE2 content is paywalled so no 2025 efficiency/usage metrics could be extracted; SOURCE1 provides 2025 core usage and expected fantasy points per game but lacks mapped RB efficiency inputs like rush EPA/att and inside-5/inside-10 share.",
-      "props": "Page content appears paywalled/no season-long prop lines visible; no usable 2026 season-long prop values found for TreVeyon Henderson.",
-      "injury": "Page only lists a 2025 Grade 1 head cranial concussion with games missed shown as “—” and no 2024 injuries or any soft-tissue (hamstring/groin/calf/quad) events."
+      "usage": "SOURCE1 contains 2025 advanced volume/efficiency; snap share appears in snap distribution, but only %Snaps w/Touch is clearly labeled—route participation, opportunity shares, red-zone shares, and efficiency (EPA/XFP/FP) are not provided; SOURCE2 provides 2025 totals but no required share/efficiency splits.",
+      "props": "Found season-long DraftKings lines for TreVeyon Henderson: Rushing TDs 7.5 and Rushing Yards 749.5; no season-long reception/receiving or passing props shown on the provided page text.",
+      "injury": "Page only provides injury details for a 2025 concussion with games-missed listed as '—' and no 2024 injury entries; no soft-tissue (hamstring/groin/calf/quad) injuries are explicitly shown."
     },
     "refresh_status": "fresh"
   },
@@ -9244,6 +9242,59 @@
       "usage": "SOURCE1 provides 2025 snap share, route participation, opportunity share, targets/game, and fantasy pts vs expected; SOURCE2 page shows 2025 rush/rec totals but does not expose matching efficiency/volume splits for the required fields.",
       "props": "Found only Rush Yds (1009), Rush TDs (16), and Rec (32); receiving yards, passing props, total TDs, sportsbook name, and as-of date were not visible on the provided page content.",
       "injury": "Only one explicitly listed 2024 injury with a quantified games-missed value; no 2025 injury entries shown; soft-tissue (hamstring/groin/calf/quad) injuries are not present in the provided history."
+    },
+    "refresh_status": "fresh"
+  },
+  "22ee9bac-a64c-4d44-94fc-51d775465b3b": {
+    "sportradar_id": "22ee9bac-a64c-4d44-94fc-51d775465b3b",
+    "player": "Kenneth Walker III",
+    "pos": "RB",
+    "usage": {
+      "snap_share_pct": 47.5,
+      "route_participation_pct": 36.6,
+      "opportunity_share_pct": 51.3,
+      "goal_line_carry_share_pct": null,
+      "rz_touch_share_pct": null,
+      "touches_per_game": null,
+      "targets_per_game": 2.1,
+      "targets_per_game_note": null,
+      "yac_per_attempt": null,
+      "mtf_per_touch": null,
+      "rush_epa_per_att": null,
+      "xfp_per_game": 11,
+      "fp_minus_xfp": 0.29,
+      "conflicts": []
+    },
+    "props": {
+      "rush_yds_prop": null,
+      "rec_yds_prop": null,
+      "receptions_prop": null,
+      "total_td_prop": null,
+      "pass_yds_prop": null,
+      "pass_td_prop": null,
+      "book": "FanDuel",
+      "as_of": "2026-08-29"
+    },
+    "injury": {
+      "games_missed_2024": 6,
+      "games_missed_2025": null,
+      "soft_tissue_events_2yr": 1,
+      "injury_list": [
+        "2024 Sep 8 abdomen muscle sprain/pull (Grade 1) — missed 2 games",
+        "2024 Dec 4 leg calf strain — missed 2 games",
+        "2024 Dec 22 pedal ankle sprain (Grade 2) — missed 2 games"
+      ],
+      "current_recovery_note": null
+    },
+    "sources": {
+      "usage": "SOURCE1: https://www.playerprofiler.com/nfl/kenneth-walker/ | SOURCE2: https://www.foxsports.com/nfl/ken-walker-iii-player",
+      "props": "https://sportsbook.fanduel.com/teams/nfl/roster/kenneth-walker-iii-55268/player-props",
+      "injury": "https://www.draftsharks.com/fantasy/injury-history/kenneth-walker-iii/12579"
+    },
+    "notes": {
+      "usage": "SOURCE1 provides multiple 2025 opportunity/usage and fantasy efficiency metrics; SOURCE2 page text contains no explicit 2025 efficiency/volume stats for this player (content mostly news).",
+      "props": "Page for Kenneth Walker III shows no player props available; no season-long prop lines listed.",
+      "injury": "Used only injuries explicitly listed in the provided DraftSharks injury-history table for 2024-2025; game counts were summed only where the page quantified games missed."
     },
     "refresh_status": "fresh"
   }

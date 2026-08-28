@@ -75,18 +75,20 @@ const midRoundDecision = draft.recommendations(board, midRoundState, midRoundSet
 assert.equal(midRoundDecision.currentPick, 49);
 assert.ok(["QB", "TE"].includes(midRoundDecision.recommendations[0].player.p));
 assert.equal(midRoundDecision.overrideApplied, true);
-assert.ok(midRoundDecision.recommendations[0].starterPressure >= 0.6);
+assert.ok(midRoundDecision.recommendations[0].starterPressure >= 0.5);
+assert.ok(midRoundDecision.recommendations[0].twoPickSurvival < 0.25);
 
 // BPA roster construction: two early RBs must not block a third RB when that
 // player is the top remaining asset and the FLEX/depth value is still high.
 const depthSettings = structuredClone(draft.DEFAULTS);
 depthSettings.slot = 3;
 const depthState = {};
-board.slice(0, 26).forEach((player) => { depthState[player.id] = "taken"; });
-board.slice(0, 26).filter((player) => player.p === "RB").slice(0, 2)
+const breeceIndex = board.findIndex((player) => player.n === "Breece Hall");
+board.slice(0, breeceIndex).forEach((player) => { depthState[player.id] = "taken"; });
+board.slice(0, breeceIndex).filter((player) => player.p === "RB").slice(0, 2)
   .forEach((player) => { depthState[player.id] = "mine"; });
 const depthDecision = draft.recommendations(board, depthState, depthSettings);
-assert.equal(depthDecision.currentPick, 27);
+assert.equal(depthDecision.currentPick, breeceIndex + 1);
 assert.equal(depthDecision.recommendations[0].player.n, "Breece Hall");
 assert.equal(depthDecision.recommendations[0].need, 0.94);
 

@@ -53,9 +53,12 @@ function zScores(values) {
 }
 
 function fitLogCurve(rows) {
-  const points = rows.filter((row) => Number.isFinite(row.pr) && Number.isFinite(row.pj));
-  const xs = points.map((row) => Math.log(row.pr));
-  const ys = points.map((row) => row.pj);
+  const points = rows.map((row) => ({
+    rank: row.bpr ?? row.pr,
+    ppg: row.bpj ?? row.pj,
+  })).filter((row) => Number.isFinite(row.rank) && Number.isFinite(row.ppg));
+  const xs = points.map((row) => Math.log(row.rank));
+  const ys = points.map((row) => row.ppg);
   const xMean = xs.reduce((sum, value) => sum + value, 0) / xs.length;
   const yMean = ys.reduce((sum, value) => sum + value, 0) / ys.length;
   const numerator = xs.reduce((sum, value, index) => sum + (value - xMean) * (ys[index] - yMean), 0);
@@ -80,6 +83,10 @@ const players = baseline.map((player) => {
   return {
     ...player,
     id,
+    baseScore: player.bs ?? player.s,
+    basePositionRank: player.bpr ?? player.pr,
+    baseProjPpg: player.bpj ?? player.pj,
+    baseInsight: player.bi ?? player.i,
     ecr: ecr?.ecr ?? player.ecr,
     t: ecr?.team || player.t,
     freshSentiment,
@@ -89,7 +96,9 @@ const players = baseline.map((player) => {
 
 for (const position of positions) {
   const group = players.filter((player) => player.p === position);
-  const oldScoreZ = zScores(group.map((player) => player.s));
+  // Always score from the immutable pre-refresh model input. Using the last
+  // exported score here would compound ECR and sentiment on every rebuild.
+  const oldScoreZ = zScores(group.map((player) => player.baseScore));
   const ecrOrdered = [...group].sort((a, b) => a.ecr - b.ecr);
   const ecrPositionRank = new Map(ecrOrdered.map((player, index) => [player.id, index + 1]));
   const ecrZ = zScores(group.map((player) => -Math.log(ecrPositionRank.get(player.id))));
@@ -147,7 +156,7 @@ const board = players.map((player) => {
   const freshInsight = [
     sent.red_flags ? `camp caution: ${sent.red_flags}` : null,
     recovery ? `recovery: ${recovery}` : null,
-    player.i,
+    player.baseInsight,
   ].filter(Boolean).join(" • ");
 
   return {
@@ -158,6 +167,9 @@ const board = players.map((player) => {
     model_pos_rank: player.pr,
     tier: player.ti,
     playr_score: player.s,
+    base_playr_score: player.baseScore,
+    base_position_rank: player.basePositionRank,
+    base_proj_ppg: player.baseProjPpg,
     classification: player.c,
     adp: player.adp,
     ecr: player.ecr,
@@ -181,6 +193,7 @@ const board = players.map((player) => {
       sources: sent.sources ?? null,
       refresh_status: sent.refresh_status ?? "fallback",
     },
+    base_insights: player.baseInsight,
     insights: freshInsight,
     draft_note: player.d,
     tag: player.tg,
