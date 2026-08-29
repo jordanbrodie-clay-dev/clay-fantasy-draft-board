@@ -32,8 +32,9 @@ Smart Rank/BPA is the decision foundation. Position-drop urgency can override it
 1. Run the Clay `Player Research 2026` and `Player Sentiment 2026` workflows over `refresh_manifest.json`.
 2. Import their bulk JSONL output with `import_workflow_results.mjs`.
 3. Download the current FantasyPros half-PPR rankings page and parse it with `refresh_market_data.mjs`.
-4. Download Sleeper projections/ADP and player metadata, then run `refresh_sleeper_market.mjs`.
-5. Run `rebuild_board.mjs`, `optimize_draft_board.mjs`, and then `../export_web.py`.
+4. Download the public rankings JSONP embedded by Hayden Winks' Yahoo half-PPR hub and parse it with `refresh_winks_rankings.mjs`.
+5. Download Sleeper projections/ADP and player metadata, then run `refresh_sleeper_market.mjs`.
+6. Run `rebuild_board.mjs`, `optimize_draft_board.mjs`, and then `../export_web.py`.
 
 `score_model.py` is the recovered full scoring engine. It uses the same standardized above-replacement objective when all original raw feature layers are available. `rebuild_board.mjs` is the source-controlled refresh path for the published compact board.
 

@@ -12,13 +12,14 @@ vm.runInContext(fs.readFileSync(path.join(root, "draft-engine.js"), "utf8"), con
 
 const board = context.window.BOARD;
 const draft = context.window.DRAFT;
+const winks = JSON.parse(fs.readFileSync(path.join(root, "model/data/winks_yahoo_2026.json"), "utf8"));
 assert.equal(board.length, 240);
 assert.equal(new Set(board.map((player) => player.id)).size, board.length);
 board.forEach((player, index) => assert.equal(player.r, index + 1));
 const allen = board.find((player) => player.n === "Josh Allen");
 assert.ok(allen.r >= 20 && allen.r <= 36, `Josh Allen should be a market-window pick, got rank ${allen.r}`);
 assert.equal(allen.qr, 3);
-assert.equal(allen.wk, 28);
+assert.equal(allen.wk, winks.players.find((player) => player.player === "Josh Allen").rank);
 assert.ok(allen.be >= 20, `Josh Allen should not have a first-round buy window, got ${allen.be}`);
 assert.ok(allen.hn > 0 && allen.hhr > 0);
 assert.equal(board.filter((player) => player.p === "K").length, 20);
@@ -95,6 +96,10 @@ const breeceIndex = board.findIndex((player) => player.n === "Breece Hall");
 board.slice(0, breeceIndex).forEach((player) => { depthState[player.id] = "taken"; });
 board.slice(0, breeceIndex).filter((player) => player.p === "RB").slice(0, 2)
   .forEach((player) => { depthState[player.id] = "mine"; });
+// Control for a legitimate last-player-in-tier TE override; this invariant is
+// specifically about whether RB depth is permitted once starters are covered.
+const earlyTightEnd = board.slice(0, breeceIndex).find((player) => player.p === "TE");
+if (earlyTightEnd) depthState[earlyTightEnd.id] = "mine";
 const depthDecision = draft.recommendations(board, depthState, depthSettings);
 assert.equal(depthDecision.currentPick, breeceIndex + 1);
 assert.equal(depthDecision.recommendations[0].player.n, "Breece Hall");

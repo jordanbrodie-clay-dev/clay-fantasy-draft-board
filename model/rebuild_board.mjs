@@ -17,6 +17,7 @@ vm.runInContext(fs.readFileSync(path.join(root, "board.js"), "utf8"), context);
 // optimize_draft_board.mjs.
 const baseline = context.window.BOARD.filter((player) => positions.includes(player.p) && !player.spec);
 const market = JSON.parse(fs.readFileSync(path.join(dataDir, "fantasypros_ecr_2026.json"), "utf8"));
+const winks = JSON.parse(fs.readFileSync(path.join(dataDir, "winks_yahoo_2026.json"), "utf8"));
 const research = JSON.parse(fs.readFileSync(path.join(dataDir, "player_metrics.json"), "utf8"));
 const sentiment = JSON.parse(fs.readFileSync(path.join(dataDir, "sentiment_2026.json"), "utf8"));
 const manifestPath = process.argv[2] ?? path.join(dataDir, "refresh_manifest.json");
@@ -68,6 +69,8 @@ function fitLogCurve(rows) {
 }
 
 const marketByName = new Map(market.players.map((player) => [normalize(player.player), player]));
+const winksByName = new Map(winks.players.map((player) => [normalize(player.player), player]));
+const winksUnranked = Number(winks.meta?.count) >= 300 ? Number(winks.meta.count) + 1 : null;
 const manifestByName = new Map(manifest.map((player) => [normalize(player.player), player]));
 const curves = Object.fromEntries(
   positions.map((position) => [position, fitLogCurve(baseline.filter((player) => player.p === position))]),
@@ -77,6 +80,7 @@ const players = baseline.map((player) => {
   const manifestPlayer = manifestByName.get(normalize(player.n));
   const id = manifestPlayer?.sportradar_id;
   const ecr = marketByName.get(normalize(player.n));
+  const freshWinks = winksByName.get(normalize(player.n));
   const freshSentiment = sentiment[id];
   const freshResearch = research[id];
 
@@ -88,6 +92,9 @@ const players = baseline.map((player) => {
     baseProjPpg: player.bpj ?? player.pj,
     baseInsight: player.bi ?? player.i,
     ecr: ecr?.ecr ?? player.ecr,
+    // The Yahoo list is a complete top 300. A modeled player omitted from it is
+    // below Winks' published range, not evidence that the prior ranking is live.
+    wk: freshWinks?.rank ?? winksUnranked ?? player.wk,
     t: ecr?.team || player.t,
     freshSentiment,
     freshResearch,
