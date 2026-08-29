@@ -9,6 +9,10 @@ The source-controlled scoring and refresh pipeline lives in `model/`.
 **Draft live from the board.** Configure league size, snake slot, starters, flex,
 bench, K, and D/ST; simulate opponents to your next pick; and use the ordered
 draft queue. State persists in localStorage, so a mid-draft refresh loses nothing.
+Default one-QB leagues spend one roster spot at quarterback. A second tight end is
+eligible only when his value is elite enough for the FLEX; customized multi-QB or
+multi-TE settings still fill every configured starter. When remaining selections
+equal unfilled starters, the engine reserves those picks for the open positions.
 Simulations are reversible previews: exit to restore the exact pre-simulation draft
 and queue, or draft players at each simulated turn and keep the generated scenario.
 The compact strategy bar includes the current recommendation as a one-click draft

@@ -122,6 +122,20 @@
     if (count >= (Number(settings.slots[player.p]) || 0)) return 100;
     return round < rounds - 2 ? 100 : 0;
   }
+  function backupSpecialistPenalty(player, decisionPick, roster, settings) {
+    if (player.p !== "QB" && player.p !== "TE") return 0;
+    const required = Math.max(0, Number(settings.slots[player.p]) || 0);
+    const rosterAtPosition = roster.filter((item) => item.p === player.p);
+    const count = rosterAtPosition.length;
+    if (count < required) return 0;
+    // In a normal one-QB league there is no reason to spend a shallow bench spot
+    // on another quarterback. A second TE is allowed only when he is genuinely
+    // elite enough to be a FLEX asset, not merely the best late specialist left.
+    if (player.p === "TE" && count === required && (Number(settings.slots.FLEX) || 0) > 0 && playerValue(player) >= 1.5) {
+      return 0;
+    }
+    return 100;
+  }
   function recommendations(players, state, settings, queueIds = [], excludedPositions = [], excludedPlayerIds = []) {
     const draftedIds = new Set(Object.keys(state));
     const excluded = new Set(excludedPositions);
@@ -140,7 +154,19 @@
     const remainingRosterPicks = myPicksFrom(currentPick, settings, totalRounds(settings)).length;
     const rosterSlack = Math.max(0, remainingRosterPicks - unfilledStarters);
     const queue = new Set(queueIds);
-    const bestAvailable = [...available].sort((a, b) => a.r - b.r)[0] ?? null;
+    const flexFilled = [...FLEX_POSITIONS].reduce((sum, position) => {
+      return sum + Math.max(0, (counts[position] || 0) - (Number(settings.slots[position]) || 0));
+    }, 0);
+    const flexOpen = flexFilled < (Number(settings.slots.FLEX) || 0);
+    const mustFillStarters = remainingRosterPicks <= unfilledStarters;
+    const eligibleAvailable = available.filter((player) => {
+      const fillsBaseStarter = (counts[player.p] || 0) < (Number(settings.slots[player.p]) || 0);
+      const fillsFlex = flexOpen && FLEX_POSITIONS.has(player.p);
+      if (mustFillStarters && !fillsBaseStarter && !fillsFlex) return false;
+      return specialistPenalty(player, decisionPick, roster, settings)
+        + backupSpecialistPenalty(player, decisionPick, roster, settings) < 100;
+    });
+    const bestAvailable = [...eligibleAvailable].sort((a, b) => a.r - b.r)[0] ?? null;
     const bestAvailableRank = Number(bestAvailable?.r) || 999;
     const scored = available.map((player) => {
       const value = Math.max(0, playerValue(player));
@@ -155,7 +181,8 @@
       const tierTwoPickSurvival = anySurvival(tierPeers, decisionPick, nextTwoPick);
       const reachesDecision = conditionalAvailability(player, currentPick, decisionPick);
       const pressure = 1 - survival;
-      const penalty = specialistPenalty(player, decisionPick, roster, settings);
+      const penalty = specialistPenalty(player, decisionPick, roster, settings)
+        + backupSpecialistPenalty(player, decisionPick, roster, settings);
       const starterOpen = (counts[player.p] || 0) < (Number(settings.slots[player.p]) || 0);
       const tierCliff = starterOpen ? Math.max(0, value - futureTwo.expected) : 0;
       const completionPressure = starterOpen ? clamp((3 - rosterSlack) / 3, 0, 1) : 0;
@@ -206,12 +233,14 @@
         reachPenalty,
         historicalHit,
         completionPressure,
+        penalty,
         rankGap,
         bpaPenalty,
       };
     }).sort((a, b) => b.score - a.score || a.player.r - b.player.r);
-    const strategyLeader = scored[0] ?? null;
-    const bpaCandidate = scored.find((candidate) => candidate.player.id === bestAvailable?.id) ?? null;
+    const decisionCandidates = scored.filter((candidate) => candidate.penalty < 100);
+    const strategyLeader = decisionCandidates[0] ?? null;
+    const bpaCandidate = decisionCandidates.find((candidate) => candidate.player.id === bestAvailable?.id) ?? null;
     const urgencyAdvantage = strategyLeader && bpaCandidate ? strategyLeader.urgency - bpaCandidate.urgency : 0;
     const scoreAdvantage = strategyLeader && bpaCandidate ? strategyLeader.score - bpaCandidate.score : 0;
     const decisionRound = Math.ceil(decisionPick / settings.teams);
@@ -226,8 +255,8 @@
       && strategyLeader.rankGap <= overrideRankLimit && urgencyAdvantage >= 0.75 && scoreAdvantage >= 0.35
     );
     const ordered = overrideApplied || !bpaCandidate
-      ? scored
-      : [bpaCandidate, ...scored.filter((candidate) => candidate !== bpaCandidate)];
+      ? decisionCandidates
+      : [bpaCandidate, ...decisionCandidates.filter((candidate) => candidate !== bpaCandidate)];
     const positionPlans = ["QB", "RB", "WR", "TE"].map((position) => {
       const positionCandidates = scored.filter((candidate) => candidate.player.p === position);
       const tierLeader = [...positionCandidates].sort((a, b) => {
@@ -323,6 +352,7 @@
     unfilledStarterCount,
     needFactor,
     expectedFutureAtPosition,
+    backupSpecialistPenalty,
     recommendations,
     simulateToMyPick,
   };

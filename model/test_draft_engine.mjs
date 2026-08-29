@@ -32,6 +32,9 @@ assert.deepEqual(Array.from(draft.myPicksFrom(1, settings, 4)), [12, 13, 36, 37]
 assert.equal(draft.needFactor("QB", [], settings, 1), 1);
 assert.equal(draft.needFactor("RB", [{ p: "RB" }, { p: "RB" }], settings, 25), 0.94);
 assert.equal(draft.needFactor("RB", [{ p: "RB" }, { p: "RB" }, { p: "RB" }], settings, 37), 0.82);
+assert.equal(draft.backupSpecialistPenalty({ p: "QB" }, 160, [{ p: "QB", zv: 2 }], settings), 100);
+assert.equal(draft.backupSpecialistPenalty({ p: "QB" }, 160, [{ p: "QB", zv: 2 }, { p: "QB", zv: 1 }], settings), 100);
+assert.equal(draft.backupSpecialistPenalty({ p: "QB" }, 100, [{ p: "QB", zv: 2 }], { ...settings, slots: { ...settings.slots, QB: 2 } }), 0);
 
 settings.slot = 1;
 const opening = draft.recommendations(board, {}, settings);
@@ -51,6 +54,23 @@ assert.equal(noQuarterbacksOrTightEnds.recommendations.some((item) => ["QB", "TE
 assert.equal(noQuarterbacksOrTightEnds.positionPlans.some((item) => ["QB", "TE"].includes(item.position)), false);
 const hardFadeGibbs = draft.recommendations(board, {}, settings, [], [], [board[0].id]);
 assert.notEqual(hardFadeGibbs.recommendations[0].player.id, board[0].id);
+
+// A default one-QB roster may take a late backup, but it must never become a
+// three- or four-QB build merely because quarterbacks project well versus QB16.
+const capSettings = structuredClone(draft.DEFAULTS);
+capSettings.slot = 1;
+let capState = {};
+while (Object.keys(capState).length < draft.totalRounds(capSettings) * capSettings.teams) {
+  capState = draft.simulateToMyPick(board, capState, capSettings).state;
+  const capDecision = draft.recommendations(board, capState, capSettings);
+  if (!capDecision.recommendations.length) break;
+  capState[capDecision.recommendations[0].player.id] = "mine";
+}
+const cappedRoster = board.filter((player) => capState[player.id] === "mine");
+assert.equal(cappedRoster.filter((player) => player.p === "QB").length, 1);
+assert.ok(cappedRoster.filter((player) => player.p === "TE").length <= 2);
+assert.equal(cappedRoster.filter((player) => player.p === "K").length, 1);
+assert.equal(cappedRoster.filter((player) => player.p === "DEF").length, 1);
 
 const protectedGibbs = draft.simulateToMyPick(board, {}, { ...settings, slot: 12 }, [board[0].id]);
 assert.equal(protectedGibbs.picks.some((pick) => pick.player.id === board[0].id), false);
