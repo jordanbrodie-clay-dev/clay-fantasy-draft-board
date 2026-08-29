@@ -48,6 +48,17 @@
     if (player.p === "K" || player.p === "DEF") return Math.max(0.03, 0.22 - 0.01 * (player.pr - 1));
     return Number.isFinite(Number(player.zv)) ? Number(player.zv) : 0;
   }
+  function playerTier(player) {
+    const tier = Number(player.ti);
+    if (Number.isFinite(tier) && tier > 0) return tier;
+    return Math.max(1, Math.ceil((Number(player.pr) || 1) / 6));
+  }
+  function anySurvival(players, fromPick, toPick) {
+    if (!players.length) return 0;
+    return clamp(1 - players.reduce((noneSurvive, player) => {
+      return noneSurvive * (1 - conditionalAvailability(player, fromPick, toPick));
+    }, 1), 0, 1);
+  }
   function rosterCounts(roster) {
     return roster.reduce((counts, player) => {
       counts[player.p] = (counts[player.p] || 0) + 1;
@@ -139,6 +150,9 @@
       const baseUrgency = Math.max(0, value - future.expected) * need;
       const survival = conditionalAvailability(player, decisionPick, nextPick);
       const twoPickSurvival = conditionalAvailability(player, decisionPick, nextTwoPick);
+      const tierPeers = available.filter((candidate) => candidate.p === player.p && playerTier(candidate) === playerTier(player));
+      const tierSurvival = anySurvival(tierPeers, decisionPick, nextPick);
+      const tierTwoPickSurvival = anySurvival(tierPeers, decisionPick, nextTwoPick);
       const reachesDecision = conditionalAvailability(player, currentPick, decisionPick);
       const pressure = 1 - survival;
       const penalty = specialistPenalty(player, decisionPick, roster, settings);
@@ -151,7 +165,7 @@
       // feasibility. This is intentionally market-aware rather than a fixed
       // "draft a QB in round six" command.
       const starterPressure = starterOpen
-        ? tierPressureWeight * (0.55 * tierCliff + 0.25 * (1 - twoPickSurvival) * value) + 0.80 * completionPressure
+        ? tierPressureWeight * (0.55 * tierCliff + 0.25 * (1 - tierTwoPickSurvival) * value) + 0.80 * completionPressure
         : 0;
       const urgency = baseUrgency + starterPressure;
       // Do not pay materially ahead of the multi-source acquisition window. This
@@ -180,14 +194,18 @@
         tierCliff,
         survival,
         twoPickSurvival,
+        tierSurvival,
+        tierTwoPickSurvival,
         reachesDecision,
         nextPick,
         nextTwoPick,
         laterAlternative: future.likelyAlternative,
+        laterTwoAlternative: futureTwo.likelyAlternative,
         futureValue: future.expected,
         futureTwoValue: futureTwo.expected,
         reachPenalty,
         historicalHit,
+        completionPressure,
         rankGap,
         bpaPenalty,
       };
@@ -211,8 +229,49 @@
       ? scored
       : [bpaCandidate, ...scored.filter((candidate) => candidate !== bpaCandidate)];
     const positionPlans = ["QB", "RB", "WR", "TE"].map((position) => {
-      const item = scored.find((candidate) => candidate.player.p === position);
-      return item ? { position, ...item } : null;
+      const positionCandidates = scored.filter((candidate) => candidate.player.p === position);
+      const tierLeader = [...positionCandidates].sort((a, b) => {
+        return a.player.pr - b.player.pr || b.value - a.value || a.player.r - b.player.r;
+      })[0];
+      if (!tierLeader) return null;
+      const currentTier = playerTier(tierLeader.player);
+      const currentTierPlayers = positionCandidates
+        .filter((candidate) => playerTier(candidate.player) === currentTier)
+        .sort((a, b) => a.player.pr - b.player.pr || a.player.r - b.player.r);
+      const currentTierSurvival = tierLeader.tierSurvival;
+      const currentTierTwoPickSurvival = tierLeader.tierTwoPickSurvival;
+      const projectedTier = tierLeader.laterAlternative ? playerTier(tierLeader.laterAlternative) : null;
+      const projectedTwoTier = tierLeader.laterTwoAlternative ? playerTier(tierLeader.laterTwoAlternative) : null;
+      const tierDrop = projectedTier == null ? null : Math.max(0, projectedTier - currentTier);
+      const twoTierDrop = projectedTwoTier == null ? null : Math.max(0, projectedTwoTier - currentTier);
+      const tierValueDrop = Math.max(0, tierLeader.value - tierLeader.futureValue);
+      const tierTwoValueDrop = Math.max(0, tierLeader.value - tierLeader.futureTwoValue);
+      const tierBreak = tierDrop > 0 && currentTierSurvival < 0.55;
+      const twoTurnTierBreak = twoTierDrop > 0 && currentTierTwoPickSurvival < 0.50;
+      let tierAction;
+      if (position === "QB" || position === "TE") {
+        if (!tierLeader.starterOpen) tierAction = "FILLED";
+        else if (tierLeader.reachPenalty >= 0.50) tierAction = "WAIT";
+        else if ((tierBreak && tierValueDrop >= 0.20) || (twoTurnTierBreak && tierTwoValueDrop >= 0.25) || tierLeader.completionPressure >= 0.90) tierAction = "DRAFT THIS TIER";
+        else tierAction = "WAIT";
+      } else {
+        tierAction = tierLeader.need >= 0.68 ? "STACK" : "DEPTH ONLY";
+      }
+      return {
+        position,
+        ...tierLeader,
+        currentTier,
+        currentTierPlayers: currentTierPlayers.map((candidate) => candidate.player),
+        currentTierSurvival,
+        currentTierTwoPickSurvival,
+        projectedTier,
+        projectedTwoTier,
+        tierDrop,
+        twoTierDrop,
+        tierValueDrop,
+        tierTwoValueDrop,
+        tierAction,
+      };
     }).filter(Boolean);
     return {
       currentPick, decisionPick, nextPick, onClock, bestAvailable,
@@ -259,6 +318,8 @@
     myPicksFrom,
     rawAvailability,
     conditionalAvailability,
+    playerTier,
+    anySurvival,
     unfilledStarterCount,
     needFactor,
     expectedFutureAtPosition,

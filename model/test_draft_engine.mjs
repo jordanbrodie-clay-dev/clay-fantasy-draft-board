@@ -36,6 +36,14 @@ settings.slot = 1;
 const opening = draft.recommendations(board, {}, settings);
 assert.equal(opening.onClock, true);
 assert.equal(opening.recommendations[0].player.n, "Jahmyr Gibbs");
+assert.equal(opening.positionPlans.find((item) => item.position === "QB").tierAction, "WAIT");
+assert.equal(opening.positionPlans.find((item) => item.position === "TE").tierAction, "WAIT");
+assert.equal(opening.positionPlans.find((item) => item.position === "RB").tierAction, "STACK");
+opening.positionPlans.forEach((item) => {
+  assert.ok(item.currentTier >= 1);
+  assert.ok(item.currentTierPlayers.length >= 1);
+  assert.ok(item.currentTierSurvival >= 0 && item.currentTierSurvival <= 1);
+});
 assert.equal(opening.recommendations.slice(0, 8).some((item) => item.player.spec), false);
 const noQuarterbacksOrTightEnds = draft.recommendations(board, {}, settings, [], ["QB", "TE"]);
 assert.equal(noQuarterbacksOrTightEnds.recommendations.some((item) => ["QB", "TE"].includes(item.player.p)), false);
@@ -73,10 +81,10 @@ for (let turn = 0; turn < 4; turn += 1) {
 midRoundState = draft.simulateToMyPick(board, midRoundState, midRoundSettings).state;
 const midRoundDecision = draft.recommendations(board, midRoundState, midRoundSettings);
 assert.equal(midRoundDecision.currentPick, 49);
-assert.ok(["QB", "TE"].includes(midRoundDecision.recommendations[0].player.p));
-assert.equal(midRoundDecision.overrideApplied, true);
-assert.ok(midRoundDecision.recommendations[0].starterPressure >= 0.5);
-assert.ok(midRoundDecision.recommendations[0].twoPickSurvival < 0.25);
+assert.equal(midRoundDecision.recommendations[0].player.id, midRoundDecision.bestAvailable.id);
+assert.equal(midRoundDecision.overrideApplied, false);
+assert.equal(midRoundDecision.positionPlans.find((item) => item.position === "TE").tierAction, "WAIT");
+assert.equal(midRoundDecision.positionPlans.find((item) => item.position === "QB").tierAction, "WAIT");
 
 // BPA roster construction: two early RBs must not block a third RB when that
 // player is the top remaining asset and the FLEX/depth value is still high.
@@ -122,10 +130,10 @@ const tierSettings = {
   slots: { QB: 0, RB: 0, WR: 0, TE: 1, FLEX: 0, K: 0, DEF: 0, BENCH: 7 },
 };
 const tierBoard = [
-  { id: "wr-bpa", n: "BPA WR", p: "WR", r: 1, pr: 1, zv: 2.0, adp: 9, asd: 3, be: 9, spk: 9, hhr: 0.7 },
-  { id: "te-cliff", n: "Last Tier TE", p: "TE", r: 4, pr: 1, zv: 1.8, adp: 9, asd: 2, be: 9, spk: 9, hhr: 0.7 },
-  { id: "wr-later", n: "Later WR", p: "WR", r: 10, pr: 2, zv: 1.95, adp: 24, asd: 4, be: 20, spk: 24, hhr: 0.7 },
-  { id: "te-later", n: "Replacement TE", p: "TE", r: 12, pr: 2, zv: 0.3, adp: 18, asd: 3, be: 16, spk: 18, hhr: 0.4 },
+  { id: "wr-bpa", n: "BPA WR", p: "WR", r: 1, pr: 1, ti: 1, zv: 2.0, adp: 9, asd: 3, be: 9, spk: 9, hhr: 0.7 },
+  { id: "te-cliff", n: "Last Tier TE", p: "TE", r: 4, pr: 1, ti: 1, zv: 1.8, adp: 9, asd: 2, be: 9, spk: 9, hhr: 0.7 },
+  { id: "wr-later", n: "Later WR", p: "WR", r: 10, pr: 2, ti: 1, zv: 1.95, adp: 24, asd: 4, be: 20, spk: 24, hhr: 0.7 },
+  { id: "te-later", n: "Replacement TE", p: "TE", r: 12, pr: 2, ti: 2, zv: 0.3, adp: 18, asd: 3, be: 16, spk: 18, hhr: 0.4 },
 ];
 assert.equal(draft.recommendations(tierBoard, {}, tierSettings).recommendations[0].player.id, "wr-bpa");
 const roundFiveState = Object.fromEntries(Array.from({ length: 8 }, (_, index) => [`gone-${index}`, "taken"]));
@@ -133,6 +141,11 @@ const tierDecision = draft.recommendations(tierBoard, roundFiveState, tierSettin
 assert.equal(tierDecision.recommendations[0].player.id, "te-cliff");
 assert.ok(tierDecision.recommendations[0].starterPressure > 0.75);
 assert.ok(tierDecision.recommendations[0].twoPickSurvival < 0.5);
+const teTier = tierDecision.positionPlans.find((item) => item.position === "TE");
+assert.equal(teTier.currentTier, 1);
+assert.equal(teTier.projectedTier, 1);
+assert.equal(teTier.projectedTwoTier, 2);
+assert.equal(teTier.tierAction, "DRAFT THIS TIER");
 
 const calibration = JSON.parse(fs.readFileSync(path.join(root, "model/data/historical_calibration.json"), "utf8"));
 assert.equal(calibration.meta.fold_count, 5);
